@@ -1,5 +1,5 @@
 baseURL = "https://akimon658.github.io/"
-languageCode = "ja"
 defaultContentLanguage = "ja"
-title = "飽きたら終わり"
+languageCode = "ja"
 publishDir = "docs"
+title = "飽きたら終わり"
