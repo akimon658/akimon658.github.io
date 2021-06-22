@@ -4,3 +4,7 @@ languageCode = "ja"
 publishDir = "docs"
 theme = "fuji"
 title = "飽きたら終わり"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
