@@ -16,4 +16,5 @@ HTMLも出てくるが知らなくても多分大丈夫。
 ## 準備
 
 ### 手順の確認
-1. テレビ東京の公式サイト（<a harf="https://www.tv-tokyo.co.jp/" target="_blank">https://www.tv-tokyo.co.jp</a>）から次回のアニポケのサブタイトルを取得
+1. <a harf="https://www.tv-tokyo.co.jp/" target="_blank">テレビ東京の公式サイト</a>から次回のアニポケのサブタイトルを取得
+1. Googleカレンダーに書き込む
