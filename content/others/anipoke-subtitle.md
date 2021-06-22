@@ -18,3 +18,7 @@ HTMLも出てくるが知らなくても多分大丈夫。
 ### 手順の確認
 1. <a harf="https://www.tv-tokyo.co.jp/" target="_blank">テレビ東京の公式サイト</a>から次回のアニポケのサブタイトルを取得
 1. Googleカレンダーに書き込む
+
+### スプレッドシート
+サブタイトルの取得はGASでもできるが、よく分からなかったので<a harf="https://docs.google.com/spreadsheets/" target="_blank">Googleスプレッドシート</a>の関数を使う。  
+新規作成し、適当な名前を付ける。
