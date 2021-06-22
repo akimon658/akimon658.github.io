@@ -9,4 +9,5 @@ draft: true
 この記事ではWindowsを用いて説明するのでMac / Chromebookは適宜読み換えてほしい。
 
 ### 扱うレベル
-この記事ではGoogle Apps Script(GAS)を扱う。簡単にいうとGoogleサービスを操作しやすいJavaScriptで、僕も初めて使うのでそんなに難しいことはしない。HTMLは分かる方が良いかも知れない。
+この記事ではGoogle Apps Script(GAS)を扱う。簡単にいうとGoogleサービスを操作しやすいJavaScriptで、僕も初めて使うのでそんなに難しいことはしない。  
+HTMLも出てくるが知らなくても多分大丈夫。
