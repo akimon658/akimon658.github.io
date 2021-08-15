@@ -1,3 +1,6 @@
 [submodule "themes/fuji"]
 	path = themes/fuji
 	url = https://github.com/dsrkafuu/hugo-theme-fuji.git
+[submodule "content/p"]
+	path = content/p
+	url = https://github.com/Akimon658/posts.git
