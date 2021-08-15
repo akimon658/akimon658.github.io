@@ -1,9 +1,11 @@
 baseURL = "https://akimon658.github.io/"
 defaultContentLanguage = "ja"
+googleAnalytics = "UA-174918347-7"
 languageCode = "ja"
 publishDir = "docs"
 theme = "fuji"
 title = "飽きたら終わり"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
