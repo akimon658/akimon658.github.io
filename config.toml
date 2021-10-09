@@ -4,7 +4,7 @@ googleAnalytics = "UA-174918347-7"
 languageCode = "ja"
 publishDir = "docs"
 theme = "fuji"
-title = "飽きたら終わり"
+title = "Boring Time"
 
 [markup]
   [markup.goldmark]
