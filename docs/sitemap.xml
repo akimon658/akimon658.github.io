@@ -2,10 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://akimon658.github.io/</loc>
+  </url><url>
     <loc>https://akimon658.github.io/categories/</loc>
   </url><url>
-    <loc>https://akimon658.github.io/tags/</loc>
+    <loc>https://akimon658.github.io/p/</loc>
   </url><url>
-    <loc>https://akimon658.github.io/</loc>
+    <loc>https://akimon658.github.io/tags/</loc>
   </url>
 </urlset>
