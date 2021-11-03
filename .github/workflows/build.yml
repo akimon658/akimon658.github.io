@@ -26,8 +26,8 @@ jobs:
       - name: Push
         run: |
           if (git diff --shortstat | grep '[0-9]'); then \
-            git config --global user.name "${GITHUB_ACTOR}" \
-            git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com" \
+            git config --global user.name "${GITHUB_ACTOR}"; \
+            git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"; \
             git add .; \
             git commit -m "actions: build.yml"; \
             git push; \
