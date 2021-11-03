@@ -1,5 +1,6 @@
 Author = "Akimo"
 baseURL = "https://akimon658.github.io/"
+copyright = "© 2021 Akimo"
 defaultContentLanguage = "ja"
 googleAnalytics = "UA-174918347-7"
 languageCode = "ja"
@@ -7,7 +8,5 @@ publishDir = "docs"
 theme = "fuji"
 title = "Boring Time"
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+[markup.goldmark.renderer]
+unsafe = true
