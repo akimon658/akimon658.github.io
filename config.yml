@@ -13,14 +13,17 @@ markup:
 
 Menus:
   link:
+    - Name: "Email"
+      URl: "mailto:akimo_greninja@yahoo.co.jp"
+
+    - Name: "GitHub"
+      URL: "https://github.com/Akimon658"
+
     - Name: "Twitter (@akimon658)"
       URL: "https://twitter.com/Akimon658"
 
     - Name: "Twitter (@kimo_pk)"
       URL: "https://twitter.com/kimo_pk"
-
-    - Name: "Email"
-      URl: "mailto:akimo_greninja@yahoo.co.jp"
 
   nav:
     - Name: "About"
