@@ -32,5 +32,8 @@ Menus:
     - Name: "Home"
       URL: ""
 
+    - Name: "Privacy Policy"
+      URL: "privacy-policy/"
+
 Params:
   author: "Akimo"
