@@ -29,5 +29,8 @@ Menus:
     - Name: "About"
       URL: "about/"
 
+    - Name: "Home"
+      URL: ""
+
 Params:
   author: "Akimo"
