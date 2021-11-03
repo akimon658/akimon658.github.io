@@ -1,7 +1,9 @@
 <aside class="col-12 col-md-3 float-left sidebar">
 	<!-- pages -->
 	<div class="sidebar-item sidebar-pages">
-		<h3>{{ i18n "sidebarPages" }}</h3>
+		<h3>
+			Pages
+		</h3>
 		<ul>
 			{{ range .Site.Menus.nav }}
 			<li>
@@ -12,7 +14,9 @@
 	</div>
 	<!-- links -->
 	<div class="sidebar-item sidebar-links">
-		<h3>{{ i18n "sidebarLinks" }}</h3>
+		<h3>
+			Links
+		</h3>
 		<ul>
 			{{ range .Site.Menus.link }}
 			<li>
@@ -23,7 +27,7 @@
 	</div>
 	<!-- tags -->
 	<div class="sidebar-item sidebar-tags">
-		<h3>{{ i18n "sidebarTags" }}</h3>
+		<h3>Tags</h3>
 		<div>
 			{{ range .Site.Taxonomies.tags }}
 			<span>
