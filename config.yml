@@ -19,6 +19,9 @@ Menus:
     - Name: "Twitter (@kimo_pk)"
       URL: "https://twitter.com/kimo_pk"
 
+    - Name: "Email"
+      URl: "mailto:akimo_greninja@yahoo.co.jp"
+
   nav:
     - Name: "About"
       URL: "about/"
