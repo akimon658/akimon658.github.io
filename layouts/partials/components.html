@@ -54,7 +54,9 @@
 		{{ if in .Site.Params.mainSections .Type }}
 		{{ if and (or .Site.Params.showToc .Params.showToc) (ne .Params.showToc false) }}
 		<div class="sidebar-item sidebar-toc">
-			<h3>{{ i18n "sidebarToc" }}</h3>
+			<h3>
+				Contents
+			</h3>
 			{{ .TableOfContents }}
 		</div>
 		{{ end }}
