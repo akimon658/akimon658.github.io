@@ -27,13 +27,13 @@ Menus:
 
   nav:
     - Name: "About"
-      URL: "about/"
+      URL: "/about/"
 
     - Name: "Home"
-      URL: ""
+      URL: "/"
 
     - Name: "Privacy Policy"
-      URL: "privacy-policy/"
+      URL: "/privacy-policy/"
 
 Params:
   author: "Akimo"
