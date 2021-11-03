@@ -12,9 +12,9 @@ markup:
       unsafe: true
 
 Menus:
-  - link:
-    Name: "Twitter"
-    URL: "https://twitter.com/Akimon658"
+  link:
+    - Name: "Twitter (@akimon658)"
+      URL: "https://twitter.com/Akimon658"
 
 Params:
   author: "Akimo"
