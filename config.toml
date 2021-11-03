@@ -1,6 +1,5 @@
-Author = "Akimo"
+author = "Akimo"
 baseURL = "https://akimon658.github.io/"
-copyright = "© 2021 Akimo"
 defaultContentLanguage = "ja"
 googleAnalytics = "UA-174918347-7"
 languageCode = "ja"
