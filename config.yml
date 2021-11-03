@@ -19,5 +19,9 @@ Menus:
     - Name: "Twitter (@kimo_pk)"
       URL: "https://twitter.com/kimo_pk"
 
+  nav:
+    - Name: "About"
+      URL: "about/"
+
 Params:
   author: "Akimo"
