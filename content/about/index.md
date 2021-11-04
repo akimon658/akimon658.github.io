@@ -1,7 +1,7 @@
 ---
 title: "About This Site"
-date: 2021-11-03T02:12:56Z
-draft: true
+date: 2021-11-04T02:12:56Z
+draft: false
 ---
 
 このサイトはあきも ([@akimon658](https://twitter.com/Akimon658)) のブログです。
