@@ -11,5 +11,5 @@ Google アナリティクスは Cookie やモバイルデバイスの広告識�
 詳しくは「[Google のサービスを使用するサイトやアプリから収集した情報の Google による使用](https://policies.google.com/technologies/partner-sites?hl=ja)」のページをご覧ください。
 
 
-## マイクロソフトクラリティ
-当サイトではアクティビティの測定のためにマイクロソフトクラリティを使用しています。
+## Microsoft Clarity
+当サイトではアクティビティの分析のために [Microsoft Clarity](https://clarity.microsoft.com/) を使用しています。
