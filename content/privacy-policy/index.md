@@ -13,3 +13,7 @@ Google アナリティクスは Cookie やデバイスの広告識別子等を�
 
 ## Microsoft Clarity
 当サイトではアクティビティの分析のために [Microsoft Clarity](https://clarity.microsoft.com/) を使用しています。
+Microsoft Clarity はクリックした場所やスクロール速度等の情報を匿名で収集します。
+
+詳しくは「[Microsoft のプライバシーに関する声明](https://privacy.microsoft.com/ja-jp/privacystatement)」のページをご覧ください。
+
