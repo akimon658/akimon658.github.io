@@ -6,7 +6,7 @@ draft: false
 
 ## Google アナリティクス
 当サイトではアクセス情報の解析のために [Google アナリティクス](https://marketingplatform.google.com/about/analytics/?hl=ja)を利用しています。
-Google アナリティクスは Cookie やモバイルデバイスの広告識別子等を利用して匿名の情報を収集します（アクセス日時、使用 OS 等）。
+Google アナリティクスは Cookie やデバイスの広告識別子等を利用して匿名の情報を収集します（アクセス日時、使用 OS 等）。
 
 詳しくは「[Google のサービスを使用するサイトやアプリから収集した情報の Google による使用](https://policies.google.com/technologies/partner-sites?hl=ja)」のページをご覧ください。
 
