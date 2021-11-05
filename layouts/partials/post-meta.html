@@ -1,11 +1,15 @@
 <span>
-	<i class="iconfont icon-today-sharp"></i>
+	<span class="material-icon">
+		event
+	</span>
 	&nbsp;{{ .Date.Format "2006-01-02" }}
 </span>
 
 {{ if ne .Date.YearDay .Lastmod.YearDay }}
 <span>
-	<i class="iconfont icon-sync-circle-sharp"></i>
+	<span class="material-icon">
+		update
+	</span>
 	&nbsp;{{ dateFormat ( or $.Site.Params.dateFormat "2006-01-02" ) $.Page.Params.LastMod }}
 </span>
 {{ end }}
@@ -25,7 +29,9 @@
 {{ end }}
 
 <span>
-	<i class="iconfont icon-pricetags-sharp"></i>
+	<span class="material-icon">
+		local_offer
+	</span>
 	&nbsp;
 	{{ if .Params.tags }}
 	{{ range .Params.tags }}
