@@ -1,6 +1,6 @@
 ## Material design icons
 
-Note: This `README.md`, `LICENSE`, and the font file are copyed from [Google's repository](https://github.com/google/material-design-icons).
+Note: This `README.md`, `LICENSE`, and the font file were copied from [Google's repository](https://github.com/google/material-design-icons).
 
 Material design icons is the official icon set from Google.
 They can be browsed at https://fonts.google.com/icons.
