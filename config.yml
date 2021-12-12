@@ -8,6 +8,13 @@ publishDir: "docs"
 theme: "fuji"
 title: "Boring Time"
 
+languages:
+  ja:
+    weight: 1
+  
+  en:
+    weight: 2
+
 markup:
   goldmark:
     renderer:
