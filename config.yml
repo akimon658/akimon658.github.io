@@ -15,6 +15,30 @@ languages:
   en:
     weight: 2
 
+    Menus:
+      link:
+        - Name: "Email"
+          URl: "mailto:akimo_greninja@yahoo.co.jp"
+
+        - Name: "GitHub"
+          URL: "https://github.com/Akimon658"
+
+        - Name: "Twitter (Pokémon)"
+          URL: "https://twitter.com/Akimon658"
+
+        - Name: "Twitter (other)"
+          URL: "https://twitter.com/kimo_pk"
+
+      nav:
+        - Name: "About"
+          URL: "/en/about/"
+        
+        - Name: "Home"
+          URL: "/en/"
+
+        - Name: "Privacy Policy"
+          URL: "/en/privacy-policy/"
+
 markup:
   goldmark:
     renderer:
