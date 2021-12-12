@@ -1,6 +1,6 @@
 ---
 title: "PowerShell でホームディレクトリを省略する"
-date: 2021-12-12T12:30:00Z
+date: 2021-12-12 12:30:00
 draft: false
 noindex: true
 ---

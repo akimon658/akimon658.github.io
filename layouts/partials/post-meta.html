@@ -2,7 +2,7 @@
 	<span class="material-icon">
 		event
 	</span>
-	&nbsp;{{ .Date.Format "2006-01-02" }}
+	&nbsp;{{ .Date.Local.Format "2006-01-02" }}
 </span>
 
 {{ if ne .Date.YearDay .Lastmod.YearDay }}
