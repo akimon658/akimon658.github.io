@@ -1,6 +1,7 @@
 ---
 title: "Privacy Policy"
 date: 2021-11-03 07:50:35 +0900
+description: "このサイトで扱う個人情報について"
 draft: false
 ---
 

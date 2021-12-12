@@ -1,6 +1,7 @@
 ---
 title: "PowerShell でホームディレクトリを省略する"
 date: 2021-12-12 13:00:00 +0900
+description: "PowerShell のパス表示をカスタマイズする方法"
 draft: false
 noindex: true
 ---
