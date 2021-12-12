@@ -60,6 +60,6 @@
 	})(window, document, "clarity", "script", "95k7fmhfca");
 </script>
 
-{{ if .Params.noindex }}
-<meta name="robots" content="noindex" />
+{{ if .Params.canonicalURL }}
+<link rel="canonical" href="{{ .Params.canonicalURL }}" />
 {{ end }}

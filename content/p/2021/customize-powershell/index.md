@@ -1,9 +1,9 @@
 ---
 title: "PowerShell でホームディレクトリを省略する"
+canonicalURL: "https://zenn.dev/akimon658/articles/customize-powershell"
 date: 2021-12-12 13:00:00 +0900
 description: "PowerShell のパス表示をカスタマイズする方法"
 draft: false
-noindex: true
 ---
 
 PowerShell はデフォルトで現在のフルパスを表示しますが、Bash のようにホームディレクトリを `~` で置き換えてほしかったのでカスタマイズしてみました。
