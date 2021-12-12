@@ -3,6 +3,7 @@ title: "Privacy Policy"
 date: 2021-12-12T18:31:07+09:00
 description: "Privacy policy of this site."
 draft: false
+showComments: false
 ---
 
 ## Google Analytics
