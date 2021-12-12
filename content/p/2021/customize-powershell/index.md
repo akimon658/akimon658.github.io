@@ -31,6 +31,7 @@ function prompt {
 ```powershell
 function prompt {
     $currentDir = (Convert-Path .)
+
     $(if (Test-Path variable:/PSDebugContext) { '[DBG]: ' }
       else { '' }) + 'PS ' + $currentDir +
         $(if ($NestedPromptLevel -ge 1) { '>>' }) + '> '
@@ -42,9 +43,11 @@ function prompt {
 ```powershell
 function prompt {
     $currentDir = (Convert-Path .)
+
     if ($currentDir.Contains($HOME)) {
         $currentDir = $currentDir.Replace($HOME, "~")
     }
+
     $(if (Test-Path variable:/PSDebugContext) { '[DBG]: ' }
       else { '' }) + 'PS ' + $currentDir +
         $(if ($NestedPromptLevel -ge 1) { '>>' }) + '> '
