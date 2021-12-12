@@ -11,9 +11,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
-    env:
-      TZ: "Asia/Tokyo"
 
     steps:
       - uses: actions/checkout@v2
@@ -27,7 +24,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify --ignoreCache
+        run: TZ="Asia/Tokyo" hugo --minify --ignoreCache
 
       - name: Push
         run: |
