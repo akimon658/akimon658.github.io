@@ -1,8 +1,8 @@
 FROM gitpod/workspace-full:latest
 
-ARG hugo-version=0.90.1
+ARG HUGO_VERSION=0.90.1
 
-RUN wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${hugo-version}/hugo_extended_${hugo-version}_Linux-64bit.deb
+RUN wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb
 
 USER root
 RUN apt install /tmp/hugo.deb
