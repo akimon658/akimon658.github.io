@@ -59,3 +59,7 @@
 		y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
 	})(window, document, "clarity", "script", "95k7fmhfca");
 </script>
+
+{{ if .Params.noindex }}
+<meta name="robots" content="noindex" />
+{{ end }}
