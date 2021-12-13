@@ -75,6 +75,9 @@ Menus:
     - Name: "Search"
       URL: "/search/"
 
+outputs:
+  home: ["HTML", "RSS", "JSON"]
+
 Params:
   author: "Akimo"
   disqusShortname: "akimon658-github-io"
