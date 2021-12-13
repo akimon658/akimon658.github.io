@@ -22,7 +22,7 @@
 <meta property="og:title" content="Boring Time">
 <meta name=twitter:title content="Boring Time">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://akimon658.github.io/en/"><meta name=twitter:card content="summary"><meta property="og:updated_time" content="2021-12-13T16:42:03+09:00">
+<meta property="og:url" content="https://akimon658.github.io/en/"><meta name=twitter:card content="summary"><meta property="og:updated_time" content="2021-12-13T16:47:37+09:00">
 <style>@media(prefers-color-scheme:dark){body[data-theme=auto] img{filter:brightness(60%)}}body[data-theme=dark] img{filter:brightness(60%)}</style>
 <link rel=stylesheet href=https://akimon658.github.io/assets/css/fuji.min.css>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-174918347-7')</script>
@@ -61,10 +61,13 @@ No tag
 </span>
 </div>
 <div class="post-item post-summary markdown-body">
-PowerShell displays the current full path by default. It&rsquo;s long, so I&rsquo;d like to replace it with ~ like Bash.
-Prepare a profile You can customize your PowerShell with $profile. It doesn&rsquo;t exist by default, so you need to run touch $profile.
-Customize To customize the prompt, use function prompt. Here is a built-in one.
-function prompt { $(if (Test-Path variable:/PSDebugContext) { '[DBG]: ' } else { '' }) + 'PS ' + $(Get-Location) + $(if ($NestedPromptLevel -ge 1) { '>>' }) + '> ' } Source: about Prompts - PowerShell | Microsoft Docs
+<p>PowerShell displays the current full path by default. It&rsquo;s long, so I&rsquo;d like to replace it with <code>~</code> like Bash.</p>
+<h2 id=prepare-a-profile>Prepare a profile</h2>
+<p>You can customize your PowerShell with <code>$profile</code>.
+It doesn&rsquo;t exist by default, so you need to run <code>touch $profile</code>.</p>
+<h2 id=customize>Customize</h2>
+<p>To customize the prompt, use <code>function prompt</code>.
+Here is a built-in one.</p>
 </div>
 </div>
 </div>
