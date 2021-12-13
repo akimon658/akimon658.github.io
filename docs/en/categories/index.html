@@ -41,6 +41,32 @@
 <main>
 <div class="container-lg clearfix">
 <div class="col-12 col-md-9 float-left content">
+<div class=post>
+<h2 class="post-item post-title">
+<a href=https://akimon658.github.io/en/p/2021/customize-powershell/>How to replace home directory with "~" on PowerShell</a>
+</h2>
+<div class="post-item post-meta">
+<span>
+<span class=material-icon>
+event
+</span>
+&nbsp;2021-12-13
+</span>
+<span>
+<span class=material-icon>
+local_offer
+</span>
+&nbsp;
+No tag
+</span>
+</div>
+<div class="post-item post-summary markdown-body">
+PowerShell displays the current full path by default. It&rsquo;s long, so I&rsquo;d like to replace it with ~ like Bash.
+Prepare a profile You can customize your PowerShell with $profile. It doesn&rsquo;t exist by default, so you need to run touch $profile.
+Customize To customize the prompt, use function prompt. Here is a built-in one.
+function prompt { $(if (Test-Path variable:/PSDebugContext) { '[DBG]: ' } else { '' }) + 'PS ' + $(Get-Location) + $(if ($NestedPromptLevel -ge 1) { '>>' }) + '> ' } Source: about Prompts - PowerShell | Microsoft Docs
+</div>
+</div>
 </div>
 <aside class="col-12 col-md-3 float-left sidebar">
 <div class="sidebar-item sidebar-pages">
