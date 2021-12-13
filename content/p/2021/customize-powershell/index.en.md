@@ -14,6 +14,8 @@ It doesn't exist by default, so you need to run `touch $profile`.
 To customize the prompt, use `function prompt`.
 Here is a built-in one.
 
+<!--more-->
+
 ```powershell
 function prompt {
     $(if (Test-Path variable:/PSDebugContext) { '[DBG]: ' }
