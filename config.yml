@@ -40,6 +40,9 @@ languages:
         - Name: "Privacy Policy"
           URL: "/en/privacy-policy/"
 
+        - Name: "Search"
+          URL: "/en/search/"
+
 markup:
   goldmark:
     renderer:
@@ -68,6 +71,9 @@ Menus:
 
     - Name: "Privacy Policy"
       URL: "/privacy-policy/"
+
+    - Name: "Search"
+      URL: "/search/"
 
 Params:
   author: "Akimo"
