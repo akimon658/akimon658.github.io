@@ -20,12 +20,15 @@ languages:
       link:
         - Name: "Email"
           URl: "mailto:akimo_greninja@yahoo.co.jp"
+          weight: 1
 
         - Name: "GitHub"
           URL: "https://github.com/Akimon658"
+          weight: 2
 
         - Name: "Twitter (Pokémon)"
           URL: "https://twitter.com/Akimon658"
+          weight: 3
 
         - Name: "Twitter (other)"
           URL: "https://twitter.com/kimo_pk"
@@ -52,12 +55,15 @@ Menus:
   link:
     - Name: "Email"
       URl: "mailto:akimo_greninja@yahoo.co.jp"
+      weight: 1
 
     - Name: "GitHub"
       URL: "https://github.com/Akimon658"
+      weight: 2
 
     - Name: "Twitter (Pokémon)"
       URL: "https://twitter.com/Akimon658"
+      weight: 3
 
     - Name: "Twitter (other)"
       URL: "https://twitter.com/kimo_pk"
