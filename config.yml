@@ -1,6 +1,7 @@
 baseURL: "https://akimon658.github.io/"
 defaultContentLanguage: "ja"
 enableGitInfo: true
+enableRobotsTXT: true
 googleAnalytics: "UA-174918347-7"
 hasCJKLanguage: true
 languageCode: "ja"
@@ -11,7 +12,7 @@ title: "Boring Time"
 languages:
   ja:
     weight: 1
-  
+
   en:
     weight: 2
 
@@ -32,7 +33,7 @@ languages:
       nav:
         - Name: "About"
           URL: "/en/about/"
-        
+
         - Name: "Home"
           URL: "/en/"
 
