@@ -1,3 +1,4 @@
 .vscode/
+resources/_gen/assets/
 
 .hugo_build.lock
