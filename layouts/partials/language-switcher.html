@@ -1,11 +1,13 @@
 {{ if .IsTranslated }}
 <select onchange="location.href=value;">
-	<option value="#">
+	<option hidden>
 		Language
 	</option>
 
 	{{ range .Translations }}
-	<option value="{{ .RelPermalink }}">{{ .Language.LanguageName }}</option>
+	<option value="{{ .RelPermalink }}">
+		{{ .Language.LanguageName }}
+	</option>
 	{{ end }}
 </select>
 {{ end }}
