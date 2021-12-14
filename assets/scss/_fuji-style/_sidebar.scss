@@ -1,6 +1,12 @@
 select {
 	background-color: var(--color-bg);
+	border-radius: 0.6rem;
 	color: var(--color-font);
+	padding: 0.3rem;
+
+	&:focus {
+		outline: none;
+	}
 }
 
 .sidebar {
