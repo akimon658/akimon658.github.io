@@ -1,5 +1,5 @@
 select {
-	background-color: var(--color-divider);
+	background-color: var(--color-bg);
 	border-color: var(--color-divider);
 	border-radius: 0.6rem;
 	border-width: 0.1rem;
@@ -59,6 +59,11 @@ select {
 		overflow: auto;
 		display: flex;
 		flex-direction: column-reverse;
+
+		select {
+			background-color: var(--color-codebg);
+			border-color: var(--color-mute);
+		}
 
 		.sidebar-wrapper {
 			display: flex;
