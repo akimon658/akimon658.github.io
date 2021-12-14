@@ -83,8 +83,15 @@ Menus:
     - Name: "Search"
       URL: "/search/"
 
+outputFormats:
+  SearchIndex:
+    isPlaintext: true
+    notAlternative: true
+    mediaType: "application/json"
+    path: "/search/"
+
 outputs:
-  home: ["HTML", "RSS", "JSON"]
+  home: ["HTML", "RSS", "SearchIndex"]
 
 Params:
   author: "Akimo"
