@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2021 on Boring Time</title><link>https://akimon658.github.io/en/p/2021/</link><description>Recent content in 2021 on Boring Time</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Thu, 16 Dec 2021 22:39:52 +0900</lastBuildDate><atom:link href="https://akimon658.github.io/en/p/2021/index.xml" rel="self" type="application/rss+xml"/><item><title>How to replace home directory with "~" on PowerShell</title><link>https://akimon658.github.io/en/p/2021/customize-powershell/</link><pubDate>Mon, 13 Dec 2021 16:42:00 +0900</pubDate><guid>https://akimon658.github.io/en/p/2021/customize-powershell/</guid><description>&lt;p>PowerShell displays the current full path by default. It&amp;rsquo;s long, so I&amp;rsquo;d like to replace it with &lt;code>~&lt;/code> like Bash.&lt;/p>
+&lt;h2 id="prepare-a-profile">Prepare a profile&lt;/h2>
+&lt;p>You can customize your PowerShell with &lt;code>$profile&lt;/code>.
+It doesn&amp;rsquo;t exist by default, so you need to run &lt;code>touch $profile&lt;/code>.&lt;/p>
+&lt;h2 id="customize">Customize&lt;/h2>
+&lt;p>To customize the prompt, use &lt;code>function prompt&lt;/code>.
+Here is a built-in one.&lt;/p></description></item></channel></rss>
