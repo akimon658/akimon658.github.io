@@ -16,7 +16,7 @@ draft: false
 - [gitpod.io](https://gitpod.io)
 
 ## やりたかったこと
-```dockerfile:.gitpod.Dockerfile
+```dockerfile
 # 自作イメージ
 FROM akimon658/go-mecab-neologd:latest
 # gopls が入っていないので入れたい
@@ -33,7 +33,7 @@ RUN go install golang.org/x/tools/gopls@latest
 ちなみに[公式イメージ](https://github.com/gitpod-io/workspace-images/blob/master/full/Dockerfile)では `USER` が適切に設定されているのでこういったことは起こりません。
 
 ### 解決策
-```dockerfile:.gitpod.Dockerfile
+```dockerfile
 FROM akimon658/go-mecab-neologd:latest
 RUN go install golang.org/x/tools/gopls@latest && \
     chmod 777 -R /go
