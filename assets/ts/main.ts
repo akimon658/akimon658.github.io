@@ -1,5 +1,11 @@
 'use strict';
 
+declare var DISQUS: any
+declare var Fuse: any
+declare var loadComment: any
+declare var mediumZoom: any
+declare var template: any
+
 // get current theme
 function getNowTheme() {
 	let nowTheme = document.body.getAttribute('data-theme');
