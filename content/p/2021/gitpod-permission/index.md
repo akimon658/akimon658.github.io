@@ -7,7 +7,7 @@ draft: false
 ---
 
 [Gitpod](https://gitpod.io) では最初から全部入りの [gitpod/workspace-full](https://hub.docker.com/r/gitpod/workspace-full) というコンテナを使えるので、基本的にはこれを使っていれば事足ります。
-ただ今回は [MeCab](https://taku910.github.io/mecab/) という形態素解析エンジンと Golang で遊びたかったので、別で作っておいた[イメージ](https://github.com/Akimon658/go-mecab-neologd)を使用しようとしました。
+ただ今回は [MeCab](https://taku910.github.io/mecab/) という形態素解析エンジンと Golang で遊びたかったので、[別で作っておいたイメージ](https://github.com/Akimon658/go-mecab-neologd)を使用しようとしました。
 しかし permission 関係でちょっと詰まったので記事にしておこうと思います。
 
 ## Gitpod について
