@@ -9,6 +9,10 @@ header {
 		font-family: $title-font;
 		font-weight: 700;
 		white-space: nowrap;
+
+		&:hover {
+			color: var(--color-mute);
+		}
 	}
 
 	.title-sub {
