@@ -1,6 +1,9 @@
 {{ if eq .Section "search" }}
 <script defer src="https://cdn.jsdelivr.net/npm/art-template@4.13.2/lib/template-web.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+{{ $options := (dict "targetPath" "assets/js/search.min.js" "minify" true "target" "es2015" "format" "iife") }}
+{{ $js := resources.Get "ts/search.ts" | js.Build $options }}
+<script defer src="{{ $js.RelPermalink }}"></script>
 {{ else if eq .Section "archives" }}
 {{ else }}
 <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
