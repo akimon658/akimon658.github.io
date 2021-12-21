@@ -1,6 +1,7 @@
 ---
 title: 'How to replace home directory with "~" on PowerShell'
 date: 2021-12-13T16:42:00+09:00
+description: "About how to customize your PowerShell."
 draft: false
 ---
 

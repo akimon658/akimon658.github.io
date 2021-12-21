@@ -2,7 +2,7 @@
 title: "Gitpod で自作の Docker イメージを使おうとして permission 関係で詰まった"
 canonicalURL: "https://zenn.dev/akimon658/articles/gipod-permission"
 date: 2021-12-20T11:13:22+09:00
-description: ""
+description: "Linux の permission についてよく知らなくて詰まったときの話です。"
 draft: false
 ---
 
