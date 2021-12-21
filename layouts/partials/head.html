@@ -60,6 +60,6 @@
 	})(window, document, "clarity", "script", "95k7fmhfca");
 </script>
 
-{{ if .Params.canonicalURL }}
-<link rel="canonical" href="{{ .Params.canonicalURL }}" />
+{{ with .Params.canonicalURL }}
+<link rel="canonical" href="{{ . }}" />
 {{ end }}
