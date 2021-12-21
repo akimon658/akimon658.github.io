@@ -64,14 +64,35 @@ local_offer
 </span>
 </div>
 <div class="post-content markdown-body">
-<p><a href=https://gitpod.io target=_blank>Gitpod</a> では最初から全部入りの <a href=https://hub.docker.com/r/gitpod/workspace-full target=_blank>gitpod/workspace-full</a> というコンテナを使えるので、基本的にはこれを使っていれば事足ります。
-ただ今回は <a href=https://taku910.github.io/mecab/ target=_blank>MeCab</a> という形態素解析エンジンと Golang で遊びたかったので、<a href=https://github.com/Akimon658/go-mecab-neologd target=_blank>別で作っておいたイメージ</a>を使用しようとしました。
+<p><a href=https://gitpod.io target=_blank rel="noopener noreferrer">
+Gitpod
+</a>
+では最初から全部入りの <a href=https://hub.docker.com/r/gitpod/workspace-full target=_blank rel="noopener noreferrer">
+gitpod/workspace-full
+</a>
+というコンテナを使えるので、基本的にはこれを使っていれば事足ります。
+ただ今回は <a href=https://taku910.github.io/mecab/ target=_blank rel="noopener noreferrer">
+MeCab
+</a>
+という形態素解析エンジンと Golang で遊びたかったので、<a href=https://github.com/Akimon658/go-mecab-neologd target=_blank rel="noopener noreferrer">
+別で作っておいたイメージ
+</a>
+を使用しようとしました。
 しかし permission 関係でちょっと詰まったので記事にしておこうと思います。</p>
 <h2 id=gitpod-について>Gitpod について</h2>
 <p>ブラウザから使える開発環境です。
-まだ <a href=https://github.com/codespaces target=_blank>GitHub Codespaces</a> が使えず、また <a href=https://education.github.com target=_blank>GitHub Education</a> の特典で月100時間無料で使えるのでお世話になっています。</p>
+まだ <a href=https://github.com/codespaces target=_blank rel="noopener noreferrer">
+GitHub Codespaces
+</a>
+が使えず、また <a href=https://education.github.com target=_blank rel="noopener noreferrer">
+GitHub Education
+</a>
+の特典で月100時間無料で使えるのでお世話になっています。</p>
 <ul>
-<li><a href=https://gitpod.io target=_blank>gitpod.io</a></li>
+<li><a href=https://gitpod.io target=_blank rel="noopener noreferrer">
+gitpod.io
+</a>
+</li>
 </ul>
 <h2 id=やりたかったこと>やりたかったこと</h2>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-dockerfile data-lang=dockerfile><span style=color:#75715e># 自作イメージ</span><span style=color:#960050;background-color:#1e0010>
@@ -84,7 +105,10 @@ local_offer
 <h3 id=原因>原因</h3>
 <p>上記の Dockerfile で <code>go install</code> が root として実行されてしまっているのが原因です。
 なので <code>sudo</code> すれば解決しますが入っていないしやりたくないです。
-ちなみに<a href=https://github.com/gitpod-io/workspace-images/blob/master/full/Dockerfile target=_blank>公式イメージ</a>では <code>USER</code> が適切に設定されているのでこういったことは起こりません。</p>
+ちなみに<a href=https://github.com/gitpod-io/workspace-images/blob/master/full/Dockerfile target=_blank rel="noopener noreferrer">
+公式イメージ
+</a>
+では <code>USER</code> が適切に設定されているのでこういったことは起こりません。</p>
 <h3 id=解決策>解決策</h3>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-dockerfile data-lang=dockerfile><span style=color:#66d9ef>FROM</span><span style=color:#e6db74> akimon658/go-mecab-neologd:latest</span><span style=color:#960050;background-color:#1e0010>
 </span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> go install golang.org/x/tools/gopls@latest <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
@@ -94,7 +118,10 @@ local_offer
 <code>777</code> だと過剰かもしれませんが面倒だったので。</p>
 <p><code>chmod</code> について詳しくは以下の記事がとても参考になります。</p>
 <ul>
-<li><a href=https://qiita.com/shisama/items/5f4c4fa768642aad9e06 target=_blank>Linuxの権限確認と変更(chmod)（超初心者向け）</a></li>
+<li><a href=https://qiita.com/shisama/items/5f4c4fa768642aad9e06 target=_blank rel="noopener noreferrer">
+Linuxの権限確認と変更(chmod)（超初心者向け）
+</a>
+</li>
 </ul>
 <h2 id=あとがき>あとがき</h2>
 <p>原因はすぐに分かりましたが Linux の権限周りの仕組みを全く知らなかったので解決策に辿り着くまでに1時間ぐらい溶かしました。</p>

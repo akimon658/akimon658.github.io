@@ -87,7 +87,10 @@ Here is a built-in one.</p>
       <span style=color:#66d9ef>else</span> { <span style=color:#e6db74>&#39;&#39;</span> }) + <span style=color:#e6db74>&#39;PS &#39;</span> + $(Get-Location) +
         $(<span style=color:#66d9ef>if</span> ($NestedPromptLevel <span style=color:#f92672>-ge</span> 1) { <span style=color:#e6db74>&#39;&gt;&gt;&#39;</span> }) + <span style=color:#e6db74>&#39;&gt; &#39;</span>
 }
-</code></pre></div><p>Source: <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7.2#built-in-prompt" target=_blank>about Prompts - PowerShell | Microsoft Docs</a></p>
+</code></pre></div><p>Source: <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7.2#built-in-prompt" target=_blank rel="noopener noreferrer">
+about Prompts - PowerShell | Microsoft Docs
+</a>
+</p>
 <p>It seems using <code>$(Get-Location)</code> to get the current path, but we can&rsquo;t use it as a <code>string</code> (even if we use <code>$pwd</code>).
 So let&rsquo;s use <code>Convert-Path</code> instead.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>function</span> prompt {
@@ -114,7 +117,10 @@ All that is left is checking if it includes <code>$home</code> and replacing it.
 <p>This time we made just a little customize for PowerShell, but we can do more things with a profile.
 I&rsquo;m happy if this article will be helpful for you.</p>
 <p>Here is my profile for your reference.</p>
-<p><a href=https://github.com/Akimon658/pwsh-profile target=_blank>github.com/akimon658/pwsh-profile</a></p>
+<p><a href=https://github.com/Akimon658/pwsh-profile target=_blank rel="noopener noreferrer">
+github.com/akimon658/pwsh-profile
+</a>
+</p>
 </div>
 </article>
 <div class=post-comment data-comment=disqus>

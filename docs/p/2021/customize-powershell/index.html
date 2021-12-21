@@ -76,7 +76,10 @@ local_offer
       <span style=color:#66d9ef>else</span> { <span style=color:#e6db74>&#39;&#39;</span> }) + <span style=color:#e6db74>&#39;PS &#39;</span> + $(Get-Location) +
         $(<span style=color:#66d9ef>if</span> ($NestedPromptLevel <span style=color:#f92672>-ge</span> 1) { <span style=color:#e6db74>&#39;&gt;&gt;&#39;</span> }) + <span style=color:#e6db74>&#39;&gt; &#39;</span>
 }
-</code></pre></div><p>参考：<a href="https://docs.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7.2#built-in-prompt" target=_blank>プロンプトについて - PowerShell | Microsoft Docs</a></p>
+</code></pre></div><p>参考：<a href="https://docs.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7.2#built-in-prompt" target=_blank rel="noopener noreferrer">
+プロンプトについて - PowerShell | Microsoft Docs
+</a>
+</p>
 <p>カレントディレクトリの取得に <code>$(Get-Location)</code> が使われていますが、これだと文字列として扱うことができません（<code>$pwd</code> も同様）。そこで <code>Convert-Path</code> を使います。</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>function</span> prompt {
     $currentDir = (Convert-Path .)
@@ -100,7 +103,10 @@ local_offer
 </code></pre></div><h2 id=あとがき>あとがき</h2>
 <p>今回はちょっと表示をいじっただけですが、他にも色々できるので試してみてください。
 参考までに僕のリポジトリを置いておきます。</p>
-<p><a href=https://github.com/Akimon658/pwsh-profile target=_blank>github.com/akimon658/pwsh-profile</a></p>
+<p><a href=https://github.com/Akimon658/pwsh-profile target=_blank rel="noopener noreferrer">
+github.com/akimon658/pwsh-profile
+</a>
+</p>
 </div>
 </article>
 <div class=post-comment data-comment=disqus>
