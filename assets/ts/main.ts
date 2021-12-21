@@ -150,13 +150,13 @@ if (urlParams.has('s')) {
 			if (xhr.status === 200) {
 				// use index json to search
 				// console.log(xhr.response);
-				counter = searchAll(key, xhr.response, counter);
+				const result: any[] | 'notFound' = searchAll(key, xhr.response, counter)
 				// console.log(counter);
-				if (counter === 'notFound') {
+				if (result === 'notFound') {
 					infoElements[1].removeAttribute('style');
 				} else {
-					infoElements[0].innerHTML = infoElements[0].innerHTML.replace('[TIME]', counter[0]);
-					infoElements[0].innerHTML = infoElements[0].innerHTML.replace('[NUM]', counter[1]);
+					infoElements[0].innerHTML = infoElements[0].innerHTML.replace('[TIME]', result[0]);
+					infoElements[0].innerHTML = infoElements[0].innerHTML.replace('[NUM]', result[1]);
 					infoElements[0].removeAttribute('style');
 				}
 			} else {
