@@ -171,7 +171,7 @@ if (urlParams.has('s')) {
 const openMenu = document.getElementById('btn-menu')
 if (openMenu) {
 	openMenu.addEventListener('click', () => {
-		const menu = document.querySelector('.sidebar-mobile')
+		const menu = document.querySelector<HTMLElement>('.sidebar-mobile')
 		if (menu) {
 			if (menu.style.display === 'none') {
 				menu.setAttribute('style', 'display: flex;')
