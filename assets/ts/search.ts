@@ -1,4 +1,5 @@
-declare var Fuse: any
+import Fuse from 'fuse.js'
+
 declare var template: any
 
 // search by fuse.js

@@ -4,7 +4,8 @@ image:
 tasks:
   - command: hugo server -D -F --baseUrl $(gp url 1313) --liveReloadPort=443 --appendPort=false --bind=0.0.0.0
 
-  - command: git config --global user.email $GIT_COMMITTER_EMAIL
+  - init: npm install
+    command: git config --global user.email $GIT_COMMITTER_EMAIL
 
 ports:
   - port: 1313
