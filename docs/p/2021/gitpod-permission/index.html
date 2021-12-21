@@ -18,11 +18,12 @@
 <meta name=theme-color content="#ffffff">
 <title>Gitpod で自作の Docker イメージを使おうとして permission 関係で詰まった - Boring Time</title>
 <meta name=author content="Akimo">
+<meta name=description content="Linux の permission についてよく知らなくて詰まったときの話です。">
 <meta property="og:title" content="Gitpod で自作の Docker イメージを使おうとして permission 関係で詰まった">
 <meta name=twitter:title content="Gitpod で自作の Docker イメージを使おうとして permission 関係で詰まった">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://akimon658.github.io/p/2021/gitpod-permission/"><meta property="og:description" content="Gitpod では最初から全部入りの gitpod/workspace-full というコンテナを使えるので、基本的にはこれを使っていれば事足ります。 ただ今回は MeCab という形態素解析エンジンと Golang で遊び">
-<meta name=twitter:description content="Gitpod では最初から全部入りの gitpod/workspace-full というコンテナを使えるので、基本的にはこれを使っていれば事足ります。 ただ今回は MeCab という形態素解析エンジンと Golang で遊び"><meta name=twitter:card content="summary"><meta property="article:published_time" content="2021-12-20T11:13:22+09:00"><meta property="article:modified_time" content="2021-12-20T12:59:19+09:00">
+<meta property="og:url" content="https://akimon658.github.io/p/2021/gitpod-permission/"><meta property="og:description" content="Linux の permission についてよく知らなくて詰まったときの話です。">
+<meta name=twitter:description content="Linux の permission についてよく知らなくて詰まったときの話です。"><meta name=twitter:card content="summary"><meta property="article:published_time" content="2021-12-20T11:13:22+09:00"><meta property="article:modified_time" content="2021-12-21T11:49:52+09:00">
 <style>@media(prefers-color-scheme:dark){body[data-theme=auto] img{filter:brightness(60%)}}body[data-theme=dark] img{filter:brightness(60%)}</style>
 <link rel=stylesheet href=https://akimon658.github.io/assets/css/style.min.css>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-174918347-7')</script>
@@ -54,6 +55,12 @@ Gitpod で自作の Docker イメージを使おうとして permission 関係�
 event
 </span>
 &nbsp;2021-12-20
+</span>
+<span>
+<span class=material-icon>
+update
+</span>
+&nbsp;2021-12-21
 </span>
 <span>
 <span class=material-icon>
