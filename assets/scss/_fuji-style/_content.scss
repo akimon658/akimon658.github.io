@@ -209,12 +209,12 @@ article {
 		height: 2.5rem;
 
 		&:hover {
-			i {
+			span {
 				color: var(--color-primary);
 			}
 		}
 
-		i {
+		span {
 			color: var(--color-mute);
 			height: 100%;
 			font-size: 1.6rem;
