@@ -30,7 +30,7 @@ export function button() {
 			// if comment area loaded
 			if (document.querySelector('span.post-comment-notloaded')!.getAttribute('style')) {
 				if (commentArea.getAttribute('data-comment') === 'utterances') {
-					updateUtterancesTheme(document.querySelector('.post-comment iframe'))
+					updateUtterancesTheme(document.querySelector<HTMLIFrameElement>('.post-comment iframe')!)
 				}
 				if (commentArea.getAttribute('data-comment') === 'disqus') {
 					DISQUS.reset({
@@ -78,11 +78,11 @@ function getCurrentTheme() {
 }
 
 // update utterances theme
-function updateUtterancesTheme(utterancesFrame) {
+function updateUtterancesTheme(utterancesFrame: HTMLIFrameElement) {
 	let targetTheme = getCurrentTheme()
 	if (utterancesFrame) {
 		if (targetTheme === 'dark') {
-			utterancesFrame.contentWindow.postMessage(
+			utterancesFrame.contentWindow!.postMessage(
 				{
 					type: 'set-theme',
 					theme: 'photon-dark',
@@ -90,7 +90,7 @@ function updateUtterancesTheme(utterancesFrame) {
 				'https://utteranc.es'
 			)
 		} else {
-			utterancesFrame.contentWindow.postMessage(
+			utterancesFrame.contentWindow!.postMessage(
 				{
 					type: 'set-theme',
 					theme: 'github-light',

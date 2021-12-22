@@ -3,7 +3,7 @@ import Fuse from 'fuse.js'
 declare var template: any
 
 // search by fuse.js
-function searchAll(key: string, index, counter: number) {
+function searchAll(key: string, index: JSON[], counter: number) {
 	let fuse = new Fuse(index, {
 		shouldSort: true,
 		distance: 10000,
