@@ -9,6 +9,9 @@ publishDir: "docs"
 theme: "fuji"
 title: "Boring Time"
 
+build:
+  noJSConfigInAssets: true
+
 languages:
   ja:
     languageName: "日本語"
