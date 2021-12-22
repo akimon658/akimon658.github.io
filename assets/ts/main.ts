@@ -1,5 +1,3 @@
-'use strict'
-
 declare var DISQUS: any
 declare var loadComment: any
 declare var mediumZoom: any
