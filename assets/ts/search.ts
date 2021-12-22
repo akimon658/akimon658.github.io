@@ -3,7 +3,7 @@ import Fuse from 'fuse.js'
 declare var template: any
 
 // search by fuse.js
-function searchAll(key, index, counter) {
+function searchAll(key: string, index, counter: number) {
 	let fuse = new Fuse(index, {
 		shouldSort: true,
 		distance: 10000,
@@ -25,7 +25,7 @@ function searchAll(key, index, counter) {
 	let result = fuse.search(key)
 	// console.log(result)
 	if (result.length > 0) {
-		document.getElementById('search-result').innerHTML = template('search-result-template', result)
+		document.getElementById('search-result')!.innerHTML = template('search-result-template', result)
 		return [new Date().getTime() - counter, result.length]
 	} else {
 		return 'notFound'
@@ -36,8 +36,8 @@ let urlParams = new URLSearchParams(window.location.search) // get params from U
 if (urlParams.has('s')) {
 	let counter = new Date().getTime()
 	let infoElements = document.querySelectorAll('.search-result-info')
-	let key = urlParams.get('s') // get search keyword, divided by space
-	document.querySelector('.search-input input').setAttribute('value', key)
+	let key = urlParams.get('s')! // get search keyword, divided by space
+	document.querySelector('.search-input input')!.setAttribute('value', key)
 	// get search index from json
 	let xhr = new XMLHttpRequest()
 	xhr.open('GET', 'index.json', true)

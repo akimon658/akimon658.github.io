@@ -14,11 +14,11 @@ function getNowTheme() {
 
 // load comment button only when comment area exist
 if (document.querySelector('span.post-comment-notloaded')) {
-	document.querySelector('span.post-comment-notloaded').addEventListener('click', loadComment)
+	document.querySelector('span.post-comment-notloaded')!.addEventListener('click', loadComment)
 }
 
 // to-top button
-document.querySelector('.btn .btn-scroll-top').addEventListener('click', () => {
+document.querySelector('.btn .btn-scroll-top')!.addEventListener('click', () => {
 	document.documentElement.scrollTop = 0
 })
 
@@ -57,7 +57,7 @@ function updateUtterancesTheme(utterancesFrame) {
 }
 
 // theme switch button
-document.querySelector('.btn .btn-toggle-mode').addEventListener('click', () => {
+document.querySelector('.btn .btn-toggle-mode')!.addEventListener('click', () => {
 	let nowTheme = getNowTheme()
 	let domTheme = document.body.getAttribute('data-theme')
 	const needAuto = document.body.getAttribute('data-theme-auto') === 'true'
@@ -82,7 +82,7 @@ document.querySelector('.btn .btn-toggle-mode').addEventListener('click', () => 
 	let commentArea = document.querySelector('.post-comment')
 	if (commentArea) {
 		// if comment area loaded
-		if (document.querySelector('span.post-comment-notloaded').getAttribute('style')) {
+		if (document.querySelector('span.post-comment-notloaded')!.getAttribute('style')) {
 			if (commentArea.getAttribute('data-comment') === 'utterances') {
 				updateUtterancesTheme(document.querySelector('.post-comment iframe'))
 			}
