@@ -4,7 +4,7 @@ declare var loadComment: any
 export function button() {
 	const button = document.querySelector<HTMLElement>('.btn')!
 	var timeoutId: number
-	window.addEventListener('scroll', () => {
+	window.addEventListener('scroll', function () {
 		button.style.visibility = 'hidden'
 
 		clearTimeout(timeoutId)
@@ -14,7 +14,7 @@ export function button() {
 	})
 
 	// theme switch button
-	document.querySelector('.btn .btn-toggle-mode')!.addEventListener('click', () => {
+	document.querySelector('.btn .btn-toggle-mode')!.addEventListener('click', function () {
 		let nowTheme = getCurrentTheme()
 		let domTheme = document.body.getAttribute('data-theme')
 		const needAuto = document.body.getAttribute('data-theme-auto') === 'true'
@@ -55,7 +55,7 @@ export function button() {
 	/* mobile menu  */
 	const openMenu = document.getElementById('btn-menu')
 	if (openMenu) {
-		openMenu.addEventListener('click', () => {
+		openMenu.addEventListener('click', function () {
 			const menu = document.querySelector<HTMLElement>('.sidebar-mobile')
 			if (menu) {
 				if (menu.style.display === 'none') {
@@ -68,7 +68,7 @@ export function button() {
 	}
 
 	// to-top button
-	document.querySelector('.btn .btn-scroll-top')!.addEventListener('click', () => {
+	document.querySelector('.btn .btn-scroll-top')!.addEventListener('click', function () {
 		document.documentElement.scrollTop = 0
 	})
 

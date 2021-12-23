@@ -2,7 +2,7 @@ import { button } from './button'
 
 declare var mediumZoom: any
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
 	if (typeof mediumZoom === 'function') {
 		mediumZoom('.img-zoomable', {
 			margin: 32,

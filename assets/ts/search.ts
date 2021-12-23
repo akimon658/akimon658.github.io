@@ -42,13 +42,13 @@ if (urlParams.has('s')) {
 	let xhr = new XMLHttpRequest()
 	xhr.open('GET', 'index.json', true)
 	xhr.responseType = 'json'
-	xhr.onerror = () => {
+	xhr.onerror = function () {
 		infoElements[2].removeAttribute('style')
 	}
-	xhr.ontimeout = () => {
+	xhr.ontimeout = function () {
 		infoElements[2].removeAttribute('style')
 	}
-	xhr.onreadystatechange = () => {
+	xhr.onreadystatechange = function () {
 		if (xhr.readyState === 4) {
 			if (xhr.status === 200) {
 				// use index json to search
