@@ -2,6 +2,17 @@ declare var DISQUS: any
 declare var loadComment: any
 
 export function button() {
+	const button = document.querySelector<HTMLElement>('.btn')!
+	var timeoutId: number
+	window.addEventListener('scroll', () => {
+		button.style.visibility = 'hidden'
+
+		clearTimeout(timeoutId)
+		timeoutId = setTimeout(function () {
+			button.style.visibility = 'visible'
+		}, 500)
+	})
+
 	// theme switch button
 	document.querySelector('.btn .btn-toggle-mode')!.addEventListener('click', () => {
 		let nowTheme = getCurrentTheme()
