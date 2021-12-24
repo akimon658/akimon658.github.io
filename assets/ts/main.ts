@@ -1,4 +1,5 @@
 import { button } from './button'
+import { header } from './header'
 
 declare var mediumZoom: any
 
@@ -13,3 +14,4 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 button()
+header()
