@@ -7,6 +7,7 @@
 body {
 	background-color: var(--color-bg);
 	color: var(--color-font);
+	margin: 4rem;
 
 	@include link-1();
 }
