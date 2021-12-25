@@ -13,7 +13,7 @@ export function button() {
 		}, 500)
 	})
 
-	document.querySelector('.btn-toggle-mode')!.addEventListener('click', function () {
+	document.getElementById('switch-theme')!.addEventListener('click', function () {
 		switchTheme()
 	})
 
