@@ -6,6 +6,7 @@ googleAnalytics: "UA-174918347-7"
 hasCJKLanguage: true
 languageCode: "ja"
 publishDir: "docs"
+summaryLength: 50
 theme: "fuji"
 title: "Boring Time"
 
