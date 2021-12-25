@@ -14,7 +14,7 @@ export function button() {
 	})
 
 	// theme switch button
-	document.querySelector('.btn .btn-toggle-mode')!.addEventListener('click', function () {
+	document.querySelector('.btn-toggle-mode')!.addEventListener('click', function () {
 		let nowTheme = getCurrentTheme()
 		let domTheme = document.body.getAttribute('data-theme')
 		const needAuto = document.body.getAttribute('data-theme-auto') === 'true'
