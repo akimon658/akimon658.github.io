@@ -1,5 +1,5 @@
 {{ define "main" }}
-<article>
+<article data-clarity-region="article">
 	<!-- post meta -->
 	<h1 class="post-item post-title">
 		{{ .Title }}
@@ -16,8 +16,13 @@
 {{ if and (or .Site.Params.showLicense .Params.showLicense) (ne .Params.showLicense false) }}
 <div class="license markdown-body">
 	<blockquote>
-		<p>{{ i18n "postCopyrightFront" }}<a rel="license" href="{{ .Site.Params.licenseLink }}" target="_blank">{{
-				.Site.Params.license }}</a>{{ i18n "postCopyrightEnd" }}</p>
+		<p>
+			{{ i18n "postCopyrightFront" }}
+			<a rel="license" href="{{ .Site.Params.licenseLink }}" target="_blank">
+				{{ .Site.Params.license }}
+			</a>
+			{{ i18n "postCopyrightEnd" }}
+		</p>
 	</blockquote>
 </div>
 {{ end }}
