@@ -7,6 +7,7 @@
 body {
 	background-color: var(--color-bg);
 	color: var(--color-font);
+	margin-top: 4rem;
 
 	@include link-1();
 }
@@ -55,6 +56,10 @@ footer {
 }
 
 .markdown-body {
+	a {
+		color: var(--color-text-link);
+	}
+
 	h1,
 	h2,
 	h3,
@@ -102,7 +107,7 @@ footer {
 
 	span.post-comment-notloaded {
 		padding: 1.5rem 0;
-		color: var(--color-secondary);
+		color: var(--color-text-link);
 		cursor: pointer;
 
 		&:hover {

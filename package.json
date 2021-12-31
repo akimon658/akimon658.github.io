@@ -3,7 +3,7 @@
     "fuse.js": "^6.4.6"
   },
   "name": "akimon658.github.io",
-  "description": "The source for [akimon658.github.io](https://akimon658.github.io/)",
+  "description": "The source for akimon658.github.io",
   "version": "1.0.0",
   "main": "assets/ts/main.ts",
   "directories": {

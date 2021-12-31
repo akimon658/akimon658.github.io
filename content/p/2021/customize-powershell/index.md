@@ -15,8 +15,6 @@ Bash でいう `.bashrc` のように、起動時に読み込まれるファイ�
 見た目に関する処理は `prompt` 関数に書きます。
 デフォルトではこんな感じです。
 
-<!--more-->
-
 ```powershell
 function prompt {
     $(if (Test-Path variable:/PSDebugContext) { '[DBG]: ' }

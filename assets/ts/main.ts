@@ -1,8 +1,9 @@
 import { button } from './button'
+import { header } from './header'
 
 declare var mediumZoom: any
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
 	if (typeof mediumZoom === 'function') {
 		mediumZoom('.img-zoomable', {
 			margin: 32,
@@ -13,3 +14,4 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 button()
+header()

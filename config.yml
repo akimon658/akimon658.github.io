@@ -6,6 +6,7 @@ googleAnalytics: "UA-174918347-7"
 hasCJKLanguage: true
 languageCode: "ja"
 publishDir: "docs"
+summaryLength: 50
 theme: "fuji"
 title: "Boring Time"
 
@@ -39,17 +40,19 @@ languages:
           URL: "https://twitter.com/kimo_pk"
 
       nav:
-        - Name: "About"
-          URL: "/en/about/"
-
         - Name: "Home"
           URL: "/en/"
-
-        - Name: "Privacy Policy"
-          URL: "/en/privacy-policy/"
+          weight: 1
 
         - Name: "Search"
           URL: "/en/search/"
+          weight: 2
+
+        - Name: "About"
+          URL: "/en/about/"
+
+        - Name: "Privacy Policy"
+          URL: "/en/privacy-policy/"
 
 markup:
   goldmark:
@@ -74,17 +77,19 @@ Menus:
       URL: "https://twitter.com/kimo_pk"
 
   nav:
-    - Name: "About"
-      URL: "/about/"
-
     - Name: "Home"
       URL: "/"
-
-    - Name: "Privacy Policy"
-      URL: "/privacy-policy/"
+      weight: 1
 
     - Name: "Search"
       URL: "/search/"
+      weight: 2
+
+    - Name: "About"
+      URL: "/about/"
+
+    - Name: "Privacy Policy"
+      URL: "/privacy-policy/"
 
 outputFormats:
   SearchIndex:

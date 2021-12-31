@@ -2,62 +2,29 @@ declare var DISQUS: any
 declare var loadComment: any
 
 export function button() {
-	// theme switch button
-	document.querySelector('.btn .btn-toggle-mode')!.addEventListener('click', () => {
-		let nowTheme = getCurrentTheme()
-		let domTheme = document.body.getAttribute('data-theme')
-		const needAuto = document.body.getAttribute('data-theme-auto') === 'true'
-		let systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+	const buttons = document.querySelector<HTMLElement>('.btn')!
+	var timeoutId: number
+	window.addEventListener('scroll', function () {
+		buttons.style.visibility = 'hidden'
 
-		if (domTheme === 'auto') {
-			// if now in auto mode, switch to user mode
-			document.body.setAttribute('data-theme', nowTheme === 'light' ? 'dark' : 'light')
-			localStorage.setItem('fuji_data-theme', nowTheme === 'light' ? 'dark' : 'light')
-		} else if (domTheme === 'light') {
-			const tar = systemTheme === 'dark' ? (needAuto ? 'auto' : 'dark') : 'dark'
-			document.body.setAttribute('data-theme', tar)
-			localStorage.setItem('fuji_data-theme', tar)
-		} else {
-			const tar = systemTheme === 'light' ? (needAuto ? 'auto' : 'light') : 'light'
-			document.body.setAttribute('data-theme', tar)
-			localStorage.setItem('fuji_data-theme', tar)
-		}
-
-		// switch comment area theme
-		// if this page has comment area
-		let commentArea = document.querySelector('.post-comment')
-		if (commentArea) {
-			// if comment area loaded
-			if (document.querySelector('span.post-comment-notloaded')!.getAttribute('style')) {
-				if (commentArea.getAttribute('data-comment') === 'utterances') {
-					updateUtterancesTheme(document.querySelector<HTMLIFrameElement>('.post-comment iframe')!)
-				}
-				if (commentArea.getAttribute('data-comment') === 'disqus') {
-					DISQUS.reset({
-						reload: true,
-					})
-				}
-			}
-		}
+		clearTimeout(timeoutId)
+		timeoutId = setTimeout(function () {
+			buttons.style.visibility = 'visible'
+		}, 500)
 	})
 
-	/* mobile menu  */
-	const openMenu = document.getElementById('btn-menu')
-	if (openMenu) {
-		openMenu.addEventListener('click', () => {
-			const menu = document.querySelector<HTMLElement>('.sidebar-mobile')
-			if (menu) {
-				if (menu.style.display === 'none') {
-					menu.setAttribute('style', 'display: flex;')
-				} else {
-					menu.setAttribute('style', 'display: none;')
-				}
-			}
+	document.getElementById('switch-theme')!.addEventListener('click', function () {
+		switchTheme()
+	})
+
+	const menuButton = document.getElementById('btn-menu')
+	if (menuButton) {
+		menuButton.addEventListener('click', function () {
+			menuOpener()
 		})
 	}
 
-	// to-top button
-	document.querySelector('.btn .btn-scroll-top')!.addEventListener('click', () => {
+	document.querySelector('.btn-scroll-top')!.addEventListener('click', function () {
 		document.documentElement.scrollTop = 0
 	})
 
@@ -67,13 +34,61 @@ export function button() {
 	}
 }
 
-// get current theme
 function getCurrentTheme() {
-	let nowTheme = document.body.getAttribute('data-theme')
-	if (nowTheme === 'auto') {
+	let currentTheme = document.body.getAttribute('data-theme')
+	if (currentTheme === 'auto') {
 		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 	} else {
-		return nowTheme === 'dark' ? 'dark' : 'light'
+		return currentTheme === 'dark' ? 'dark' : 'light'
+	}
+}
+
+function menuOpener() {
+	const menu = document.querySelector<HTMLElement>('.sidebar-mobile')
+	if (menu) {
+		if (menu.style.display === 'none') {
+			menu.setAttribute('style', 'display: flex;')
+		} else {
+			menu.setAttribute('style', 'display: none;')
+		}
+	}
+}
+
+function switchTheme() {
+	let currentTheme = getCurrentTheme()
+	let domTheme = document.body.getAttribute('data-theme')
+	const needAuto = document.body.getAttribute('data-theme-auto') === 'true'
+	let systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+
+	if (domTheme === 'auto') {
+		// if now in auto mode, switch to user mode
+		document.body.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light')
+		localStorage.setItem('fuji_data-theme', currentTheme === 'light' ? 'dark' : 'light')
+	} else if (domTheme === 'light') {
+		const tar = systemTheme === 'dark' ? (needAuto ? 'auto' : 'dark') : 'dark'
+		document.body.setAttribute('data-theme', tar)
+		localStorage.setItem('fuji_data-theme', tar)
+	} else {
+		const tar = systemTheme === 'light' ? (needAuto ? 'auto' : 'light') : 'light'
+		document.body.setAttribute('data-theme', tar)
+		localStorage.setItem('fuji_data-theme', tar)
+	}
+
+	// switch comment area theme
+	// if this page has comment area
+	let commentArea = document.querySelector('.post-comment')
+	if (commentArea) {
+		// if comment area loaded
+		if (document.querySelector('span.post-comment-notloaded')!.getAttribute('style')) {
+			if (commentArea.getAttribute('data-comment') === 'utterances') {
+				updateUtterancesTheme(document.querySelector<HTMLIFrameElement>('.post-comment iframe')!)
+			}
+			if (commentArea.getAttribute('data-comment') === 'disqus') {
+				DISQUS.reset({
+					reload: true,
+				})
+			}
+		}
 	}
 }
 
