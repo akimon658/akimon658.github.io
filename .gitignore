@@ -1,6 +1,4 @@
 .vscode/
-node_modules/
 resources/_gen/assets/
 
 .hugo_build.lock
-.pnpm-debug.log
