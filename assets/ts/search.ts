@@ -1,6 +1,5 @@
 import Fuse from 'fuse.js'
-
-declare var template: any
+import template from 'https://cdn.jsdelivr.net/npm/art-template@4.13.2/lib/template-web.min.js'
 
 // search by fuse.js
 function searchAll(key: string, index: JSON[], counter: number) {
