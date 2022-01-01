@@ -1,5 +1,4 @@
 {{ if eq .Section "search" }}
-<script defer src="https://cdn.jsdelivr.net/npm/art-template@4.13.2/lib/template-web.min.js"></script>
 {{ $options := (dict "targetPath" "assets/js/search.min.js" "minify" true "target" "es2015" "format" "iife") }}
 {{ $js := resources.Get "ts/search.ts" | js.Build $options }}
 <script defer src="{{ $js.RelPermalink }}"></script>
@@ -11,7 +10,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
 {{ end }}
 {{ $options := (dict "targetPath" "assets/js/script.min.js" "minify" true "target" "es2015" "format" "iife") }}
-{{ $js := resources.Get "ts/main.ts" | js.Build $options }}
+{{ $js := resources.Get "js/script.js" | js.Build $options }}
 <script defer src="{{ $js.RelPermalink }}"></script>
 {{ if or .Params.math .Site.Params.math }}
 {{ partial "math.html" . }}

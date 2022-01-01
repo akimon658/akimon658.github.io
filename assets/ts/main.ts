@@ -1,5 +1,5 @@
-import { button } from './button'
-import { header } from './header'
+import { button } from './button.ts'
+import { header } from './header.ts'
 
 declare var mediumZoom: any
 
