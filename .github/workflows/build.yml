@@ -27,12 +27,13 @@ jobs:
           submodules: true
 
       - name: Setup Deno
-        uses: denoland/setup-deno@v2
+        uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
         
       - name: Bundle JS
         run: |
+          mkdir assets/js
           deno bundle assets/ts/main.ts assets/js/script.js --config deno.json
           deno bundle assets/ts/search.ts assets/js/search.js --config deno.json
 
