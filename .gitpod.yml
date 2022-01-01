@@ -3,6 +3,7 @@ image:
 
 tasks:
   - init: >
+      mkdir assets/js &&
       deno bundle assets/ts/main.ts assets/js/script.js --config deno.json &&
       deno bundle assets/ts/search.ts assets/js/search.js --config deno.json
     command: hugo server -D -F --baseUrl $(gp url 1313) --liveReloadPort=443 --appendPort=false --bind=0.0.0.0
