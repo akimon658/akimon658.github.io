@@ -3,7 +3,7 @@ declare var loadComment: any
 
 export function button() {
 	const buttons = document.querySelector<HTMLElement>('.btn')!
-	var timeoutId: number
+	let timeoutId: number
 	window.addEventListener('scroll', function () {
 		buttons.style.visibility = 'hidden'
 
@@ -35,7 +35,7 @@ export function button() {
 }
 
 function getCurrentTheme() {
-	let currentTheme = document.body.getAttribute('data-theme')
+	const currentTheme = document.body.getAttribute('data-theme')
 	if (currentTheme === 'auto') {
 		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 	} else {
@@ -55,10 +55,10 @@ function menuOpener() {
 }
 
 function switchTheme() {
-	let currentTheme = getCurrentTheme()
-	let domTheme = document.body.getAttribute('data-theme')
-	const needAuto = document.body.getAttribute('data-theme-auto') === 'true'
-	let systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+	const currentTheme = getCurrentTheme(),
+		domTheme = document.body.getAttribute('data-theme'),
+		needAuto = document.body.getAttribute('data-theme-auto') === 'true',
+		systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 
 	if (domTheme === 'auto') {
 		// if now in auto mode, switch to user mode
@@ -76,7 +76,7 @@ function switchTheme() {
 
 	// switch comment area theme
 	// if this page has comment area
-	let commentArea = document.querySelector('.post-comment')
+	const commentArea = document.querySelector('.post-comment')
 	if (commentArea) {
 		// if comment area loaded
 		if (document.querySelector('span.post-comment-notloaded')!.getAttribute('style')) {
@@ -94,7 +94,7 @@ function switchTheme() {
 
 // update utterances theme
 function updateUtterancesTheme(utterancesFrame: HTMLIFrameElement) {
-	let targetTheme = getCurrentTheme()
+	const targetTheme = getCurrentTheme()
 	if (utterancesFrame) {
 		if (targetTheme === 'dark') {
 			utterancesFrame.contentWindow!.postMessage(
