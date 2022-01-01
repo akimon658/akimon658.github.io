@@ -1,6 +1,6 @@
 {{ if eq .Section "search" }}
 {{ $options := (dict "targetPath" "assets/js/search.min.js" "minify" true "target" "es2015" "format" "iife") }}
-{{ $js := resources.Get "ts/search.ts" | js.Build $options }}
+{{ $js := resources.Get "js/search.js" | js.Build $options }}
 <script defer src="{{ $js.RelPermalink }}"></script>
 {{ else if eq .Section "archives" }}
 {{ else }}
