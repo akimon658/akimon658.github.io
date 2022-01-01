@@ -3,7 +3,7 @@ import template from 'https://esm.sh/art-template@4.13.2/lib/template-web.js'
 
 // search by fuse.js
 function searchAll(key: string, index: JSON[], counter: number) {
-	let fuse = new Fuse(index, {
+	const fuse = new Fuse(index, {
 		shouldSort: true,
 		distance: 10000,
 		keys: [
@@ -21,7 +21,7 @@ function searchAll(key: string, index: JSON[], counter: number) {
 			},
 		],
 	})
-	let result = fuse.search(key)
+	const result = fuse.search(key)
 	// console.log(result)
 	if (result.length > 0) {
 		document.getElementById('search-result')!.innerHTML = template('search-result-template', result)
@@ -31,14 +31,14 @@ function searchAll(key: string, index: JSON[], counter: number) {
 	}
 }
 
-let urlParams = new URLSearchParams(window.location.search) // get params from URL
+const urlParams = new URLSearchParams(window.location.search) // get params from URL
 if (urlParams.has('s')) {
-	let counter = new Date().getTime()
-	let infoElements = document.querySelectorAll('.search-result-info')
-	let key = urlParams.get('s')! // get search keyword, divided by space
+	const counter = new Date().getTime()
+	const infoElements = document.querySelectorAll('.search-result-info')
+	const key = urlParams.get('s')! // get search keyword, divided by space
 	document.querySelector('.search-input input')!.setAttribute('value', key)
 	// get search index from json
-	let xhr = new XMLHttpRequest()
+	const xhr = new XMLHttpRequest()
 	xhr.open('GET', 'index.json', true)
 	xhr.responseType = 'json'
 	xhr.onerror = function () {
