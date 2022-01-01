@@ -1,7 +1,7 @@
 import { button } from './button.ts'
 import { header } from './header.ts'
 
-declare var mediumZoom: any
+import mediumZoom from 'https://esm.sh/medium-zoom@1.0.6/dist/medium-zoom.js'
 
 document.addEventListener('DOMContentLoaded', function () {
 	if (typeof mediumZoom === 'function') {
