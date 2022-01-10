@@ -1,0 +1,345 @@
+<!doctype html><html lang=ja>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=HandheldFriendly content="True">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta http-equiv=cache-control content="no-transform">
+<meta http-equiv=cache-control content="no-siteapp">
+<meta name=generator content="Hugo 0.91.2">
+<link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/icons/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/icons/favicon-16x16.png>
+<link rel=manifest href=/icons/site.webmanifest>
+<link rel=mask-icon href=/icons/safari-pinned-tab.svg color=#5bbad5>
+<link rel="shortcut icon" href=/icons/favicon.ico>
+<meta name=msapplication-TileColor content="#2d89ef">
+<meta name=msapplication-config content="/icons/browserconfig.xml">
+<meta name=theme-color content="#ffffff">
+<title>DeeloCloud なる会社？からメールが来た - Boring Time</title>
+<meta name=author content="Akimo">
+<meta property="og:title" content="DeeloCloud なる会社？からメールが来た">
+<meta name=twitter:title content="DeeloCloud なる会社？からメールが来た">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://akimon658.github.io/p/2022/deelocloud/"><meta property="og:description" content="GitHub に自分用の Dockerfile を置いていたら DeeloCloud なるサービスの owner を名乗る方からメールが来ました。 見るからに怪しさ全開で">
+<meta name=twitter:description content="GitHub に自分用の Dockerfile を置いていたら DeeloCloud なるサービスの owner を名乗る方からメールが来ました。 見るからに怪しさ全開で"><meta name=twitter:card content="summary"><meta property="article:published_time" content="2022-01-10T11:45:00+09:00"><meta property="article:modified_time" content="2022-01-10T11:47:19+09:00">
+<style>@media(prefers-color-scheme:dark){body[data-theme=auto] img{filter:brightness(60%)}}body[data-theme=dark] img{filter:brightness(60%)}</style>
+<link rel=stylesheet href=https://akimon658.github.io/assets/css/style.min.css>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-174918347-7')</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174918347-7"></script>
+<script>(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},c=e.createElement(f),c.async=1,c.src="https://www.clarity.ms/tag/"+g+"?ref=bwt",d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","95k7fmhfca")</script>
+</head>
+<body data-theme=auto data-theme-auto=false>
+<script data-cfasync=false>var fujiThemeData=localStorage.getItem('fuji_data-theme');fujiThemeData?fujiThemeData!=='auto'&&document.body.setAttribute('data-theme',fujiThemeData==='dark'?'dark':'light'):localStorage.setItem('fuji_data-theme','auto')</script>
+<header>
+<div class="container-lg clearfix">
+<div class="col-12 header">
+<a class=title-main href=https://akimon658.github.io/>
+Boring Time
+</a>
+<div id=switch-theme>
+<span class=material-icon>
+brightness_medium
+</span>
+</div>
+</div>
+</div>
+</header>
+<main>
+<div class="container-lg clearfix">
+<div class="col-12 col-md-9 float-left content">
+<article data-clarity-region=article>
+<h1 class="post-item post-title">
+DeeloCloud なる会社？からメールが来た
+</h1>
+<div class="post-item post-meta">
+<span>
+<span class=material-icon>
+event
+</span>
+&nbsp;2022-01-10
+</span>
+<span>
+<span class=material-icon>
+local_offer
+</span>
+&nbsp;
+タグはありません
+</span>
+</div>
+<div class="post-content markdown-body">
+<p>GitHub に自分用の Dockerfile を置いていたら DeeloCloud なるサービスの owner を名乗る方からメールが来ました。
+見るからに怪しさ全開でしたが、すぐにスパムと決めつけるのは良くないと思ったのでちゃんと調べることにしました。</p>
+<h2 id=deelocloud-とは>DeeloCloud とは</h2>
+<blockquote>
+<p><strong>Easily deploy and host your apps</strong></p>
+<p>DeeloCloud handles the deployment and hosting of your backend and frontend apps so that you can focus on building instead of managing infrastructure.</p>
+</blockquote>
+<p>だそうです（<a href=https://www.deelo.cloud target=_blank rel="noopener noreferrer">
+公式サイト
+</a>
+より）。
+リポジトリの変更を検知して勝手にデプロイしてくれるんだとか。</p>
+<p>まぁ Readme 読めば Web サービスじゃないと分かるリポジトリに対して「そのプロジェクト、うちで無料でホスティングしないか？」みたいなメールを送ってきていたので、そもそも使う気は無いんですけどね。</p>
+<h2 id=めちゃくちゃ怪しい>めちゃくちゃ怪しい</h2>
+<h3 id=薄っぺらいドキュメント>薄っぺらいドキュメント</h3>
+<p>書かれているのはほぼさっき引用したのと同じで、具体的なことが一切書かれていません。
+ログインしたら何か変わる可能性もありますが……。</p>
+<h3 id=github-でのサインアップ>GitHub でのサインアップ</h3>
+<p>まず、メールアドレス等でのアカウント作成はできず GitHub との連携が必須です。
+これはまだ GitHub との連携が前提のサービスなので分かりますが、問題は許可しなきゃいけない権限が多すぎること。
+メールアドレスやプロフィールの読み取りはもちろん、</p>
+<blockquote>
+<p>This application will be able to <strong>read and write all public and private repository data</strong>.
+This includes the following:</p>
+<ul>
+<li>Code</li>
+<li>Issues</li>
+<li>Pull requests</li>
+<li>Wikis</li>
+<li>Settings</li>
+<li>Webhooks and services</li>
+<li>Deploy keys</li>
+<li>Collaboration invites</li>
+</ul>
+</blockquote>
+<p>……。潔いですね。</p>
+<h3 id=もちろん定型文メール>もちろん定型文メール</h3>
+<p>当たり前ですが<a href=https://www.reddit.com/r/Hosting/comments/rxfapx/deelocloud/ target=_blank rel="noopener noreferrer">
+僕が受け取ったのと全く同じ内容のメールを受け取っている人
+</a>
+がいました。
+2022年に入った辺りから増えているみたいです。
+GitHub で公開しているメールアドレスにバンバン送っているみたいで、<a href=https://github.com/keras-team target=_blank rel="noopener noreferrer">
+keras-team
+</a>
+という organization に設定されているのが <a href=https://groups.google.com/g/keras-users target=_blank rel="noopener noreferrer">
+Keras-users
+</a>
+という Google グループのアドレスだったせいで<a href=https://groups.google.com/g/keras-users/c/3QdTeLA-YlQ target=_blank rel="noopener noreferrer">
+メーリングリストにスパムが紛れ込む
+</a>
+のはこの世の終わりみたいでちょっと笑ったりしました。</p>
+<h2 id=あとがき>あとがき</h2>
+<p>仮に詐欺じゃなかったとしても、無料プランだと RAM 250 MB しかないので使わないよ……。</p>
+</div>
+</article>
+<div class=post-comment data-comment=disqus>
+<span class=post-comment-notloaded>
+<span class=material-icon>
+comment
+</span>
+&nbsp;コメントを表示
+</span>
+<div id=disqus_thread style=display:none></div>
+<script>function loadComment(){var b=document.querySelector('.post-comment'),c=function(){this.language='ja',this.page.url='https://akimon658.github.io/p/2022/deelocloud/',this.page.identifier='deelocloud'},a=document.createElement('script');a.src='https://akimon658-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),document.querySelector('#disqus_thread').removeAttribute('style'),(document.body||document.head).appendChild(a),document.querySelector('span.post-comment-notloaded').setAttribute('style','display: none;')}</script>
+</div>
+</div>
+<aside class="col-12 col-md-3 float-left sidebar">
+<div class=sidebar-item>
+</div>
+<div class="sidebar-item sidebar-pages">
+<h3>
+Pages
+</h3>
+<ul>
+<li>
+<a href=/>
+Home
+</a>
+</li>
+<li>
+<a href=/search/>
+Search
+</a>
+</li>
+<li>
+<a href=/about/>
+About
+</a>
+</li>
+<li>
+<a href=/privacy-policy/>
+Privacy Policy
+</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-item sidebar-links">
+<h3>
+Links
+</h3>
+<ul>
+<li>
+<a href=mailto:akimo_greninja@yahoo.co.jp target=_blank rel="noopener noreferrer">
+<span>
+Email
+</span>
+</a>
+</li>
+<li>
+<a href=https://github.com/Akimon658 target=_blank rel="noopener noreferrer">
+<span>
+GitHub
+</span>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/Akimon658 target=_blank rel="noopener noreferrer">
+<span>
+Twitter (Pokémon)
+</span>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/kimo_pk target=_blank rel="noopener noreferrer">
+<span>
+Twitter (other)
+</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-item sidebar-tags">
+<h3>
+Tags
+</h3>
+<div>
+</div>
+</div>
+<div class="sidebar-item sidebar-toc">
+<h3>
+Contents
+</h3><nav id=TableOfContents>
+<ul>
+<li><a href=#deelocloud-とは>DeeloCloud とは</a></li>
+<li><a href=#めちゃくちゃ怪しい>めちゃくちゃ怪しい</a>
+<ul>
+<li><a href=#薄っぺらいドキュメント>薄っぺらいドキュメント</a></li>
+<li><a href=#github-でのサインアップ>GitHub でのサインアップ</a></li>
+<li><a href=#もちろん定型文メール>もちろん定型文メール</a></li>
+</ul>
+</li>
+<li><a href=#あとがき>あとがき</a></li>
+</ul>
+</nav></div>
+</aside>
+</div>
+<div class=btn>
+<div class=btn-menu id=btn-menu>
+<span class=material-icon>
+menu
+</span>
+</div>
+<div class=btn-scroll-top>
+<span class=material-icon>
+keyboard_arrow_up
+</span>
+</div>
+</div>
+<aside class=sidebar-mobile style=display:none>
+<div class=sidebar-wrapper>
+<div class="sidebar-item sidebar-pages">
+<h3>
+Pages
+</h3>
+<ul>
+<li>
+<a href=/>
+Home
+</a>
+</li>
+<li>
+<a href=/search/>
+Search
+</a>
+</li>
+<li>
+<a href=/about/>
+About
+</a>
+</li>
+<li>
+<a href=/privacy-policy/>
+Privacy Policy
+</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-item sidebar-links">
+<h3>
+Links
+</h3>
+<ul>
+<li>
+<a href=mailto:akimo_greninja@yahoo.co.jp target=_blank rel="noopener noreferrer">
+<span>
+Email
+</span>
+</a>
+</li>
+<li>
+<a href=https://github.com/Akimon658 target=_blank rel="noopener noreferrer">
+<span>
+GitHub
+</span>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/Akimon658 target=_blank rel="noopener noreferrer">
+<span>
+Twitter (Pokémon)
+</span>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/kimo_pk target=_blank rel="noopener noreferrer">
+<span>
+Twitter (other)
+</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-item sidebar-tags">
+<h3>
+Tags
+</h3>
+<div>
+</div>
+</div>
+<div class=sidebar-item>
+</div>
+</div>
+</aside>
+</main>
+<footer>
+<div class="container-lg clearfix">
+<div class="col-12 footer">
+<span>&copy; 2022
+<a href=https://akimon658.github.io/>
+Akimo
+</a>
+|
+<a href=https://github.com/Akimon658/akimon658.github.io target=_blank rel="noopener noreferrer">
+Source code
+</a>
+|
+Powered by
+<a href=https://github.com/dsrkafuu/hugo-theme-fuji/ target=_blank rel="noopener noreferrer">
+Fuji-v2
+</a>
+&
+<a href=https://gohugo.io/ target=_blank rel="noopener noreferrer">
+Hugo
+</a>
+</span>
+</div>
+</div>
+</footer>
+<script defer src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js></script>
+<script defer src=https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js></script>
+<script defer src=https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js></script>
+<script defer src=/assets/js/script.min.js></script>
+</body>
+</html>
