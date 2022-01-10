@@ -2,7 +2,7 @@
 title: "DeeloCloud なる会社？からメールが来た"
 canonicalURL: ""
 date: 2022-01-10T11:45:00+09:00
-description: ""
+description: "多分スパムですが、一応できるだけ調べました。"
 draft: false
 ---
 
