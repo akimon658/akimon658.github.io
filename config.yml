@@ -103,5 +103,6 @@ outputs:
 
 Params:
   author: "Akimo"
+  copyrightStartYear = "2021"
   disqusShortname: "akimon658-github-io"
   sourceURL: "https://github.com/Akimon658/akimon658.github.io"
