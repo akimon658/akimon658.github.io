@@ -1,5 +1,5 @@
+declare function loadComment(): void
 declare var DISQUS: any
-declare var loadComment: any
 
 export function button() {
 	const buttons = document.querySelector<HTMLElement>('.btn')!
