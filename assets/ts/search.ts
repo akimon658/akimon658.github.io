@@ -1,4 +1,4 @@
-import Fuse from 'https://esm.sh/fuse.js@6.4.6'
+import Fuse from 'https://esm.sh/fuse.js@6.5.3'
 import template from 'https://esm.sh/art-template@4.13.2/lib/template-web.js'
 
 // search by fuse.js
