@@ -74,12 +74,12 @@ Copy the token?
 Or use WSLg?
 These ways are not wrong, but it will be better to use the host&rsquo;s browser.</p>
 <p>Here is how to set it:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser path/to/browser priority
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser path/to/browser priority
 </code></pre></div><p>Example:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser /mnt/c/Program<span style=color:#ae81ff>\ </span>Files/Google/Chrome/Application/chrome.exe <span style=color:#ae81ff>1</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser /mnt/c/Program<span class=se>\ </span>Files/Google/Chrome/Application/chrome.exe <span class=m>1</span>
 </code></pre></div><p>That’s all if you don&rsquo;t have any browser in WSL.
 Even if you have installed one, I don&rsquo;t think you have to think seriously about priority because you can configure default by the following command.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>sudo update-alternatives --config x-www-browser
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>sudo update-alternatives --config x-www-browser
 </code></pre></div><p>Now, you can use the browser of Windows as WSL&rsquo;s default.</p>
 </div>
 </article>
@@ -295,8 +295,6 @@ Hugo
 </div>
 </footer>
 <script defer src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js></script>
-<script defer src=https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js></script>
-<script defer src=https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js></script>
 <script defer src=/assets/js/script.min.js></script>
 </body>
 </html>

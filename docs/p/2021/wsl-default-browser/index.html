@@ -71,12 +71,12 @@ local_offer
 <div class="post-content markdown-body">
 <p>WSLg があるのでまぁそれでも良いんですが、Windows 側に統一できた方が楽なので。
 ちなみに Debian です。</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser 使いたいブラウザへのパス 優先度
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser 使いたいブラウザへのパス 優先度
 </code></pre></div><p>例：</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser /mnt/c/Program<span style=color:#ae81ff>\ </span>Files/Google/Chrome/Application/chrome.exe <span style=color:#ae81ff>1</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser /mnt/c/Program<span class=se>\ </span>Files/Google/Chrome/Application/chrome.exe <span class=m>1</span>
 </code></pre></div><p>WSL 側にブラウザが無いならこれで終わりです。
 あっても次の方法でデフォルトを設定できるので、優先度は適当でいいと思います。</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>sudo update-alternatives --config x-www-browser
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>sudo update-alternatives --config x-www-browser
 </code></pre></div><p>これで Windows のブラウザを WSL のデフォルトブラウザとして使えるようになりました。</p>
 </div>
 </article>
@@ -292,8 +292,6 @@ Hugo
 </div>
 </footer>
 <script defer src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js></script>
-<script defer src=https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js></script>
-<script defer src=https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js></script>
 <script defer src=/assets/js/script.min.js></script>
 </body>
 </html>

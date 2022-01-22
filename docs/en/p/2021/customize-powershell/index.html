@@ -82,37 +82,37 @@ It doesn&rsquo;t exist by default, so you need to run <code>touch $profile</code
 <h2 id=customize>Customize</h2>
 <p>To customize the prompt, use <code>function prompt</code>.
 Here is a built-in one.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>function</span> prompt {
-    $(<span style=color:#66d9ef>if</span> (Test-Path variable<span style=color:#960050;background-color:#1e0010>:</span>/PSDebugContext) { <span style=color:#e6db74>&#39;[DBG]: &#39;</span> }
-      <span style=color:#66d9ef>else</span> { <span style=color:#e6db74>&#39;&#39;</span> }) + <span style=color:#e6db74>&#39;PS &#39;</span> + $(Get-Location) +
-        $(<span style=color:#66d9ef>if</span> ($NestedPromptLevel <span style=color:#f92672>-ge</span> 1) { <span style=color:#e6db74>&#39;&gt;&gt;&#39;</span> }) + <span style=color:#e6db74>&#39;&gt; &#39;</span>
-}
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=k>function</span> <span class=n>prompt</span> <span class=p>{</span>
+    <span class=p>$(</span><span class=k>if</span> <span class=p>(</span><span class=nb>Test-Path</span> <span class=n>variable</span><span class=err>:</span><span class=p>/</span><span class=n>PSDebugContext</span><span class=p>)</span> <span class=p>{</span> <span class=s1>&#39;[DBG]: &#39;</span> <span class=p>}</span>
+      <span class=k>else</span> <span class=p>{</span> <span class=s1>&#39;&#39;</span> <span class=p>})</span> <span class=p>+</span> <span class=s1>&#39;PS &#39;</span> <span class=p>+</span> <span class=p>$(</span><span class=nb>Get-Location</span><span class=p>)</span> <span class=p>+</span>
+        <span class=p>$(</span><span class=k>if</span> <span class=p>(</span><span class=nv>$NestedPromptLevel</span> <span class=o>-ge</span> <span class=n>1</span><span class=p>)</span> <span class=p>{</span> <span class=s1>&#39;&gt;&gt;&#39;</span> <span class=p>})</span> <span class=p>+</span> <span class=s1>&#39;&gt; &#39;</span>
+<span class=p>}</span>
 </code></pre></div><p>Source: <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7.2#built-in-prompt" target=_blank rel="noopener noreferrer">
 about Prompts - PowerShell | Microsoft Docs
 </a>
 </p>
 <p>It seems using <code>$(Get-Location)</code> to get the current path, but we can&rsquo;t use it as a <code>string</code> (even if we use <code>$pwd</code>).
 So let&rsquo;s use <code>Convert-Path</code> instead.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>function</span> prompt {
-    $currentDir = (Convert-Path .)
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=k>function</span> <span class=n>prompt</span> <span class=p>{</span>
+    <span class=nv>$currentDir</span> <span class=p>=</span> <span class=p>(</span><span class=nb>Convert-Path</span> <span class=p>.)</span>
 
-    $(<span style=color:#66d9ef>if</span> (Test-Path variable<span style=color:#960050;background-color:#1e0010>:</span>/PSDebugContext) { <span style=color:#e6db74>&#39;[DBG]: &#39;</span> }
-      <span style=color:#66d9ef>else</span> { <span style=color:#e6db74>&#39;&#39;</span> }) + <span style=color:#e6db74>&#39;PS &#39;</span> + $currentDir +
-        $(<span style=color:#66d9ef>if</span> ($NestedPromptLevel <span style=color:#f92672>-ge</span> 1) { <span style=color:#e6db74>&#39;&gt;&gt;&#39;</span> }) + <span style=color:#e6db74>&#39;&gt; &#39;</span>
-}
+    <span class=p>$(</span><span class=k>if</span> <span class=p>(</span><span class=nb>Test-Path</span> <span class=n>variable</span><span class=err>:</span><span class=p>/</span><span class=n>PSDebugContext</span><span class=p>)</span> <span class=p>{</span> <span class=s1>&#39;[DBG]: &#39;</span> <span class=p>}</span>
+      <span class=k>else</span> <span class=p>{</span> <span class=s1>&#39;&#39;</span> <span class=p>})</span> <span class=p>+</span> <span class=s1>&#39;PS &#39;</span> <span class=p>+</span> <span class=nv>$currentDir</span> <span class=p>+</span>
+        <span class=p>$(</span><span class=k>if</span> <span class=p>(</span><span class=nv>$NestedPromptLevel</span> <span class=o>-ge</span> <span class=n>1</span><span class=p>)</span> <span class=p>{</span> <span class=s1>&#39;&gt;&gt;&#39;</span> <span class=p>})</span> <span class=p>+</span> <span class=s1>&#39;&gt; &#39;</span>
+<span class=p>}</span>
 </code></pre></div><p>Now we can use <code>$currentDir</code> as a <code>string</code>.
 All that is left is checking if it includes <code>$home</code> and replacing it.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>function</span> prompt {
-    $currentDir = (Convert-Path .)
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=k>function</span> <span class=n>prompt</span> <span class=p>{</span>
+    <span class=nv>$currentDir</span> <span class=p>=</span> <span class=p>(</span><span class=nb>Convert-Path</span> <span class=p>.)</span>
 
-    <span style=color:#66d9ef>if</span> ($currentDir.Contains($HOME)) {
-        $currentDir = $currentDir.Replace($HOME, <span style=color:#e6db74>&#34;~&#34;</span>)
-    }
+    <span class=k>if</span> <span class=p>(</span><span class=nv>$currentDir</span><span class=p>.</span><span class=n>Contains</span><span class=p>(</span><span class=nv>$HOME</span><span class=p>))</span> <span class=p>{</span>
+        <span class=nv>$currentDir</span> <span class=p>=</span> <span class=nv>$currentDir</span><span class=p>.</span><span class=n>Replace</span><span class=p>(</span><span class=nv>$HOME</span><span class=p>,</span> <span class=s2>&#34;~&#34;</span><span class=p>)</span>
+    <span class=p>}</span>
 
-    $(<span style=color:#66d9ef>if</span> (Test-Path variable<span style=color:#960050;background-color:#1e0010>:</span>/PSDebugContext) { <span style=color:#e6db74>&#39;[DBG]: &#39;</span> }
-      <span style=color:#66d9ef>else</span> { <span style=color:#e6db74>&#39;&#39;</span> }) + <span style=color:#e6db74>&#39;PS &#39;</span> + $currentDir +
-        $(<span style=color:#66d9ef>if</span> ($NestedPromptLevel <span style=color:#f92672>-ge</span> 1) { <span style=color:#e6db74>&#39;&gt;&gt;&#39;</span> }) + <span style=color:#e6db74>&#39;&gt; &#39;</span>
-}
+    <span class=p>$(</span><span class=k>if</span> <span class=p>(</span><span class=nb>Test-Path</span> <span class=n>variable</span><span class=err>:</span><span class=p>/</span><span class=n>PSDebugContext</span><span class=p>)</span> <span class=p>{</span> <span class=s1>&#39;[DBG]: &#39;</span> <span class=p>}</span>
+      <span class=k>else</span> <span class=p>{</span> <span class=s1>&#39;&#39;</span> <span class=p>})</span> <span class=p>+</span> <span class=s1>&#39;PS &#39;</span> <span class=p>+</span> <span class=nv>$currentDir</span> <span class=p>+</span>
+        <span class=p>$(</span><span class=k>if</span> <span class=p>(</span><span class=nv>$NestedPromptLevel</span> <span class=o>-ge</span> <span class=n>1</span><span class=p>)</span> <span class=p>{</span> <span class=s1>&#39;&gt;&gt;&#39;</span> <span class=p>})</span> <span class=p>+</span> <span class=s1>&#39;&gt; &#39;</span>
+<span class=p>}</span>
 </code></pre></div><h2 id=afterword>Afterword</h2>
 <p>This time we made just a little customize for PowerShell, but we can do more things with a profile.
 I&rsquo;m happy if this article will be helpful for you.</p>
@@ -341,8 +341,6 @@ Hugo
 </div>
 </footer>
 <script defer src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js></script>
-<script defer src=https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js></script>
-<script defer src=https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js></script>
 <script defer src=/assets/js/script.min.js></script>
 </body>
 </html>

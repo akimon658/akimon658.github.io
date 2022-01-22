@@ -107,10 +107,10 @@ gitpod.io
 </li>
 </ul>
 <h2 id=what-i-wanted-to-do>What I wanted to do</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-dockerfile data-lang=dockerfile><span style=color:#75715e># Self-made image</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>FROM</span><span style=color:#e6db74> akimon658/go-mecab-neologd:latest</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># This image doesn&#39;t have gopls, so I want to install it</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> go install golang.org/x/tools/gopls@latest<span style=color:#960050;background-color:#1e0010>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-dockerfile data-lang=dockerfile><span class=c># Self-made image</span><span class=err>
+</span><span class=err></span><span class=k>FROM</span><span class=s> akimon658/go-mecab-neologd:latest</span><span class=err>
+</span><span class=err></span><span class=c># This image doesn&#39;t have gopls, so I want to install it</span><span class=err>
+</span><span class=err></span><span class=k>RUN</span> go install golang.org/x/tools/gopls@latest<span class=err>
 </span></code></pre></div><p>After that, I want to run <code>go get</code> etc. as needed.</p>
 <h2 id=why-i-got-stuck>Why I got stuck</h2>
 <p>All accesses under <code>/go/pkg</code> are denied, so I can&rsquo;t run <code>go get</code>.</p>
@@ -122,9 +122,9 @@ the official image
 </a>
 because it sets the <code>USER</code> properly.</p>
 <h3 id=solution>Solution</h3>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-dockerfile data-lang=dockerfile><span style=color:#66d9ef>FROM</span><span style=color:#e6db74> akimon658/go-mecab-neologd:latest</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> go install golang.org/x/tools/gopls@latest <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    chmod <span style=color:#ae81ff>777</span> -R / go<span style=color:#960050;background-color:#1e0010>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-dockerfile data-lang=dockerfile><span class=k>FROM</span><span class=s> akimon658/go-mecab-neologd:latest</span><span class=err>
+</span><span class=err></span><span class=k>RUN</span> go install golang.org/x/tools/gopls@latest <span class=o>&amp;&amp;</span> <span class=se>\
+</span><span class=se></span>    chmod <span class=m>777</span> -R / go<span class=err>
 </span></code></pre></div><p><code>chmod 777</code> is a command that allows all users to read, write, and execute to the specified location, and <code>-R</code> is an option that applies it to the contents of the target directory as well.
 Set this where you need it.
 It may not need to set <code>777</code> permission, but it was troublesome to think.</p>
@@ -356,8 +356,6 @@ Hugo
 </div>
 </footer>
 <script defer src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js></script>
-<script defer src=https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js></script>
-<script defer src=https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js></script>
 <script defer src=/assets/js/script.min.js></script>
 </body>
 </html>
