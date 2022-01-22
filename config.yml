@@ -59,6 +59,9 @@ markup:
     renderer:
       unsafe: true
 
+  highlight:
+    noClasses: false
+
 Menus:
   link:
     - Name: "Email"
