@@ -78,9 +78,7 @@ PowerShell でホームディレクトリを省略する
         <span class=p>$(</span><span class=k>if</span> <span class=p>(</span><span class=nv>$NestedPromptLevel</span> <span class=o>-ge</span> <span class=n>1</span><span class=p>)</span> <span class=p>{</span> <span class=s1>&#39;&gt;&gt;&#39;</span> <span class=p>})</span> <span class=p>+</span> <span class=s1>&#39;&gt; &#39;</span>
 <span class=p>}</span>
 </code></pre></div><p>参考：<a href="https://docs.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7.2#built-in-prompt" target=_blank rel="noopener noreferrer">
-プロンプトについて - PowerShell | Microsoft Docs
-</a>
-</p>
+プロンプトについて - PowerShell | Microsoft Docs</a></p>
 <p>カレントディレクトリの取得に <code>$(Get-Location)</code> が使われていますが、これだと文字列として扱うことができません（<code>$pwd</code> も同様）。そこで <code>Convert-Path</code> を使います。</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=k>function</span> <span class=n>prompt</span> <span class=p>{</span>
     <span class=nv>$currentDir</span> <span class=p>=</span> <span class=p>(</span><span class=nb>Convert-Path</span> <span class=p>.)</span>
@@ -105,9 +103,7 @@ PowerShell でホームディレクトリを省略する
 <p>今回はちょっと表示をいじっただけですが、他にも色々できるので試してみてください。
 参考までに僕のリポジトリを置いておきます。</p>
 <p><a href=https://github.com/Akimon658/pwsh-profile target=_blank rel="noopener noreferrer">
-github.com/akimon658/pwsh-profile
-</a>
-</p>
+github.com/akimon658/pwsh-profile</a></p>
 </div>
 </article>
 <div class=post-comment data-comment=disqus>

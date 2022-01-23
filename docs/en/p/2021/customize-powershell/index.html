@@ -78,9 +78,7 @@ Here is a built-in one.</p>
         <span class=p>$(</span><span class=k>if</span> <span class=p>(</span><span class=nv>$NestedPromptLevel</span> <span class=o>-ge</span> <span class=n>1</span><span class=p>)</span> <span class=p>{</span> <span class=s1>&#39;&gt;&gt;&#39;</span> <span class=p>})</span> <span class=p>+</span> <span class=s1>&#39;&gt; &#39;</span>
 <span class=p>}</span>
 </code></pre></div><p>Source: <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7.2#built-in-prompt" target=_blank rel="noopener noreferrer">
-about Prompts - PowerShell | Microsoft Docs
-</a>
-</p>
+about Prompts - PowerShell | Microsoft Docs</a></p>
 <p>It seems using <code>$(Get-Location)</code> to get the current path, but we can&rsquo;t use it as a <code>string</code> (even if we use <code>$pwd</code>).
 So let&rsquo;s use <code>Convert-Path</code> instead.</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=k>function</span> <span class=n>prompt</span> <span class=p>{</span>
@@ -108,9 +106,7 @@ All that is left is checking if it includes <code>$home</code> and replacing it.
 I&rsquo;m happy if this article will be helpful for you.</p>
 <p>Here is my profile for your reference.</p>
 <p><a href=https://github.com/Akimon658/pwsh-profile target=_blank rel="noopener noreferrer">
-github.com/akimon658/pwsh-profile
-</a>
-</p>
+github.com/akimon658/pwsh-profile</a></p>
 </div>
 </article>
 <div class=post-comment data-comment=disqus>

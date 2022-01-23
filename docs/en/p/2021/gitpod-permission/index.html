@@ -66,35 +66,21 @@ No tag
 </div>
 <div class="post-content markdown-body">
 <p>When you use <a href=https://gitpod.io target=_blank rel="noopener noreferrer">
-Gitpod
-</a>
-, you can use <a href=https://hub.docker.com/r/gitpod/workspace-full target=_blank rel="noopener noreferrer">
-gitpod/workspace-full
-</a>
-.
+Gitpod</a>, you can use <a href=https://hub.docker.com/r/gitpod/workspace-full target=_blank rel="noopener noreferrer">
+gitpod/workspace-full</a>.
 It is enough for development most case.
 However, I&rsquo;d like to use a morphological analysis engine called <a href=https://taku910.github.io/mecab/ target=_blank rel="noopener noreferrer">
-MeCab
-</a>
-with Golang, so I tried to use <a href=https://github.com/Akimon658/go-mecab-neologd target=_blank rel="noopener noreferrer">
-an image I&rsquo;ve created in advance
-</a>
-.
+MeCab</a> with Golang, so I tried to use <a href=https://github.com/Akimon658/go-mecab-neologd target=_blank rel="noopener noreferrer">
+an image I&rsquo;ve created in advance</a>.
 However, I got stuck on permission, so I&rsquo;m writing this article.</p>
 <h2 id=about-gitpod>About Gitpod</h2>
 <p>It is a development environment that we can use on a browser.
 I often use it because I haven&rsquo;t been able to use <a href=https://github.com/codespaces target=_blank rel="noopener noreferrer">
-GitHub Codespaces
-</a>
-yet, and I can use it for free for 100 hours a month with the benefits of <a href=https://education.github.com target=_blank rel="noopener noreferrer">
-GitHub Education
-</a>
-.</p>
+GitHub Codespaces</a> yet, and I can use it for free for 100 hours a month with the benefits of <a href=https://education.github.com target=_blank rel="noopener noreferrer">
+GitHub Education</a>.</p>
 <ul>
 <li><a href=https://gitpod.io target=_blank rel="noopener noreferrer">
-gitpod.io
-</a>
-</li>
+gitpod.io</a></li>
 </ul>
 <h2 id=what-i-wanted-to-do>What I wanted to do</h2>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-dockerfile data-lang=dockerfile><span class=c># Self-made image</span><span class=err>
@@ -108,9 +94,7 @@ gitpod.io
 <p>It occurred because <code>go install</code> was run by root in the Dockerfile.
 So running <code>sudo</code> will solve it, but the image doesn&rsquo;t have the command.
 By the way, it won&rsquo;t occur in <a href=https://github.com/gitpod-io/workspace-images/blob/master/full/Dockerfile target=_blank rel="noopener noreferrer">
-the official image
-</a>
-because it sets the <code>USER</code> properly.</p>
+the official image</a> because it sets the <code>USER</code> properly.</p>
 <h3 id=solution>Solution</h3>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-dockerfile data-lang=dockerfile><span class=k>FROM</span><span class=s> akimon658/go-mecab-neologd:latest</span><span class=err>
 </span><span class=err></span><span class=k>RUN</span> go install golang.org/x/tools/gopls@latest <span class=o>&amp;&amp;</span> <span class=se>\
