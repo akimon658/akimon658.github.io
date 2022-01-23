@@ -71,9 +71,8 @@ search
 			<a href="<%= $data[i].item.permalink %>"><%= $data[i].item.title %></a>
 		</h3>
 		<div class="post-item post-meta-archive">
-			<span><span class="material-icon">event</span>&nbsp;<%= $data[i].item.date %></span>
-			<span>
-				<span class="material-icon">local_offer</span>&nbsp;<% if ($data[i].item.tags && $data[i].item.tags.length > 0) { %><% for(var j = 0; j < $data[i].item.tags.length; j++){ %><%= $data[i].item.tags[j] %>&nbsp;<% } %><% } else { %>No tag<% } %>
+			<span class="event material-icons"><%= $data[i].item.date %></span>
+			<span class="local-offer material-icons"><% if ($data[i].item.tags && $data[i].item.tags.length > 0) { %><% for(var j = 0; j < $data[i].item.tags.length; j++){ %><%= $data[i].item.tags[j] %>&nbsp;<% } %><% } else { %>No tag<% } %>
 			</span>
 		</div>
 	</div>
