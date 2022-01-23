@@ -9,3 +9,24 @@
 	font-family: 'Material Icons' !important;
 	user-select: none;
 }
+
+.material-icons::before {
+	font-family: 'Material Icons' !important;
+	padding-right: 0.25rem;
+}
+
+.comment::before {
+	content: 'comment';
+}
+
+.event::before {
+	content: 'event';
+}
+
+.local-offer::before {
+	content: 'local_offer';
+}
+
+.update::before {
+	content: 'update';
+}

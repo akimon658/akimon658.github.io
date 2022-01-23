@@ -1,16 +1,10 @@
-<span>
-	<span class="material-icon">
-		event
-	</span>
-	&nbsp;{{ .Date.Local.Format "2006-01-02" }}
+<span class="event material-icons">
+	{{ .Date.Local.Format "2006-01-02" }}
 </span>
 
 {{ if ne .Date.YearDay .Lastmod.YearDay }}
-<span>
-	<span class="material-icon">
-		update
-	</span>
-	&nbsp;{{ dateFormat ( or $.Site.Params.dateFormat "2006-01-02" ) $.Page.Params.LastMod }}
+<span class="material-icons update">
+	{{ dateFormat ( or $.Site.Params.dateFormat "2006-01-02" ) $.Page.Params.LastMod }}
 </span>
 {{ end }}
 
@@ -28,17 +22,12 @@
 </span>
 {{ end }}
 
-<span>
-	<span class="material-icon">
-		local_offer
-	</span>
-	&nbsp;
+<span class="local-offer material-icons">
 	{{ if .Params.tags }}
 	{{ range .Params.tags }}
 	<a href="{{ " /tags/" | relURL }}{{ . | urlize}}">
 		{{ . }}
 	</a>
-	&nbsp;
 	{{ end }}
 	{{ else }}
 	{{ i18n "postMetaNoTag" }}
