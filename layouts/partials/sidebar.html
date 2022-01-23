@@ -1,6 +1,6 @@
 <aside class="col-12 col-md-3 float-left sidebar">
 	<div class="sidebar-item">
-		{{ partial "language-switcher" . }}
+		{{- partial "language-switcher" . -}}
 	</div>
 
 	<!-- pages -->
@@ -9,13 +9,13 @@
 			Pages
 		</h3>
 		<ul>
-			{{ range .Site.Menus.nav }}
+			{{- range .Site.Menus.nav -}}
 			<li>
 				<a href="{{ .URL }}">
-					{{ .Name }}
+					{{- .Name -}}
 				</a>
 			</li>
-			{{ end }}
+			{{- end -}}
 		</ul>
 	</div>
 	<!-- links -->
@@ -24,15 +24,15 @@
 			Links
 		</h3>
 		<ul>
-			{{ range .Site.Menus.link }}
+			{{- range .Site.Menus.link -}}
 			<li>
 				<a href="{{ .URL }}" target="_blank" rel="noopener noreferrer">
 					<span>
-						{{ .Name }}
+						{{- .Name -}}
 					</span>
 				</a>
 			</li>
-			{{ end }}
+			{{- end -}}
 		</ul>
 	</div>
 	<!-- tags -->
@@ -41,13 +41,13 @@
 			Tags
 		</h3>
 		<div>
-			{{ range .Site.Taxonomies.tags }}
+			{{- range .Site.Taxonomies.tags -}}
 			<span>
 				<a href="{{ .Page.RelPermalink }}">
-					{{ .Page.Title }}
+					{{- .Page.Title -}}
 				</a>
 			</span>
-			{{ end }}
+			{{- end -}}
 		</div>
 	</div>
 	<!-- in-post toc -->
@@ -62,15 +62,15 @@
 		{{- .TableOfContents -}}
 	</div>
 	{{- end -}}
-	{{ else }}
-	{{ with .Site.Params.bgmImageChart }}
+	{{- else -}}
+	{{- with .Site.Params.bgmImageChart -}}
 	<!-- bgm.tv image chart -->
 	<div class="sidebar-item sidebar-bgm">
 		<h3>
-			{{ i18n "sidebarBangumiChart" }}
+			{{- i18n "sidebarBangumiChart" -}}
 		</h3>
 		<img class="lazyload" src="{{ $.Site.Params.lazyPlaceholder | relURL }}" data-src="https://bgm.tv/chart/img/{{ . }}" alt="Bangumi" />
 	</div>
-	{{ end }}
-	{{ end }}
+	{{- end -}}
+	{{- end -}}
 </aside>

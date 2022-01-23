@@ -1,21 +1,21 @@
 {{ define "main" }}
 {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-{{ range $paginator.Pages }}
+{{- range $paginator.Pages -}}
 <div class="post">
 	<h2 class="post-item post-title">
 		<a href="{{ .Permalink }}">
-			{{ .Title }}
+			{{- .Title -}}
 		</a>
 	</h2>
 	<div class="post-item post-meta">
-		{{ partial "post-meta.html" . }}
+		{{- partial "post-meta.html" . -}}
 	</div>
 	<div class="post-item post-summary markdown-body">
-		{{ .Summary }} ...
+		{{- .Summary }} ...
 	</div>
 </div>
-{{ end }}
+{{- end -}}
 
 {{- partial "pagination.html" (dict "context" . "pagi" $paginator) -}}
 
-{{ end }}
+{{- end }}

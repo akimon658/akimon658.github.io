@@ -1,27 +1,27 @@
 <footer>
 	<div class="container-lg clearfix">
 		<div class="col-12 footer">
-			{{ if .Site.Params.showLicenseInFooter }}
+			{{- if .Site.Params.showLicenseInFooter -}}
 			<p>
-				{{ i18n "postCopyrightFront" }}
+				{{- i18n "postCopyrightFront" -}}
 				<a rel="license" href="{{ .Site.Params.licenseLink }}" target="_blank">
-					{{ .Site.Params.license }}
+					{{- .Site.Params.license -}}
 				</a>
-				{{ i18n "postCopyrightEnd" }}
+				{{- i18n "postCopyrightEnd" -}}
 			</p>
-			{{ end }}
+			{{- end -}}
 			<span>&copy; {{ with .Site.Params.copyrightStartYear }}{{ . }}-{{ end }}{{ now.Format "2006" }}
 				<a href="{{ .Site.BaseURL }}">
-					{{ .Site.Params.author }}
+					{{- .Site.Params.author -}}
 				</a>
-				{{ with .Site.Params.sourceURL }}
+				{{- with .Site.Params.sourceURL }}
 				|
 				<a href="{{ . }}" target="_blank" rel="noopener noreferrer">
 					Source code
 				</a>
-				{{end }}
+				{{- end }}
 				|
-				{{ i18n "footerPoweredFront" }}
+				{{ i18n "footerPoweredFront" -}}
 				<a href="https://github.com/dsrkafuu/hugo-theme-fuji/" target="_blank" rel="noopener noreferrer">
 					Fuji-v2
 				</a>
@@ -29,7 +29,7 @@
 				<a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">
 					Hugo
 				</a>
-				{{ i18n "footerPoweredEnd" }}
+				{{- i18n "footerPoweredEnd" -}}
 			</span>
 		</div>
 	</div>

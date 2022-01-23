@@ -2,14 +2,14 @@
 	<div class="container-lg clearfix">
 		<div class="col-12 header">
 			<a class="title-main" href='{{ .Site.BaseURL }}{{ if ne .Lang "ja" }}{{ .Lang }}/{{ end }}'>
-				{{ .Site.Title }}
+				{{- .Site.Title -}}
 			</a>
 
-			{{ with .Site.Params.subTitle }}
+			{{- with .Site.Params.subTitle -}}
 			<span class="title-sub">
-				{{ . }}
+				{{- . -}}
 			</span>
-			{{ end }}
+			{{- end -}}
 			<div id="switch-theme">
 				<span class="material-icon">
 					brightness_medium

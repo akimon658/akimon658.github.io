@@ -3,8 +3,7 @@
 <div class="page-info">
 	<form class="search-form" method="GET">
 		<div class="search-input">
-			<input name="s" type="search" autocapitalize="off" autocomplete="off" autocorrect="off"
-				spellcheck="false" />
+			<input name="s" type="search" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" />
 			<button type="submit">
 				<span class="material-icon">
 					search
@@ -14,15 +13,29 @@
 	</form>
 </div>
 <!-- search result and template -->
-<div class="search-result-info" style="display: none;"><span>{{ i18n "searchSuccess" }}</span></div>
-<div class="search-result-info" style="display: none;"><span>{{ i18n "searchNotFound" }}</span></div>
-<div class="search-result-info" style="display: none;"><span>{{ i18n "searchFailed" }}</span></div>
+<div class="search-result-info" style="display: none;">
+	<span>
+		{{- i18n "searchSuccess" -}}
+	</span>
+</div>
+<div class="search-result-info" style="display: none;">
+	<span>
+		{{- i18n "searchNotFound" -}}
+	</span>
+</div>
+<div class="search-result-info" style="display: none;">
+	<span>
+		{{- i18n "searchFailed" -}}
+	</span>
+</div>
 <div id="search-result"></div>
 <script id="search-result-template" type="text/fuse-template">
-	{{ "<% for(var i = 0; i < $data.length; i++){ %>" | safeHTML }}
+	{{- "<% for(var i = 0; i < $data.length; i++){ %>" | safeHTML -}}
 	<div class="post">
 		<h3 class="post-item post-title-archive">
-			<a href="<%= $data[i].item.permalink %>">{{ "<%= $data[i].item.title %>" | safeHTML }}</a>
+			<a href="<%= $data[i].item.permalink %>">
+				{{- "<%= $data[i].item.title %>" | safeHTML -}}
+			</a>
 		</h3>
 		<div class="post-item post-meta-archive">
 			<span class="event material-icons">
@@ -35,10 +48,10 @@
 					{{- "<% } %>" | safeHTML -}}
 				{{- "<% } else { %>" | safeHTML -}}
 					{{- i18n "postMetaNoTag" -}}
-				{{- "<% } %>" | safeHTML }}
+				{{- "<% } %>" | safeHTML -}}
 			</span>
 		</div>
 	</div>
-	{{ "<% } %>" | safeHTML }}
+	{{- "<% } %>" | safeHTML -}}
 </script>
-{{ end }}
+{{- end -}}
