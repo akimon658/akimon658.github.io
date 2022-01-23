@@ -6,7 +6,7 @@
 	<script>
 		function loadComment() {
 			var commentArea = document.querySelector('.post-comment');
-			var disqus_config = function () {
+			window.disqus_config = function () {
 				this.language = '{{ .Lang }}';
 				this.page.url = '{{ .Permalink }}';
 				this.page.identifier = '{{ .File.ContentBaseName }}';
