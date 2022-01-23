@@ -5,9 +5,7 @@
 <meta name=HandheldFriendly content="True">
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta http-equiv=cache-control content="no-transform">
-<meta http-equiv=cache-control content="no-siteapp">
-<meta name=generator content="Hugo 0.92.0">
-<link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png>
+<meta http-equiv=cache-control content="no-siteapp"><meta name=generator content="Hugo 0.92.0"><link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/icons/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/icons/favicon-16x16.png>
 <link rel=manifest href=/icons/site.webmanifest>
@@ -16,10 +14,7 @@
 <meta name=msapplication-TileColor content="#2d89ef">
 <meta name=msapplication-config content="/icons/browserconfig.xml">
 <meta name=theme-color content="#ffffff">
-<title>How to replace home directory with "~" on PowerShell - Boring Time</title>
-<meta name=author content="Akimo">
-<meta name=description content="About how to customize your PowerShell.">
-<meta property="og:title" content="How to replace home directory with &#34;~&#34; on PowerShell">
+<title>How to replace home directory with "~" on PowerShell - Boring Time</title><meta name=author content="Akimo"><meta name=description content="About how to customize your PowerShell."><meta property="og:title" content="How to replace home directory with &#34;~&#34; on PowerShell">
 <meta name=twitter:title content="How to replace home directory with &#34;~&#34; on PowerShell">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://akimon658.github.io/en/p/2021/customize-powershell/"><meta property="og:description" content="About how to customize your PowerShell.">
@@ -35,10 +30,7 @@
 <header>
 <div class="container-lg clearfix">
 <div class="col-12 header">
-<a class=title-main href=https://akimon658.github.io/en/>
-Boring Time
-</a>
-<div id=switch-theme>
+<a class=title-main href=https://akimon658.github.io/en/>Boring Time</a><div id=switch-theme>
 <span class=material-icon>
 brightness_medium
 </span>
@@ -50,22 +42,10 @@ brightness_medium
 <div class="container-lg clearfix">
 <div class="col-12 col-md-9 float-left content">
 <article data-clarity-region=article>
-<h1 class="post-item post-title">
-How to replace home directory with "~" on PowerShell
-</h1>
-<div class="post-item post-meta">
-<span class="event material-icons">
-2021-12-13
-</span>
-<span class="material-icons update">
-2021-12-24
-</span>
-<span class="local-offer material-icons">
-No tag
-</span>
+<h1 class="post-item post-title">How to replace home directory with "~" on PowerShell</h1>
+<div class="post-item post-meta"><span class="event material-icons">2021-12-13</span><span class="material-icons update">2021-12-24</span><span class="local-offer material-icons">No tag</span>
 </div>
-<div class="post-content markdown-body">
-<p>PowerShell displays the current full path by default. It&rsquo;s long, so I&rsquo;d like to replace it with <code>~</code> like Bash.</p>
+<div class="post-content markdown-body"><p>PowerShell displays the current full path by default. It&rsquo;s long, so I&rsquo;d like to replace it with <code>~</code> like Bash.</p>
 <h2 id=prepare-a-profile>Prepare a profile</h2>
 <p>You can customize your PowerShell with <code>$profile</code>.
 It doesn&rsquo;t exist by default, so you need to run <code>touch $profile</code>.</p>
@@ -77,8 +57,7 @@ Here is a built-in one.</p>
       <span class=k>else</span> <span class=p>{</span> <span class=s1>&#39;&#39;</span> <span class=p>})</span> <span class=p>+</span> <span class=s1>&#39;PS &#39;</span> <span class=p>+</span> <span class=p>$(</span><span class=nb>Get-Location</span><span class=p>)</span> <span class=p>+</span>
         <span class=p>$(</span><span class=k>if</span> <span class=p>(</span><span class=nv>$NestedPromptLevel</span> <span class=o>-ge</span> <span class=n>1</span><span class=p>)</span> <span class=p>{</span> <span class=s1>&#39;&gt;&gt;&#39;</span> <span class=p>})</span> <span class=p>+</span> <span class=s1>&#39;&gt; &#39;</span>
 <span class=p>}</span>
-</code></pre></div><p>Source: <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7.2#built-in-prompt" target=_blank rel="noopener noreferrer">
-about Prompts - PowerShell | Microsoft Docs</a></p>
+</code></pre></div><p>Source: <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7.2#built-in-prompt" target=_blank rel="noopener noreferrer">about Prompts - PowerShell | Microsoft Docs</a></p>
 <p>It seems using <code>$(Get-Location)</code> to get the current path, but we can&rsquo;t use it as a <code>string</code> (even if we use <code>$pwd</code>).
 So let&rsquo;s use <code>Convert-Path</code> instead.</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=k>function</span> <span class=n>prompt</span> <span class=p>{</span>
@@ -105,94 +84,60 @@ All that is left is checking if it includes <code>$home</code> and replacing it.
 <p>This time we made just a little customize for PowerShell, but we can do more things with a profile.
 I&rsquo;m happy if this article will be helpful for you.</p>
 <p>Here is my profile for your reference.</p>
-<p><a href=https://github.com/Akimon658/pwsh-profile target=_blank rel="noopener noreferrer">
-github.com/akimon658/pwsh-profile</a></p>
+<p><a href=https://github.com/Akimon658/pwsh-profile target=_blank rel="noopener noreferrer">github.com/akimon658/pwsh-profile</a></p>
 </div>
 </article>
 <div class=post-comment data-comment=disqus>
-<span class="comment material-icons post-comment-notloaded">
-Load comments
-</span>
+<span class="comment material-icons post-comment-notloaded">Load comments</span>
 <div id=disqus_thread style=display:none></div>
 <script>function loadComment(){var b=document.querySelector('.post-comment'),c=function(){this.language='en',this.page.url='https://akimon658.github.io/en/p/2021/customize-powershell/',this.page.identifier='customize-powershell'},a=document.createElement('script');a.src='https://akimon658-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),document.querySelector('#disqus_thread').removeAttribute('style'),(document.body||document.head).appendChild(a),document.querySelector('span.post-comment-notloaded').setAttribute('style','display: none;')}</script>
 </div>
 </div>
 <aside class="col-12 col-md-3 float-left sidebar">
-<div class=sidebar-item>
-<select onchange="location.href=value"><option hidden>
+<div class=sidebar-item><select onchange="location.href=value"><option hidden>
 Language
-</option><option value=/p/2021/customize-powershell/>
-日本語
-</option></select>
-</div>
+</option><option value=/p/2021/customize-powershell/>日本語</option></select></div>
 <div class="sidebar-item sidebar-pages">
 <h3>
 Pages
 </h3>
-<ul>
-<li>
-<a href=/en/>
-Home
-</a>
-</li>
-<li>
-<a href=/en/search/>
-Search
-</a>
-</li>
-<li>
-<a href=/en/about/>
-About
-</a>
-</li>
-<li>
-<a href=/en/privacy-policy/>
-Privacy Policy
-</a>
-</li>
-</ul>
+<ul><li>
+<a href=/en/>Home</a>
+</li><li>
+<a href=/en/search/>Search</a>
+</li><li>
+<a href=/en/about/>About</a>
+</li><li>
+<a href=/en/privacy-policy/>Privacy Policy</a>
+</li></ul>
 </div>
 <div class="sidebar-item sidebar-links">
 <h3>
 Links
 </h3>
-<ul>
-<li>
+<ul><li>
 <a href=mailto:akimo_greninja@yahoo.co.jp target=_blank rel="noopener noreferrer">
-<span>
-Email
-</span>
+<span>Email</span>
 </a>
-</li>
-<li>
+</li><li>
 <a href=https://github.com/Akimon658 target=_blank rel="noopener noreferrer">
-<span>
-GitHub
-</span>
+<span>GitHub</span>
 </a>
-</li>
-<li>
+</li><li>
 <a href=https://twitter.com/Akimon658 target=_blank rel="noopener noreferrer">
-<span>
-Twitter (Pokémon)
-</span>
+<span>Twitter (Pokémon)</span>
 </a>
-</li>
-<li>
+</li><li>
 <a href=https://twitter.com/kimo_pk target=_blank rel="noopener noreferrer">
-<span>
-Twitter (other)
-</span>
+<span>Twitter (other)</span>
 </a>
-</li>
-</ul>
+</li></ul>
 </div>
 <div class="sidebar-item sidebar-tags">
 <h3>
 Tags
 </h3>
-<div>
-</div>
+<div></div>
 </div>
 <div class="sidebar-item sidebar-toc">
 <h3>
@@ -203,8 +148,7 @@ Contents
 <li><a href=#customize>Customize</a></li>
 <li><a href=#afterword>Afterword</a></li>
 </ul>
-</nav></div>
-</aside>
+</nav></div></aside>
 </div>
 <div class=btn>
 <div class=btn-menu id=btn-menu>
@@ -224,102 +168,66 @@ keyboard_arrow_up
 <h3>
 Pages
 </h3>
-<ul>
-<li>
-<a href=/en/>
-Home
-</a>
-</li>
-<li>
-<a href=/en/search/>
-Search
-</a>
-</li>
-<li>
-<a href=/en/about/>
-About
-</a>
-</li>
-<li>
-<a href=/en/privacy-policy/>
-Privacy Policy
-</a>
-</li>
-</ul>
+<ul><li>
+<a href=/en/>Home</a>
+</li><li>
+<a href=/en/search/>Search</a>
+</li><li>
+<a href=/en/about/>About</a>
+</li><li>
+<a href=/en/privacy-policy/>Privacy Policy</a>
+</li></ul>
 </div>
 <div class="sidebar-item sidebar-links">
 <h3>
 Links
 </h3>
-<ul>
-<li>
+<ul><li>
 <a href=mailto:akimo_greninja@yahoo.co.jp target=_blank rel="noopener noreferrer">
-<span>
-Email
-</span>
+<span>Email</span>
 </a>
-</li>
-<li>
+</li><li>
 <a href=https://github.com/Akimon658 target=_blank rel="noopener noreferrer">
-<span>
-GitHub
-</span>
+<span>GitHub</span>
 </a>
-</li>
-<li>
+</li><li>
 <a href=https://twitter.com/Akimon658 target=_blank rel="noopener noreferrer">
-<span>
-Twitter (Pokémon)
-</span>
+<span>Twitter (Pokémon)</span>
 </a>
-</li>
-<li>
+</li><li>
 <a href=https://twitter.com/kimo_pk target=_blank rel="noopener noreferrer">
-<span>
-Twitter (other)
-</span>
+<span>Twitter (other)</span>
 </a>
-</li>
-</ul>
+</li></ul>
 </div>
 <div class="sidebar-item sidebar-tags">
 <h3>
 Tags
 </h3>
-<div>
+<div></div>
 </div>
-</div>
-<div class=sidebar-item>
-<select onchange="location.href=value"><option hidden>
+<div class=sidebar-item><select onchange="location.href=value"><option hidden>
 Language
-</option><option value=/p/2021/customize-powershell/>
-日本語
-</option></select>
-</div>
+</option><option value=/p/2021/customize-powershell/>日本語</option></select></div>
 </div>
 </aside>
 </main>
 <footer>
 <div class="container-lg clearfix">
-<div class="col-12 footer">
-<span>&copy; 2021-2022
-<a href=https://akimon658.github.io/>
-Akimo
-</a>
+<div class="col-12 footer"><span>&copy; 2021-2022
+<a href=https://akimon658.github.io/>Akimo</a>
 |
 <a href=https://github.com/Akimon658/akimon658.github.io target=_blank rel="noopener noreferrer">
 Source code
 </a>
 |
-Powered by
-<a href=https://github.com/dsrkafuu/hugo-theme-fuji/ target=_blank rel="noopener noreferrer">
+Powered by <a href=https://github.com/dsrkafuu/hugo-theme-fuji/ target=_blank rel="noopener noreferrer">
 Fuji-v2
 </a>
 &
 <a href=https://gohugo.io/ target=_blank rel="noopener noreferrer">
 Hugo
-</a>
-</span>
+</a> </span>
 </div>
 </div>
 </footer>
