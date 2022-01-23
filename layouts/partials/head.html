@@ -39,7 +39,6 @@
 {{- partial "opengraph.html" . -}}
 
 <!-- dep -->
-{{- partial "styles.html" . -}}
 {{ $options := (dict "targetPath" "assets/css/style.min.css" "outputStyle" "compressed") }}
 {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
