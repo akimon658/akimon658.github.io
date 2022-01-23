@@ -14,10 +14,11 @@
 <meta name=msapplication-TileColor content="#2d89ef">
 <meta name=msapplication-config content="/icons/browserconfig.xml">
 <meta name=theme-color content="#ffffff">
-<title>2022 - Boring Time</title><meta name=author content="Akimo"><link rel=alternate type=application/rss+xml href=https://akimon658.github.io/p/2022/index.xml title="Boring Time"><meta property="og:title" content="2022">
-<meta name=twitter:title content="2022">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://akimon658.github.io/p/2022/"><meta name=twitter:card content="summary"><meta property="og:updated_time" content="2022-01-10T11:51:27+09:00">
+<title>Hugo でリンクの後に余分な空白が挿入されてしまう現象 - Boring Time</title><meta name=author content="Akimo"><meta name=description content="Hugo そのものの不具合ではありませんが、まぁまぁ困ったので解決策を調べました。"><meta property="og:title" content="Hugo でリンクの後に余分な空白が挿入されてしまう現象">
+<meta name=twitter:title content="Hugo でリンクの後に余分な空白が挿入されてしまう現象">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://akimon658.github.io/p/2022/hugo-whitespace/"><meta property="og:description" content="Hugo そのものの不具合ではありませんが、まぁまぁ困ったので解決策を調べました。">
+<meta name=twitter:description content="Hugo そのものの不具合ではありませんが、まぁまぁ困ったので解決策を調べました。"><meta name=twitter:card content="summary"><meta property="article:published_time" content="2022-01-24T08:55:00+09:00"><meta property="article:modified_time" content="2022-01-24T08:55:29+09:00">
 <link rel=stylesheet href=https://akimon658.github.io/assets/css/style.min.css>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-174918347-7')</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174918347-7"></script>
@@ -39,46 +40,36 @@ brightness_medium
 <main>
 <div class="container-lg clearfix">
 <div class="col-12 col-md-9 float-left content">
-<div class=post>
-<h2 class="post-item post-title">
-<a href=https://akimon658.github.io/p/2022/hugo-whitespace/>Hugo でリンクの後に余分な空白が挿入されてしまう現象</a>
-</h2>
+<article data-clarity-region=article>
+<h1 class="post-item post-title">Hugo でリンクの後に余分な空白が挿入されてしまう現象</h1>
 <div class="post-item post-meta"><span class="event material-icons">2022-01-24</span><span class="local-offer material-icons">タグはありません</span>
 </div>
-<div class="post-item post-summary markdown-body">このブログは Hugo を使って運用しています。 多機能なのに高速でめちゃくちゃ便利なんですが、リンクを貼ると後 ...
+<div class="post-content markdown-body"><p>このブログは <a href=https://gohugo.io target=_blank rel="noopener noreferrer">Hugo</a> を使って運用しています。
+多機能なのに高速でめちゃくちゃ便利なんですが、リンクを貼ると後ろに余計な半角スペースが入ってしまって気持ち悪かったので原因を調べました。</p>
+<h2 id=問題点>問題点</h2>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown>This is [<span class=nt>test</span>](<span class=na>https://example.com</span>), just a [<span class=nt>sample</span>](<span class=na>https://sample.test</span>).
+</code></pre></div><p>これが</p>
+<p><img class=img-zoomable src=./unnecessary-whitespace.webp alt=余分なスペースの例>
+</p>
+<p>こうなる。（カンマ、ピリオドの前に余計なスペースが入っている）</p>
+<p>※紛らわしいんですが、この記事で半角スペースが入っているのは僕が日本語とアルファベットの間に空白を入れる派だからであって上記の問題は解決してあります。
+多分</p>
+<h2 id=原因>原因</h2>
+<p><code>layouts/_default/_markup/render-link.html</code> の最後に改行が入っているせいでした。</p>
+<h3 id=render-linkhtml-について><code>render-link.html</code> について</h3>
+<p>Hugo には <a href=https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks target=_blank rel="noopener noreferrer">Render Hooks</a> という機能があります。
+HTML の生成に割り込み、例えば <code>render-link.html</code> を使うと外部リンクを <code>target="_blank"</code> で開くといったことができる機能です。
+ただ、Hugo 内部で使われている <a href=https://github.com/yuin/goldmark target=_blank rel="noopener noreferrer">goldmark</a> という Markdown パーサーのバグなのか仕様なのかスペースが入ってしまうみたいです。</p>
+<p>当サイトのテーマのベースになっている <a href=https://github.com/dsrkafuu/hugo-theme-fuji/ target=_blank rel="noopener noreferrer">Fuji</a> ではしっかり対処されていましたが、アレンジする時に自分で改行を入れたので自業自得でした。</p>
+<h2 id=あとがき>あとがき</h2>
+<p><a href=https://github.com/gohugoio/hugo/issues/6832 target=_blank rel="noopener noreferrer">同じような issue</a> が既に立っていました。
+各自で改行を入れないように気をつけてくれというスタンスみたいで、Vim を使っていると勝手に末尾に改行が入ってしまうので面倒臭いです。</p>
 </div>
-</div><div class=post>
-<h2 class="post-item post-title">
-<a href=https://akimon658.github.io/p/2022/deelocloud/>DeeloCloud なる会社？からメールが来た</a>
-</h2>
-<div class="post-item post-meta"><span class="event material-icons">2022-01-10</span><span class="local-offer material-icons">タグはありません</span>
-</div>
-<div class="post-item post-summary markdown-body">GitHub に自分用の Dockerfile を置いていたら DeeloCloud なるサービスの owner を名乗る方からメールが来ました。 見るからに怪しさ全開で ...
-</div>
-</div><div class=post>
-<h2 class="post-item post-title">
-<a href=https://akimon658.github.io/p/2021/wsl-default-browser/>Windows のブラウザを WSL のデフォルトとして使用する</a>
-</h2>
-<div class="post-item post-meta"><span class="event material-icons">2021-12-31</span><span class="local-offer material-icons">タグはありません</span>
-</div>
-<div class="post-item post-summary markdown-body">WSLg があるのでまぁそれでも良いんですが、Windows 側に統一できた方が楽なので。 ちなみに Debian です。 sudo update-alternatives ...
-</div>
-</div><div class=post>
-<h2 class="post-item post-title">
-<a href=https://akimon658.github.io/p/2021/gitpod-permission/>Gitpod で自作の Docker イメージを使おうとして permission 関係で詰まった</a>
-</h2>
-<div class="post-item post-meta"><span class="event material-icons">2021-12-20</span><span class="material-icons update">2021-12-21</span><span class="local-offer material-icons">タグはありません</span>
-</div>
-<div class="post-item post-summary markdown-body">Gitpod では最初から全部入りの gitpod/workspace-full というコンテナを使えるので、基本的にはこれを使っていれば事足ります。 ただ今 ...
-</div>
-</div><div class=post>
-<h2 class="post-item post-title">
-<a href=https://akimon658.github.io/p/2021/customize-powershell/>PowerShell でホームディレクトリを省略する</a>
-</h2>
-<div class="post-item post-meta"><span class="event material-icons">2021-12-12</span><span class="material-icons update">2021-12-24</span><span class="local-offer material-icons">タグはありません</span>
-</div>
-<div class="post-item post-summary markdown-body">PowerShell はデフォルトで現在のフルパスを表示しますが、Bash のようにホームディレクトリを ~ で置き換えてほし ...
-</div>
+</article>
+<div class=post-comment data-comment=disqus>
+<span class="comment material-icons post-comment-notloaded">コメントを表示</span>
+<div id=disqus_thread style=display:none></div>
+<script>function loadComment(){var b=document.querySelector('.post-comment'),a;window.disqus_config=function(){this.language='ja',this.page.url='https://akimon658.github.io/p/2022/hugo-whitespace/',this.page.identifier='hugo-whitespace'},a=document.createElement('script'),a.src='https://akimon658-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),document.querySelector('#disqus_thread').removeAttribute('style'),(document.body||document.head).appendChild(a),document.querySelector('span.post-comment-notloaded').setAttribute('style','display: none;')}</script>
 </div>
 </div>
 <aside class="col-12 col-md-3 float-left sidebar">
@@ -125,7 +116,20 @@ Tags
 </h3>
 <div></div>
 </div>
-</aside>
+<div class="sidebar-item sidebar-toc">
+<h3>
+Contents
+</h3><nav id=TableOfContents>
+<ul>
+<li><a href=#問題点>問題点</a></li>
+<li><a href=#原因>原因</a>
+<ul>
+<li><a href=#render-linkhtml-について><code>render-link.html</code> について</a></li>
+</ul>
+</li>
+<li><a href=#あとがき>あとがき</a></li>
+</ul>
+</nav></div></aside>
 </div>
 <div class=btn>
 <div class=btn-menu id=btn-menu>
