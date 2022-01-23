@@ -2,7 +2,7 @@
 @import '_custom'; // Keep that for back-compatibility. This shouldn't be used anymore.
 
 $body-font: -apple-system, BlinkMacSystemFont, "Roboto", "Arial", "Noto Sans JP", "Yu Gothic Medium", "Meiryo", sans-serif;
-$mono-font: "Roboto Mono", 'Cascadia Code', 'SF Mono', 'Fira Code', 'Consolas', $body-font, monospace;
+$mono-font: "Roboto Mono", 'Cascadia Code', 'SF Mono', 'Fira Code', 'Consolas', 'Noto Sans JP', monospace, $body-font;
 $title-font: $body-font;
 
 $light-color-bg: #ffffff;
