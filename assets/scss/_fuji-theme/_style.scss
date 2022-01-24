@@ -25,6 +25,10 @@ body {
 .title-sub,
 .post-meta {
 	color: var(--color-mute);
+
+	a {
+		color: inherit;
+	}
 }
 
 header,
