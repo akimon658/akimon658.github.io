@@ -1,9 +1,9 @@
 ---
 title: "Hugo で Disqus を多言語対応させる"
 canonicalURL: ""
-date: 2022-01-24T13:55:00+09:00
+date: 2022-01-24T17:20:00+09:00
 description: "Hugo でビルド時に minify すると JavaScript から Disqus の言語が変えられなくて困ってたんですが、解決できたのでメモ"
-draft: true
+draft: false
 tags: ["Hugo"]
 ---
 
