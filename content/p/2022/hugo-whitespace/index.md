@@ -4,6 +4,7 @@ canonicalURL: ""
 date: 2022-01-24T08:55:00+09:00
 description: "Hugo そのものの不具合ではありませんが、まぁまぁ困ったので解決策を調べました。"
 draft: false
+tags: ["Hugo"]
 ---
 
 このブログは [Hugo](https://gohugo.io) を使って運用しています。
