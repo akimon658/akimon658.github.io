@@ -17,7 +17,7 @@
 <title>Boring Time</title><meta name=author content="Akimo"><link rel=alternate type=application/rss+xml href=https://akimon658.github.io/en/index.xml title="Boring Time"><meta property="og:title" content="Boring Time">
 <meta name=twitter:title content="Boring Time">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://akimon658.github.io/en/"><meta name=twitter:card content="summary"><meta property="og:updated_time" content="2021-12-31T17:18:10+09:00">
+<meta property="og:url" content="https://akimon658.github.io/en/"><meta name=twitter:card content="summary"><meta property="og:updated_time" content="2022-01-25T18:44:36+09:00">
 <link rel=stylesheet href=https://akimon658.github.io/assets/css/style.min.css>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-174918347-7')</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174918347-7"></script>
@@ -40,6 +40,17 @@ brightness_medium
 <div class="container-lg clearfix">
 <div class="col-12 col-md-9 float-left content">
 <div class=post>
+<h2 class="post-item post-title">
+<a href=https://akimon658.github.io/en/p/2022/hugo-whitespace/>Hugo adds unnecessary whitespace after a link</a>
+</h2>
+<div class="post-item post-meta"><span class="event material-icons">2022-01-25</span><span class="local-offer material-icons">No tag</span>
+</div>
+<div class="post-item post-summary markdown-body">I&rsquo;m running this blog with Hugo. I love it because it&rsquo;s super fast and functional, but I had a problem.
+Issue example This is [test](https://example.com), just a [sample](https://sample.test) This would output&mldr;
+like this. It rendered unnecessary space before comma or period.
+Cause It was because layouts/_default/_markup/render-link.html ended with a newline. ...
+</div>
+</div><div class=post>
 <h2 class="post-item post-title">
 <a href=https://akimon658.github.io/en/p/2021/wsl-default-browser/>How to use the browser in Windows as WSL's default</a>
 </h2>
