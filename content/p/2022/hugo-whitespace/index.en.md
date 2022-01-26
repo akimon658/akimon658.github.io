@@ -2,6 +2,7 @@
 title: "Hugo adds unnecessary whitespace after a link"
 date: 2022-01-25T18:40:00+09:00
 description: "I don't like to end with no newlines, but there are no other solutions"
+tags: ["Hugo"]
 ---
 
 I'm running this blog with [Hugo](https://gohugo.io).
