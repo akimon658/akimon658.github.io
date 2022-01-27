@@ -71,6 +71,10 @@ body[data-theme='auto'] {
 
 body[data-theme='light'] {
 	@include light();
+
+	header {
+		box-shadow: 0 0.25rem 0.15rem rgba(0, 0, 0, 0.2);
+	}
 }
 
 body[data-theme='dark'] {
