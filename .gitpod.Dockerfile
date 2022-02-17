@@ -6,5 +6,5 @@ RUN wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${
 
 USER root
 
-COPY --from=denoland/deno:bin-1.18.2 /deno /usr/local/bin/deno
+COPY --from=denoland/deno:bin-1.19.0 /deno /usr/local/bin/deno
 RUN apt install /tmp/hugo.deb
