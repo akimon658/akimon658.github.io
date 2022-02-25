@@ -2,12 +2,22 @@
 title: "Hugo で Disqus を多言語対応させる"
 canonicalURL: ""
 date: 2022-01-24T17:20:00+09:00
-description: "Hugo でビルド時に minify すると JavaScript から Disqus の言語が変えられなくて困ってたんですが、解決できたのでメモ"
+description: "Hugo のコメント欄をそのページの言語に合わせて変える方法"
 draft: false
 tags: ["Hugo"]
 ---
 
-[Disqus 公式のヘルプ](https://help.disqus.com/en/articles/1717203-multi-lingual-websites)によると、
+## 結論
+
+```javascript
+window.disqus_config = function() {
+	this.language = '{{ .Lang }}';
+}
+```
+
+## 解説
+
+[Disqus 公式のヘルプ](https://help.disqus.com/en/articles/1717203-multi-lingual-websites)を見ると、
 
 ```javascript
 var disqus_config = function () {
@@ -15,8 +25,9 @@ var disqus_config = function () {
 };
 ```
 
-このように言語設定を上書きできます。
-なので使っているテーマのコメント部分、もしくは [Hugo 公式の Disqus テンプレート](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/disqus.html)の `disqus_config` を探して
+このように言語設定を上書きできるとあります。
+
+なので HTML テンプレートのどこかに
 
 ```javascript
 var disqus_config = function () {
@@ -24,19 +35,9 @@ var disqus_config = function () {
 };
 ```
 
-のようにすればそのページの言語を設定できるはずです。
-が、ビルド時に `hugo --minify` すると変数名 `disqus_config` も短縮されて別の名前になってしまうので設定を上書きできません。
+こう書いておけば基本的には良いんですが、これだと `hugo --minify` した時に変数名 `disqus_config` が短縮されて違う名前になってしまうので意味が無くなります。
 
-## `minify` 対策
-
-`minify` の仕様を変えてもらうのも難しいのでしばらく放置してましたが、定義した以上どこかから `disqus_config` を呼び出しているはずだと思って [akimon658-github-io.disqus.com/embed.js](https://akimon658-github-io.disqus.com/embed.js) を見てみたら
-
-```javascript
-var _config = window.disqus_config;
-```
-
-という記述がありました。
-もしかして……と思って
+しかし、JavaScript におけるグローバル変数は `window` オブジェクトのプロパティとして扱えるので以下のような書き方が可能です。
 
 ```javascript
 window.disqus_config = function() {
@@ -44,13 +45,13 @@ window.disqus_config = function() {
 }
 ```
 
-こうしたら上手くいきました。
-
-## グローバル変数は `window` オブジェクトのプロパティとして扱える
-JavaScript 詳しくないので知らなかったのですが、例えばグローバル変数 `foo` と `window.foo` は同じものとして扱えるんですね。
+これなら `minify` しても名前が変わってしまうことはありません。
 
 参考：[Global object (グローバルオブジェクト) - MDN Web Docs 用語集: ウェブ関連用語の定義 | MDN](https://developer.mozilla.org/ja/docs/Glossary/Global_object)
 
-（関数も同じように使えるらしいけど、`addEventListener` みたいな関数作ったらどうなるんだろう？）
+## おまけ
 
-JavaScript、こういう変わった仕様のせいでイマイチ好きになれないけどポジティブに捉えるなら奥が深いってことでしょうか……。
+Hugo には[公式の Disqus テンプレート](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/disqus.html)がありますが、そこでも `var disqus_config` が使われていたのでプルリクを送ったところマージされました。
+ショボいけど初めて OSS に直接コントリビュートできたので嬉しいです。
+
+[Change `disqus_config` to `window.disqus_config` by Akimon658 · Pull Request #9550 · gohugoio/hugo](https://github.com/gohugoio/hugo/pull/9550)

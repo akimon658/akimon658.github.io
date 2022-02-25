@@ -5,7 +5,17 @@ description: "How to use Disqus on multilingual Hugo site with minify option"
 tags: ["Hugo"]
 ---
 
-According to [the Disqus help page](https://help.disqus.com/en/articles/1717203-multi-lingual-websites), we can override the language by adding this.
+## The answer
+
+```javascript
+window.disqus_config = function() {
+	this.language = '{{ .Lang }}';
+}
+```
+
+## Why use `window.disqus_config`?
+
+According to [the Disqus' help page](https://help.disqus.com/en/articles/1717203-multi-lingual-websites), we can override the language by adding this.
 
 ```javascript
 var disqus_config = function () {
@@ -13,7 +23,7 @@ var disqus_config = function () {
 };
 ```
 
-So, if you want to change the language of Disqus by the page's, adding the following code to the `disqus_config` of your theme or [official Disqus template](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/disqus.html) should effect.
+So basically the following JavaScript works.
 
 ```javascript
 var disqus_config = function () {
@@ -21,17 +31,9 @@ var disqus_config = function () {
 };
 ```
 
-However, the variable name `disqus_config` would be changed if you used `hugo --minify` so you couldn't change the language.
+However, the variable `disqus_config` doesn't work with `--minify` option because Hugo changes the name.
 
-## Against `minify`
-One day, I realized that `disqus_config` should be called from somewhere because it was just declared in the above code.
-Therefore, I visited [akimon658-githug-io.disqus.com/embed.js](https://akimon658-github-io.disqus.com/embed.js) and found this.
-
-```javascript
-var _config = window.disqus_config;
-```
-
-So I tried the following code, and it works correctly.
+To solve it, you can use a `window` object instead.
 
 ```javascript
 var disqus_config = function () {
@@ -39,8 +41,11 @@ var disqus_config = function () {
 };
 ```
 
-## `window` objects and global variables
-We can use `window.foo` same as a global variable `foo`.
-I didn't know that.
-
 Reference: [Global object - MDN Web Docs Glossary: Definitions of Web-related terms | MDN](https://developer.mozilla.org/en-US/docs/Glossary/Global_object)
+
+## By the way...
+
+Hugo has [a Disqus template](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/disqus.html), and it was using `var disqus_config` so I sent a pull request.
+I was happy because it's my first contribution to OSS.
+
+[Change `disqus_config` to `window.disqus_config` by Akimon658 · Pull Request #9550 · gohugoio/hugo](https://github.com/gohugoio/hugo/pull/9550)
