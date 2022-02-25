@@ -43,9 +43,9 @@ brightness_medium
 <h2 class="post-item post-title">
 <a href=https://akimon658.github.io/p/2022/disqus-multi-lang/>Hugo で Disqus を多言語対応させる</a>
 </h2>
-<div class="post-item post-meta"><span class="event material-icons">2022-01-24</span><span class="local-offer material-icons"><a href=/tags/hugo>Hugo</a></span>
+<div class="post-item post-meta"><span class="event material-icons">2022-01-24</span><span class="material-icons update">2022-02-26</span><span class="local-offer material-icons"><a href=/tags/hugo>Hugo</a></span>
 </div>
-<div class="post-item post-summary markdown-body">Disqus 公式のヘルプによると、 var disqus_config = function () { this.language = "ja"; }; このように言語設定を上書きできます。 なので使っているテー ...
+<div class="post-item post-summary markdown-body">結論 window.disqus_config = function() { this.language = '{{ .Lang }}'; } 解説 Disqus 公式のヘルプを見ると、 var disqus_config = function () { this.language = "ja"; }; このように言語設定を上書きで ...
 </div>
 </div><div class=post>
 <h2 class="post-item post-title">

@@ -17,7 +17,7 @@
 <title>Boring Time</title><meta name=author content="Akimo"><link rel=alternate type=application/rss+xml href=https://akimon658.github.io/en/index.xml title="Boring Time"><meta property="og:title" content="Boring Time">
 <meta name=twitter:title content="Boring Time">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://akimon658.github.io/en/"><meta name=twitter:card content="summary"><meta property="og:updated_time" content="2022-01-26T21:20:06+09:00">
+<meta property="og:url" content="https://akimon658.github.io/en/"><meta name=twitter:card content="summary"><meta property="og:updated_time" content="2022-02-26T00:23:17+09:00">
 <link rel=stylesheet href=https://akimon658.github.io/assets/css/style.min.css>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-174918347-7')</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174918347-7"></script>
@@ -43,10 +43,11 @@ brightness_medium
 <h2 class="post-item post-title">
 <a href=https://akimon658.github.io/en/p/2022/disqus-multi-lang/>Use Disqus on multilingual Hugo site</a>
 </h2>
-<div class="post-item post-meta"><span class="event material-icons">2022-01-26</span><span class="local-offer material-icons"><a href=/tags/hugo>Hugo</a></span>
+<div class="post-item post-meta"><span class="event material-icons">2022-01-26</span><span class="material-icons update">2022-02-26</span><span class="local-offer material-icons"><a href=/tags/hugo>Hugo</a></span>
 </div>
-<div class="post-item post-summary markdown-body">According to the Disqus help page, we can override the language by adding this.
-var disqus_config = function () { this.language = "ja"; }; So, if you want to change the language of Disqus by the page&rsquo;s, adding the following code to the disqus_config of your theme or official Disqus template should effect. ...
+<div class="post-item post-summary markdown-body">The answer window.disqus_config = function() { this.language = '{{ .Lang }}'; } Why use window.disqus_config? According to the Disqus' help page, we can override the language by adding this.
+var disqus_config = function () { this.language = "ja"; }; So basically the following JavaScript works.
+var disqus_config = function () { this. ...
 </div>
 </div><div class=post>
 <h2 class="post-item post-title">
