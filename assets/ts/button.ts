@@ -1,5 +1,9 @@
 declare function loadComment(): void
-declare var DISQUS: any
+declare namespace DISQUS {
+	function reset(disqusReload: {
+		reload: boolean
+	}): void
+}
 
 export function button() {
 	const buttons = document.querySelector<HTMLElement>('.btn')!
