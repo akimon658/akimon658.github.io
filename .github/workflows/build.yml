@@ -30,7 +30,7 @@ jobs:
         uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
-        
+
       - name: Bundle JS
         run: |
           mkdir assets/js
@@ -46,11 +46,8 @@ jobs:
         run: TZ="Asia/Tokyo" hugo --minify --ignoreCache
 
       - name: Push
-        run: |
-          if (git diff --shortstat | grep '[0-9]'); then \
-            git config --global user.name "${GITHUB_ACTOR}"; \
-            git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"; \
-            git add .; \
-            git commit -m ":robot: build.yml"; \
-            git push; \
-          fi
+        uses: EndBug/add-and-commit@72e246094f1af94def5a07467cd789c503ae8be0
+        with:
+          committer_name: github-actions
+          committer_email: github-actions@github.com
+          message: ":robot: build.yml"
