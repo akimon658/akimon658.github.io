@@ -47,11 +47,13 @@ window.disqus_config = function() {
 
 これなら `minify` しても名前が変わってしまうことはありません。
 
-参考：[Global object (グローバルオブジェクト) - MDN Web Docs 用語集: ウェブ関連用語の定義 | MDN](https://developer.mozilla.org/ja/docs/Glossary/Global_object)
+参考：
+
+{{< card "https://developer.mozilla.org/ja/docs/Glossary/Global_object" >}}
 
 ## おまけ
 
 Hugo には[公式の Disqus テンプレート](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/disqus.html)がありますが、そこでも `var disqus_config` が使われていたのでプルリクを送ったところマージされました。
 ショボいけど初めて OSS に直接コントリビュートできたので嬉しいです。
 
-[Change `disqus_config` to `window.disqus_config` by Akimon658 · Pull Request #9550 · gohugoio/hugo](https://github.com/gohugoio/hugo/pull/9550)
+{{< card "https://github.com/gohugoio/hugo/pull/9550" >}}

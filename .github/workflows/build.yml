@@ -20,6 +20,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    services:
+      ogjson:
+        image: akimon658/ogjson:1.0.0
+        ports:
+          - 8080:8080
+
     steps:
       - uses: actions/checkout@v2
         with:

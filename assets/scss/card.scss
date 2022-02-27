@@ -1,0 +1,23 @@
+.card {
+  border: 2px solid var(--color-divider);
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 1rem;
+
+  .card-title {
+    color: var(--color-font);
+  }
+
+  .card-description {
+    color: var(--color-mute);
+  }
+
+  .card-host {
+    color: var(--color-mute);
+    font-size: 0.8rem
+  }
+
+  &:hover {
+    background-color: var(--color-divider);
+  }
+}

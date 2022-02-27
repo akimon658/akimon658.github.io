@@ -41,11 +41,13 @@ var disqus_config = function () {
 };
 ```
 
-Reference: [Global object - MDN Web Docs Glossary: Definitions of Web-related terms | MDN](https://developer.mozilla.org/en-US/docs/Glossary/Global_object)
+Reference:
+
+{{< card "https://developer.mozilla.org/en-US/docs/Glossary/Global_object" >}}
 
 ## By the way...
 
 Hugo has [a Disqus template](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/disqus.html), and it was using `var disqus_config` so I sent a pull request.
 I was happy because it's my first contribution to OSS.
 
-[Change `disqus_config` to `window.disqus_config` by Akimon658 · Pull Request #9550 · gohugoio/hugo](https://github.com/gohugoio/hugo/pull/9550)
+{{< card "https://github.com/gohugoio/hugo/pull/9550" >}}
