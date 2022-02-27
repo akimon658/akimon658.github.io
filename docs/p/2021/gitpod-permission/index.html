@@ -18,7 +18,7 @@
 <meta name=twitter:title content="Gitpod で自作の Docker イメージを使おうとして permission 関係で詰まった">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://akimon658.github.io/p/2021/gitpod-permission/"><meta property="og:description" content="Linux の permission についてよく知らなくて詰まったときの話です。">
-<meta name=twitter:description content="Linux の permission についてよく知らなくて詰まったときの話です。"><meta name=twitter:card content="summary"><meta property="article:published_time" content="2021-12-20T11:13:22+09:00"><meta property="article:modified_time" content="2021-12-21T11:49:52+09:00">
+<meta name=twitter:description content="Linux の permission についてよく知らなくて詰まったときの話です。"><meta name=twitter:card content="summary"><meta property="article:published_time" content="2021-12-20T11:13:22+09:00"><meta property="article:modified_time" content="2022-02-28T08:47:22+09:00">
 <link rel=stylesheet href=https://akimon658.github.io/assets/css/style.min.css>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-174918347-7')</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174918347-7"></script>
@@ -42,7 +42,7 @@ brightness_medium
 <div class="col-12 col-md-9 float-left content">
 <article data-clarity-region=article>
 <h1 class="post-item post-title">Gitpod で自作の Docker イメージを使おうとして permission 関係で詰まった</h1>
-<div class="post-item post-meta"><span class="event material-icons">2021-12-20</span><span class="material-icons update">2021-12-21</span><span class="local-offer material-icons">タグはありません</span>
+<div class="post-item post-meta"><span class="event material-icons">2021-12-20</span><span class="material-icons update">2022-02-28</span><span class="local-offer material-icons">タグはありません</span>
 </div>
 <div class="post-content markdown-body"><p><a href=https://gitpod.io target=_blank rel="noopener noreferrer">Gitpod</a> では最初から全部入りの <a href=https://hub.docker.com/r/gitpod/workspace-full target=_blank rel="noopener noreferrer">gitpod/workspace-full</a> というコンテナを使えるので、基本的にはこれを使っていれば事足ります。
 ただ今回は <a href=https://taku910.github.io/mecab/ target=_blank rel="noopener noreferrer">MeCab</a> という形態素解析エンジンと Golang で遊びたかったので、<a href=https://github.com/Akimon658/go-mecab-neologd target=_blank rel="noopener noreferrer">別で作っておいたイメージ</a>を使用しようとしました。
@@ -50,9 +50,13 @@ brightness_medium
 <h2 id=gitpod-について>Gitpod について</h2>
 <p>ブラウザから使える開発環境です。
 まだ <a href=https://github.com/codespaces target=_blank rel="noopener noreferrer">GitHub Codespaces</a> が使えず、また <a href=https://education.github.com target=_blank rel="noopener noreferrer">GitHub Education</a> の特典で月100時間無料で使えるのでお世話になっています。</p>
-<ul>
-<li><a href=https://gitpod.io target=_blank rel="noopener noreferrer">gitpod.io</a></li>
-</ul>
+<a href=https://gitpod.io target=_blank rel="noopener noreferrer">
+<div class=card>
+<div class=card-title>Dashboard — Gitpod</div>
+<div class=card-host>gitpod.io</div>
+<div class=card-description></div>
+</div>
+</a>
 <h2 id=やりたかったこと>やりたかったこと</h2>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-dockerfile data-lang=dockerfile><span class=c># 自作イメージ</span><span class=err>
 </span><span class=err></span><span class=k>FROM</span><span class=s> akimon658/go-mecab-neologd:latest</span><span class=err>
@@ -73,9 +77,18 @@ brightness_medium
 これを必要なところに設定しましょう。
 <code>777</code> だと過剰かもしれませんが面倒だったので。</p>
 <p><code>chmod</code> について詳しくは以下の記事がとても参考になります。</p>
-<ul>
-<li><a href=https://qiita.com/shisama/items/5f4c4fa768642aad9e06 target=_blank rel="noopener noreferrer">Linuxの権限確認と変更(chmod)（超初心者向け）</a></li>
-</ul>
+<a href=https://qiita.com/shisama/items/5f4c4fa768642aad9e06 target=_blank rel="noopener noreferrer">
+<div class=card>
+<div class=card-title>Linuxの権限確認と変更(chmod)（超初心者向け） - Qiita</div>
+<div class=card-host>qiita.com</div>
+<div class=card-description>
+ファイル・ディレクトリの権限（パーミッション）の確認方法と変更方法
+以下のようなコマンドの謎の数字や
+$ chmod 777 hoge.txt
+以下のような一覧のrやwなど謎の英文字について
+-rw-r--r-- 1 ...</div>
+</div>
+</a>
 <h2 id=あとがき>あとがき</h2>
 <p>原因はすぐに分かりましたが Linux の権限周りの仕組みを全く知らなかったので解決策に辿り着くまでに1時間ぐらい溶かしました。</p>
 </div>

@@ -18,7 +18,7 @@
 <meta name=twitter:title content="PowerShell でホームディレクトリを省略する">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://akimon658.github.io/p/2021/customize-powershell/"><meta property="og:description" content="PowerShell のパス表示をカスタマイズする方法について簡単に書きました。">
-<meta name=twitter:description content="PowerShell のパス表示をカスタマイズする方法について簡単に書きました。"><meta name=twitter:card content="summary"><meta property="article:published_time" content="2021-12-12T13:00:00+09:00"><meta property="article:modified_time" content="2021-12-24T13:23:32+09:00">
+<meta name=twitter:description content="PowerShell のパス表示をカスタマイズする方法について簡単に書きました。"><meta name=twitter:card content="summary"><meta property="article:published_time" content="2021-12-12T13:00:00+09:00"><meta property="article:modified_time" content="2022-02-28T08:47:22+09:00">
 <link rel=stylesheet href=https://akimon658.github.io/assets/css/style.min.css>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-174918347-7')</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174918347-7"></script>
@@ -42,7 +42,7 @@ brightness_medium
 <div class="col-12 col-md-9 float-left content">
 <article data-clarity-region=article>
 <h1 class="post-item post-title">PowerShell でホームディレクトリを省略する</h1>
-<div class="post-item post-meta"><span class="event material-icons">2021-12-12</span><span class="material-icons update">2021-12-24</span><span class="local-offer material-icons">タグはありません</span>
+<div class="post-item post-meta"><span class="event material-icons">2021-12-12</span><span class="material-icons update">2022-02-28</span><span class="local-offer material-icons">タグはありません</span>
 </div>
 <div class="post-content markdown-body"><p>PowerShell はデフォルトで現在のフルパスを表示しますが、Bash のようにホームディレクトリを <code>~</code> で置き換えてほしかったのでカスタマイズしてみました。</p>
 <h2 id=profile-の準備>Profile の準備</h2>
@@ -55,7 +55,14 @@ brightness_medium
       <span class=k>else</span> <span class=p>{</span> <span class=s1>&#39;&#39;</span> <span class=p>})</span> <span class=p>+</span> <span class=s1>&#39;PS &#39;</span> <span class=p>+</span> <span class=p>$(</span><span class=nb>Get-Location</span><span class=p>)</span> <span class=p>+</span>
         <span class=p>$(</span><span class=k>if</span> <span class=p>(</span><span class=nv>$NestedPromptLevel</span> <span class=o>-ge</span> <span class=n>1</span><span class=p>)</span> <span class=p>{</span> <span class=s1>&#39;&gt;&gt;&#39;</span> <span class=p>})</span> <span class=p>+</span> <span class=s1>&#39;&gt; &#39;</span>
 <span class=p>}</span>
-</code></pre></div><p>参考：<a href="https://docs.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7.2#built-in-prompt" target=_blank rel="noopener noreferrer">プロンプトについて - PowerShell | Microsoft Docs</a></p>
+</code></pre></div><p>参考：</p>
+<a href="https://docs.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7.2#built-in-prompt" target=_blank rel="noopener noreferrer">
+<div class=card>
+<div class=card-title>プロンプトについて - PowerShell</div>
+<div class=card-host>docs.microsoft.com</div>
+<div class=card-description>関数について説明 `Prompt` し、カスタム関数を作成する方法を示し `Prompt` ます。</div>
+</div>
+</a>
 <p>カレントディレクトリの取得に <code>$(Get-Location)</code> が使われていますが、これだと文字列として扱うことができません（<code>$pwd</code> も同様）。そこで <code>Convert-Path</code> を使います。</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=k>function</span> <span class=n>prompt</span> <span class=p>{</span>
     <span class=nv>$currentDir</span> <span class=p>=</span> <span class=p>(</span><span class=nb>Convert-Path</span> <span class=p>.)</span>
@@ -79,7 +86,13 @@ brightness_medium
 </code></pre></div><h2 id=あとがき>あとがき</h2>
 <p>今回はちょっと表示をいじっただけですが、他にも色々できるので試してみてください。
 参考までに僕のリポジトリを置いておきます。</p>
-<p><a href=https://github.com/Akimon658/pwsh-profile target=_blank rel="noopener noreferrer">github.com/akimon658/pwsh-profile</a></p>
+<a href=https://github.com/Akimon658/pwsh-profile target=_blank rel="noopener noreferrer">
+<div class=card>
+<div class=card-title>GitHub - Akimon658/pwsh-profile: My PowerShell profile</div>
+<div class=card-host>github.com</div>
+<div class=card-description>My PowerShell profile. Contribute to Akimon658/pwsh-profile development by creating an account on GitHub.</div>
+</div>
+</a>
 </div>
 </article>
 <div class=post-comment data-comment=disqus>
