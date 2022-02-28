@@ -36,7 +36,7 @@ brightness_medium
 <div class="container-lg clearfix">
 <div class="col-12 col-md-9 float-left content">
 <article data-clarity-region=article>
-<h1 class="post-item post-title">Gitpod で自作の Docker イメージを使おうとして permission 関係で詰まった</h1><div class="post-item post-meta"><span class="event material-icons">2021-12-20</span><span class="material-icons update">2022-03-01</span><span class="local-offer material-icons"><a href=/tags/docker>Docker</a></span>
+<h1 class="post-item post-title">Gitpod で自作の Docker イメージを使おうとして permission 関係で詰まった</h1><div class="post-item post-meta"><span class="event material-icons">2021-12-20</span><span class="material-icons update">2022-03-01</span><span class="local-offer material-icons"><a href=/tags/docker class=tag>Docker</a></span>
 </div><div class="post-content markdown-body"><p><a href=https://gitpod.io target=_blank rel="noopener noreferrer">Gitpod</a> では最初から全部入りの <a href=https://hub.docker.com/r/gitpod/workspace-full target=_blank rel="noopener noreferrer">gitpod/workspace-full</a> というコンテナを使えるので、基本的にはこれを使っていれば事足ります。
 ただ今回は <a href=https://taku910.github.io/mecab/ target=_blank rel="noopener noreferrer">MeCab</a> という形態素解析エンジンと Golang で遊びたかったので、<a href=https://github.com/Akimon658/go-mecab-neologd target=_blank rel="noopener noreferrer">別で作っておいたイメージ</a>を使用しようとしました。
 しかし permission 関係でちょっと詰まったので記事にしておこうと思います。</p><h2 id=gitpod-について>Gitpod について</h2><p>ブラウザから使える開発環境です。

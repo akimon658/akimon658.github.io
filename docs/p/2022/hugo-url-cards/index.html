@@ -36,7 +36,7 @@ brightness_medium
 <div class="container-lg clearfix">
 <div class="col-12 col-md-9 float-left content">
 <article data-clarity-region=article>
-<h1 class="post-item post-title">GitHub Actions のサービスコンテナを使って Hugo のビルド時にリンクカードを生成する</h1><div class="post-item post-meta"><span class="event material-icons">2022-02-28</span><span class="material-icons update">2022-03-01</span><span class="local-offer material-icons"><a href=/tags/docker>Docker</a><a href=/tags/hugo>Hugo</a></span>
+<h1 class="post-item post-title">GitHub Actions のサービスコンテナを使って Hugo のビルド時にリンクカードを生成する</h1><div class="post-item post-meta"><span class="event material-icons">2022-02-28</span><span class="material-icons update">2022-03-01</span><span class="local-offer material-icons"><a href=/tags/docker class=tag>Docker</a><a href=/tags/hugo class=tag>Hugo</a></span>
 </div><div class="post-content markdown-body"><p>めっちゃ速い静的サイトジェネレータとして定評のある <a href=https://gohugo.io target=_blank rel="noopener noreferrer">Hugo</a> ですが、その分動的な処理ができないので色々と工夫する必要があります。
 関連記事やタグなど一般的なブログに必要な機能は標準で搭載されているし、shortcodes を使えば複雑な HTML も簡単に入れられますが、<strong>外部サイトからは JSON か CSV しか取得できない</strong>ので URL からリンクカードを生成しようと思ったら API サーバーを立てて経由させなければなりません。</p><p>とはいえビルド時にしか使わないのに外部のレンタルサーバーを使ったりするのは無駄が多いし、ローカルでプレビューするときも使えるような汎用性の高さも必要です。
 ということで簡単な Docker イメージを作って GitHub Actions で使ってみたいと思います。</p><p>完成品はこちら。</p><a href=https://github.com/Akimon658/ogjson target=_blank rel="noopener noreferrer">
