@@ -4,6 +4,7 @@ canonicalURL: "https://zenn.dev/akimon658/articles/gipod-permission"
 date: 2021-12-20T11:13:22+09:00
 description: "Linux の permission についてよく知らなくて詰まったときの話です。"
 draft: false
+tags: ["Docker"]
 ---
 
 [Gitpod](https://gitpod.io) では最初から全部入りの [gitpod/workspace-full](https://hub.docker.com/r/gitpod/workspace-full) というコンテナを使えるので、基本的にはこれを使っていれば事足ります。
