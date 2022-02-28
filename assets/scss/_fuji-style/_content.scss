@@ -34,6 +34,10 @@
   span {
     display: flex;
     align-items: center;
+
+    a {
+      margin-right: 0.9rem;
+    }
   }
 
   span:not(:last-child) {
