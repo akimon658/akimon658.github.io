@@ -14,11 +14,10 @@
 <meta name=msapplication-TileColor content="#2d89ef">
 <meta name=msapplication-config content="/icons/browserconfig.xml">
 <meta name=theme-color content="#ffffff">
-<title>Windows のブラウザを WSL のデフォルトとして使用する - Boring Time</title><meta name=author content="Akimo"><meta name=description content="あんまり使う機会ないけどね"><meta property="og:title" content="Windows のブラウザを WSL のデフォルトとして使用する">
-<meta name=twitter:title content="Windows のブラウザを WSL のデフォルトとして使用する">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://akimon658.github.io/p/2021/wsl-default-browser/"><meta property="og:description" content="あんまり使う機会ないけどね">
-<meta name=twitter:description content="あんまり使う機会ないけどね"><meta name=twitter:card content="summary"><meta property="article:published_time" content="2021-12-31T11:10:00+09:00"><meta property="article:modified_time" content="2021-12-31T11:09:45+09:00">
+<title>Docker - Boring Time</title><meta name=author content="Akimo"><link rel=alternate type=application/rss+xml href=https://akimon658.github.io/tags/docker/index.xml title="Boring Time"><meta property="og:title" content="Docker">
+<meta name=twitter:title content="Docker">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://akimon658.github.io/tags/docker/"><meta name=twitter:card content="summary"><meta property="og:updated_time" content="2022-03-01T07:51:53+09:00">
 <link rel=stylesheet href=https://akimon658.github.io/assets/css/style.min.css>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-174918347-7")</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174918347-7"></script>
@@ -35,20 +34,20 @@ brightness_medium
 </div></div></div></header><main>
 <div class="container-lg clearfix">
 <div class="col-12 col-md-9 float-left content">
-<article data-clarity-region=article>
-<h1 class="post-item post-title">Windows のブラウザを WSL のデフォルトとして使用する</h1><div class="post-item post-meta"><span class="event material-icons">2021-12-31</span><span class="local-offer material-icons">タグはありません</span>
-</div><div class="post-content markdown-body"><p>WSLg があるのでまぁそれでも良いんですが、Windows 側に統一できた方が楽なので。
-ちなみに Debian です。</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser 使いたいブラウザへのパス 優先度
-</span></span></code></pre></div><p>例：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser /mnt/c/Program<span class=se>\ </span>Files/Google/Chrome/Application/chrome.exe <span class=m>1</span>
-</span></span></code></pre></div><p>WSL 側にブラウザが無いならこれで終わりです。
-あっても次の方法でデフォルトを設定できるので、優先度は適当でいいと思います。</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>sudo update-alternatives --config x-www-browser
-</span></span></code></pre></div><p>これで Windows のブラウザを WSL のデフォルトブラウザとして使えるようになりました。</p></div></article><div class=post-comment data-comment=disqus>
-<span class="comment material-icons post-comment-notloaded">コメントを表示</span>
-<div id=disqus_thread style=display:none></div><script>function loadComment(){var t=document.querySelector(".post-comment"),e;window.disqus_config=function(){this.language="ja",this.page.url="https://akimon658.github.io/p/2021/wsl-default-browser/",this.page.identifier="wsl-default-browser"},e=document.createElement("script"),e.src="https://akimon658-github-io.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),document.querySelector("#disqus_thread").removeAttribute("style"),(document.body||document.head).appendChild(e),document.querySelector("span.post-comment-notloaded").setAttribute("style","display: none;")}</script>
-</div></div><aside class="col-12 col-md-3 float-left sidebar">
-<div class=sidebar-item><select onchange="location.href=value"><option hidden>
-Language
-</option><option value=/en/p/2021/wsl-default-browser/>English</option></select></div><div class="sidebar-item sidebar-pages">
+<div class=page-info>
+<span>タグ「Docker」の記事：</span>
+</div><div class=post>
+<h2 class="post-item post-title">
+<a href=https://akimon658.github.io/p/2022/hugo-url-cards/>GitHub Actions のサービスコンテナを使って Hugo のビルド時にリンクカードを生成する</a>
+</h2><div class="post-item post-meta"><span class="event material-icons">2022-02-28</span><span class="material-icons update">2022-03-01</span><span class="local-offer material-icons"><a href=/tags/docker>Docker</a><a href=/tags/hugo>Hugo</a></span>
+</div><div class="post-item post-summary markdown-body">めっちゃ速い静的サイトジェネレータとして定評のある Hugo ですが、その分動的な処理ができないので色々と工夫 ...
+</div></div><div class=post>
+<h2 class="post-item post-title">
+<a href=https://akimon658.github.io/p/2021/gitpod-permission/>Gitpod で自作の Docker イメージを使おうとして permission 関係で詰まった</a>
+</h2><div class="post-item post-meta"><span class="event material-icons">2021-12-20</span><span class="material-icons update">2022-03-01</span><span class="local-offer material-icons"><a href=/tags/docker>Docker</a></span>
+</div><div class="post-item post-summary markdown-body">Gitpod では最初から全部入りの gitpod/workspace-full というコンテナを使えるので、基本的にはこれを使っていれば事足ります。 ただ今 ...
+</div></div></div><aside class="col-12 col-md-3 float-left sidebar">
+<div class=sidebar-item></div><div class="sidebar-item sidebar-pages">
 <h3>
 Pages
 </h3><ul><li>
@@ -85,10 +84,7 @@ Tags
 <a href=/tags/docker/>Docker</a>
 </span><span>
 <a href=/tags/hugo/>Hugo</a>
-</span></div></div><div class="sidebar-item sidebar-toc">
-<h3>
-Contents
-</h3><nav id=TableOfContents></nav></div></aside></div><div class=btn>
+</span></div></div></aside></div><div class=btn>
 <div class=btn-menu id=btn-menu>
 <span class=material-icon>
 menu
@@ -136,9 +132,7 @@ Tags
 <a href=/tags/docker/>Docker</a>
 </span><span>
 <a href=/tags/hugo/>Hugo</a>
-</span></div></div><div class=sidebar-item><select onchange="location.href=value"><option hidden>
-Language
-</option><option value=/en/p/2021/wsl-default-browser/>English</option></select></div></div></aside></main><footer>
+</span></div></div><div class=sidebar-item></div></div></aside></main><footer>
 <div class="container-lg clearfix">
 <div class="col-12 footer"><span>&copy; 2021-2022
 <a href=https://akimon658.github.io/>Akimo</a>

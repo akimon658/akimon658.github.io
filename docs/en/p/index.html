@@ -5,7 +5,7 @@
 <meta name=HandheldFriendly content="True">
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta http-equiv=cache-control content="no-transform">
-<meta http-equiv=cache-control content="no-siteapp"><meta name=generator content="Hugo 0.92.2"><link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png>
+<meta http-equiv=cache-control content="no-siteapp"><meta name=generator content="Hugo 0.93.0"><link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/icons/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/icons/favicon-16x16.png>
 <link rel=manifest href=/icons/site.webmanifest>
@@ -19,12 +19,11 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://akimon658.github.io/en/p/"><meta name=twitter:card content="summary"><meta property="og:updated_time" content="2021-12-16T22:45:24+09:00">
 <link rel=stylesheet href=https://akimon658.github.io/assets/css/style.min.css>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-174918347-7')</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-174918347-7")</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174918347-7"></script>
-<script>(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},c=e.createElement(f),c.async=1,c.src="https://www.clarity.ms/tag/"+g+"?ref=bwt",d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","95k7fmhfca")</script>
-</head>
-<body data-theme=auto data-theme-auto=false>
-<script data-cfasync=false>var fujiThemeData=localStorage.getItem('fuji_data-theme');fujiThemeData?fujiThemeData!=='auto'&&document.body.setAttribute('data-theme',fujiThemeData==='dark'?'dark':'light'):localStorage.setItem('fuji_data-theme','auto')</script>
+<script>(function(e,o,t,i,a,n,s){e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},n=o.createElement(i),n.async=1,n.src="https://www.clarity.ms/tag/"+a+"?ref=bwt",s=o.getElementsByTagName(i)[0],s.parentNode.insertBefore(n,s)})(window,document,"clarity","script","95k7fmhfca")</script>
+</head><body data-theme=auto data-theme-auto=false>
+<script data-cfasync=false>var fujiThemeData=localStorage.getItem("fuji_data-theme");fujiThemeData?fujiThemeData!=="auto"&&document.body.setAttribute("data-theme",fujiThemeData==="dark"?"dark":"light"):localStorage.setItem("fuji_data-theme","auto")</script>
 <header>
 <div class="container-lg clearfix">
 <div class="col-12 header">
@@ -32,73 +31,50 @@
 <span class=material-icon>
 brightness_medium
 </span>
-</div>
-</div>
-</div>
-</header>
-<main>
+</div></div></div></header><main>
 <div class="container-lg clearfix">
 <div class="col-12 col-md-9 float-left content">
 <div class=post>
 <h2 class="post-item post-title">
 <a href=https://akimon658.github.io/en/p/2022/disqus-multi-lang/>Use Disqus on multilingual Hugo site</a>
-</h2>
-<div class="post-item post-meta"><span class="event material-icons">2022-01-26</span><span class="material-icons update">2022-02-28</span><span class="local-offer material-icons"><a href=/tags/hugo>Hugo</a></span>
-</div>
-<div class="post-item post-summary markdown-body">The answer window.disqus_config = function() { this.language = '{{ .Lang }}'; } Why use window.disqus_config? According to the Disqus' help page, we can override the language by adding this.
+</h2><div class="post-item post-meta"><span class="event material-icons">2022-01-26</span><span class="material-icons update">2022-02-28</span><span class="local-offer material-icons"><a href=/tags/hugo>Hugo</a></span>
+</div><div class="post-item post-summary markdown-body">The answer window.disqus_config = function() { this.language = '{{ .Lang }}'; } Why use window.disqus_config? According to the Disqus&rsquo; help page, we can override the language by adding this.
 var disqus_config = function () { this.language = "ja"; }; So basically the following JavaScript works.
 var disqus_config = function () { this. ...
-</div>
-</div><div class=post>
+</div></div><div class=post>
 <h2 class="post-item post-title">
 <a href=https://akimon658.github.io/en/p/2022/hugo-whitespace/>Hugo adds unnecessary whitespace after a link</a>
-</h2>
-<div class="post-item post-meta"><span class="event material-icons">2022-01-25</span><span class="material-icons update">2022-01-26</span><span class="local-offer material-icons"><a href=/tags/hugo>Hugo</a></span>
-</div>
-<div class="post-item post-summary markdown-body">I&rsquo;m running this blog with Hugo. I love it because it&rsquo;s super fast and functional, but I had a problem.
+</h2><div class="post-item post-meta"><span class="event material-icons">2022-01-25</span><span class="material-icons update">2022-01-26</span><span class="local-offer material-icons"><a href=/tags/hugo>Hugo</a></span>
+</div><div class="post-item post-summary markdown-body">I&rsquo;m running this blog with Hugo. I love it because it&rsquo;s super fast and functional, but I had a problem.
 Issue example This is [test](https://example.com), just a [sample](https://sample.test) This would output&mldr;
 like this. It rendered unnecessary space before comma or period.
 Cause It was because layouts/_default/_markup/render-link.html ended with a newline. ...
-</div>
-</div><div class=post>
+</div></div><div class=post>
 <h2 class="post-item post-title">
 <a href=https://akimon658.github.io/en/p/2021/wsl-default-browser/>How to use the browser in Windows as WSL's default</a>
-</h2>
-<div class="post-item post-meta"><span class="event material-icons">2021-12-31</span><span class="local-offer material-icons">No tag</span>
-</div>
-<div class="post-item post-summary markdown-body">How do you usually do when you need to authorize using the browser in WSL? Copy the token? Or use WSLg? These ways are not wrong, but it will be better to use the host&rsquo;s browser.
+</h2><div class="post-item post-meta"><span class="event material-icons">2021-12-31</span><span class="local-offer material-icons">No tag</span>
+</div><div class="post-item post-summary markdown-body">How do you usually do when you need to authorize using the browser in WSL? Copy the token? Or use WSLg? These ways are not wrong, but it will be better to use the host&rsquo;s browser.
 Here is how to set it:
 sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser path/to/browser priority Example: ...
-</div>
-</div><div class=post>
+</div></div><div class=post>
 <h2 class="post-item post-title">
 <a href=https://akimon658.github.io/en/p/2021/gitpod-permission/>Permission denied when using Gitpod with self-made Dockerfile</a>
-</h2>
-<div class="post-item post-meta"><span class="event material-icons">2021-12-20</span><span class="material-icons update">2022-02-28</span><span class="local-offer material-icons">No tag</span>
-</div>
-<div class="post-item post-summary markdown-body">When you use Gitpod, you can use gitpod/workspace-full. It is enough for development most case. However, I&rsquo;d like to use a morphological analysis engine called MeCab with Golang, so I tried to use an image I&rsquo;ve created in advance. However, I got stuck on permission, so I&rsquo;m writing this article. ...
-</div>
-</div><div class=post>
+</h2><div class="post-item post-meta"><span class="event material-icons">2021-12-20</span><span class="material-icons update">2022-02-28</span><span class="local-offer material-icons">No tag</span>
+</div><div class="post-item post-summary markdown-body">When you use Gitpod, you can use gitpod/workspace-full. It is enough for development most case. However, I&rsquo;d like to use a morphological analysis engine called MeCab with Golang, so I tried to use an image I&rsquo;ve created in advance. However, I got stuck on permission, so I&rsquo;m writing this article. ...
+</div></div><div class=post>
 <h2 class="post-item post-title">
 <a href=https://akimon658.github.io/en/p/2021/customize-powershell/>How to replace home directory with "~" on PowerShell</a>
-</h2>
-<div class="post-item post-meta"><span class="event material-icons">2021-12-13</span><span class="material-icons update">2022-02-28</span><span class="local-offer material-icons">No tag</span>
-</div>
-<div class="post-item post-summary markdown-body">PowerShell displays the current full path by default. It&rsquo;s long, so I&rsquo;d like to replace it with ~ like Bash.
+</h2><div class="post-item post-meta"><span class="event material-icons">2021-12-13</span><span class="material-icons update">2022-02-28</span><span class="local-offer material-icons">No tag</span>
+</div><div class="post-item post-summary markdown-body">PowerShell displays the current full path by default. It&rsquo;s long, so I&rsquo;d like to replace it with ~ like Bash.
 Prepare a profile You can customize your PowerShell with $profile. It doesn&rsquo;t exist by default, so you need to run touch $profile.
 Customize To customize the prompt, use function prompt. Here is a built-in one. ...
-</div>
-</div>
-</div>
-<aside class="col-12 col-md-3 float-left sidebar">
+</div></div></div><aside class="col-12 col-md-3 float-left sidebar">
 <div class=sidebar-item><select onchange="location.href=value"><option hidden>
 Language
-</option><option value=/p/>日本語</option></select></div>
-<div class="sidebar-item sidebar-pages">
+</option><option value=/p/>日本語</option></select></div><div class="sidebar-item sidebar-pages">
 <h3>
 Pages
-</h3>
-<ul><li>
+</h3><ul><li>
 <a href=/en/>Home</a>
 </li><li>
 <a href=/en/search/>Search</a>
@@ -106,13 +82,10 @@ Pages
 <a href=/en/about/>About</a>
 </li><li>
 <a href=/en/privacy-policy/>Privacy Policy</a>
-</li></ul>
-</div>
-<div class="sidebar-item sidebar-links">
+</li></ul></div><div class="sidebar-item sidebar-links">
 <h3>
 Links
-</h3>
-<ul><li>
+</h3><ul><li>
 <a href=mailto:akimo_greninja@yahoo.co.jp target=_blank rel="noopener noreferrer">
 <span>Email</span>
 </a>
@@ -128,37 +101,26 @@ Links
 <a href=https://twitter.com/kimo_pk target=_blank rel="noopener noreferrer">
 <span>Twitter (other)</span>
 </a>
-</li></ul>
-</div>
-<div class="sidebar-item sidebar-tags">
+</li></ul></div><div class="sidebar-item sidebar-tags">
 <h3>
 Tags
-</h3>
-<div><span>
+</h3><div><span>
 <a href=/en/tags/hugo/>Hugo</a>
-</span></div>
-</div>
-</aside>
-</div>
-<div class=btn>
+</span></div></div></aside></div><div class=btn>
 <div class=btn-menu id=btn-menu>
 <span class=material-icon>
 menu
 </span>
-</div>
-<div class=btn-scroll-top>
+</div><div class=btn-scroll-top>
 <span class=material-icon>
 keyboard_arrow_up
 </span>
-</div>
-</div>
-<aside class=sidebar-mobile style=display:none>
+</div></div><aside class=sidebar-mobile style=display:none>
 <div class=sidebar-wrapper>
 <div class="sidebar-item sidebar-pages">
 <h3>
 Pages
-</h3>
-<ul><li>
+</h3><ul><li>
 <a href=/en/>Home</a>
 </li><li>
 <a href=/en/search/>Search</a>
@@ -166,13 +128,10 @@ Pages
 <a href=/en/about/>About</a>
 </li><li>
 <a href=/en/privacy-policy/>Privacy Policy</a>
-</li></ul>
-</div>
-<div class="sidebar-item sidebar-links">
+</li></ul></div><div class="sidebar-item sidebar-links">
 <h3>
 Links
-</h3>
-<ul><li>
+</h3><ul><li>
 <a href=mailto:akimo_greninja@yahoo.co.jp target=_blank rel="noopener noreferrer">
 <span>Email</span>
 </a>
@@ -188,23 +147,14 @@ Links
 <a href=https://twitter.com/kimo_pk target=_blank rel="noopener noreferrer">
 <span>Twitter (other)</span>
 </a>
-</li></ul>
-</div>
-<div class="sidebar-item sidebar-tags">
+</li></ul></div><div class="sidebar-item sidebar-tags">
 <h3>
 Tags
-</h3>
-<div><span>
+</h3><div><span>
 <a href=/en/tags/hugo/>Hugo</a>
-</span></div>
-</div>
-<div class=sidebar-item><select onchange="location.href=value"><option hidden>
+</span></div></div><div class=sidebar-item><select onchange="location.href=value"><option hidden>
 Language
-</option><option value=/p/>日本語</option></select></div>
-</div>
-</aside>
-</main>
-<footer>
+</option><option value=/p/>日本語</option></select></div></div></aside></main><footer>
 <div class="container-lg clearfix">
 <div class="col-12 footer"><span>&copy; 2021-2022
 <a href=https://akimon658.github.io/>Akimo</a>
@@ -220,10 +170,6 @@ Fuji-v2
 <a href=https://gohugo.io/ target=_blank rel="noopener noreferrer">
 Hugo
 </a> </span>
-</div>
-</div>
-</footer>
-<script defer src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js></script>
+</div></div></footer><script defer src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js></script>
 <script defer src=/assets/js/script.min.js></script>
-</body>
-</html>
+</body></html>

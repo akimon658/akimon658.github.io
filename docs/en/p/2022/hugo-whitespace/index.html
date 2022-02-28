@@ -5,7 +5,7 @@
 <meta name=HandheldFriendly content="True">
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta http-equiv=cache-control content="no-transform">
-<meta http-equiv=cache-control content="no-siteapp"><meta name=generator content="Hugo 0.92.2"><link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png>
+<meta http-equiv=cache-control content="no-siteapp"><meta name=generator content="Hugo 0.93.0"><link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/icons/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/icons/favicon-16x16.png>
 <link rel=manifest href=/icons/site.webmanifest>
@@ -20,12 +20,11 @@
 <meta property="og:url" content="https://akimon658.github.io/en/p/2022/hugo-whitespace/"><meta property="og:description" content="I don't like to end with no newlines, but there are no other solutions">
 <meta name=twitter:description content="I don't like to end with no newlines, but there are no other solutions"><meta name=twitter:card content="summary"><meta property="article:published_time" content="2022-01-25T18:40:00+09:00"><meta property="article:modified_time" content="2022-01-26T21:20:06+09:00">
 <link rel=stylesheet href=https://akimon658.github.io/assets/css/style.min.css>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-174918347-7')</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-174918347-7")</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174918347-7"></script>
-<script>(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},c=e.createElement(f),c.async=1,c.src="https://www.clarity.ms/tag/"+g+"?ref=bwt",d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","95k7fmhfca")</script>
-</head>
-<body data-theme=auto data-theme-auto=false>
-<script data-cfasync=false>var fujiThemeData=localStorage.getItem('fuji_data-theme');fujiThemeData?fujiThemeData!=='auto'&&document.body.setAttribute('data-theme',fujiThemeData==='dark'?'dark':'light'):localStorage.setItem('fuji_data-theme','auto')</script>
+<script>(function(e,o,t,i,a,n,s){e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},n=o.createElement(i),n.async=1,n.src="https://www.clarity.ms/tag/"+a+"?ref=bwt",s=o.getElementsByTagName(i)[0],s.parentNode.insertBefore(n,s)})(window,document,"clarity","script","95k7fmhfca")</script>
+</head><body data-theme=auto data-theme-auto=false>
+<script data-cfasync=false>var fujiThemeData=localStorage.getItem("fuji_data-theme");fujiThemeData?fujiThemeData!=="auto"&&document.body.setAttribute("data-theme",fujiThemeData==="dark"?"dark":"light"):localStorage.setItem("fuji_data-theme","auto")</script>
 <header>
 <div class="container-lg clearfix">
 <div class="col-12 header">
@@ -33,52 +32,29 @@
 <span class=material-icon>
 brightness_medium
 </span>
-</div>
-</div>
-</div>
-</header>
-<main>
+</div></div></div></header><main>
 <div class="container-lg clearfix">
 <div class="col-12 col-md-9 float-left content">
 <article data-clarity-region=article>
-<h1 class="post-item post-title">Hugo adds unnecessary whitespace after a link</h1>
-<div class="post-item post-meta"><span class="event material-icons">2022-01-25</span><span class="material-icons update">2022-01-26</span><span class="local-offer material-icons"><a href=/tags/hugo>Hugo</a></span>
-</div>
-<div class="post-content markdown-body"><p>I&rsquo;m running this blog with <a href=https://gohugo.io target=_blank rel="noopener noreferrer">Hugo</a>.
-I love it because it&rsquo;s super fast and functional, but I had a problem.</p>
-<h2 id=issue-example>Issue example</h2>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown>This is [<span class=nt>test</span>](<span class=na>https://example.com</span>), just a [<span class=nt>sample</span>](<span class=na>https://sample.test</span>)
-</code></pre></div><p>This would output&mldr;</p>
-<p><img class=img-zoomable src=./unnecessary-whitespace.webp alt="unnecessary whitespace">
-</p>
-<p>like this.
-It rendered unnecessary space before comma or period.</p>
-<h2 id=cause>Cause</h2>
-<p>It was because <code>layouts/_default/_markup/render-link.html</code> ended with a newline.</p>
-<h3 id=what-is-lender-linkhtml>What is <code>lender-link.html</code></h3>
-<p>It is used with <a href=https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks target=_blank rel="noopener noreferrer">Render Hooks</a>, which overrides default HTML rendering.
+<h1 class="post-item post-title">Hugo adds unnecessary whitespace after a link</h1><div class="post-item post-meta"><span class="event material-icons">2022-01-25</span><span class="material-icons update">2022-01-26</span><span class="local-offer material-icons"><a href=/tags/hugo>Hugo</a></span>
+</div><div class="post-content markdown-body"><p>I&rsquo;m running this blog with <a href=https://gohugo.io target=_blank rel="noopener noreferrer">Hugo</a>.
+I love it because it&rsquo;s super fast and functional, but I had a problem.</p><h2 id=issue-example>Issue example</h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=cl>This is [<span class=nt>test</span>](<span class=na>https://example.com</span>), just a [<span class=nt>sample</span>](<span class=na>https://sample.test</span>)
+</span></span></code></pre></div><p>This would output&mldr;</p><p><img class=img-zoomable src=./unnecessary-whitespace.webp alt="unnecessary whitespace">
+</p><p>like this.
+It rendered unnecessary space before comma or period.</p><h2 id=cause>Cause</h2><p>It was because <code>layouts/_default/_markup/render-link.html</code> ended with a newline.</p><h3 id=what-is-lender-linkhtml>What is <code>lender-link.html</code></h3><p>It is used with <a href=https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks target=_blank rel="noopener noreferrer">Render Hooks</a>, which overrides default HTML rendering.
 For example, we can add <code>target="_blank"</code> to external links by using <code>lender-link.html</code>.
-However, <a href=https://github.com/yuin/goldmark target=_blank rel="noopener noreferrer">goldmark</a> adds whitespace if the template ends with a newline.</p>
-<p><code>render-link.html</code> of <a href=https://github.com/dsrkafuu/hugo-theme-fuji/ target=_blank rel="noopener noreferrer">Fuji</a>, the theme I&rsquo;m using as a base of this blog, ends with no newlines.
+However, <a href=https://github.com/yuin/goldmark target=_blank rel="noopener noreferrer">goldmark</a> adds whitespace if the template ends with a newline.</p><p><code>render-link.html</code> of <a href=https://github.com/dsrkafuu/hugo-theme-fuji/ target=_blank rel="noopener noreferrer">Fuji</a>, the theme I&rsquo;m using as a base of this blog, ends with no newlines.
 However, I added a newline to the template by myself when I customize it.
-Some editor adds a newline of the end automatically, so please be careful&mldr;</p>
-</div>
-</article>
-<div class=post-comment data-comment=disqus>
+Some editor adds a newline of the end automatically, so please be careful&mldr;</p></div></article><div class=post-comment data-comment=disqus>
 <span class="comment material-icons post-comment-notloaded">Load comments</span>
-<div id=disqus_thread style=display:none></div>
-<script>function loadComment(){var b=document.querySelector('.post-comment'),a;window.disqus_config=function(){this.language='en',this.page.url='https://akimon658.github.io/en/p/2022/hugo-whitespace/',this.page.identifier='hugo-whitespace'},a=document.createElement('script'),a.src='https://akimon658-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),document.querySelector('#disqus_thread').removeAttribute('style'),(document.body||document.head).appendChild(a),document.querySelector('span.post-comment-notloaded').setAttribute('style','display: none;')}</script>
-</div>
-</div>
-<aside class="col-12 col-md-3 float-left sidebar">
+<div id=disqus_thread style=display:none></div><script>function loadComment(){var t=document.querySelector(".post-comment"),e;window.disqus_config=function(){this.language="en",this.page.url="https://akimon658.github.io/en/p/2022/hugo-whitespace/",this.page.identifier="hugo-whitespace"},e=document.createElement("script"),e.src="https://akimon658-github-io.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),document.querySelector("#disqus_thread").removeAttribute("style"),(document.body||document.head).appendChild(e),document.querySelector("span.post-comment-notloaded").setAttribute("style","display: none;")}</script>
+</div></div><aside class="col-12 col-md-3 float-left sidebar">
 <div class=sidebar-item><select onchange="location.href=value"><option hidden>
 Language
-</option><option value=/p/2022/hugo-whitespace/>日本語</option></select></div>
-<div class="sidebar-item sidebar-pages">
+</option><option value=/p/2022/hugo-whitespace/>日本語</option></select></div><div class="sidebar-item sidebar-pages">
 <h3>
 Pages
-</h3>
-<ul><li>
+</h3><ul><li>
 <a href=/en/>Home</a>
 </li><li>
 <a href=/en/search/>Search</a>
@@ -86,13 +62,10 @@ Pages
 <a href=/en/about/>About</a>
 </li><li>
 <a href=/en/privacy-policy/>Privacy Policy</a>
-</li></ul>
-</div>
-<div class="sidebar-item sidebar-links">
+</li></ul></div><div class="sidebar-item sidebar-links">
 <h3>
 Links
-</h3>
-<ul><li>
+</h3><ul><li>
 <a href=mailto:akimo_greninja@yahoo.co.jp target=_blank rel="noopener noreferrer">
 <span>Email</span>
 </a>
@@ -108,49 +81,33 @@ Links
 <a href=https://twitter.com/kimo_pk target=_blank rel="noopener noreferrer">
 <span>Twitter (other)</span>
 </a>
-</li></ul>
-</div>
-<div class="sidebar-item sidebar-tags">
+</li></ul></div><div class="sidebar-item sidebar-tags">
 <h3>
 Tags
-</h3>
-<div><span>
+</h3><div><span>
 <a href=/en/tags/hugo/>Hugo</a>
-</span></div>
-</div>
-<div class="sidebar-item sidebar-toc">
+</span></div></div><div class="sidebar-item sidebar-toc">
 <h3>
 Contents
 </h3><nav id=TableOfContents>
 <ul>
-<li><a href=#issue-example>Issue example</a></li>
-<li><a href=#cause>Cause</a>
+<li><a href=#issue-example>Issue example</a></li><li><a href=#cause>Cause</a>
 <ul>
-<li><a href=#what-is-lender-linkhtml>What is <code>lender-link.html</code></a></li>
-</ul>
-</li>
-</ul>
-</nav></div></aside>
-</div>
-<div class=btn>
+<li><a href=#what-is-lender-linkhtml>What is <code>lender-link.html</code></a></li></ul></li></ul></nav></div></aside></div><div class=btn>
 <div class=btn-menu id=btn-menu>
 <span class=material-icon>
 menu
 </span>
-</div>
-<div class=btn-scroll-top>
+</div><div class=btn-scroll-top>
 <span class=material-icon>
 keyboard_arrow_up
 </span>
-</div>
-</div>
-<aside class=sidebar-mobile style=display:none>
+</div></div><aside class=sidebar-mobile style=display:none>
 <div class=sidebar-wrapper>
 <div class="sidebar-item sidebar-pages">
 <h3>
 Pages
-</h3>
-<ul><li>
+</h3><ul><li>
 <a href=/en/>Home</a>
 </li><li>
 <a href=/en/search/>Search</a>
@@ -158,13 +115,10 @@ Pages
 <a href=/en/about/>About</a>
 </li><li>
 <a href=/en/privacy-policy/>Privacy Policy</a>
-</li></ul>
-</div>
-<div class="sidebar-item sidebar-links">
+</li></ul></div><div class="sidebar-item sidebar-links">
 <h3>
 Links
-</h3>
-<ul><li>
+</h3><ul><li>
 <a href=mailto:akimo_greninja@yahoo.co.jp target=_blank rel="noopener noreferrer">
 <span>Email</span>
 </a>
@@ -180,23 +134,14 @@ Links
 <a href=https://twitter.com/kimo_pk target=_blank rel="noopener noreferrer">
 <span>Twitter (other)</span>
 </a>
-</li></ul>
-</div>
-<div class="sidebar-item sidebar-tags">
+</li></ul></div><div class="sidebar-item sidebar-tags">
 <h3>
 Tags
-</h3>
-<div><span>
+</h3><div><span>
 <a href=/en/tags/hugo/>Hugo</a>
-</span></div>
-</div>
-<div class=sidebar-item><select onchange="location.href=value"><option hidden>
+</span></div></div><div class=sidebar-item><select onchange="location.href=value"><option hidden>
 Language
-</option><option value=/p/2022/hugo-whitespace/>日本語</option></select></div>
-</div>
-</aside>
-</main>
-<footer>
+</option><option value=/p/2022/hugo-whitespace/>日本語</option></select></div></div></aside></main><footer>
 <div class="container-lg clearfix">
 <div class="col-12 footer"><span>&copy; 2021-2022
 <a href=https://akimon658.github.io/>Akimo</a>
@@ -212,10 +157,6 @@ Fuji-v2
 <a href=https://gohugo.io/ target=_blank rel="noopener noreferrer">
 Hugo
 </a> </span>
-</div>
-</div>
-</footer>
-<script defer src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js></script>
+</div></div></footer><script defer src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js></script>
 <script defer src=/assets/js/script.min.js></script>
-</body>
-</html>
+</body></html>

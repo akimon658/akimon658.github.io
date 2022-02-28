@@ -5,7 +5,7 @@
 <meta name=HandheldFriendly content="True">
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta http-equiv=cache-control content="no-transform">
-<meta http-equiv=cache-control content="no-siteapp"><meta name=generator content="Hugo 0.92.2"><link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png>
+<meta http-equiv=cache-control content="no-siteapp"><meta name=generator content="Hugo 0.93.0"><link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/icons/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/icons/favicon-16x16.png>
 <link rel=manifest href=/icons/site.webmanifest>
@@ -20,12 +20,11 @@
 <meta property="og:url" content="https://akimon658.github.io/en/p/2021/wsl-default-browser/"><meta property="og:description" content="The way to use the browser of Windows as WSL's default browser.">
 <meta name=twitter:description content="The way to use the browser of Windows as WSL's default browser."><meta name=twitter:card content="summary"><meta property="article:published_time" content="2021-12-31T12:04:20+09:00"><meta property="article:modified_time" content="2021-12-31T17:18:10+09:00">
 <link rel=stylesheet href=https://akimon658.github.io/assets/css/style.min.css>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-174918347-7')</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-174918347-7")</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174918347-7"></script>
-<script>(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},c=e.createElement(f),c.async=1,c.src="https://www.clarity.ms/tag/"+g+"?ref=bwt",d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","95k7fmhfca")</script>
-</head>
-<body data-theme=auto data-theme-auto=false>
-<script data-cfasync=false>var fujiThemeData=localStorage.getItem('fuji_data-theme');fujiThemeData?fujiThemeData!=='auto'&&document.body.setAttribute('data-theme',fujiThemeData==='dark'?'dark':'light'):localStorage.setItem('fuji_data-theme','auto')</script>
+<script>(function(e,o,t,i,a,n,s){e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},n=o.createElement(i),n.async=1,n.src="https://www.clarity.ms/tag/"+a+"?ref=bwt",s=o.getElementsByTagName(i)[0],s.parentNode.insertBefore(n,s)})(window,document,"clarity","script","95k7fmhfca")</script>
+</head><body data-theme=auto data-theme-auto=false>
+<script data-cfasync=false>var fujiThemeData=localStorage.getItem("fuji_data-theme");fujiThemeData?fujiThemeData!=="auto"&&document.body.setAttribute("data-theme",fujiThemeData==="dark"?"dark":"light"):localStorage.setItem("fuji_data-theme","auto")</script>
 <header>
 <div class="container-lg clearfix">
 <div class="col-12 header">
@@ -33,46 +32,28 @@
 <span class=material-icon>
 brightness_medium
 </span>
-</div>
-</div>
-</div>
-</header>
-<main>
+</div></div></div></header><main>
 <div class="container-lg clearfix">
 <div class="col-12 col-md-9 float-left content">
 <article data-clarity-region=article>
-<h1 class="post-item post-title">How to use the browser in Windows as WSL's default</h1>
-<div class="post-item post-meta"><span class="event material-icons">2021-12-31</span><span class="local-offer material-icons">No tag</span>
-</div>
-<div class="post-content markdown-body"><p>How do you usually do when you need to authorize using the browser in WSL?
+<h1 class="post-item post-title">How to use the browser in Windows as WSL's default</h1><div class="post-item post-meta"><span class="event material-icons">2021-12-31</span><span class="local-offer material-icons">No tag</span>
+</div><div class="post-content markdown-body"><p>How do you usually do when you need to authorize using the browser in WSL?
 Copy the token?
 Or use WSLg?
-These ways are not wrong, but it will be better to use the host&rsquo;s browser.</p>
-<p>Here is how to set it:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser path/to/browser priority
-</code></pre></div><p>Example:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser /mnt/c/Program<span class=se>\ </span>Files/Google/Chrome/Application/chrome.exe <span class=m>1</span>
-</code></pre></div><p>That’s all if you don&rsquo;t have any browser in WSL.
-Even if you have installed one, I don&rsquo;t think you have to think seriously about priority because you can configure default by the following command.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>sudo update-alternatives --config x-www-browser
-</code></pre></div><p>Now, you can use the browser of Windows as WSL&rsquo;s default.</p>
-</div>
-</article>
-<div class=post-comment data-comment=disqus>
+These ways are not wrong, but it will be better to use the host&rsquo;s browser.</p><p>Here is how to set it:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser path/to/browser priority
+</span></span></code></pre></div><p>Example:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser /mnt/c/Program<span class=se>\ </span>Files/Google/Chrome/Application/chrome.exe <span class=m>1</span>
+</span></span></code></pre></div><p>That’s all if you don&rsquo;t have any browser in WSL.
+Even if you have installed one, I don&rsquo;t think you have to think seriously about priority because you can configure default by the following command.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>sudo update-alternatives --config x-www-browser
+</span></span></code></pre></div><p>Now, you can use the browser of Windows as WSL&rsquo;s default.</p></div></article><div class=post-comment data-comment=disqus>
 <span class="comment material-icons post-comment-notloaded">Load comments</span>
-<div id=disqus_thread style=display:none></div>
-<script>function loadComment(){var b=document.querySelector('.post-comment'),a;window.disqus_config=function(){this.language='en',this.page.url='https://akimon658.github.io/en/p/2021/wsl-default-browser/',this.page.identifier='wsl-default-browser'},a=document.createElement('script'),a.src='https://akimon658-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),document.querySelector('#disqus_thread').removeAttribute('style'),(document.body||document.head).appendChild(a),document.querySelector('span.post-comment-notloaded').setAttribute('style','display: none;')}</script>
-</div>
-</div>
-<aside class="col-12 col-md-3 float-left sidebar">
+<div id=disqus_thread style=display:none></div><script>function loadComment(){var t=document.querySelector(".post-comment"),e;window.disqus_config=function(){this.language="en",this.page.url="https://akimon658.github.io/en/p/2021/wsl-default-browser/",this.page.identifier="wsl-default-browser"},e=document.createElement("script"),e.src="https://akimon658-github-io.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),document.querySelector("#disqus_thread").removeAttribute("style"),(document.body||document.head).appendChild(e),document.querySelector("span.post-comment-notloaded").setAttribute("style","display: none;")}</script>
+</div></div><aside class="col-12 col-md-3 float-left sidebar">
 <div class=sidebar-item><select onchange="location.href=value"><option hidden>
 Language
-</option><option value=/p/2021/wsl-default-browser/>日本語</option></select></div>
-<div class="sidebar-item sidebar-pages">
+</option><option value=/p/2021/wsl-default-browser/>日本語</option></select></div><div class="sidebar-item sidebar-pages">
 <h3>
 Pages
-</h3>
-<ul><li>
+</h3><ul><li>
 <a href=/en/>Home</a>
 </li><li>
 <a href=/en/search/>Search</a>
@@ -80,13 +61,10 @@ Pages
 <a href=/en/about/>About</a>
 </li><li>
 <a href=/en/privacy-policy/>Privacy Policy</a>
-</li></ul>
-</div>
-<div class="sidebar-item sidebar-links">
+</li></ul></div><div class="sidebar-item sidebar-links">
 <h3>
 Links
-</h3>
-<ul><li>
+</h3><ul><li>
 <a href=mailto:akimo_greninja@yahoo.co.jp target=_blank rel="noopener noreferrer">
 <span>Email</span>
 </a>
@@ -102,40 +80,29 @@ Links
 <a href=https://twitter.com/kimo_pk target=_blank rel="noopener noreferrer">
 <span>Twitter (other)</span>
 </a>
-</li></ul>
-</div>
-<div class="sidebar-item sidebar-tags">
+</li></ul></div><div class="sidebar-item sidebar-tags">
 <h3>
 Tags
-</h3>
-<div><span>
+</h3><div><span>
 <a href=/en/tags/hugo/>Hugo</a>
-</span></div>
-</div>
-<div class="sidebar-item sidebar-toc">
+</span></div></div><div class="sidebar-item sidebar-toc">
 <h3>
 Contents
-</h3><nav id=TableOfContents></nav></div></aside>
-</div>
-<div class=btn>
+</h3><nav id=TableOfContents></nav></div></aside></div><div class=btn>
 <div class=btn-menu id=btn-menu>
 <span class=material-icon>
 menu
 </span>
-</div>
-<div class=btn-scroll-top>
+</div><div class=btn-scroll-top>
 <span class=material-icon>
 keyboard_arrow_up
 </span>
-</div>
-</div>
-<aside class=sidebar-mobile style=display:none>
+</div></div><aside class=sidebar-mobile style=display:none>
 <div class=sidebar-wrapper>
 <div class="sidebar-item sidebar-pages">
 <h3>
 Pages
-</h3>
-<ul><li>
+</h3><ul><li>
 <a href=/en/>Home</a>
 </li><li>
 <a href=/en/search/>Search</a>
@@ -143,13 +110,10 @@ Pages
 <a href=/en/about/>About</a>
 </li><li>
 <a href=/en/privacy-policy/>Privacy Policy</a>
-</li></ul>
-</div>
-<div class="sidebar-item sidebar-links">
+</li></ul></div><div class="sidebar-item sidebar-links">
 <h3>
 Links
-</h3>
-<ul><li>
+</h3><ul><li>
 <a href=mailto:akimo_greninja@yahoo.co.jp target=_blank rel="noopener noreferrer">
 <span>Email</span>
 </a>
@@ -165,23 +129,14 @@ Links
 <a href=https://twitter.com/kimo_pk target=_blank rel="noopener noreferrer">
 <span>Twitter (other)</span>
 </a>
-</li></ul>
-</div>
-<div class="sidebar-item sidebar-tags">
+</li></ul></div><div class="sidebar-item sidebar-tags">
 <h3>
 Tags
-</h3>
-<div><span>
+</h3><div><span>
 <a href=/en/tags/hugo/>Hugo</a>
-</span></div>
-</div>
-<div class=sidebar-item><select onchange="location.href=value"><option hidden>
+</span></div></div><div class=sidebar-item><select onchange="location.href=value"><option hidden>
 Language
-</option><option value=/p/2021/wsl-default-browser/>日本語</option></select></div>
-</div>
-</aside>
-</main>
-<footer>
+</option><option value=/p/2021/wsl-default-browser/>日本語</option></select></div></div></aside></main><footer>
 <div class="container-lg clearfix">
 <div class="col-12 footer"><span>&copy; 2021-2022
 <a href=https://akimon658.github.io/>Akimo</a>
@@ -197,10 +152,6 @@ Fuji-v2
 <a href=https://gohugo.io/ target=_blank rel="noopener noreferrer">
 Hugo
 </a> </span>
-</div>
-</div>
-</footer>
-<script defer src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js></script>
+</div></div></footer><script defer src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js></script>
 <script defer src=/assets/js/script.min.js></script>
-</body>
-</html>
+</body></html>

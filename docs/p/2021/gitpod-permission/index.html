@@ -5,7 +5,7 @@
 <meta name=HandheldFriendly content="True">
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta http-equiv=cache-control content="no-transform">
-<meta http-equiv=cache-control content="no-siteapp"><meta name=generator content="Hugo 0.92.2"><link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png>
+<meta http-equiv=cache-control content="no-siteapp"><meta name=generator content="Hugo 0.93.0"><link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/icons/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/icons/favicon-16x16.png>
 <link rel=manifest href=/icons/site.webmanifest>
@@ -14,18 +14,17 @@
 <meta name=msapplication-TileColor content="#2d89ef">
 <meta name=msapplication-config content="/icons/browserconfig.xml">
 <meta name=theme-color content="#ffffff">
-<title>Gitpod で自作の Docker イメージを使おうとして permission 関係で詰まった - Boring Time</title><meta name=author content="Akimo"><meta name=description content="Linux の permission についてよく知らなくて詰まったときの話です。"><meta property="og:title" content="Gitpod で自作の Docker イメージを使おうとして permission 関係で詰まった">
+<title>Gitpod で自作の Docker イメージを使おうとして permission 関係で詰まった - Boring Time</title><meta name=author content="Akimo"><meta name=description content="Linux の permission についてよく知らなくて詰まったときの話です。"><meta name=keywords content="Docker"><meta property="og:title" content="Gitpod で自作の Docker イメージを使おうとして permission 関係で詰まった">
 <meta name=twitter:title content="Gitpod で自作の Docker イメージを使おうとして permission 関係で詰まった">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://akimon658.github.io/p/2021/gitpod-permission/"><meta property="og:description" content="Linux の permission についてよく知らなくて詰まったときの話です。">
-<meta name=twitter:description content="Linux の permission についてよく知らなくて詰まったときの話です。"><meta name=twitter:card content="summary"><meta property="article:published_time" content="2021-12-20T11:13:22+09:00"><meta property="article:modified_time" content="2022-02-28T08:47:22+09:00">
+<meta name=twitter:description content="Linux の permission についてよく知らなくて詰まったときの話です。"><meta name=twitter:card content="summary"><meta property="article:published_time" content="2021-12-20T11:13:22+09:00"><meta property="article:modified_time" content="2022-03-01T07:51:53+09:00">
 <link rel=stylesheet href=https://akimon658.github.io/assets/css/style.min.css>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-174918347-7')</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-174918347-7")</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174918347-7"></script>
-<script>(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},c=e.createElement(f),c.async=1,c.src="https://www.clarity.ms/tag/"+g+"?ref=bwt",d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","95k7fmhfca")</script><link rel=canonical href=https://zenn.dev/akimon658/articles/gipod-permission>
-</head>
-<body data-theme=auto data-theme-auto=false>
-<script data-cfasync=false>var fujiThemeData=localStorage.getItem('fuji_data-theme');fujiThemeData?fujiThemeData!=='auto'&&document.body.setAttribute('data-theme',fujiThemeData==='dark'?'dark':'light'):localStorage.setItem('fuji_data-theme','auto')</script>
+<script>(function(e,o,t,i,a,n,s){e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},n=o.createElement(i),n.async=1,n.src="https://www.clarity.ms/tag/"+a+"?ref=bwt",s=o.getElementsByTagName(i)[0],s.parentNode.insertBefore(n,s)})(window,document,"clarity","script","95k7fmhfca")</script><link rel=canonical href=https://zenn.dev/akimon658/articles/gipod-permission>
+</head><body data-theme=auto data-theme-auto=false>
+<script data-cfasync=false>var fujiThemeData=localStorage.getItem("fuji_data-theme");fujiThemeData?fujiThemeData!=="auto"&&document.body.setAttribute("data-theme",fujiThemeData==="dark"?"dark":"light"):localStorage.setItem("fuji_data-theme","auto")</script>
 <header>
 <div class="container-lg clearfix">
 <div class="col-12 header">
@@ -33,86 +32,49 @@
 <span class=material-icon>
 brightness_medium
 </span>
-</div>
-</div>
-</div>
-</header>
-<main>
+</div></div></div></header><main>
 <div class="container-lg clearfix">
 <div class="col-12 col-md-9 float-left content">
 <article data-clarity-region=article>
-<h1 class="post-item post-title">Gitpod で自作の Docker イメージを使おうとして permission 関係で詰まった</h1>
-<div class="post-item post-meta"><span class="event material-icons">2021-12-20</span><span class="material-icons update">2022-02-28</span><span class="local-offer material-icons">タグはありません</span>
-</div>
-<div class="post-content markdown-body"><p><a href=https://gitpod.io target=_blank rel="noopener noreferrer">Gitpod</a> では最初から全部入りの <a href=https://hub.docker.com/r/gitpod/workspace-full target=_blank rel="noopener noreferrer">gitpod/workspace-full</a> というコンテナを使えるので、基本的にはこれを使っていれば事足ります。
+<h1 class="post-item post-title">Gitpod で自作の Docker イメージを使おうとして permission 関係で詰まった</h1><div class="post-item post-meta"><span class="event material-icons">2021-12-20</span><span class="material-icons update">2022-03-01</span><span class="local-offer material-icons"><a href=/tags/docker>Docker</a></span>
+</div><div class="post-content markdown-body"><p><a href=https://gitpod.io target=_blank rel="noopener noreferrer">Gitpod</a> では最初から全部入りの <a href=https://hub.docker.com/r/gitpod/workspace-full target=_blank rel="noopener noreferrer">gitpod/workspace-full</a> というコンテナを使えるので、基本的にはこれを使っていれば事足ります。
 ただ今回は <a href=https://taku910.github.io/mecab/ target=_blank rel="noopener noreferrer">MeCab</a> という形態素解析エンジンと Golang で遊びたかったので、<a href=https://github.com/Akimon658/go-mecab-neologd target=_blank rel="noopener noreferrer">別で作っておいたイメージ</a>を使用しようとしました。
-しかし permission 関係でちょっと詰まったので記事にしておこうと思います。</p>
-<h2 id=gitpod-について>Gitpod について</h2>
-<p>ブラウザから使える開発環境です。
-まだ <a href=https://github.com/codespaces target=_blank rel="noopener noreferrer">GitHub Codespaces</a> が使えず、また <a href=https://education.github.com target=_blank rel="noopener noreferrer">GitHub Education</a> の特典で月100時間無料で使えるのでお世話になっています。</p>
-<a href=https://gitpod.io target=_blank rel="noopener noreferrer">
+しかし permission 関係でちょっと詰まったので記事にしておこうと思います。</p><h2 id=gitpod-について>Gitpod について</h2><p>ブラウザから使える開発環境です。
+まだ <a href=https://github.com/codespaces target=_blank rel="noopener noreferrer">GitHub Codespaces</a> が使えず、また <a href=https://education.github.com target=_blank rel="noopener noreferrer">GitHub Education</a> の特典で月100時間無料で使えるのでお世話になっています。</p><a href=https://gitpod.io target=_blank rel="noopener noreferrer">
 <div class=card>
 <div class=card-meta>
-<div class=card-title>Dashboard — Gitpod</div>
-<div class=card-host>gitpod.io</div>
-<div class=card-description></div>
-</div>
-</div>
-</a>
-<h2 id=やりたかったこと>やりたかったこと</h2>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-dockerfile data-lang=dockerfile><span class=c># 自作イメージ</span><span class=err>
-</span><span class=err></span><span class=k>FROM</span><span class=s> akimon658/go-mecab-neologd:latest</span><span class=err>
-</span><span class=err></span><span class=c># gopls が入っていないので入れたい</span><span class=err>
-</span><span class=err></span><span class=k>RUN</span> go install golang.org/x/tools/gopls@latest<span class=err>
-</span></code></pre></div><p>この後適宜 <code>go get</code> などを実行できれば良い。</p>
-<h2 id=詰まったところ>詰まったところ</h2>
-<p><code>/go/pkg</code> 以下へのアクセスが全て <code>Permission denied</code> となってしまい <code>go get</code> できない。</p>
-<h3 id=原因>原因</h3>
-<p>上記の Dockerfile で <code>go install</code> が root として実行されてしまっているのが原因です。
+<div class=card-title>Dashboard — Gitpod</div><div class=card-host>gitpod.io</div><div class=card-description></div></div></div></a>
+<h2 id=やりたかったこと>やりたかったこと</h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-dockerfile data-lang=dockerfile><span class=line><span class=cl><span class=c># 自作イメージ</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=k>FROM</span><span class=s> akimon658/go-mecab-neologd:latest</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c># gopls が入っていないので入れたい</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=k>RUN</span> go install golang.org/x/tools/gopls@latest<span class=err>
+</span></span></span></code></pre></div><p>この後適宜 <code>go get</code> などを実行できれば良い。</p><h2 id=詰まったところ>詰まったところ</h2><p><code>/go/pkg</code> 以下へのアクセスが全て <code>Permission denied</code> となってしまい <code>go get</code> できない。</p><h3 id=原因>原因</h3><p>上記の Dockerfile で <code>go install</code> が root として実行されてしまっているのが原因です。
 なので <code>sudo</code> すれば解決しますが入っていないしやりたくないです。
-ちなみに<a href=https://github.com/gitpod-io/workspace-images/blob/master/full/Dockerfile target=_blank rel="noopener noreferrer">公式イメージ</a>では <code>USER</code> が適切に設定されているのでこういったことは起こりません。</p>
-<h3 id=解決策>解決策</h3>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-dockerfile data-lang=dockerfile><span class=k>FROM</span><span class=s> akimon658/go-mecab-neologd:latest</span><span class=err>
-</span><span class=err></span><span class=k>RUN</span> go install golang.org/x/tools/gopls@latest <span class=o>&amp;&amp;</span> <span class=se>\
-</span><span class=se></span>    chmod <span class=m>777</span> -R /go<span class=err>
-</span></code></pre></div><p><code>chmod 777</code> は全てのユーザーに指定した場所への読み書き・実行を許可するコマンド、<code>-R</code> はそれを対象ディレクトリの中身にも適用するオプションです。
+ちなみに<a href=https://github.com/gitpod-io/workspace-images/blob/master/full/Dockerfile target=_blank rel="noopener noreferrer">公式イメージ</a>では <code>USER</code> が適切に設定されているのでこういったことは起こりません。</p><h3 id=解決策>解決策</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-dockerfile data-lang=dockerfile><span class=line><span class=cl><span class=k>FROM</span><span class=s> akimon658/go-mecab-neologd:latest</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=k>RUN</span> go install golang.org/x/tools/gopls@latest <span class=o>&amp;&amp;</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    chmod <span class=m>777</span> -R /go<span class=err>
+</span></span></span></code></pre></div><p><code>chmod 777</code> は全てのユーザーに指定した場所への読み書き・実行を許可するコマンド、<code>-R</code> はそれを対象ディレクトリの中身にも適用するオプションです。
 これを必要なところに設定しましょう。
-<code>777</code> だと過剰かもしれませんが面倒だったので。</p>
-<p><code>chmod</code> について詳しくは以下の記事がとても参考になります。</p>
-<a href=https://qiita.com/shisama/items/5f4c4fa768642aad9e06 target=_blank rel="noopener noreferrer">
+<code>777</code> だと過剰かもしれませんが面倒だったので。</p><p><code>chmod</code> について詳しくは以下の記事がとても参考になります。</p><a href=https://qiita.com/shisama/items/5f4c4fa768642aad9e06 target=_blank rel="noopener noreferrer">
 <div class=card>
 <div class=card-meta>
-<div class=card-title>Linuxの権限確認と変更(chmod)（超初心者向け） - Qiita</div>
-<div class=card-host>qiita.com</div>
-<div class=card-description>
+<div class=card-title>Linuxの権限確認と変更(chmod)（超初心者向け） - Qiita</div><div class=card-host>qiita.com</div><div class=card-description>
 ファイル・ディレクトリの権限（パーミッション）の確認方法と変更方法
 以下のようなコマンドの謎の数字や
 $ chmod 777 hoge.txt
 以下のような一覧のrやwなど謎の英文字について
--rw-r--r-- 1 ...</div>
-</div>
-<img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9TGludXglRTMlODElQUUlRTYlQTglQTklRTklOTklOTAlRTclQTIlQkElRTglQUElOEQlRTMlODElQTglRTUlQTQlODklRTYlOUIlQjQlMjhjaG1vZCUyOSVFRiVCQyU4OCVFOCVCNiU4NSVFNSU4OCU5RCVFNSVCRiU4MyVFOCU4MCU4NSVFNSU5MCU5MSVFMyU4MSU5MSVFRiVCQyU4OSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9YzkzMGFmODNiYjljMTQxYTllYjg3ZmJjYmIwYWFhZDM&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwc2hpc2FtYSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9ZWM3NDEyMDhhZDg2MjY4NTlhMTM1ZTNiNzJiOWNiZWY&blend-x=142&blend-y=491&blend-mode=normal&s=49b0b00222dc4f9b5db712f33a4eb076" alt>
-</div>
-</a>
-<h2 id=あとがき>あとがき</h2>
-<p>原因はすぐに分かりましたが Linux の権限周りの仕組みを全く知らなかったので解決策に辿り着くまでに1時間ぐらい溶かしました。</p>
-</div>
-</article>
-<div class=post-comment data-comment=disqus>
+-rw-r--r-- 1 ...</div></div><img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9TGludXglRTMlODElQUUlRTYlQTglQTklRTklOTklOTAlRTclQTIlQkElRTglQUElOEQlRTMlODElQTglRTUlQTQlODklRTYlOUIlQjQlMjhjaG1vZCUyOSVFRiVCQyU4OCVFOCVCNiU4NSVFNSU4OCU5RCVFNSVCRiU4MyVFOCU4MCU4NSVFNSU5MCU5MSVFMyU4MSU5MSVFRiVCQyU4OSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9YzkzMGFmODNiYjljMTQxYTllYjg3ZmJjYmIwYWFhZDM&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwc2hpc2FtYSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9ZWM3NDEyMDhhZDg2MjY4NTlhMTM1ZTNiNzJiOWNiZWY&blend-x=142&blend-y=491&blend-mode=normal&s=49b0b00222dc4f9b5db712f33a4eb076" alt>
+</div></a>
+<h2 id=あとがき>あとがき</h2><p>原因はすぐに分かりましたが Linux の権限周りの仕組みを全く知らなかったので解決策に辿り着くまでに1時間ぐらい溶かしました。</p></div></article><div class=post-comment data-comment=disqus>
 <span class="comment material-icons post-comment-notloaded">コメントを表示</span>
-<div id=disqus_thread style=display:none></div>
-<script>function loadComment(){var b=document.querySelector('.post-comment'),a;window.disqus_config=function(){this.language='ja',this.page.url='https://akimon658.github.io/p/2021/gitpod-permission/',this.page.identifier='gitpod-permission'},a=document.createElement('script'),a.src='https://akimon658-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),document.querySelector('#disqus_thread').removeAttribute('style'),(document.body||document.head).appendChild(a),document.querySelector('span.post-comment-notloaded').setAttribute('style','display: none;')}</script>
-</div>
-</div>
-<aside class="col-12 col-md-3 float-left sidebar">
+<div id=disqus_thread style=display:none></div><script>function loadComment(){var t=document.querySelector(".post-comment"),e;window.disqus_config=function(){this.language="ja",this.page.url="https://akimon658.github.io/p/2021/gitpod-permission/",this.page.identifier="gitpod-permission"},e=document.createElement("script"),e.src="https://akimon658-github-io.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),document.querySelector("#disqus_thread").removeAttribute("style"),(document.body||document.head).appendChild(e),document.querySelector("span.post-comment-notloaded").setAttribute("style","display: none;")}</script>
+</div></div><aside class="col-12 col-md-3 float-left sidebar">
 <div class=sidebar-item><select onchange="location.href=value"><option hidden>
 Language
-</option><option value=/en/p/2021/gitpod-permission/>English</option></select></div>
-<div class="sidebar-item sidebar-pages">
+</option><option value=/en/p/2021/gitpod-permission/>English</option></select></div><div class="sidebar-item sidebar-pages">
 <h3>
 Pages
-</h3>
-<ul><li>
+</h3><ul><li>
 <a href=/>Home</a>
 </li><li>
 <a href=/search/>Search</a>
@@ -120,13 +82,10 @@ Pages
 <a href=/about/>About</a>
 </li><li>
 <a href=/privacy-policy/>Privacy Policy</a>
-</li></ul>
-</div>
-<div class="sidebar-item sidebar-links">
+</li></ul></div><div class="sidebar-item sidebar-links">
 <h3>
 Links
-</h3>
-<ul><li>
+</h3><ul><li>
 <a href=mailto:akimo_greninja@yahoo.co.jp target=_blank rel="noopener noreferrer">
 <span>Email</span>
 </a>
@@ -142,52 +101,35 @@ Links
 <a href=https://twitter.com/kimo_pk target=_blank rel="noopener noreferrer">
 <span>Twitter (other)</span>
 </a>
-</li></ul>
-</div>
-<div class="sidebar-item sidebar-tags">
+</li></ul></div><div class="sidebar-item sidebar-tags">
 <h3>
 Tags
-</h3>
-<div><span>
+</h3><div><span>
+<a href=/tags/docker/>Docker</a>
+</span><span>
 <a href=/tags/hugo/>Hugo</a>
-</span></div>
-</div>
-<div class="sidebar-item sidebar-toc">
+</span></div></div><div class="sidebar-item sidebar-toc">
 <h3>
 Contents
 </h3><nav id=TableOfContents>
 <ul>
-<li><a href=#gitpod-について>Gitpod について</a></li>
-<li><a href=#やりたかったこと>やりたかったこと</a></li>
-<li><a href=#詰まったところ>詰まったところ</a>
+<li><a href=#gitpod-について>Gitpod について</a></li><li><a href=#やりたかったこと>やりたかったこと</a></li><li><a href=#詰まったところ>詰まったところ</a>
 <ul>
-<li><a href=#原因>原因</a></li>
-<li><a href=#解決策>解決策</a></li>
-</ul>
-</li>
-<li><a href=#あとがき>あとがき</a></li>
-</ul>
-</nav></div></aside>
-</div>
-<div class=btn>
+<li><a href=#原因>原因</a></li><li><a href=#解決策>解決策</a></li></ul></li><li><a href=#あとがき>あとがき</a></li></ul></nav></div></aside></div><div class=btn>
 <div class=btn-menu id=btn-menu>
 <span class=material-icon>
 menu
 </span>
-</div>
-<div class=btn-scroll-top>
+</div><div class=btn-scroll-top>
 <span class=material-icon>
 keyboard_arrow_up
 </span>
-</div>
-</div>
-<aside class=sidebar-mobile style=display:none>
+</div></div><aside class=sidebar-mobile style=display:none>
 <div class=sidebar-wrapper>
 <div class="sidebar-item sidebar-pages">
 <h3>
 Pages
-</h3>
-<ul><li>
+</h3><ul><li>
 <a href=/>Home</a>
 </li><li>
 <a href=/search/>Search</a>
@@ -195,13 +137,10 @@ Pages
 <a href=/about/>About</a>
 </li><li>
 <a href=/privacy-policy/>Privacy Policy</a>
-</li></ul>
-</div>
-<div class="sidebar-item sidebar-links">
+</li></ul></div><div class="sidebar-item sidebar-links">
 <h3>
 Links
-</h3>
-<ul><li>
+</h3><ul><li>
 <a href=mailto:akimo_greninja@yahoo.co.jp target=_blank rel="noopener noreferrer">
 <span>Email</span>
 </a>
@@ -217,23 +156,16 @@ Links
 <a href=https://twitter.com/kimo_pk target=_blank rel="noopener noreferrer">
 <span>Twitter (other)</span>
 </a>
-</li></ul>
-</div>
-<div class="sidebar-item sidebar-tags">
+</li></ul></div><div class="sidebar-item sidebar-tags">
 <h3>
 Tags
-</h3>
-<div><span>
+</h3><div><span>
+<a href=/tags/docker/>Docker</a>
+</span><span>
 <a href=/tags/hugo/>Hugo</a>
-</span></div>
-</div>
-<div class=sidebar-item><select onchange="location.href=value"><option hidden>
+</span></div></div><div class=sidebar-item><select onchange="location.href=value"><option hidden>
 Language
-</option><option value=/en/p/2021/gitpod-permission/>English</option></select></div>
-</div>
-</aside>
-</main>
-<footer>
+</option><option value=/en/p/2021/gitpod-permission/>English</option></select></div></div></aside></main><footer>
 <div class="container-lg clearfix">
 <div class="col-12 footer"><span>&copy; 2021-2022
 <a href=https://akimon658.github.io/>Akimo</a>
@@ -249,10 +181,6 @@ Fuji-v2
 <a href=https://gohugo.io/ target=_blank rel="noopener noreferrer">
 Hugo
 </a> </span>
-</div>
-</div>
-</footer>
-<script defer src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js></script>
+</div></div></footer><script defer src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js></script>
 <script defer src=/assets/js/script.min.js></script>
-</body>
-</html>
+</body></html>
