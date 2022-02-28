@@ -14,11 +14,11 @@
 <meta name=msapplication-TileColor content="#2d89ef">
 <meta name=msapplication-config content="/icons/browserconfig.xml">
 <meta name=theme-color content="#ffffff">
-<title>GitHub Actions のサービスコンテナを使って Hugo のビルド時にリンクカードを生成する - Boring Time</title><meta name=author content="Akimo"><meta name=description content="できるだけ手軽にリンクカードを生成する方法"><meta property="og:title" content="GitHub Actions のサービスコンテナを使って Hugo のビルド時にリンクカードを生成する">
+<title>GitHub Actions のサービスコンテナを使って Hugo のビルド時にリンクカードを生成する - Boring Time</title><meta name=author content="Akimo"><meta name=description content="できるだけ手軽にリンクカードを生成する方法"><meta name=keywords content="Hugo"><meta property="og:title" content="GitHub Actions のサービスコンテナを使って Hugo のビルド時にリンクカードを生成する">
 <meta name=twitter:title content="GitHub Actions のサービスコンテナを使って Hugo のビルド時にリンクカードを生成する">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://akimon658.github.io/p/2022/hugo-url-cards/"><meta property="og:description" content="できるだけ手軽にリンクカードを生成する方法">
-<meta name=twitter:description content="できるだけ手軽にリンクカードを生成する方法"><meta name=twitter:card content="summary"><meta property="article:published_time" content="2022-02-28T22:00:00+09:00"><meta property="article:modified_time" content="2022-02-28T22:01:59+09:00">
+<meta name=twitter:description content="できるだけ手軽にリンクカードを生成する方法"><meta name=twitter:card content="summary"><meta property="article:published_time" content="2022-02-28T22:00:00+09:00"><meta property="article:modified_time" content="2022-02-28T22:15:53+09:00">
 <link rel=stylesheet href=https://akimon658.github.io/assets/css/style.min.css>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-174918347-7')</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174918347-7"></script>
@@ -42,7 +42,7 @@ brightness_medium
 <div class="col-12 col-md-9 float-left content">
 <article data-clarity-region=article>
 <h1 class="post-item post-title">GitHub Actions のサービスコンテナを使って Hugo のビルド時にリンクカードを生成する</h1>
-<div class="post-item post-meta"><span class="event material-icons">2022-02-28</span><span class="local-offer material-icons">タグはありません</span>
+<div class="post-item post-meta"><span class="event material-icons">2022-02-28</span><span class="local-offer material-icons"><a href=/tags/hugo>Hugo</a></span>
 </div>
 <div class="post-content markdown-body"><p>めっちゃ速い静的サイトジェネレータとして定評のある <a href=https://gohugo.io target=_blank rel="noopener noreferrer">Hugo</a> ですが、その分動的な処理ができないので色々と工夫する必要があります。
 関連記事やタグなど一般的なブログに必要な機能は標準で搭載されているし、shortcodes を使えば複雑な HTML も簡単に入れられますが、<strong>外部サイトからは JSON か CSV しか取得できない</strong>ので URL からリンクカードを生成しようと思ったら API サーバーを立てて経由させなければなりません。</p>
