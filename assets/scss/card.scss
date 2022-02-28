@@ -1,11 +1,27 @@
 .card {
   border: 2px solid var(--color-divider);
   border-radius: 1rem;
-  margin: 0.5rem;
-  padding: 1rem;
+  display: flex;
+  height: 6.5rem;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 5rem;
+  }
+
+  .card-meta div {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
 
   .card-title {
     color: var(--color-font);
+    font-weight: 500;
   }
 
   .card-description {

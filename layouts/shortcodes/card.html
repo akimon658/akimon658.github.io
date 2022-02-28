@@ -3,8 +3,13 @@
 
 <a href="{{ $url | safeURL }}"{{ if strings.HasPrefix $url "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>
   <div class="card">
-    <div class="card-title">{{ $json.Title }}</div>
-    <div class="card-host">{{ $json.URL.Host }}</div>
-    <div class="card-description">{{ $json.Description }}</div>
+    <div class="card-meta">
+      <div class="card-title">{{ $json.Title }}</div>
+      <div class="card-host">{{ $json.URL.Host }}</div>
+      <div class="card-description">{{ $json.Description }}</div>
+    </div>
+    {{ range first 1 $json.Image }}
+      <img src="{{ .URL }}" alt="{{ .Alt }}">
+    {{ end }}
   </div>
 </a>
