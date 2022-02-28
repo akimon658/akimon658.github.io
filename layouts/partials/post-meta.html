@@ -1,35 +1,35 @@
 <span class="event material-icons">
-	{{- .Date.Local.Format "2006-01-02" -}}
+  {{- .Date.Local.Format "2006-01-02" -}}
 </span>
 
 {{- if ne .Date.YearDay .Lastmod.YearDay -}}
 <span class="material-icons update">
-	{{- dateFormat ( or $.Site.Params.dateFormat "2006-01-02" ) $.Page.Params.LastMod -}}
+  {{- dateFormat ( or $.Site.Params.dateFormat "2006-01-02" ) $.Page.Params.LastMod -}}
 </span>
 {{- end -}}
 
 {{- if .Site.Params.showWordCounter -}}
 <span>
-	<i class="iconfont icon-file-tray-sharp"></i>
-	&nbsp;{{ i18n "postMetaWordCount" .WordCount}}
+  <i class="iconfont icon-file-tray-sharp"></i>
+  &nbsp;{{ i18n "postMetaWordCount" .WordCount}}
 </span>
 {{- end -}}
 
 {{- if .Site.Params.showReadTime -}}
 <span>
-	<i class="iconfont icon-time-sharp"></i>
-	&nbsp;{{ i18n "postMetaReadingTime" .ReadingTime }}
+  <i class="iconfont icon-time-sharp"></i>
+  &nbsp;{{ i18n "postMetaReadingTime" .ReadingTime }}
 </span>
 {{- end -}}
 
 <span class="local-offer material-icons">
-	{{- if .Params.tags -}}
-	{{- range .Params.tags -}}
-	<a href="{{ "/tags/" | relURL }}{{ . | urlize}}">
-		{{- . -}}
-	</a>
-	{{- end -}}
-	{{- else -}}
-	{{- i18n "postMetaNoTag" -}}
-	{{- end -}}
+  {{- if .Params.tags -}}
+  {{- range .Params.tags -}}
+  <a href="{{ "/tags/" | relURL }}{{ . | urlize}}">
+    {{- . -}}
+  </a>
+  {{- end -}}
+  {{- else -}}
+  {{- i18n "postMetaNoTag" -}}
+  {{- end -}}
 </span>
