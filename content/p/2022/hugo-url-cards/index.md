@@ -4,6 +4,7 @@ canonicalURL: "https://zenn.dev/akimon658/articles/hugo-url-cards"
 date: 2022-02-28T22:00:00+09:00
 description: "できるだけ手軽にリンクカードを生成する方法"
 draft: false
+tags: ["Hugo"]
 ---
 
 めっちゃ速い静的サイトジェネレータとして定評のある [Hugo](https://gohugo.io) ですが、その分動的な処理ができないので色々と工夫する必要があります。
