@@ -32,10 +32,10 @@ function searchAll(key: string, index: JSON[], counter: number) {
 }
 
 const urlParams = new URLSearchParams(window.location.search) // get params from URL
-if (urlParams.has('s')) {
+if (urlParams.has('q')) {
 	const counter = new Date().getTime()
 	const infoElements = document.querySelectorAll('.search-result-info')
-	const key = urlParams.get('s')! // get search keyword, divided by space
+	const key = urlParams.get('q')! // get search keyword, divided by space
 	document.querySelector('.search-input input')!.setAttribute('value', key)
 	// get search index from json
 	const xhr = new XMLHttpRequest()
