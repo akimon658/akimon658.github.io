@@ -3,6 +3,7 @@ title: "Permission denied when using Gitpod with self-made Dockerfile"
 date: 2021-12-20T13:17:03+09:00
 description: "I didn't know much about permission of Linux."
 draft: false
+categories: ["dev.to"]
 tags: ["Docker"]
 ---
 

@@ -3,6 +3,7 @@ title: 'How to replace home directory with "~" on PowerShell'
 date: 2021-12-13T16:42:00+09:00
 description: "About how to customize your PowerShell."
 draft: false
+categories: ["dev.to"]
 ---
 
 PowerShell displays the current full path by default. It's long, so I'd like to replace it with `~` like Bash.
