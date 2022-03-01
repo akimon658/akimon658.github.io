@@ -37,7 +37,7 @@ brightness_medium
 <div class=page-info>
 <form class=search-form method=get>
 <div class=search-input>
-<input name=s type=search autocapitalize=off autocomplete=off autocorrect=off spellcheck=false>
+<input name=q type=search autocapitalize=off autocomplete=off autocorrect=off spellcheck=false>
 <button type=submit>
 <span class=material-icon>
 search
@@ -50,14 +50,14 @@ search
 </div><div class=search-result-info style=display:none>
 <span>Failed to load index file</span>
 </div><div id=search-result></div><script id=search-result-template type=text/fuse-template><% for(var i = 0; i < $data.length; i++){ %><div class="post">
-		<h3 class="post-item post-title-archive">
-			<a href="<%= $data[i].item.permalink %>"><%= $data[i].item.title %></a>
-		</h3>
-		<div class="post-item post-meta-archive">
-			<span class="event material-icons"><%= $data[i].item.date %></span>
-			<span class="local-offer material-icons"><% if ($data[i].item.tags && $data[i].item.tags.length > 0) { %><% for(var j = 0; j < $data[i].item.tags.length; j++){ %><%= $data[i].item.tags[j] %>&nbsp;<% } %><% } else { %>No tag<% } %></span>
-		</div>
-	</div><% } %></script>
+    <h3 class="post-item post-title-archive">
+      <a href="<%= $data[i].item.permalink %>"><%= $data[i].item.title %></a>
+    </h3>
+    <div class="post-item post-meta-archive">
+      <span class="event material-icons"><%= $data[i].item.date %></span>
+      <span class="local-offer material-icons"><% if ($data[i].item.tags && $data[i].item.tags.length > 0) { %><% for(var j = 0; j < $data[i].item.tags.length; j++){ %><%= $data[i].item.tags[j] %>&nbsp;<% } %><% } else { %>No tag<% } %></span>
+    </div>
+  </div><% } %></script>
 </div><aside class="col-12 col-md-3 float-left sidebar">
 <div class=sidebar-item><select onchange="location.href=value"><option hidden>
 Language
