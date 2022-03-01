@@ -1,43 +1,43 @@
 header {
-	background-color: var(--color-header-bg);
-	left: 0;
-	position: fixed;
-	top: 0;
-	width: 100%;
+  background-color: var(--color-header-bg);
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
 
-	#switch-theme {
-		color: var(--color-mute);
-		cursor: pointer;
-		float: right;
-		font-size: 1.5rem;
-	}
+  #switch-theme {
+    color: var(--color-mute);
+    cursor: pointer;
+    float: right;
+    font-size: 1.5rem;
+  }
 
-	.header {
-		padding: 0.75rem 1.5rem;
-	}
+  .header {
+    padding: 0.75rem 1.5rem;
+  }
 
-	.title-main {
-		color: var(--color-font);
-		font-size: 1.5rem;
-		font-family: $title-font;
+  .title-main {
+    color: var(--color-font);
+    font-size: 1.5rem;
+    font-family: $title-font;
         font-weight: $font-weight-bold;
-		white-space: nowrap;
+    white-space: nowrap;
 
-		&:hover {
-			color: var(--color-mute);
-		}
-	}
+    &:hover {
+      color: var(--color-mute);
+    }
+  }
 
-	.title-sub {
-		margin: 0 0.1rem;
-		display: block;
-		white-space: nowrap;
+  .title-sub {
+    margin: 0 0.1rem;
+    display: block;
+    white-space: nowrap;
 
-		&::-webkit-scrollbar {
-			display: none; // WebKit
-		}
+    &::-webkit-scrollbar {
+      display: none; // WebKit
+    }
 
-		scrollbar-width: none; // Firefox
-		-ms-overflow-style: none; // Microsoft
-	}
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // Microsoft
+  }
 }
