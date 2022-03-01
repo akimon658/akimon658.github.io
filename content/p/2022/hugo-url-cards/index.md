@@ -98,9 +98,9 @@ jobs:
 Shortcodes は `layouts/shortcodes/` 以下に作ります。
 ファイル名がそのまま shortcode の名前になるので好きな名前にしてください。
 
-以下は[僕のブログ](https://akimon658.github.io)で使っているものです。
+以下はこのブログで使っているものです。
 
-```html:layouts/shortcodes/card.html
+```html
 <!-- 引数、JSON を取得 -->
 {{ $url := .Get 0 }}
 {{ $json := getJSON "http://localhost:8080/?url=" $url }}
