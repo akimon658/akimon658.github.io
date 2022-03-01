@@ -46,7 +46,7 @@ brightness_medium
 </span></span></code></pre></div><p>参考：</p><a href="https://docs.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7.2#built-in-prompt" target=_blank rel="noopener noreferrer">
 <div class=card>
 <div class=card-meta>
-<div class=card-title>プロンプトについて - PowerShell</div><div class=card-host>docs.microsoft.com</div><div class=card-description>関数について説明 `Prompt` し、カスタム関数を作成する方法を示し `Prompt` ます。</div></div><img src=https://docs.microsoft.com/media/logos/logo-powershell-social.png alt>
+<div class=card-title>プロンプトについて - PowerShell</div><div class=card-host>docs.microsoft.com</div><div class=card-description>関数について説明 `Prompt` し、カスタム関数を作成する方法を示 `Prompt` します。</div></div><img src=https://docs.microsoft.com/media/logos/logo-powershell-social.png alt>
 </div></a>
 <p>カレントディレクトリの取得に <code>$(Get-Location)</code> が使われていますが、これだと文字列として扱うことができません（<code>$pwd</code> も同様）。そこで <code>Convert-Path</code> を使います。</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=k>function</span> <span class=n>prompt</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=nv>$currentDir</span> <span class=p>=</span> <span class=p>(</span><span class=nb>Convert-Path</span> <span class=p>.)</span>
