@@ -12,7 +12,7 @@ It also has many functionaries such as shortcodes.
 However, it's not good at dynamic processing because **it can't use remote files other than JSON or CSV**.
 So we need an API server to generate link cards from URLs.
 
-Although, it's wasteful to use a lental server and I also want to run it locally.
+Although, it's wasteful to use a rental server and I also want to run it locally.
 Therefore, I decided to create a simple Docker image and use it on GitHub Actions.
 
 Here is the repo for the container.
@@ -23,7 +23,7 @@ Here is the repo for the container.
 
 Just using [otiai10/opengraph](https://github.com/otiai10/opengraph).
 
-```go:main.go
+```go
 package main
 
 import (
@@ -55,7 +55,7 @@ func main() {
 
 And build it.
 
-```dockerfile:Dockerfile
+```dockerfile
 FROM golang:1.17.7-bullseye AS builder
 
 WORKDIR /go/src/ogjson
@@ -78,7 +78,7 @@ Execute `docker run --rm -p 8080:8080 <image>`, then you'll be able to get JSON 
 
 We can use containers by just adding the following settings to the manifest file.
 
-```yaml:.github/workflows/build.yml
+```yaml
 jobs:
   # Name of the job
   build:
