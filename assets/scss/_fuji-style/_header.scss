@@ -20,6 +20,7 @@ header {
 		color: var(--color-font);
 		font-size: 1.5rem;
 		font-family: $title-font;
+        font-weight: $font-weight-bold;
 		white-space: nowrap;
 
 		&:hover {
