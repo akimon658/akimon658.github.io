@@ -1,17 +1,17 @@
 {{ if eq .Section "search" -}}
-{{ $options := (dict "targetPath" "assets/js/search.min.js" "minify" true "target" "es2015" "format" "iife") }}
+{{ $options := (dict "targetPath" "assets/js/search.min.js" "minify" true "format" "iife") }}
 {{ $js := resources.Get "js/search.js" | js.Build $options }}
 <script defer src="{{ $js.RelPermalink }}"></script>
-{{- else if eq .Section "archives" -}}
-{{- else -}}
-<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
 {{- end -}}
-{{ $options := (dict "targetPath" "assets/js/script.min.js" "minify" true "target" "es2015" "format" "iife") }}
+
+{{ $options := (dict "targetPath" "assets/js/script.min.js" "minify" true "format" "iife") }}
 {{ $js := resources.Get "js/script.js" | js.Build $options }}
 <script defer src="{{ $js.RelPermalink }}"></script>
+
 {{- if or .Params.math .Site.Params.math -}}
 {{- partial "math.html" . -}}
 {{- end -}}
+
 {{- with .Params.aplayer -}}
 <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
 <script>
