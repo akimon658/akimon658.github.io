@@ -109,9 +109,9 @@ Here is the shortcode I'm using within this blog.
 <a href="{{ $url | safeURL }}"{{ if strings.HasPrefix $url "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>
   <div class="card">
     <div class="card-meta">
-      <div class="card-title">{{ $json.Title }}</div>
+      <div class="card-title" title="{{ $json.Title }}">{{ $json.Title }}</div>
       <div class="card-host">{{ $json.URL.Host }}</div>
-      <div class="card-description">{{ $json.Description }}</div>
+      <div class="card-description" title="{{ $json.Description }}">{{ $json.Description }}</div>
     </div>
     <!-- Image is an array so use the first one -->
     {{ range first 1 $json.Image }}
