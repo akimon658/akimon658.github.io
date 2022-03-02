@@ -1,78 +1,88 @@
-.highlight pre.chroma {
-	background-color: #282a36;
-	color: #f8f8f2;
-	tab-size: 4;
+.highlight {
+  ::-webkit-scrollbar-thumb {
+    background-color: $dark-color-divider;
 
-	.c, .c1, .ch, .cm, .cs {
-		color: #6272a4;
-	}
+    &:active {
+      background-color: $dark-color-mute;
+    }
+  }
 
-	.cp, .cpf, .k, .kc, kn, kp, kr, .nt, .o, .ow {
-		color: #ff79c6;
-	}
+  pre.chroma {
+    background-color: #282a36;
+    color: #f8f8f2;
+    tab-size: 4;
 
-	.dl, .s, .s1, .s2, .sa, .sb, .sc, .sd, .se, .sh, .si, .sr, .ss, .sx {
-		color: #f1fa8c;
-	}
+    .c, .c1, .ch, .cm, .cs {
+      color: #6272a4;
+    }
 
-	.gd {
-		color: #ff5555;
-	}
+    .cp, .cpf, .k, .kc, kn, kp, kr, .nt, .o, .ow {
+      color: #ff79c6;
+    }
 
-	.ge, .gl {
-		text-decoration: underline;
-	}
+    .dl, .s, .s1, .s2, .sa, .sb, .sc, .sd, .se, .sh, .si, .sr, .ss, .sx {
+      color: #f1fa8c;
+    }
 
-	.gh, .gu {
-		font-weight: bold;
-	}
+    .gd {
+      color: #ff5555;
+    }
 
-	.gi {
-		color: #50fa7b; font-weight: bold;
-	}
+    .ge, .gl {
+      text-decoration: underline;
+    }
 
-	.go {
-		color: #44475a;
-	}
+    .gh, .gu {
+      font-weight: bold;
+    }
 
-	.hl {
-		background-color: #ffffcc;
-		display: block;
-		width: 100%;
-	}
+    .gi {
+      color: #50fa7b; font-weight: bold;
+    }
 
-	.il, .m, .mb, .mf, .mh, .mi, .mo {
-		color: #bd93f9;
-	}
+    .go {
+      color: #44475a;
+    }
 
-	.kd, .kt, .nb, .nl, .nv, .vc, .vg, .vi {
-		color: #8be9fd;
-	}
+    .hl {
+      background-color: #ffffcc;
+      display: block;
+      width: 100%;
+    }
 
-	.ln, .lnt {
-		color: #7f7f7f;
-		margin-right: 0.4em;
-		padding: 0 0.4em 0 0.4em;
-	}
+    .il, .m, .mb, .mf, .mh, .mi, .mo {
+      color: #bd93f9;
+    }
 
-	.lntable {
-		border: 0;
-		border-spacing: 0;
-		display: block;
-		margin: 0;
-		overflow: auto;
-		padding: 0;
-		width: auto;
-	}
+    .kd, .kt, .nb, .nl, .nv, .vc, .vg, .vi {
+      color: #8be9fd;
+    }
 
-	.lntd {
-		border: 0;
-		margin: 0;
-		padding: 0;
-		vertical-align: top;
-	}
+    .ln, .lnt {
+      color: #7f7f7f;
+      margin-right: 0.4em;
+      padding: 0 0.4em 0 0.4em;
+    }
 
-	.na, .nc, .nf {
-		color: #50fa7b;
-	}
+    .lntable {
+      border: 0;
+      border-spacing: 0;
+      display: block;
+      margin: 0;
+      overflow: auto;
+      padding: 0;
+      width: auto;
+    }
+
+    .lntd {
+      border: 0;
+      margin: 0;
+      padding: 0;
+      vertical-align: top;
+    }
+
+    .na, .nc, .nf {
+      color: #50fa7b;
+    }
+  }
 }
