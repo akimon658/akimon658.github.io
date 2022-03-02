@@ -22,7 +22,8 @@
 
   .card-title {
     color: var(--color-font);
-    font-weight: 500;
+    font-family: $bold-font;
+    font-weight: $font-weight-bold;
   }
 
   .card-description {
