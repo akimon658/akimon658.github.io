@@ -1,4 +1,4 @@
-FROM debian:11.2 AS installer
+FROM debian:20220228 AS installer
 
 RUN apt update && \
 	apt install -y curl
