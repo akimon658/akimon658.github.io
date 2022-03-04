@@ -20,12 +20,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    services:
-      ogjson:
-        image: akimon658/ogjson:1.0.0
-        ports:
-          - 8080:8080
-
     steps:
       - uses: actions/checkout@v2
         with:
@@ -47,6 +41,9 @@ jobs:
         uses: peaceiris/actions-hugo@2e89aa66d0093e4cd14751b3028fc1a179452c2e
         with:
           extended: true
+
+      - name: Start ogjson server
+        run: docker-compose --file ./.devcontainer/docker-compose.yml -d ogjson
 
       - name: Build
         run: TZ="Asia/Tokyo" hugo --minify --ignoreCache

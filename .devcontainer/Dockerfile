@@ -8,7 +8,7 @@ RUN export HUGO_VERSION=$(curl -s https://api.github.com/repos/gohugoio/hugo/rel
 
 RUN apt install ./hugo.deb
 
-FROM denoland/deno:debian-1.19.1
+FROM denoland/deno:debian-1.19.2
 
 RUN apt update && \
 	apt install -y git gnupg2 && \

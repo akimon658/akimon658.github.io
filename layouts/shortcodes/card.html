@@ -1,5 +1,5 @@
 {{ $url := .Get 0 }}
-{{ $json := getJSON "http://localhost:8080/?url=" $url }}
+{{ $json := getJSON "http://ogjson:8080/?url=" $url }}
 
 <a href="{{ $url | safeURL }}"{{ if strings.HasPrefix $url "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>
   <div class="card">
