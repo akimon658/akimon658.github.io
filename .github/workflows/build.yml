@@ -43,7 +43,7 @@ jobs:
           extended: true
 
       - name: Start ogjson server
-        run: docker-compose --file ./.devcontainer/docker-compose.yml -d ogjson
+        run: docker-compose --file ./.devcontainer/docker-compose.yml run -d ogjson
 
       - name: Build
         run: TZ="Asia/Tokyo" hugo --minify --ignoreCache
