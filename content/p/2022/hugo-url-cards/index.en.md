@@ -132,3 +132,5 @@ I'm using `Title`, `URL.Host`, `Description`, and `Image`, but the JSON gives yo
 ![Generated card](./dev-card.webp)
 
 Here you can see, Hugo successfully generated a URL card!
+
+I think it is also useful to run on [dev containers](https://code.visualstudio.com/docs/remote/create-dev-container).

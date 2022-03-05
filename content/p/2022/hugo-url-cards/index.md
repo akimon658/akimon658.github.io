@@ -136,6 +136,4 @@ CSS は頑張って良い感じにしてください。
 
 ## あとがき
 
-Hugo はいいぞ。
-
-{{< card "https://gohugo.io" >}}
+コンテナなので上手いことやれば [dev container](https://code.visualstudio.com/docs/remote/create-dev-container) との相性も良さそうですね。
