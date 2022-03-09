@@ -4,7 +4,8 @@
 	"service": "hugo",
 	"workspaceFolder": "/workspace",
 	"extensions": [
-		"denoland.vscode-deno"
+		"denoland.vscode-deno",
+		"znck.grammarly"
 	],
 	"settings": {
 		"deno.enable": true,
