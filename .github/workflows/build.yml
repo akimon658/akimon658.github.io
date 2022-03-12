@@ -38,8 +38,7 @@ jobs:
           TZ="Asia/Tokyo" hugo --minify'
 
       - name: Push
-        uses: EndBug/add-and-commit@72e246094f1af94def5a07467cd789c503ae8be0
+        uses: EndBug/add-and-commit@050a66787244b10a4874a2a5f682130263edc192
         with:
-          committer_name: github-actions
-          committer_email: github-actions@github.com
+          default_author: github_actions
           message: ":robot: build.yml"
