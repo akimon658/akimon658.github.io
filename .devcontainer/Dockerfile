@@ -3,8 +3,9 @@ FROM debian:bullseye-20220228 AS installer
 RUN apt update && \
 	apt install -y curl
 
-RUN export HUGO_VERSION=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep tag_name | awk '{print substr($2, 3, length($2)-4)}') && \
-	curl -L -o ./hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb
+ENV HUGO_VERSION=0.94.2
+
+RUN curl -L -o ./hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb
 
 RUN apt install ./hugo.deb
 

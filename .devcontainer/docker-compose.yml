@@ -10,4 +10,4 @@ services:
     command: sleep infinity
 
   ogjson:
-    image: akimon658/ogjson:1.0.0
+    image: akimon658/ogjson:1.0.1
