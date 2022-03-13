@@ -10,5 +10,14 @@ This site is Akimo([@akimon658](https://twitter.com/Akimon658))'s blog.
 I'll write about Pokémon and tech.
 
 ## About Me
-I'm a Pokémon Trainer and love Google and [BUMP OF CHICKEN](https://en.wikipedia.org/wiki/Bump_of_Chicken).
+
+I'm a Pokémon Trainer, who loves Google and [BUMP OF CHICKEN](https://en.wikipedia.org/wiki/Bump_of_Chicken).
 I'm learning English, so I'm happy if you make a comment or give me some advice.
+
+## System requirements
+
+- Google Chrome
+- Microsoft Edge
+
+I usually test both of them on Windows.
+It may not work correctly on non-Chromium browsers.
