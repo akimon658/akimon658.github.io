@@ -22,7 +22,7 @@
 body {
   background-color: var(--color-bg);
   color: var(--color-font);
-  margin-top: 4rem;
+  height: max-content;
 
   @include link-1();
 }
