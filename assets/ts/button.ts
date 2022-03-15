@@ -8,27 +8,27 @@ declare namespace DISQUS {
 export function button() {
   const buttons = document.querySelector<HTMLElement>('.btn')!
   let timeoutId: number
-  window.addEventListener('scroll', function () {
+  window.addEventListener('scroll', () => {
     buttons.style.visibility = 'hidden'
 
     clearTimeout(timeoutId)
-    timeoutId = setTimeout(function () {
+    timeoutId = setTimeout(() => {
       buttons.style.visibility = 'visible'
     }, 500)
   })
 
-  document.getElementById('switch-theme')!.addEventListener('click', function () {
+  document.getElementById('switch-theme')!.addEventListener('click', () => {
     switchTheme()
   })
 
   const menuButton = document.getElementById('btn-menu')
   if (menuButton) {
-    menuButton.addEventListener('click', function () {
+    menuButton.addEventListener('click', () => {
       menuOpener()
     })
   }
 
-  document.querySelector('.btn-scroll-top')!.addEventListener('click', function () {
+  document.querySelector('.btn-scroll-top')!.addEventListener('click', () => {
     document.documentElement.scrollTop = 0
   })
 

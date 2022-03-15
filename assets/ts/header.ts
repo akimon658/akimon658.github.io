@@ -4,7 +4,7 @@ export function header() {
   let currentPosition = 0,
     lastPosition = 0
 
-  document.addEventListener("scroll", function () {
+  document.addEventListener("scroll", () => {
     currentPosition = window.scrollY
 
     if (currentPosition > headerHeight && currentPosition > lastPosition) {
