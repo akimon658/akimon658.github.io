@@ -1,105 +1,105 @@
 @mixin light {
-	--color-mode: 'light';
-	--color-primary: #{$light-color-primary};
-	--color-secondary: #{$light-color-secondary};
-	--color-focus: #{$light-color-focus};
-	--color-mute: #{$light-color-mute};
-	--color-font: #{$light-color-font};
-	--color-divider: #{$light-color-divider};
-	--color-bg: #{$light-color-bg};
-	--color-header-bg: #{$light-color-bg};
-	--color-codebg: #{$light-color-codebg};
+  --color-mode: 'light';
+  --color-primary: #{$light-color-primary};
+  --color-secondary: #{$light-color-secondary};
+  --color-focus: #{$light-color-focus};
+  --color-mute: #{$light-color-mute};
+  --color-font: #{$light-color-font};
+  --color-divider: #{$light-color-divider};
+  --color-bg: #{$light-color-bg};
+  --color-header-bg: #{$light-color-bg};
+  --color-codebg: #{$light-color-codebg};
 
-	// primer variable fix
-	--color-text-primary: #{$light-color-font};
-	--color-text-tertiary: #{$light-color-font};
-	--color-text-link: #{$light-color-primary};
-	--color-text-danger: #{$light-color-primary};
-	--color-bg-primary: #{$light-color-bg};
-	--color-bg-secondary: #{$light-color-codebg};
-	--color-bg-tertiary: #{$light-color-bg};
-	--color-bg-canvas: #{$light-color-bg};
-	--color-markdown-code-bg: #{$light-color-codebg};
-	--color-markdown-frame-border: #{$light-color-divider};
-	--color-markdown-blockquote-border: #{$light-color-divider};
-	--color-markdown-table-border: #{$light-color-divider};
-	--color-markdown-table-tr-border: #{$light-color-divider};
-	--color-border-primary: #{$light-color-divider};
-	--color-border-secondary: #{$light-color-divider};
-	--color-border-tertiary: #{$light-color-divider};
+  // primer variable fix
+  --color-text-primary: #{$light-color-font};
+  --color-text-tertiary: #{$light-color-font};
+  --color-text-link: #{$light-color-primary};
+  --color-text-danger: #{$light-color-primary};
+  --color-bg-primary: #{$light-color-bg};
+  --color-bg-secondary: #{$light-color-codebg};
+  --color-bg-tertiary: #{$light-color-bg};
+  --color-bg-canvas: #{$light-color-bg};
+  --color-markdown-code-bg: #{$light-color-codebg};
+  --color-markdown-frame-border: #{$light-color-divider};
+  --color-markdown-blockquote-border: #{$light-color-divider};
+  --color-markdown-table-border: #{$light-color-divider};
+  --color-markdown-table-tr-border: #{$light-color-divider};
+  --color-border-primary: #{$light-color-divider};
+  --color-border-secondary: #{$light-color-divider};
+  --color-border-tertiary: #{$light-color-divider};
 }
 
 @mixin dark {
-	--color-mode: 'dark';
-	--color-primary: #{$dark-color-primary};
-	--color-secondary: #{$dark-color-secondary};
-	--color-focus: #{$dark-color-focus};
-	--color-mute: #{$dark-color-mute};
-	--color-font: #{$dark-color-font};
-	--color-divider: #{$dark-color-divider};
-	--color-bg: #{$dark-color-bg};
-	--color-header-bg: #202020;
-	--color-codebg: #{$dark-color-codebg};
+  --color-mode: 'dark';
+  --color-primary: #{$dark-color-primary};
+  --color-secondary: #{$dark-color-secondary};
+  --color-focus: #{$dark-color-focus};
+  --color-mute: #{$dark-color-mute};
+  --color-font: #{$dark-color-font};
+  --color-divider: #{$dark-color-divider};
+  --color-bg: #{$dark-color-bg};
+  --color-header-bg: #202020;
+  --color-codebg: #{$dark-color-codebg};
 
-	// primer variable fix
-	--color-text-primary: #{$dark-color-font};
-	--color-text-tertiary: #{$dark-color-font};
-	--color-text-link: #{$dark-color-primary};
-	--color-text-danger: #{$dark-color-primary};
-	--color-bg-primary: #{$dark-color-bg};
-	--color-bg-secondary: #{$dark-color-codebg};
-	--color-bg-tertiary: #{$dark-color-bg};
-	--color-bg-canvas: #{$dark-color-bg};
-	--color-markdown-code-bg: #{$dark-color-codebg};
-	--color-markdown-frame-border: #{$dark-color-divider};
-	--color-markdown-blockquote-border: #{$dark-color-divider};
-	--color-markdown-table-border: #{$dark-color-divider};
-	--color-markdown-table-tr-border: #{$dark-color-divider};
-	--color-border-primary: #{$dark-color-divider};
-	--color-border-secondary: #{$dark-color-divider};
-	--color-border-tertiary: #{$dark-color-divider};
+  // primer variable fix
+  --color-text-primary: #{$dark-color-font};
+  --color-text-tertiary: #{$dark-color-font};
+  --color-text-link: #{$dark-color-primary};
+  --color-text-danger: #{$dark-color-primary};
+  --color-bg-primary: #{$dark-color-bg};
+  --color-bg-secondary: #{$dark-color-codebg};
+  --color-bg-tertiary: #{$dark-color-bg};
+  --color-bg-canvas: #{$dark-color-bg};
+  --color-markdown-code-bg: #{$dark-color-codebg};
+  --color-markdown-frame-border: #{$dark-color-divider};
+  --color-markdown-blockquote-border: #{$dark-color-divider};
+  --color-markdown-table-border: #{$dark-color-divider};
+  --color-markdown-table-tr-border: #{$dark-color-divider};
+  --color-border-primary: #{$dark-color-divider};
+  --color-border-secondary: #{$dark-color-divider};
+  --color-border-tertiary: #{$dark-color-divider};
 }
 
 body[data-theme='auto'] {
-	@include light();
+  @include light();
 
-	@media (prefers-color-scheme: dark) {
-		@include dark();
-		@import '_dark-diff'; // things different from light
-	}
+  @media (prefers-color-scheme: dark) {
+    @include dark();
+    @import '_dark-diff'; // things different from light
+  }
 }
 
 body[data-theme='light'] {
-	@include light();
+  @include light();
 
-	header {
-		box-shadow: 0 0.25rem 0.15rem rgba(0, 0, 0, 0.2);
-	}
+  header {
+    box-shadow: 0 0.25rem 0.15rem rgba(0, 0, 0, 0.2);
+  }
 }
 
 body[data-theme='dark'] {
-	@include dark();
-	@import '_dark-diff'; // things different from light
+  @include dark();
+  @import '_dark-diff'; // things different from light
 }
 
 @mixin link-1 {
-	a {
-		color: var(--color-primary);
-	}
+  a {
+    color: var(--color-primary);
+  }
 
-	a:hover {
-		color: var(--color-secondary);
-	}
+  a:hover {
+    color: var(--color-secondary);
+  }
 }
 
 @mixin link-2 {
-	a {
-		color: var(--color-secondary);
-	}
+  a {
+    color: var(--color-secondary);
+  }
 
-	a:hover {
-		color: var(--color-focus);
-	}
+  a:hover {
+    color: var(--color-focus);
+  }
 }
 
 $divider: 2px solid var(--color-divider);
