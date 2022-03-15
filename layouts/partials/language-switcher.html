@@ -5,7 +5,7 @@
   </option>
 
   {{ range .Translations }}
-  <option value="{{ .RelPermalink }}">
+  <option title="{{ .RelPermalink | absURL }}" value="{{ .RelPermalink }}">
     {{ .Language.LanguageName }}
   </option>
   {{ end }}
