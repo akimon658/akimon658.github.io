@@ -2,8 +2,12 @@
   ::-webkit-scrollbar-thumb {
     background-color: $dark-color-divider;
 
-    &:active {
-      background-color: $dark-color-mute;
+    &:hover {
+      background-color: $dark-scrollbar-hover;
+
+      &:active {
+        background-color: $dark-color-mute;
+      }
     }
   }
 

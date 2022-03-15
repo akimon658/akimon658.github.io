@@ -14,8 +14,12 @@
   background-color: var(--color-divider);
   border-radius: 5px;
 
-  &:active {
-    background-color: var(--color-mute);
+  &:hover {
+    background-color: var(--scrollbar-hover);
+
+    &:active {
+      background-color: var(--color-mute);
+    }
   }
 }
 

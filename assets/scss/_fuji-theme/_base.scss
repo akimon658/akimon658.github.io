@@ -27,6 +27,7 @@
   --color-border-primary: #{$light-color-divider};
   --color-border-secondary: #{$light-color-divider};
   --color-border-tertiary: #{$light-color-divider};
+  --scrollbar-hover: #a9a9a9;
 }
 
 @mixin dark {
@@ -58,6 +59,7 @@
   --color-border-primary: #{$dark-color-divider};
   --color-border-secondary: #{$dark-color-divider};
   --color-border-tertiary: #{$dark-color-divider};
+  --scrollbar-hover: #{$dark-scrollbar-hover};
 }
 
 body[data-theme='auto'] {
