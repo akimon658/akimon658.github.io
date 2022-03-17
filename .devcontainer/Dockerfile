@@ -1,4 +1,4 @@
-FROM debian:bullseye-20220228 AS installer
+FROM debian:bullseye-20220316 AS installer
 
 RUN apt update && \
 	apt install -y curl
@@ -9,7 +9,7 @@ RUN curl -L -o ./hugo.deb https://github.com/gohugoio/hugo/releases/download/v${
 
 RUN apt install ./hugo.deb
 
-FROM denoland/deno:debian-1.19.3
+FROM denoland/deno:debian-1.20.1
 
 RUN apt update && \
 	apt install -y git gnupg2 && \
