@@ -2,7 +2,7 @@
 title: "GitHub Actions のサービスコンテナを使って Hugo のビルド時にリンクカードを生成する"
 canonicalURL: "https://zenn.dev/akimon658/articles/hugo-url-cards"
 date: 2022-02-28T22:00:00+09:00
-description: "できるだけ手軽にリンクカードを生成する方法"
+description: "Hugo と GitHub Actions を使ってリンクカードを生成する方法"
 draft: false
 tags: ["Docker", "Golang", "Hugo"]
 ---

@@ -35,7 +35,7 @@ jobs:
           sh -c 'mkdir assets/js && \
           deno bundle assets/ts/main.ts assets/js/script.js && \
           deno bundle assets/ts/search.ts assets/js/search.js && \
-          TZ="Asia/Tokyo" hugo --minify'
+          hugo --minify'
 
       - name: Push
         uses: EndBug/add-and-commit@050a66787244b10a4874a2a5f682130263edc192

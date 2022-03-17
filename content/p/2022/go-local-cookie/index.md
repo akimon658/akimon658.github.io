@@ -2,7 +2,7 @@
 title: "Go の HTTP クライアントで cookie を永続化させる"
 canonicalURL: "https://zenn.dev/akimon658/articles/go-local-cookie"
 date: 2022-03-18T08:35:00+09:00
-description: "Golang で cookie をファイルとして保存する方法"
+description: "Golang で cookie をファイルとして保存するためのライブラリ・juju/persistent-cookiejar の使い方"
 draft: false
 tags: ["Golang"]
 ---
