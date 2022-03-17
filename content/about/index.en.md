@@ -18,6 +18,7 @@ I'm learning English, so I'm happy if you make a comment or give me some advice.
 
 - Google Chrome
 - Microsoft Edge
+- Mozilla Firefox
 
-I usually test both of them on Windows.
-It may not work correctly on non-Chromium browsers.
+I can't test on Safari because I don't have Apple devices.
+If you find any issues, please report on [GitHub](https://github.com/Akimon658/akimon658.github.io/issues)!

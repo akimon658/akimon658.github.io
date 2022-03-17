@@ -21,8 +21,10 @@ Google と BUMP OF CHICKEN が好きなポケモントレーナーです。
 
 - Google Chrome
 - Microsoft Edge
+- Mozilla Firefox
 
-Windows の両ブラウザと Android の Chrome でのみテストしているため、非 Chromium ブラウザでは表示が崩れることがあります。
+Windows と Android しか持っていないので Safari ではテストできていません。
+表示が乱れている箇所がありましたら [GitHub の issue](https://github.com/Akimon658/akimon658.github.io/issues) で教えてください。
 
 ## 著作権について
 
