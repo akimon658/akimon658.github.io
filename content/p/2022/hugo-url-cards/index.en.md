@@ -2,9 +2,8 @@
 title: "Generate URL cards when building your Hugo site on GitHub Actions"
 date: 2022-03-01T18:15:00+09:00
 description: "How to generate URL cards for your Hugo site"
-draft: false
 categories: ["dev.to"]
-tags: ["Docker", "Hugo"]
+tags: ["Docker", "Golang", "Hugo"]
 ---
 
 [Hugo](https://gohugo.io) is known as a super-fast static site generator.
