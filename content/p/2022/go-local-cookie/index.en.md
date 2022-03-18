@@ -2,6 +2,7 @@
 title: "How to save cookies as a file in Golang"
 date: 2022-03-18T21:45:00+09:00
 description: "Use juju/persistent-cookiejar to make cookies permanent"
+categories: ["dev.to"]
 tags: ["Golang"]
 ---
 
