@@ -4,25 +4,6 @@
   background-color: var(--color-primary);
 }
 
-::-webkit-scrollbar {
-  background: transparent;
-  height: 10px;
-  width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--color-divider);
-  border-radius: 5px;
-
-  &:hover {
-    background-color: var(--scrollbar-hover);
-
-    &:active {
-      background-color: var(--color-mute);
-    }
-  }
-}
-
 body {
   background-color: var(--color-bg);
   color: var(--color-font);

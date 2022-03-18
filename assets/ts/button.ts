@@ -68,14 +68,16 @@ function switchTheme() {
     // if now in auto mode, switch to user mode
     document.body.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light')
     localStorage.setItem('fuji_data-theme', currentTheme === 'light' ? 'dark' : 'light')
-  } else if (domTheme === 'light') {
-    const tar = systemTheme === 'dark' ? (needAuto ? 'auto' : 'dark') : 'dark'
-    document.body.setAttribute('data-theme', tar)
-    localStorage.setItem('fuji_data-theme', tar)
   } else {
-    const tar = systemTheme === 'light' ? (needAuto ? 'auto' : 'light') : 'light'
-    document.body.setAttribute('data-theme', tar)
-    localStorage.setItem('fuji_data-theme', tar)
+    let target: string
+    if (domTheme === 'light') {
+      target = systemTheme === 'dark' ? (needAuto ? 'auto' : 'dark') : 'dark'
+    } else {
+      target = systemTheme === 'light' ? (needAuto ? 'auto' : 'light') : 'light'
+    }
+    document.body.setAttribute('data-theme', target)
+    document.documentElement.style.colorScheme = target
+    localStorage.setItem('fuji_data-theme', target)
   }
 
   // switch comment area theme

@@ -1,15 +1,5 @@
 .highlight {
-  ::-webkit-scrollbar-thumb {
-    background-color: $dark-color-divider;
-
-    &:hover {
-      background-color: $dark-scrollbar-hover;
-
-      &:active {
-        background-color: $dark-color-mute;
-      }
-    }
-  }
+  color-scheme: dark;
 
   pre.chroma {
     background-color: #282a36;
