@@ -6,7 +6,7 @@
         <a href="{{ .Permalink }}">{{ .Title }}</a>
       </h2>
       <div class="post-item post-meta">{{ partial "post-meta.html" . }}</div>
-      <div class="post-item post-summary markdown-body">{{ .Summary }} ...</div>
+      <div class="post-item post-summary markdown-body">{{ .Summary | plainify | htmlUnescape }} ...</div>
     </div>
   {{ end }}
 

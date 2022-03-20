@@ -9,6 +9,8 @@ tags: ["Golang"]
 Go's cookiejar doesn't have any function to persistence cookies, so you need to do [something](https://stackoverflow.com/questions/44031601/how-can-make-a-curl-store-cookie-in-golang) to save cookies to a local file.
 To make it easy, you can use [juju/persistent-cookiejar](https://github.com/juju/persistent-cookiejar) instead.
 
+<!--more-->
+
 {{< card "https://github.com/juju/persistent-cookiejar" >}}
 
 ## Usage
