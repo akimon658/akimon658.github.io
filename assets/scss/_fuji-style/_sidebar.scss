@@ -41,6 +41,26 @@ select {
   }
 }
 
+.sidebar-tags div {
+  display: flex;
+  flex-wrap: wrap;
+
+  span {
+    border: 2px solid var(--color-divider);
+    border-radius: .5rem;
+    margin: .25rem;
+    padding: 0 .25rem;
+
+    a {
+      color: var(--color-font);
+    }
+
+    &:hover {
+      background-color: var(--color-divider);
+    }
+  }
+}
+
 @media screen and (max-width: $width-md) {
   .sidebar {
     display: none !important;
