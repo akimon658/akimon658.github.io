@@ -52,7 +52,7 @@
 {{- if .Site.Params.useDisqusJS -}}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs@1.3.0/dist/disqusjs.css" />
 {{- end -}}
-{{- partial "analytic-gtag.html" . -}}
+{{ template "_internal/google_analytics_async.html" . }}
 {{- partial "analytic-cfga.html" . -}}
 
 <!-- Clarity tracking code for https://akimon658.github.io/ -->
