@@ -51,3 +51,6 @@
 
 [searchFailed]
     other = "インデックスを取得できません"
+
+[seeAlso]
+    other = "関連記事"

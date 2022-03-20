@@ -179,6 +179,25 @@ article {
   padding: 1.25rem 0;
 }
 
+#see-also {
+  border-top: 2px solid var(--color-divider);
+  font-family: $bold-font;
+  padding: 1rem 0;
+
+  a {
+    color: var(--color-font);
+    font-size: 1.1rem;
+
+    &:hover {
+      color: var(--color-mute);
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+
 // search page part
 
 #search-result .post:first-child {

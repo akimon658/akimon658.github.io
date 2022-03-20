@@ -26,6 +26,7 @@
 	</blockquote>
 </div>
 {{- end -}}
+{{ partial "related.html" . }}
 {{- if and (.Site.Params.disqusJSApi) (ne .Params.showComments false) -}}
 {{- partial "comment-disqusjs.html" . -}}
 {{- else if and (.Site.Params.disqusShortname) (ne .Params.showComments false) -}}
