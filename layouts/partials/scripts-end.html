@@ -1,10 +1,10 @@
 {{ if eq .Section "search" -}}
-{{ $options := (dict "targetPath" "assets/js/search.min.js" "minify" true "format" "iife") }}
+{{ $options := (dict "targetPath" "assets/js/search.min.js" "minify" true ) }}
 {{ $js := resources.Get "js/search.js" | js.Build $options }}
 <script defer src="{{ $js.RelPermalink }}"></script>
 {{- end -}}
 
-{{ $options := (dict "targetPath" "assets/js/script.min.js" "minify" true "format" "iife") }}
+{{ $options := (dict "targetPath" "assets/js/script.min.js" "minify" true ) }}
 {{ $js := resources.Get "js/script.js" | js.Build $options }}
 <script defer src="{{ $js.RelPermalink }}"></script>
 
