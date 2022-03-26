@@ -103,6 +103,10 @@ select {
         margin-top: 0;
       }
     }
+
+    .sidebar-tags div {
+      justify-content: flex-end;
+    }
   }
 }
 
