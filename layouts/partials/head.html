@@ -38,6 +38,7 @@
 <!-- og -->
 {{ partial "opengraph.html" . }}
 
+<link rel="preload" href="/fonts/MaterialIcons-Regular.woff2" as="font" type="font/woff2" crossorigin />
 <!-- dep -->
 {{ $options := (dict "targetPath" "assets/css/style.min.css" "outputStyle" "compressed") }}
 {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
