@@ -2,7 +2,7 @@ baseURL: "https://akimon658.github.io/"
 defaultContentLanguage: "ja"
 enableGitInfo: true
 enableRobotsTXT: true
-googleAnalytics: "UA-174918347-7"
+googleAnalytics: "G-KWKSTPH28H"
 hasCJKLanguage: true
 languageCode: "ja"
 publishDir: "docs"
