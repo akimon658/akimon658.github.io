@@ -1,32 +1,32 @@
 @font-face {
-	font-family: 'Material Icons';
-	src: local('Material Icons'),
-		url('/fonts/MaterialIcons-Regular.woff2') format('woff2'),
-		url('https://fonts.gstatic.com/s/materialicons/v126/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2') format('woff2');
+  font-family: 'Material Icons';
+  src: local('Material Icons'),
+    url('/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+    url('https://fonts.gstatic.com/s/materialicons/v126/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2') format('woff2');
 }
 
 .material-icon {
-	font-family: 'Material Icons' !important;
-	user-select: none;
+  font-family: 'Material Icons' !important;
+  user-select: none;
 }
 
 .material-icons::before {
-	font-family: 'Material Icons' !important;
-	padding-right: 0.25rem;
+  font-family: 'Material Icons' !important;
+  padding-right: 0.25rem;
 }
 
 .comment::before {
-	content: 'comment';
+  content: 'comment';
 }
 
 .event::before {
-	content: 'event';
+  content: 'event';
 }
 
 .local-offer::before {
-	content: 'local_offer';
+  content: 'local_offer';
 }
 
 .update::before {
-	content: 'update';
+  content: 'update';
 }
