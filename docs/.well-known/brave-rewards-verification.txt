@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: akimon658.github.io
+Token: aa976593d1e2c0dd28bbb631eb31ed3e341d0c1f8ded80c05e0223298699ac06
