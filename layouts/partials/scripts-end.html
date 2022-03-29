@@ -1,62 +1,62 @@
-{{ if eq .Section "search" -}}
-{{ $options := (dict "targetPath" "assets/js/search.min.js" "minify" true ) }}
-{{ $js := resources.Get "js/search.js" | js.Build $options }}
-<script defer src="{{ $js.RelPermalink }}"></script>
-{{- end -}}
+{{ if eq .Section "search" }}
+  {{ $options := (dict "targetPath" "assets/js/search.min.js" "minify" true ) }}
+  {{ $js := resources.Get "js/search.js" | js.Build $options }}
+  <script defer src="{{ $js.RelPermalink }}"></script>
+{{ end }}
 
 {{ $options := (dict "targetPath" "assets/js/script.min.js" "minify" true ) }}
 {{ $js := resources.Get "js/script.js" | js.Build $options }}
 <script defer src="{{ $js.RelPermalink }}"></script>
 
-{{- if or .Params.math .Site.Params.math -}}
-{{- partial "math.html" . -}}
-{{- end -}}
+{{ if or .Params.math .Site.Params.math }}
+  {{ partial "math.html" . }}
+{{ end }}
 
-{{- with .Params.aplayer -}}
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-<script>
-  // in-post aplayer
-  var pContainers = document.querySelectorAll('.content article .post-aplayer');
-  if (pContainers && pContainers.length > 0) {
-    pContainers.forEach(function (container) {
-      var attrs = ['urls', 'names', 'artists', 'covers'];
-      attrs = attrs.map(function (attr) {
-        var arr = container.getAttribute('data-' + attr).replace(/( |%20)/ig, '').split(',');
-        if (arr.length > 0) {
-          return arr.map(function (val) {
-            return String(val).trim();
-          });
-        } else {
-          return attr;
+{{ with .Params.aplayer }}
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+  <script>
+    // in-post aplayer
+    var pContainers = document.querySelectorAll('.content article .post-aplayer');
+    if (pContainers && pContainers.length > 0) {
+      pContainers.forEach(function (container) {
+        var attrs = ['urls', 'names', 'artists', 'covers'];
+        attrs = attrs.map(function (attr) {
+          var arr = container.getAttribute('data-' + attr).replace(/( |%20)/ig, '').split(',');
+          if (arr.length > 0) {
+            return arr.map(function (val) {
+              return String(val).trim();
+            });
+          } else {
+            return attr;
+          }
+        });
+        var audio = [];
+        for (var i = 0; i < attrs[0].length; i++) {
+          var a = {
+            name: attrs[1][i],
+            url: attrs[0][i],
+          };
+          (typeof attrs[2] !== 'string') && (a.artist = attrs[2][i]);
+          (typeof attrs[3] !== 'string') && (a.cover = attrs[3][i]);
+          audio.push(a);
         }
+        new APlayer({
+          container: container,
+          theme: '#8f82bc',
+          volume: 0.1,
+          listFolded: true,
+          audio: audio
+        });
       });
-      var audio = [];
-      for (var i = 0; i < attrs[0].length; i++) {
-        var a = {
-          name: attrs[1][i],
-          url: attrs[0][i],
-        };
-        (typeof attrs[2] !== 'string') && (a.artist = attrs[2][i]);
-        (typeof attrs[3] !== 'string') && (a.cover = attrs[3][i]);
-        audio.push(a);
-      }
-      new APlayer({
-        container: container,
-        theme: '#8f82bc',
-        volume: 0.1,
-        listFolded: true,
-        audio: audio
-      });
-    });
-  }
-  // aplayer toc anchors fix
-  // see https://github.com/MoePlayer/APlayer/issues/242#issuecomment-602471423
-  document.addEventListener('DOMContentLoaded', function () {
-    var issueTocEle = document.querySelector('.sidebar-toc');
-    if (issueTocEle) {
-      var newTocEle = issueTocEle.cloneNode(true);
-      issueTocEle.parentNode.replaceChild(newTocEle, issueTocEle);
     }
-  });
-</script>
-{{- end -}}
+    // aplayer toc anchors fix
+    // see https://github.com/MoePlayer/APlayer/issues/242#issuecomment-602471423
+    document.addEventListener('DOMContentLoaded', function () {
+      var issueTocEle = document.querySelector('.sidebar-toc');
+      if (issueTocEle) {
+        var newTocEle = issueTocEle.cloneNode(true);
+        issueTocEle.parentNode.replaceChild(newTocEle, issueTocEle);
+      }
+    });
+  </script>
+{{ end }}

@@ -14,9 +14,9 @@
       <h3>Pages</h3>
       <ul>
         {{ range .Site.Menus.nav }}
-        <li>
-          <a href="{{ .URL }}">{{ .Name }}</a>
-        </li>
+          <li>
+            <a href="{{ .URL }}">{{ .Name }}</a>
+          </li>
         {{ end }}
       </ul>
     </div>
@@ -25,11 +25,11 @@
       <h3>Links</h3>
       <ul>
         {{ range .Site.Menus.link }}
-        <li>
-          <a href="{{ .URL }}" target="_blank" rel="noopener noreferrer">
-            <span>{{ .Name }}</span>
-          </a>
-        </li>
+          <li>
+            <a href="{{ .URL }}" target="_blank" rel="noopener noreferrer">
+              <span>{{ .Name }}</span>
+            </a>
+          </li>
         {{ end }}
       </ul>
     </div>
@@ -38,24 +38,22 @@
       <h3>Tags</h3>
       <div>
         {{ range .Site.Taxonomies.tags }}
-        <span>
-          <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
-        </span>
+          <span>
+            <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+          </span>
         {{ end }}
       </div>
     </div>
     <!-- in-post toc -->
     {{ if in .Site.Params.mainSections .Type }}
-    {{ if and (or .Site.Params.showToc .Params.showToc) (ne .Params.showToc false) }}
-    <div class="sidebar-item sidebar-toc">
-      <h3>Contents</h3>
-      {{ .TableOfContents }}
-    </div>
-    {{ end }}
+      {{ if and (or .Site.Params.showToc .Params.showToc) (ne .Params.showToc false) }}
+        <div class="sidebar-item sidebar-toc">
+          <h3>Contents</h3>
+          {{ .TableOfContents }}
+        </div>
+      {{ end }}
     {{ end }}
 
-    <div class="sidebar-item">
-      {{ partial "language-switcher" . }}
-    </div>
+    <div class="sidebar-item">{{ partial "language-switcher" . }}</div>
   </div>
 </nav>
