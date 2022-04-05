@@ -11,11 +11,15 @@ RUN apt install ./hugo.deb
 
 FROM denoland/deno:debian-1.20.4
 
-RUN apt update && \
-	apt install -y git gnupg2 && \
-	rm -rf /ver/lib/apt/lists/* && \
-	mkdir /home/deno && \
-	chmod 777 -R /deno-dir/
+ARG IS_ACTION=0
+
+RUN mkdir /home/deno && \
+	if [ ${IS_ACTION} -eq 0 ] ; then \
+		apt update ;\
+		apt install -y git gnupg2 ;\
+		rm -rf /var/lib/apt/lists/* ;\
+		chmod 777 -R /deno-dir/ ;\
+	fi
 
 USER deno
 
