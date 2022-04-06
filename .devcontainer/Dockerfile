@@ -14,9 +14,10 @@ FROM denoland/deno:debian-1.20.4
 ARG IS_ACTION=0
 
 RUN mkdir /home/deno && \
+	apt update && \
+	apt install -y git && \
 	if [ ${IS_ACTION} -eq 0 ] ; then \
-		apt update ;\
-		apt install -y git gnupg2 ;\
+		apt install -y gnupg2 ;\
 		rm -rf /var/lib/apt/lists/* ;\
 		chmod 777 -R /deno-dir/ ;\
 	fi
