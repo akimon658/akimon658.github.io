@@ -4,7 +4,7 @@ canonicalURL: ""
 date: 2022-01-24T17:20:00+09:00
 description: "Hugo のコメント欄をそのページの言語に合わせて変える方法"
 draft: false
-tags: ["Hugo"]
+tags: ["Hugo", "JavaScript"]
 ---
 
 ## 結論
