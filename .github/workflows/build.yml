@@ -28,7 +28,7 @@ jobs:
 
       - name: Start containers
         run: |
-          docker-compose --file ./.devcontainer/docker-compose.yml build hugo --build-arg IS_ACTION=1
+          docker-compose --file ./.devcontainer/docker-compose.yml build --build-arg IS_ACTION=1 hugo
           docker-compose --file ./.devcontainer/docker-compose.yml up -d
 
       - name: Build
