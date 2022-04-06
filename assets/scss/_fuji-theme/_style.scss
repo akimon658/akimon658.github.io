@@ -4,6 +4,10 @@
   background-color: var(--color-primary);
 }
 
+:target {
+  scroll-margin-top: 5rem;
+}
+
 body {
   background-color: var(--color-bg);
   color: var(--color-font);
