@@ -28,14 +28,14 @@ tags: ["JavaScript"]
 
 ```javascript
 const header = document.querySelector("header"),
-  headerStyle = window.getComputedStyle(header);
+  headerStyle = window.getComputedStyle(header),
+  headerHeight = parseFloat(headerStyle.height);
 
 let lastPosition = 0;
 
 document.addEventListener("scroll", () => {
   const currentPosition = window.scrollY,
-    diff = currentPosition - lastPosition,
-    headerHeight = parseFloat(headerStyle.height);
+    diff = currentPosition - lastPosition;
 
   let newTop = parseFloat(headerStyle.top) - diff;
   if (diff < 0) {
