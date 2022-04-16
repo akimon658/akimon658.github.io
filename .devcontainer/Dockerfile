@@ -3,13 +3,13 @@ FROM debian:bullseye-20220328 AS installer
 RUN apt update && \
 	apt install -y curl
 
-ENV HUGO_VERSION=0.96.0
+ENV HUGO_VERSION=0.97.0
 
 RUN curl -L -o ./hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb
 
 RUN apt install ./hugo.deb
 
-FROM denoland/deno:debian-1.20.5
+FROM denoland/deno:debian-1.20.6
 
 ARG IS_ACTION=0
 
