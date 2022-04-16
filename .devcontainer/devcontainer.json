@@ -12,5 +12,5 @@
 		"deno.lint": true,
 		"deno.unstable": false
 	},
-	"postCreateCommand": "echo 'alias server=\"hugo server --bind 0.0.0.0\" >> ~/.bashrc"
+	"postCreateCommand": "echo 'alias server=\"hugo server --bind 0.0.0.0\"' >> ~/.bashrc"
 }
