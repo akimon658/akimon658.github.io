@@ -17,7 +17,7 @@ tags: ["JavaScript"]
 
 マウスだと（設定によりますが）速くて分かりにくいのでタッチパッドやスマホで試してみてください。
 
-<p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="zYpROeV" data-user="akimon658" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<p class="codepen" data-height="400" data-default-tab="result" data-slug-hash="zYpROeV" data-user="akimon658" style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/akimon658/pen/zYpROeV">
   Awesome header</a> by Akimo (<a href="https://codepen.io/akimon658">@akimon658</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
