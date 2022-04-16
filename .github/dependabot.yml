@@ -11,6 +11,6 @@ updates:
       interval: "daily"
 
   - package-ecosystem: "gitsubmodule"
-    directory: "/themes"
+    directory: "/"
     schedule:
       interval: "daily"
