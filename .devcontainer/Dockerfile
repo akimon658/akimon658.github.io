@@ -3,7 +3,7 @@ FROM debian:bullseye-20220328 AS installer
 RUN apt update && \
 	apt install -y curl
 
-ENV HUGO_VERSION=0.97.2
+ENV HUGO_VERSION=0.97.3
 
 RUN curl -L -o ./hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb
 
