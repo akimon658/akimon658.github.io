@@ -1,4 +1,4 @@
-FROM debian:bullseye-20220328 AS installer
+FROM debian:bullseye-20220418 AS installer
 
 RUN apt update && \
 	apt install -y curl
