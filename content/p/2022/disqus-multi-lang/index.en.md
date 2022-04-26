@@ -2,7 +2,7 @@
 title: "Use Disqus on multilingual Hugo site"
 date: 2022-01-26T21:20:00+09:00
 description: "How to use Disqus on multilingual Hugo site with minify option"
-tags: ["Hugo"]
+tags: ["JavaScript", "Hugo"]
 ---
 
 ## The answer
