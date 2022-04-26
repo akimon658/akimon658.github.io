@@ -1,7 +1,9 @@
-<span class="event material-icons">{{ .Date.Local.Format "2006-01-02" }}</span>
+{{ $dateFormat := (or .Site.Params.dateFormat "Jan 2, 2006" ) }}
+
+<span class="event material-icons">{{ .Date.Local.Format $dateFormat }}</span>
 
 {{ if ne .Date.YearDay .Lastmod.YearDay }}
-  <span class="material-icons update">{{ dateFormat ( or $.Site.Params.dateFormat "2006-01-02" ) $.Page.Params.LastMod }}</span>
+  <span class="material-icons update">{{ dateFormat $dateFormat $.Page.Params.LastMod }}</span>
 {{ end }}
 
 {{ if .Site.Params.showWordCounter }}

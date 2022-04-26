@@ -16,6 +16,7 @@ build:
 languages:
   ja:
     languageName: "日本語"
+    dateFormat: 2006年1月2日
     weight: 1
 
   en:
