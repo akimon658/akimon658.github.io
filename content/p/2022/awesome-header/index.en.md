@@ -2,6 +2,7 @@
 title: "Create a header that appears and disappears by scrolling"
 date: 2022-04-26T14:00:00+09:00
 description: ""
+categories: ["dev.to"]
 tags: ["JavaScript"]
 ---
 
