@@ -12,5 +12,5 @@ services:
     command: sleep infinity
 
   ogjson:
-    image: akimon658/ogjson:1.1.0
-    command: /ogjson -user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"
+    image: akimon658/ogjson:1.1.2
+    command: /ogjson -user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36"
