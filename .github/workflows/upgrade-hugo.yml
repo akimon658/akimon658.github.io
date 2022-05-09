@@ -26,7 +26,7 @@ jobs:
         run: echo "::set-output name=latest::$(gh release view --repo gohugoio/hugo --json body | jq '.body' | sed 's/\\r\\n/%0A/g; s/@/@<!-- -->/g; s/#/#<!-- -->/g' | awk '{print substr($0, 2, length($0)-2)}')"
 
       - name: Create a pull request
-        uses: peter-evans/create-pull-request@v4.0.2
+        uses: peter-evans/create-pull-request@v4.0.3
         with:
           author: GitHub Actions <41898282+github-actions[bot]@users.noreply.github.com>
           body: |
