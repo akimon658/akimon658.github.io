@@ -1,4 +1,4 @@
-import Fuse from 'https://esm.sh/fuse.js@6.6.1'
+import Fuse from 'https://esm.sh/fuse.js@6.6.2'
 import template from 'https://esm.sh/art-template@4.13.2/lib/template-web.js'
 
 // search by fuse.js
@@ -22,13 +22,12 @@ function searchAll(key: string, index: JSON[], counter: number) {
     ],
   })
   const result = fuse.search(key)
-  // console.log(result)
+
   if (result.length > 0) {
     document.getElementById('search-result')!.innerHTML = template('search-result-template', result)
-    return [new Date().getTime() - counter, result.length]
-  } else {
-    return 'notFound'
   }
+
+  return [new Date().getTime() - counter, result.length]
 }
 
 const urlParams = new URLSearchParams(window.location.search) // get params from URL
@@ -52,15 +51,13 @@ if (urlParams.has('q')) {
       if (xhr.status === 200) {
         // use index json to search
         // console.log(xhr.response)
-        const result: number[] | 'notFound' = searchAll(key, xhr.response, counter)
+        const [time, num] = searchAll(key, xhr.response, counter)
         // console.log(counter)
-        if (result === 'notFound') {
+        if (num <= 0) {
           infoElements[1].removeAttribute('style')
         } else {
-          const resultString: string[] = result.map(String)
-
-          infoElements[0].innerHTML = infoElements[0].innerHTML.replace('[TIME]', resultString[0])
-          infoElements[0].innerHTML = infoElements[0].innerHTML.replace('[NUM]', resultString[1])
+          infoElements[0].innerHTML = infoElements[0].innerHTML.replace('[TIME]', String(time))
+          infoElements[0].innerHTML = infoElements[0].innerHTML.replace('[NUM]', String(num))
           infoElements[0].removeAttribute('style')
         }
       } else {
