@@ -47,7 +47,7 @@
     other = "[NUM] 件 ([TIME] ミリ秒)"
 
 [searchNotFound]
-    other = "検索できませんでした"
+    other = "見つかりませんでした"
 
 [searchFailed]
     other = "インデックスを取得できません"
