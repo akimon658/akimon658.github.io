@@ -21,22 +21,12 @@ jobs:
       - name: Update Dockerfile
         run: sed -i -r "s/ENV HUGO_VERSION=\S*/ENV HUGO_VERSION=${{ steps.hugo_version.outputs.latest }}/" .devcontainer/Dockerfile
 
-      - name: Get release note
-        id: release_note
-        run: echo "::set-output name=latest::$(gh release view --repo gohugoio/hugo --json body | jq '.body' | sed 's/\\r\\n/%0A/g; s/@/@<!-- -->/g; s/#/#<!-- -->/g' | awk '{print substr($0, 2, length($0)-2)}')"
-
       - name: Create a pull request
         uses: peter-evans/create-pull-request@v4.0.3
         with:
           author: GitHub Actions <41898282+github-actions[bot]@users.noreply.github.com>
-          body: |
-            <details>
-              <summary>Release Note</summary>
-
-              ${{ steps.release_note.outputs.latest }}
-            </details>
+          body: "[Release notes](https://github.com/gohugoio/hugo/releases/tag/v${{ steps.hugo_version.outputs.latest }})"
           branch: upgrade-hugo/v${{ steps.hugo_version.outputs.latest }}
-          commit-message: Upgrade Hugo to ${{ steps.hugo_version.outputs.latest }}
-          delete-branch: true
+          commit-message: Upgrade Hugo to v${{ steps.hugo_version.outputs.latest }}
           labels: dependencies
-          title: Upgrade Hugo to ${{ steps.hugo_version.outputs.latest }}
+          title: Upgrade Hugo to v${{ steps.hugo_version.outputs.latest }}
