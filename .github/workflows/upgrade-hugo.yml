@@ -18,6 +18,14 @@ jobs:
         id: hugo_version
         run: echo "::set-output name=latest::$(gh release view --repo gohugoio/hugo --json tagName | jq -r '.tagName' | awk '{print substr($0, 2)}')"
 
+      - name: Close older PR
+        run: |
+          BRANCH_BASE=upgrade-hugo/v
+          OLDER_VERSION=`gh pr list | grep $BRANCH_BASE | awk '{print substr($5, 2)}'`
+          if [ $(OLDER_VERSION) != ${{ steps.hugo_version.outputs.latest }} ]; then
+            gh pr close $BRANCH_BASE$OLDER_VERSION
+          fi
+
       - name: Update Dockerfile
         run: sed -i -r "s/ENV HUGO_VERSION=\S*/ENV HUGO_VERSION=${{ steps.hugo_version.outputs.latest }}/" .devcontainer/Dockerfile
 
