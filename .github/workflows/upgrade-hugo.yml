@@ -22,7 +22,7 @@ jobs:
         run: |
           BRANCH_BASE=upgrade-hugo/v
           OLDER_VERSION=`gh pr list | grep $BRANCH_BASE | awk '{print substr($5, 2)}'`
-          if [ $(OLDER_VERSION) != ${{ steps.hugo_version.outputs.latest }} ]; then
+          if [ "$OLDER_VERSION" != "" ] && [ "$OLDER_VERSION" != ${{ steps.hugo_version.outputs.latest }} ]; then
             gh pr close $BRANCH_BASE$OLDER_VERSION
           fi
 
