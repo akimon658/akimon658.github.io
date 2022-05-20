@@ -25,18 +25,20 @@
       {{ end }}
     </ul>
   </div>
-  <!-- tags -->
-  <div class="sidebar-item sidebar-tags">
-    <h3>Tags</h3>
-    <div>
-      {{ range .Site.Taxonomies.tags }}
-        <span>
-          <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
-        </span>
-      {{ end }}
+
+  {{ with .Site.Taxonomies.tags }}
+    <div class="sidebar-item sidebar-tags">
+      <h3>Tags</h3>
+      <div>
+        {{ range .ByCount }}
+          <span>
+            <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+          </span>
+        {{ end }}
+      </div>
     </div>
-  </div>
-  <!-- in-post toc -->
+  {{ end }}
+
   {{ if .IsPage }}
     {{ $pageShowToc := .Params.showToc }}
     {{ $siteShowToc := .Site.Params.showToc }}
