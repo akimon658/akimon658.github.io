@@ -24,9 +24,9 @@
   <script id="search-result-template" type="text/fuse-template">
     {{ "<% for(var i = 0; i < $data.length; i++){ %>" | safeHTML }}
       <div class="post">
-        <h3 class="post-item post-title-archive">
+        <h2 class="post-item post-title-archive">
           <a href="<%= $data[i].item.permalink %>">{{ "<%= $data[i].item.title %>" | safeHTML }}</a>
-        </h3>
+        </h2>
         <div class="post-item post-meta-archive">
           <span class="event material-icons">{{ "<%= $data[i].item.date %>" | safeHTML }}</span>
           {{ "<% if ($data[i].item.tags && $data[i].item.tags.length > 0) { %>" | safeHTML }}

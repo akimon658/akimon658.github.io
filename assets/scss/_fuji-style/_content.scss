@@ -14,11 +14,17 @@
 }
 
 .post-title {
-  font-family: $bold-font;
-  font-size: $font-size-1;
+  @extend .post-title-archive;
 
   a {
+    font-size: $font-size-1;
+  }
+}
+
+.post-title-archive {
+  a {
     color: var(--color-font);
+    font-family: $bold-font;
 
     &:hover {
       color: var(--color-mute);
