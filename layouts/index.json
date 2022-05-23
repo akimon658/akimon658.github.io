@@ -2,7 +2,12 @@
 {{ $dateFormat := (or .Site.Params.dateFormat "Jan 2, 2006" )}}
 
 {{ range (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-  {{ $.Scratch.Add "search" (dict "title" .Title "tags" .Params.tags "content" .Plain "permalink" .Permalink "date" (.Date.Format $dateFormat)) }}
+  {{ $dict := dict "title" .Title "tags" .Params.tags "content" .Plain "permalink" .Permalink "date" (.Date.Format $dateFormat) }}
+  {{ if ne .Date.YearDay .Lastmod.YearDay }}
+    {{ $dict = merge $dict (dict "lastmod" (dateFormat $dateFormat .Page.Params.Lastmod)) }}
+  {{ end }}
+
+  {{ $.Scratch.Add "search" $dict }}
 {{ end }}
 
 {{ $.Scratch.Get "search" | jsonify }}

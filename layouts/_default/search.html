@@ -21,14 +21,21 @@
     <span>{{ i18n "searchFailed" }}</span>
   </div>
   <div id="search-result"></div>
+
   <script id="search-result-template" type="text/fuse-template">
     {{ "<% for(var i = 0; i < $data.length; i++){ %>" | safeHTML }}
       <div class="post">
         <h2 class="post-item post-title-archive">
           <a href="<%= $data[i].item.permalink %>">{{ "<%= $data[i].item.title %>" | safeHTML }}</a>
         </h2>
+
         <div class="post-item post-meta-archive">
           <span class="event material-icons">{{ "<%= $data[i].item.date %>" | safeHTML }}</span>
+
+          {{ "<% if ($data[i].item.lastmod) { %>" | safeHTML }}
+            <span class="material-icons update">{{ "<%= $data[i].item.lastmod %>" | safeHTML }}</span>
+          {{ "<% } %>" | safeHTML }}
+
           {{ "<% if ($data[i].item.tags && $data[i].item.tags.length > 0) { %>" | safeHTML }}
             <span class="local-offer material-icons">
               {{ "<% for(var j = 0; j < $data[i].item.tags.length; j++){ %>" | safeHTML }}
