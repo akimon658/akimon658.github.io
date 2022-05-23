@@ -19,14 +19,11 @@
 [footerPoweredEnd]
     other = " "
 
-[postMetaNoTag]
-    other = "タグはありません"
-
 [postMetaWordCount]
-    other = "{{.Count}} 字"
+    other = "{{.Count}}字"
 
 [postMetaReadingTime]
-    other = "{{.Count}} 分"
+    other = "{{.Count}}分"
 
 [postCopyrightFront]
     other = "特定のセクションを除いて、このサイトは "
@@ -44,7 +41,7 @@
     other = "タグ「{{ .Title }}」の記事："
 
 [searchSuccess]
-    other = "[NUM] 件 ([TIME] ミリ秒)"
+    other = "[NUM]件（[TIME]ミリ秒）"
 
 [searchNotFound]
     other = "見つかりませんでした"

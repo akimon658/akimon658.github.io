@@ -29,15 +29,13 @@
         </h3>
         <div class="post-item post-meta-archive">
           <span class="event material-icons">{{ "<%= $data[i].item.date %>" | safeHTML }}</span>
-          <span class="local-offer material-icons">
-            {{ "<% if ($data[i].item.tags && $data[i].item.tags.length > 0) { %>" | safeHTML }}
+          {{ "<% if ($data[i].item.tags && $data[i].item.tags.length > 0) { %>" | safeHTML }}
+            <span class="local-offer material-icons">
               {{ "<% for(var j = 0; j < $data[i].item.tags.length; j++){ %>" | safeHTML }}
                 {{ "<%= $data[i].item.tags[j] %>&nbsp;" | safeHTML }}
               {{ "<% } %>" | safeHTML }}
-            {{ "<% } else { %>" | safeHTML }}
-              {{ i18n "postMetaNoTag" }}
-            {{ "<% } %>" | safeHTML }}
-          </span>
+            </span>
+          {{ "<% } %>" | safeHTML }}
         </div>
       </div>
     {{ "<% } %>" | safeHTML }}

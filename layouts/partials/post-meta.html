@@ -20,12 +20,10 @@
   </span>
 {{ end }}
 
-<span class="local-offer material-icons">
-  {{ if .Params.tags }}
-    {{ range .Params.tags }}
+{{ with .Params.tags }}
+  <span class="local-offer material-icons">
+    {{ range . }}
       <a href="{{ "/tags/" | relURL }}{{ . | urlize}}" class="tag">{{ . }}</a>
     {{ end }}
-  {{ else }}
-    {{ i18n "postMetaNoTag" }}
-  {{ end }}
-</span>
+  </span>
+{{ end }}
