@@ -1,23 +1,27 @@
 <!doctype html><html lang=ja><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=HandheldFriendly content="True"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><meta name=generator content="Hugo 0.99.1"><link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/icons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/icons/favicon-16x16.png><link rel=manifest href=/icons/site.webmanifest><link rel=mask-icon href=/icons/safari-pinned-tab.svg color=#5bbad5><link rel="shortcut icon" href=/icons/favicon.ico><meta name=msapplication-TileColor content="#2d89ef"><meta name=msapplication-config content="/icons/browserconfig.xml"><meta name=theme-color content="#ffffff"><title>Search - Boring Time</title><meta name=author content="Akimo"><link rel=alternate type=application/rss+xml href=https://akimon658.github.io/search/index.xml title="Boring Time"><meta property="og:title" content="Search"><meta name=twitter:title content="Search"><meta property="og:type" content="website"><meta property="og:url" content="https://akimon658.github.io/search/"><meta name=twitter:card content="summary"><meta property="og:updated_time" content="2021-12-13T21:38:27+09:00"><link rel=preload href=/fonts/MaterialIcons-Regular.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=https://akimon658.github.io/assets/css/style.min.css><script async src="https://www.googletagmanager.com/gtag/js?id=G-KWKSTPH28H"></script>
 <script>var dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-KWKSTPH28H",{anonymize_ip:!1})}</script><script>(function(e,o,t,i,a,n,s){e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},n=o.createElement(i),n.async=1,n.src="https://www.clarity.ms/tag/"+a+"?ref=bwt",s=o.getElementsByTagName(i)[0],s.parentNode.insertBefore(n,s)})(window,document,"clarity","script","95k7fmhfca")</script></head><body data-theme=auto data-theme-auto=false><script data-cfasync=false>const fujiThemeData=localStorage.getItem("fuji_data-theme");let colorScheme=fujiThemeData;colorScheme!=="light"&&colorScheme!=="dark"&&(colorScheme=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"),document.documentElement.style.colorScheme=colorScheme,fujiThemeData?fujiThemeData!=="auto"&&document.body.setAttribute("data-theme",fujiThemeData==="dark"?"dark":"light"):localStorage.setItem("fuji_data-theme","auto")</script><header><div class="container-lg clearfix"><div class="col-12 header"><a class=title-main href=https://akimon658.github.io/>Boring Time</a><div id=switch-theme><span class=material-icon>brightness_medium</span></div></div></div></header><main><div class="container-lg clearfix"><div class="col-12 col-md-9 float-left content"><div class=page-info><form class=search-form method=get><div class=search-input><input name=q type=search autocapitalize=off autocomplete=off autocorrect=off spellcheck=false>
 <button type=submit>
-<span class=material-icon>search</span></button></div></form></div><div class=search-result-info style=display:none><span>[NUM] 件 ([TIME] ミリ秒)</span></div><div class=search-result-info style=display:none><span>見つかりませんでした</span></div><div class=search-result-info style=display:none><span>インデックスを取得できません</span></div><div id=search-result></div><script id=search-result-template type=text/fuse-template>
+<span class=material-icon>search</span></button></div></form></div><div class=search-result-info style=display:none><span>[NUM]件（[TIME]ミリ秒）</span></div><div class=search-result-info style=display:none><span>見つかりませんでした</span></div><div class=search-result-info style=display:none><span>インデックスを取得できません</span></div><div id=search-result></div><script id=search-result-template type=text/fuse-template>
     <% for(var i = 0; i < $data.length; i++){ %>
       <div class="post">
-        <h3 class="post-item post-title-archive">
+        <h2 class="post-item post-title-archive">
           <a href="<%= $data[i].item.permalink %>"><%= $data[i].item.title %></a>
-        </h3>
+        </h2>
+
         <div class="post-item post-meta-archive">
           <span class="event material-icons"><%= $data[i].item.date %></span>
-          <span class="local-offer material-icons">
-            <% if ($data[i].item.tags && $data[i].item.tags.length > 0) { %>
+
+          <% if ($data[i].item.lastmod) { %>
+            <span class="material-icons update"><%= $data[i].item.lastmod %></span>
+          <% } %>
+
+          <% if ($data[i].item.tags && $data[i].item.tags.length > 0) { %>
+            <span class="local-offer material-icons">
               <% for(var j = 0; j < $data[i].item.tags.length; j++){ %>
                 <%= $data[i].item.tags[j] %>&nbsp;
               <% } %>
-            <% } else { %>
-              タグはありません
-            <% } %>
-          </span>
+            </span>
+          <% } %>
         </div>
       </div>
     <% } %>

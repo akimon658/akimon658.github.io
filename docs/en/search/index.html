@@ -4,20 +4,24 @@
 <span class=material-icon>search</span></button></div></form></div><div class=search-result-info style=display:none><span>[NUM] results ([TIME] ms)</span></div><div class=search-result-info style=display:none><span>Results not found</span></div><div class=search-result-info style=display:none><span>Failed to load index file</span></div><div id=search-result></div><script id=search-result-template type=text/fuse-template>
     <% for(var i = 0; i < $data.length; i++){ %>
       <div class="post">
-        <h3 class="post-item post-title-archive">
+        <h2 class="post-item post-title-archive">
           <a href="<%= $data[i].item.permalink %>"><%= $data[i].item.title %></a>
-        </h3>
+        </h2>
+
         <div class="post-item post-meta-archive">
           <span class="event material-icons"><%= $data[i].item.date %></span>
-          <span class="local-offer material-icons">
-            <% if ($data[i].item.tags && $data[i].item.tags.length > 0) { %>
+
+          <% if ($data[i].item.lastmod) { %>
+            <span class="material-icons update"><%= $data[i].item.lastmod %></span>
+          <% } %>
+
+          <% if ($data[i].item.tags && $data[i].item.tags.length > 0) { %>
+            <span class="local-offer material-icons">
               <% for(var j = 0; j < $data[i].item.tags.length; j++){ %>
                 <%= $data[i].item.tags[j] %>&nbsp;
               <% } %>
-            <% } else { %>
-              No tag
-            <% } %>
-          </span>
+            </span>
+          <% } %>
         </div>
       </div>
     <% } %>
