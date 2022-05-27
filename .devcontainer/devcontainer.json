@@ -1,6 +1,6 @@
 {
 	"name": "Hugo",
-	"dockerComposeFile": "./docker-compose.yml",
+	"dockerComposeFile": "../docker-compose.yml",
 	"service": "hugo",
 	"workspaceFolder": "/workspace",
 	"extensions": [

@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  hugo:
+    build: .devcontainer/
+    volumes:
+      - .:/workspace
+    ports:
+      - '1313:1313'
+    environment:
+      TZ: Asia/Tokyo
+    command: sleep infinity
+
+  ogjson:
+    image: akimon658/ogjson:1.1.2
+    command: /ogjson -user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"

@@ -28,12 +28,12 @@ jobs:
 
       - name: Start containers
         run: |
-          docker-compose --file ./.devcontainer/docker-compose.yml build --build-arg IS_ACTION=1 hugo
-          docker-compose --file ./.devcontainer/docker-compose.yml up -d
+          docker-compose build --build-arg IS_ACTION=1 hugo
+          docker-compose up -d
 
       - name: Build
         run: |
-          docker-compose --file ./.devcontainer/docker-compose.yml exec -T --user root --workdir /workspace hugo \
+          docker-compose exec -T --user root --workdir /workspace hugo \
           sh -c 'mkdir assets/js && \
           deno bundle assets/ts/main.ts assets/js/script.js && \
           deno bundle assets/ts/search.ts assets/js/search.js && \
