@@ -35,7 +35,7 @@ jobs:
         run: |
           mkdir assets/js
           rm -r docs/
-          docker-compose exec -T --user root --workdir /workspace hugo \
+          docker-compose exec -T --user root --workdir /workspaces/akimon658.github.io hugo \
           sh -c 'deno bundle assets/ts/main.ts assets/js/script.js && \
           deno bundle assets/ts/search.ts assets/js/search.js && \
           hugo --minify'

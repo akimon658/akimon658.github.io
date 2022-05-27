@@ -4,7 +4,7 @@ services:
   hugo:
     build: .devcontainer/
     volumes:
-      - .:/workspace
+      - .:/workspaces/akimon658.github.io
     ports:
       - '1313:1313'
     environment:

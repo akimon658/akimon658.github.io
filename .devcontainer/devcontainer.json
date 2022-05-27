@@ -2,7 +2,7 @@
   "name": "Hugo",
   "dockerComposeFile": "../docker-compose.yml",
   "service": "hugo",
-  "workspaceFolder": "/workspace",
+  "workspaceFolder": "/workspaces/akimon658.github.io",
   "extensions": [
     "denoland.vscode-deno",
     "znck.grammarly"

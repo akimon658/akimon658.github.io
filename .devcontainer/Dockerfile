@@ -18,7 +18,7 @@ RUN mkdir /home/deno && \
         apt-get update && \
         apt-get install -y git gnupg2 ;\
         rm -rf /var/lib/apt-get/lists/* ;\
-        chown deno -R /deno-dir/ ;\
+        chmod 777 -R /deno-dir/ ;\
     fi
 
 USER deno
