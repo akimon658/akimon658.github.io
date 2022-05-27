@@ -33,11 +33,13 @@ jobs:
 
       - name: Build
         run: |
+          mkdir assets/js
+          rm -r docs/
           docker-compose exec -T --user root --workdir /workspace hugo \
-          sh -c 'mkdir assets/js && \
-          deno bundle assets/ts/main.ts assets/js/script.js && \
+          sh -c 'deno bundle assets/ts/main.ts assets/js/script.js && \
           deno bundle assets/ts/search.ts assets/js/search.js && \
           hugo --minify'
+          touch docs/.nojekyll
 
       - name: Push
         uses: EndBug/add-and-commit@050a66787244b10a4874a2a5f682130263edc192
