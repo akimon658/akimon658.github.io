@@ -27,7 +27,7 @@ jobs:
           fi
 
       - name: Update Dockerfile
-        run: sed -i -r "s/ENV HUGO_VERSION=\S*/ENV HUGO_VERSION=${{ steps.hugo_version.outputs.latest }}/" .devcontainer/Dockerfile
+        run: sed -i -r "s/ARG HUGO_VERSION=\S*/ARG HUGO_VERSION=${{ steps.hugo_version.outputs.latest }}/" .devcontainer/Dockerfile
 
       - name: Create a pull request
         uses: peter-evans/create-pull-request@v4.0.3
