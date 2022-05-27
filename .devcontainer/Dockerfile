@@ -9,7 +9,7 @@ RUN curl -L -o ./hugo.deb https://github.com/gohugoio/hugo/releases/download/v${
 
 RUN apt-get install ./hugo.deb
 
-FROM denoland/deno:debian-1.22.0
+FROM denoland/deno:debian-1.22.1
 
 ARG IS_ACTION=0
 
