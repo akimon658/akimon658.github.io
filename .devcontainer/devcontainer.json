@@ -12,5 +12,6 @@
     "deno.lint": true,
     "deno.unstable": false
   },
+  "remoteUser": "deno",
   "postCreateCommand": "echo 'alias server=\"hugo server --bind 0.0.0.0\"' >> ~/.bashrc"
 }

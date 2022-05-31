@@ -21,6 +21,4 @@ RUN mkdir /home/deno && \
         chmod 777 -R /deno-dir/ ;\
     fi
 
-USER deno
-
 COPY --from=installer /usr/local/bin/hugo /usr/local/bin/hugo
