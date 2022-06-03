@@ -30,7 +30,7 @@ jobs:
         run: sed -i -r "s/ARG HUGO_VERSION=\S*/ARG HUGO_VERSION=${{ steps.hugo_version.outputs.latest }}/" .devcontainer/Dockerfile
 
       - name: Create a pull request
-        uses: peter-evans/create-pull-request@v4.0.3
+        uses: peter-evans/create-pull-request@v4.0.4
         with:
           author: GitHub Actions <41898282+github-actions[bot]@users.noreply.github.com>
           body: "[Release notes](https://github.com/gohugoio/hugo/releases/tag/v${{ steps.hugo_version.outputs.latest }})"
