@@ -9,16 +9,8 @@ RUN curl -L -o ./hugo.deb https://github.com/gohugoio/hugo/releases/download/v${
 
 RUN apt-get install ./hugo.deb
 
-FROM denoland/deno:debian-1.22.2
+FROM node:16.15.1-bullseye
 
-ARG IS_ACTION=0
-
-RUN mkdir /home/deno && \
-    if [ ${IS_ACTION} -eq 0 ] ; then \
-        apt-get update && \
-        apt-get install -y git gnupg2 ;\
-        rm -rf /var/lib/apt-get/lists/* ;\
-        chmod 777 -R /deno-dir/ ;\
-    fi
+RUN npm install -g pnpm
 
 COPY --from=installer /usr/local/bin/hugo /usr/local/bin/hugo

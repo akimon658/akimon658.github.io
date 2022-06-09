@@ -1,6 +1,6 @@
-import { button } from './button.ts'
-import { header } from './header.ts'
-import { Images } from './images.ts'
+import { button } from './button'
+import { header } from './header'
+import { Images } from './images'
 
 button()
 header()

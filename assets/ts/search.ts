@@ -1,5 +1,5 @@
-import Fuse from 'https://esm.sh/fuse.js@6.6.2'
-import template from 'https://esm.sh/art-template@4.13.2/lib/template-web.js'
+import Fuse from 'fuse.js'
+import template from 'art-template/lib/template-web'
 
 // search by fuse.js
 function searchAll(key: string, index: JSON[], counter: number) {

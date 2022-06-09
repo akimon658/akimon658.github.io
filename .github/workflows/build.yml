@@ -28,16 +28,14 @@ jobs:
 
       - name: Start containers
         run: |
-          docker-compose build --build-arg IS_ACTION=1 hugo
+          docker-compose build hugo
           docker-compose up -d
 
       - name: Build
         run: |
-          mkdir assets/js
           rm -r docs/
           docker-compose exec -T --workdir /workspaces/akimon658.github.io hugo \
-          sh -c 'deno bundle assets/ts/main.ts assets/js/script.js && \
-          deno bundle assets/ts/search.ts assets/js/search.js && \
+          sh -c 'pnpm install && \
           hugo --minify'
           touch docs/.nojekyll
 

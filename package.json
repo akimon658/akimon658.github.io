@@ -1,0 +1,10 @@
+{
+	"dependencies": {
+		"art-template": "4.13.2",
+		"fuse.js": "6.6.2",
+		"medium-zoom": "1.0.6"
+	},
+	"scripts": {
+		"serve": "hugo server --bind 0.0.0.0"
+	}
+}

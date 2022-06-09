@@ -1,16 +1,21 @@
 version: 2
 updates:
-  - package-ecosystem: "docker"
-    directory: "/.devcontainer"
+  - package-ecosystem: docker
+    directory: /.devcontainer
     schedule:
-      interval: "daily"
+      interval: daily
 
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: github-actions
+    directory: /
     schedule:
-      interval: "daily"
+      interval: daily
 
-  - package-ecosystem: "gitsubmodule"
-    directory: "/"
+  - package-ecosystem: gitsubmodule
+    directory: /
     schedule:
-      interval: "daily"
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily

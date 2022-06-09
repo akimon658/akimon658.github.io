@@ -1,4 +1,4 @@
-import mediumZoom from 'https://esm.sh/medium-zoom@1.0.6/dist/medium-zoom.js'
+import mediumZoom from 'medium-zoom'
 
 export function Images() {
   document.addEventListener('DOMContentLoaded', () => {

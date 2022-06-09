@@ -4,14 +4,8 @@
   "service": "hugo",
   "workspaceFolder": "/workspaces/akimon658.github.io",
   "extensions": [
-    "denoland.vscode-deno",
     "znck.grammarly"
   ],
-  "settings": {
-    "deno.enable": true,
-    "deno.lint": true,
-    "deno.unstable": false
-  },
-  "remoteUser": "deno",
-  "postCreateCommand": "echo 'alias server=\"hugo server --bind 0.0.0.0\"' >> ~/.bashrc"
+  "remoteUser": "node",
+  "updateContentCommand": "pnpm install"
 }
