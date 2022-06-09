@@ -9,7 +9,7 @@ RUN curl -L -o ./hugo.deb https://github.com/gohugoio/hugo/releases/download/v${
 
 RUN apt-get install ./hugo.deb
 
-FROM node:16.15.1-bullseye
+FROM node:18.3.0-bullseye
 
 RUN npm install -g pnpm
 
