@@ -36,8 +36,8 @@ jobs:
           rm -r docs/
           docker-compose exec -T --workdir /workspaces/akimon658.github.io hugo \
           sh -c 'pnpm install && \
-          hugo --minify'
-          touch docs/.nojekyll
+          hugo --minify && \
+          touch docs/.nojekyll'
 
       - name: Push
         uses: EndBug/add-and-commit@050a66787244b10a4874a2a5f682130263edc192
