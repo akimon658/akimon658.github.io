@@ -1,16 +1,6 @@
 {{ define "main" }}
   {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-  {{ range $paginator.Pages }}
-    <div class="post">
-      <h2 class="post-item post-title">
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </h2>
-      <div class="post-item post-meta">{{ partial "post-meta.html" . }}</div>
-      {{ with .Summary }}
-        <div class="post-item post-summary markdown-body">{{ . | plainify | htmlUnescape }}...</div>
-      {{ end }}
-    </div>
-  {{ end }}
+  {{ partial "list-item.html" $paginator.Pages }}
 
   {{ partial "pagination.html" (dict "context" . "pagi" $paginator) }}
 {{ end }}
