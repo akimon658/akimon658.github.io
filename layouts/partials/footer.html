@@ -14,7 +14,7 @@
           {{ . }}-
         {{- end -}}
         {{ now.Format "2006" }}
-        <a href="{{ .Site.BaseURL }}">{{ .Site.Params.author }}</a>
+        <a href="{{ .Site.BaseURL | relURL }}">{{ .Site.Params.author }}</a>
         {{ with .Site.Params.sourceURL }}
           |
           <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Source code</a>

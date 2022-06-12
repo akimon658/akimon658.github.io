@@ -1,7 +1,7 @@
 <header>
   <div class="container-lg clearfix">
     <div class="col-12 header">
-      <a class="title-main" href='{{ .Site.BaseURL }}{{ if ne .Lang "ja" }}{{ .Lang }}/{{ end }}'>{{ .Site.Title }}</a>
+      <a class="title-main" href='{{ .Site.BaseURL | relURL }}{{ if ne .Lang "ja" }}{{ .Lang }}/{{ end }}'>{{ .Site.Title }}</a>
 
       {{ with .Site.Params.subTitle }}
         <span class="title-sub">{{ . }}</span>

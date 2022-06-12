@@ -41,7 +41,7 @@
 <!-- dep -->
 {{ $options := (dict "targetPath" "assets/css/style.min.css" "outputStyle" "compressed") }}
 {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" />
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
 {{ with .Site.Params.googleAdsense }}
   <script async data-ad-client="ca-pub-{{ . }}" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
