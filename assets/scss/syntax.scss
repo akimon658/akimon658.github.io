@@ -2,20 +2,20 @@
   color-scheme: dark;
 
   pre.chroma {
-    background-color: #282a36;
-    color: #f8f8f2;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
     tab-size: 4;
 
     .c, .c1, .ch, .cm, .cs {
-      color: $dark-color-mute;
+      color: #6a9955;
     }
 
-    .cp, .cpf, .k, .kc, kn, kp, kr, .nt, .o, .ow {
-      color: #ff79c6;
+    .cp, .cpf, .kc, .kn, .kp, .nt, .ow {
+      color: #569cd6;
     }
 
-    .dl, .s, .s1, .s2, .sa, .sb, .sc, .sd, .se, .sh, .si, .sr, .ss, .sx {
-      color: #f1fa8c;
+    .dl, .l, .s, .s1, .s2, .sa, .sb, .sc, .sd, .se, .sh, .sr, .ss, .sx {
+      color: #ce9178;
     }
 
     .gd {
@@ -45,11 +45,15 @@
     }
 
     .il, .m, .mb, .mf, .mh, .mi, .mo {
-      color: #bd93f9;
+      color: #b5cea8;
     }
 
-    .kd, .kt, .nb, .nl, .nv, .vc, .vg, .vi {
-      color: #8be9fd;
+    .k {
+      color: #c586c0;
+    }
+
+    .kd, .kr, .kt, .nl, .nv, .vc, .vg, .vi {
+      color: #569cd6;
     }
 
     .ln, .lnt {
@@ -75,8 +79,20 @@
       vertical-align: top;
     }
 
-    .na, .nc, .nf {
-      color: #50fa7b;
+    .na, .nb {
+      color: #9cdcfe;
+    }
+
+    .n, .nc, .nf {
+      color: #dcdcaa;
+    }
+
+    .nx {
+      color: #4fc1ff;
+    }
+
+    .si {
+      color: #ffd700;
     }
   }
 }
