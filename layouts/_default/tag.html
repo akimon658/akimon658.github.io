@@ -1,13 +1,11 @@
 {{ define "main" }}
-<!-- page info section e.g. current tag & total archive pages -->
-<div class="page-info">
-  <span>{{ i18n "tagsCurrentTag" . }}</span>
-</div>
-<!-- tags page range in posts with current tag -->
-{{ $paginator := .Paginator }}
-{{ partial "list-item.html" $paginator.Pages }}
+  <!-- page info section e.g. current tag & total archive pages -->
+  <h1 class="page-info">{{ i18n "tagsCurrentTag" . }}</h1>
 
-<!-- custom smart pagination -->
-{{ partial "pagination.html" (dict "context" . "pagi" $paginator) }}
+  <!-- tags page range in posts with current tag -->
+  {{ $paginator := .Paginator }}
+  {{ partial "list-item.html" $paginator.Pages }}
 
+  <!-- custom smart pagination -->
+  {{ partial "pagination.html" (dict "context" . "pagi" $paginator) }}
 {{ end }}

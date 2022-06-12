@@ -38,7 +38,7 @@
     other = "総記事数："
 
 [tagsCurrentTag]
-    other = "タグ「{{ .Title }}」の記事："
+    other = "タグ「{{ .Title }}」の記事"
 
 [searchSuccess]
     other = "[NUM]件（[TIME]ミリ秒）"

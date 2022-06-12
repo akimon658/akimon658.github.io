@@ -1,15 +1,13 @@
 {{ define "main" }}
   <!-- search form -->
-  <div class="page-info">
-    <form class="search-form" method="GET">
-      <div class="search-input">
-        <input name="q" type="search" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" />
-        <button type="submit">
-          <span class="material-icon">search</span>
-        </button>
-      </div>
-    </form>
-  </div>
+  <form class="search-form" method="GET">
+    <div class="search-input">
+      <input name="q" type="search" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" />
+      <button type="submit">
+        <span class="material-icon">search</span>
+      </button>
+    </div>
+  </form>
   <!-- search result and template -->
   <div class="search-result-info" style="display: none;">
     <span>{{ i18n "searchSuccess" }}</span>
