@@ -1,5 +1,5 @@
 <footer>
-  <div class="container-lg clearfix">
+  <div class="container-lg">
     <div class="col-12 footer">
       {{ if .Site.Params.showLicenseInFooter }}
         <p>
@@ -8,24 +8,22 @@
           {{ i18n "postCopyrightEnd" }}
         </p>
       {{ end }}
-      <span>
-        &copy;
-        {{ with .Site.Params.copyrightStartYear }}
-          {{ . }}-
-        {{- end -}}
-        {{ now.Format "2006" }}
-        <a href="{{ .Site.BaseURL | relURL }}">{{ .Site.Params.author }}</a>
-        {{ with .Site.Params.sourceURL }}
-          |
-          <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Source code</a>
-        {{ end }}
+      &copy;
+      {{ with .Site.Params.copyrightStartYear }}
+        {{ . }}-
+      {{- end -}}
+      {{ now.Format "2006" }}
+      <a href="{{ .Site.BaseURL | relURL }}">{{ .Site.Params.author }}</a>
+      {{ with .Site.Params.sourceURL }}
         |
-        {{ i18n "footerPoweredFront" }}
-        <a href="https://github.com/dsrkafuu/hugo-theme-fuji/" target="_blank" rel="noopener noreferrer">Fuji-v2</a>
-        &amp;
-        <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>
-        {{ i18n "footerPoweredEnd" }}
-      </span>
+        <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Source code</a>
+      {{ end }}
+      |
+      {{ i18n "footerPoweredFront" }}
+      <a href="https://github.com/dsrkafuu/hugo-theme-fuji/" target="_blank" rel="noopener noreferrer">Fuji-v2</a>
+      &amp;
+      <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>
+      {{ i18n "footerPoweredEnd" }}
     </div>
   </div>
 </footer>
