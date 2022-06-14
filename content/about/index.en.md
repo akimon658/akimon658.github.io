@@ -22,3 +22,7 @@ I'm learning English, so I'm happy if you make a comment or give me some advice.
 
 I can't test on Safari because I don't have Apple devices.
 If you find any issues, please report on [GitHub](https://github.com/Akimon658/akimon658.github.io/issues)!
+
+## License
+
+Unless otherwise noted, the content of this site is licensed under [CC BY 4.0](https://github.com/Akimon658/akimon658.github.io/blob/main/LICENSE) license.
