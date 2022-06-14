@@ -1,7 +1,7 @@
 {{ $url := .Get 0 }}
 {{ $json := getJSON "http://ogjson:8080/?url=" $url }}
 
-<a href="{{ $url | safeURL }}"{{ if strings.HasPrefix $url "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>
+<a href="{{ $url | safeURL }}"{{ if strings.HasPrefix $url "http" }} target="_blank" rel="noreferrer"{{ end }}>
   <div class="card">
     <div class="card-meta">
       <div class="card-title" title="{{ $json.Title }}">{{ $json.Title }}</div>
