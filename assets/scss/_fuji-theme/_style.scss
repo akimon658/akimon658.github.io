@@ -12,6 +12,7 @@ body {
   background-color: var(--color-bg);
   color: var(--color-font);
   height: max-content;
+  min-height: 100vh;
 
   @include link-1();
 }
