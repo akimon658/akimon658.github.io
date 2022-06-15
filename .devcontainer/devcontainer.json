@@ -7,5 +7,6 @@
     "znck.grammarly"
   ],
   "remoteUser": "node",
-  "updateContentCommand": "pnpm install && git submodule update --init"
+  "updateContentCommand": "git submodule init",
+  "postAttachCommand": "git pull origin main && git submodule update && pnpm install"
 }
