@@ -24,6 +24,7 @@
 .post-title-archive {
   a {
     color: var(--color-font);
+    font-weight: normal;
 
     &:hover {
       color: var(--color-mute);
@@ -185,21 +186,7 @@ article {
 }
 
 #see-also {
-  border-top: 2px solid var(--color-divider);
   padding: 1rem 0;
-
-  a {
-    color: var(--color-font);
-    font-size: 1.1rem;
-
-    &:hover {
-      color: var(--color-mute);
-    }
-  }
-
-  ul {
-    list-style: none;
-  }
 }
 
 // search page part
