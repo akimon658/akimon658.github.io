@@ -4,6 +4,7 @@
   "service": "hugo",
   "workspaceFolder": "/workspaces/akimon658.github.io",
   "extensions": [
+    "budparr.language-hugo-vscode",
     "znck.grammarly"
   ],
   "remoteUser": "node",
