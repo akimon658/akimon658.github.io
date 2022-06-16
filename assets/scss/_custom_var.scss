@@ -1,10 +1,9 @@
 // Override variables with that file
 @import '_custom'; // Keep that for back-compatibility. This shouldn't be used anymore.
 
-$body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Arial", "Yu Gothic Medium", "Meiryo", sans-serif;
-$bold-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Arial", "Yu Gothic", "Meiryo", sans-serif;
-$mono-font: "Roboto Mono", 'Cascadia Code', 'SF Mono', 'Fira Code', 'Consolas', 'Noto Sans JP', monospace, $body-font;
-$title-font: $body-font;
+$body-font: sans-serif;
+$mono-font: monospace;
+$title-font: Roboto, 'Segoe UI', $body-font;
 $font-weight-bold: 600;
 
 $light-color-bg: #ffffff;

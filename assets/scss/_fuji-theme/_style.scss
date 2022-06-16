@@ -75,7 +75,6 @@ footer {
   h5,
   h6 {
     color: var(--color-font);
-        font-family: $bold-font;
   }
 
   h1,
@@ -86,10 +85,6 @@ footer {
   blockquote {
     color: var(--color-mute);
   }
-
-    b, strong {
-      font-family: $bold-font;
-    }
 
   img {
     border-radius: 2px;
