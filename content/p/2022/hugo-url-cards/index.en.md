@@ -71,9 +71,9 @@ Execute `docker run --rm -p 8080:8080 <image>`, then you'll be able to get JSON 
 
 ## Use service containers
 
-> Service containers are Docker containers that provide a simple and portable way for you to host services that you might need to test or operate your application in a workflow. For example, your workflow might need to run integration tests that require access to a database and memory cache.
-
-{{< card "https://docs.github.com/en/actions/using-containerized-services/about-service-containers" >}}
+{{< quote href="https://docs.github.com/en/actions/using-containerized-services/about-service-containers" >}}
+Service containers are Docker containers that provide a simple and portable way for you to host services that you might need to test or operate your application in a workflow. For example, your workflow might need to run integration tests that require access to a database and memory cache.
+{{< /quote >}}
 
 We can use containers by just adding the following settings to the manifest file.
 

@@ -70,9 +70,9 @@ CMD ["/ogjson"]
 
 ## サービスコンテナを使う
 
-> サービスコンテナは、ワークフロー中でアプリケーションをテストもしくは運用するのに必要になるかもしれないサービスをホストするための、シンプルでポータブルな方法を提供するDockerコンテナです。 たとえば、ワークフローでデータベースやメモリキャッシュへのアクセスを必要とする結合テストを実行する必要があるかもしれません。
-
-{{< card "https://docs.github.com/ja/actions/using-containerized-services/about-service-containers" >}}
+{{< quote href="https://docs.github.com/ja/actions/using-containerized-services/about-service-containers" >}}
+サービスコンテナは、ワークフロー中でアプリケーションをテストもしくは運用するのに必要になるかもしれないサービスをホストするための、シンプルでポータブルな方法を提供するDockerコンテナです。 たとえば、ワークフローでデータベースやメモリキャッシュへのアクセスを必要とする結合テストを実行する必要があるかもしれません。
+{{< /quote >}}
 
 説明がふわっとしていますが、とにかくワークフローの中で Docker コンテナを動かせるようです。
 

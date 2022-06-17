@@ -1,0 +1,12 @@
+{{ $url := .Get "href" }}
+{{ $json := getJSON "http://ogjson:8080/?url=" $url }}
+
+<figure>
+  <blockquote>{{ .Inner | markdownify }}</blockquote>
+
+  <figcaption>
+    <cite>
+      <a href="{{ $url | safeURL }}" target="_blank" rel="noreferrer">{{ $json.Title }}</a>
+    </cite>
+  </figcaption>
+</figure>
