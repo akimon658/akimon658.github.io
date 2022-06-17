@@ -39,7 +39,7 @@
 
 <link rel="preload" href="/fonts/MaterialIcons-Regular.woff2" as="font" type="font/woff2" crossorigin />
 <!-- dep -->
-{{ $options := (dict "targetPath" "assets/css/style.min.css" "outputStyle" "compressed") }}
+{{ $options := (dict "targetPath" "assets/css/style.min.css" "outputStyle" "compressed" "transpiler" "dartsass") }}
 {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
