@@ -5,94 +5,136 @@
     background-color: #1e1e1e;
     color: #d4d4d4;
     tab-size: 4;
-
-    .c, .c1, .ch, .cm, .cs {
-      color: #6a9955;
-    }
-
-    .cp, .cpf, .kc, .kn, .kp, .nt, .ow {
-      color: #569cd6;
-    }
-
-    .dl, .l, .s, .s1, .s2, .sa, .sb, .sc, .sd, .se, .sh, .sr, .ss, .sx {
-      color: #ce9178;
-    }
-
-    .gd {
-      color: #ff5555;
-    }
-
-    .ge, .gl {
-      text-decoration: underline;
-    }
-
-    .gh, .gu {
-      font-weight: bold;
-    }
-
-    .gi {
-      color: #50fa7b; font-weight: bold;
-    }
-
-    .go {
-      color: #44475a;
-    }
-
-    .hl {
-      background-color: #ffffcc;
-      display: block;
-      width: 100%;
-    }
-
-    .il, .m, .mb, .mf, .mh, .mi, .mo {
-      color: #b5cea8;
-    }
-
-    .k {
-      color: #c586c0;
-    }
-
-    .kd, .kr, .kt, .nl, .nv, .vc, .vg, .vi {
-      color: #569cd6;
-    }
-
-    .ln, .lnt {
-      color: #7f7f7f;
-      margin-right: 0.4em;
-      padding: 0 0.4em 0 0.4em;
-    }
-
-    .lntable {
-      border: 0;
-      border-spacing: 0;
-      display: block;
-      margin: 0;
-      overflow: auto;
-      padding: 0;
-      width: auto;
-    }
-
-    .lntd {
-      border: 0;
-      margin: 0;
-      padding: 0;
-      vertical-align: top;
-    }
-
-    .na, .nb {
-      color: #9cdcfe;
-    }
-
-    .n, .nc, .nf {
-      color: #dcdcaa;
-    }
-
-    .nx {
-      color: #4fc1ff;
-    }
-
-    .si {
-      color: #ffd700;
-    }
   }
+}
+
+.c,
+.c1,
+.ch,
+.cm,
+.cs {
+  color: #6a9955;
+}
+
+.cp,
+.cpf,
+.kc,
+.kn,
+.kp,
+.nt,
+.ow {
+  color: #569cd6;
+}
+
+.dl,
+.l,
+.s,
+.s1,
+.s2,
+.sa,
+.sb,
+.sc,
+.sd,
+.se,
+.sh,
+.sr,
+.ss,
+.sx {
+  color: #ce9178;
+}
+
+.gd {
+  color: #ff5555;
+}
+
+.ge,
+.gl {
+  text-decoration: underline;
+}
+
+.gh,
+.gu {
+  font-weight: bold;
+}
+
+.gi {
+  color: #50fa7b; font-weight: bold;
+}
+
+.go {
+  color: #44475a;
+}
+
+.hl {
+  background-color: #ffffcc;
+  display: block;
+  width: 100%;
+}
+
+.il,
+.m,
+.mb,
+.mf,
+.mh,
+.mi,
+.mo {
+  color: #b5cea8;
+}
+
+.k {
+  color: #c586c0;
+}
+
+.kd,
+.kr,
+.kt,
+.nl,
+.nv,
+.vc,
+.vg,
+.vi {
+  color: #569cd6;
+}
+
+.ln,
+.lnt {
+  color: #7f7f7f;
+  margin-right: 0.4em;
+  padding: 0 0.4em 0 0.4em;
+}
+
+.lntable {
+  border: 0;
+  border-spacing: 0;
+  display: block;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+  width: auto;
+}
+
+.lntd {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+.na,
+.nb {
+  color: #9cdcfe;
+}
+
+.n,
+.nc,
+.nf {
+  color: #dcdcaa;
+}
+
+.nx {
+  color: #4fc1ff;
+}
+
+.si {
+  color: #ffd700;
 }
