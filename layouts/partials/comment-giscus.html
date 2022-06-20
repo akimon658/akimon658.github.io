@@ -1,0 +1,19 @@
+<div id="post-comment">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      var giscusTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+      var s = document.createElement('script');
+      s.src = 'https://giscus.app/client.js';
+      s.setAttribute('data-repo', '{{ .Site.Params.giscusRepo }}');
+      s.setAttribute('data-repo-id', '{{ .Site.Params.giscusRepoId }}');
+      s.setAttribute('data-category', '{{ .Site.Params.giscusCategory }}');
+      s.setAttribute('data-category-id', '{{ .Site.Params.giscusCategoryId }}');
+      s.setAttribute('data-theme', giscusTheme);
+      s.setAttribute('crossorigin', 'anonymous');
+      s.setAttribute('async', '');
+
+      document.getElementById('post-comment').appendChild(s);
+    })
+  </script>
+</div>

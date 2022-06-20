@@ -15,10 +15,6 @@
   padding-right: 0.25rem;
 }
 
-.comment::before {
-  content: 'comment';
-}
-
 .event::before {
   content: 'event';
 }

@@ -23,12 +23,16 @@
   <aside>
     {{ partial "related.html" . }}
 
-    {{ if and (.Site.Params.disqusJSApi) (ne .Params.showComments false) }}
-      {{ partial "comment-disqusjs.html" . }}
-    {{ else if and (.Site.Params.disqusShortname) (ne .Params.showComments false) }}
-      {{ partial "comment-disqus.html" . }}
-    {{ else if and (.Site.Params.utterancesRepo) (ne .Params.showComments false) }}
-      {{ partial "comment-utterances.html" . }}
+    {{ if ne .Params.showComments false }}
+      {{ if .Site.Params.disqusJSApi }}
+        {{ partial "comment-disqusjs.html" . }}
+      {{ else if .Site.Params.disqusShortname }}
+        {{ partial "comment-disqus.html" . }}
+      {{ else if .Site.Params.utterancesRepo }}
+        {{ partial "comment-utterances.html" . }}
+      {{ else if and .Site.Params.giscusRepo .Site.Params.giscusCategory }}
+        {{ partial "comment-giscus.html" . }}
+      {{ end }}
     {{ end }}
   </aside>
 {{ end }}
