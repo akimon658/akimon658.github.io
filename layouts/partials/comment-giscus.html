@@ -9,6 +9,11 @@
       s.setAttribute('data-repo-id', '{{ .Site.Params.giscusRepoId }}');
       s.setAttribute('data-category', '{{ .Site.Params.giscusCategory }}');
       s.setAttribute('data-category-id', '{{ .Site.Params.giscusCategoryId }}');
+
+      {{ if ne .Lang "en" }}
+        s.setAttribute('data-lang', '{{ .Lang }}');
+      {{ end }}
+
       s.setAttribute('data-theme', giscusTheme);
       s.setAttribute('crossorigin', 'anonymous');
       s.setAttribute('async', '');
