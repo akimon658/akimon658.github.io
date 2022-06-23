@@ -1,5 +1,3 @@
-declare function loadComment(): void
-
 export function button() {
   const buttons = document.querySelector<HTMLElement>('.btn')!
   let timeoutId: number
@@ -22,20 +20,13 @@ export function button() {
   document.querySelector('.btn-scroll-top')!.addEventListener('click', () => {
     document.documentElement.scrollTop = 0
   })
-
-  // load comment button only when comment area exist
-  if (document.querySelector('span.post-comment-notloaded')) {
-    document.querySelector('span.post-comment-notloaded')!.addEventListener('click', loadComment)
-  }
 }
 
 function menuOpener() {
   const menu = document.querySelector<HTMLElement>('.sidebar-mobile')
+
   if (menu) {
-    if (menu.style.display === 'none') {
-      menu.setAttribute('style', 'display: flex;')
-    } else {
-      menu.setAttribute('style', 'display: none;')
-    }
+    const style = menu.style.display === 'none' ? 'flex' : 'none'
+    menu.setAttribute('style', `display: ${style};`)
   }
 }
