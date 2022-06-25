@@ -47,12 +47,16 @@ select {
 
   span {
     border: 2px solid var(--color-divider);
-    border-radius: .5rem;
+    border-radius: 1rem;
     margin: .25rem;
-    padding: 0 .25rem;
+    padding: 0 .5rem;
 
     a {
-      color: var(--color-font);
+      color: var(--color-mute);
+
+      &:hover {
+        color: var(--color-font);
+      }
     }
 
     &:hover {
