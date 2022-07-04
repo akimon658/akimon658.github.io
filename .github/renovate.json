@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":disableDependencyDashboard"
+  ],
+  "git-submodules": {
+    "enabled": true
+  },
+  "regexManagers": [
+    {
+      "fileMatch": ["^\\.github/workflows/upgrade-hugo\\.yml$"],
+      "matchStrings": ["_REPO=(?<depName>.*?)\\nARG .*?_VERSION=(?<currentValue>.*?)\\n"],
+      "datasourceTemplate": "github-releases"
+    }
+  ]
+}
