@@ -1,4 +1,4 @@
-name: Hugo Build
+name: Deploy
 
 on:
   push:
@@ -35,7 +35,7 @@ jobs:
           docker-compose exec -T --workdir /workspaces/akimon658.github.io hugo \
           sh -c 'pnpm install && \
           hugo --minify && \
-          touch docs/.nojekyll'
+          touch public/.nojekyll'
 
       - name: Upload
         uses: actions/upload-pages-artifact@v1
