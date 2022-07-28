@@ -5,7 +5,6 @@ enableRobotsTXT: true
 googleAnalytics: G-KWKSTPH28H
 hasCJKLanguage: true
 languageCode: ja
-publishDir: docs
 summaryLength: 50
 theme: fuji
 title: Boring Time

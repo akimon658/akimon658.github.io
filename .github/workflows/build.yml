@@ -8,7 +8,6 @@ on:
       - 'archtypes/**'
       - 'assets/**'
       - 'content/**'
-      - 'docs/**'
       - 'layouts/**'
       - 'static/**'
       - 'themes/**'
@@ -33,14 +32,30 @@ jobs:
 
       - name: Build
         run: |
-          rm -r docs/
           docker-compose exec -T --workdir /workspaces/akimon658.github.io hugo \
           sh -c 'pnpm install && \
           hugo --minify && \
           touch docs/.nojekyll'
 
-      - name: Push
-        uses: EndBug/add-and-commit@v9.0.1
+      - name: Upload
+        uses: actions/upload-pages-artifact@v1
         with:
-          default_author: github_actions
-          message: ":robot: build.yml"
+          path: public/
+
+  deploy:
+    needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1

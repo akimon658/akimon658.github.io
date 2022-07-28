@@ -1,3 +1,0 @@
-User-agent: *
-
-Sitemap: https://akimon658.github.io/sitemap.xml
