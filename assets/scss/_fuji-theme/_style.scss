@@ -17,6 +17,10 @@ body {
   @include link-1();
 }
 
+figure, p {
+  font-family: serif;
+}
+
 .post-summary,
 .post-meta {
   @include link-2();
