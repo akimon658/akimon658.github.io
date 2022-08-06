@@ -8,7 +8,6 @@
     --color-font: #{$light-color-font};
     --color-divider: #{$light-color-divider};
     --color-bg: #{$light-color-bg};
-    --color-header-bg: #{$light-color-bg};
     --color-codebg: #{$light-color-codebg};
 
     // primer variable fix
@@ -29,10 +28,6 @@
     --color-border-secondary: #{$light-color-divider};
     --color-border-tertiary: #{$light-color-divider};
   }
-
-  header {
-    box-shadow: 0 0.25rem 0.15rem rgba(0, 0, 0, 0.2);
-  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,7 +40,6 @@
     --color-font: #{$dark-color-font};
     --color-divider: #{$dark-color-divider};
     --color-bg: #{$dark-color-bg};
-    --color-header-bg: #202020;
     --color-codebg: #{$dark-color-codebg};
 
     // primer variable fix
