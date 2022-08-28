@@ -13,5 +13,11 @@
       "matchStrings": ["_REPO=(?<depName>.*?)\\nARG .*?_VERSION=(?<currentValue>.*?)\\n"],
       "datasourceTemplate": "github-releases"
     }
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["gohugoio/hugo"],
+      "extractVersion": "^v(?<version>.*)$"
+    }
   ]
 }
