@@ -9,7 +9,7 @@
   },
   "regexManagers": [
     {
-      "fileMatch": ["^\\.github/workflows/upgrade-hugo\\.yml$"],
+      "fileMatch": ["^\\.devcontainer/Dockerfile$"],
       "matchStrings": ["_REPO=(?<depName>.*?)\\nARG .*?_VERSION=(?<currentValue>.*?)\\n"],
       "datasourceTemplate": "github-releases"
     }
