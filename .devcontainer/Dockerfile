@@ -4,7 +4,7 @@ RUN apt-get update && \
     apt-get install -y curl
 
 ARG HUGO_REPO=gohugoio/hugo
-ARG HUGO_VERSION=0.102.0
+ARG HUGO_VERSION=0.104.3
 RUN curl -fsSL -o ./hugo.deb https://github.com/${HUGO_REPO}/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb
 RUN apt-get install ./hugo.deb
 
