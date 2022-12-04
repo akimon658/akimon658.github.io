@@ -9,6 +9,7 @@
     --color-divider: #{$light-color-divider};
     --color-bg: #{$light-color-bg};
     --color-codebg: #{$light-color-codebg};
+    --color-header: var(--color-bg);
 
     // primer variable fix
     --color-text-primary: #{$light-color-font};
@@ -41,6 +42,7 @@
     --color-divider: #{$dark-color-divider};
     --color-bg: #{$dark-color-bg};
     --color-codebg: #{$dark-color-codebg};
+    --color-header: var(--color-bg-secondary);
 
     // primer variable fix
     --color-text-primary: #{$dark-color-font};
