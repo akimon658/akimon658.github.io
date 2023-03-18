@@ -13,7 +13,7 @@ ARG SASS_VERSION=1.56.1
 RUN curl -fsSL -o ./sass.tar.gz https://github.com/${SASS_REPO}/releases/download/${SASS_VERSION}/sass_embedded-${SASS_VERSION}-linux-x64.tar.gz
 RUN tar -xvf ./sass.tar.gz -C /
 
-FROM node:18.12.1-bullseye
+FROM node:18.15.0-bullseye
 
 RUN npm install -g pnpm
 
