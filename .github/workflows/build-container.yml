@@ -8,6 +8,8 @@ on:
     paths:
       - builder/Dockerfile
 
+  workflow_dispatch:
+
 concurrency:
   group: ${{ github.workflow }}
 
@@ -38,7 +40,9 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: ${{ env.REGISTRY }}/${{ github.repository }}
-          tags: type=sha
+          tags: |
+            type=raw,value=latest
+            type=sha
 
       - name: Build and push image
         uses: docker/build-push-action@v4
