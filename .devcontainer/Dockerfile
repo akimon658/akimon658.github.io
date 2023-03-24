@@ -7,6 +7,8 @@ SHELL [ "/bin/bash", "-c" ]
 
 USER vscode
 
+ENV PNPM_HOME=~/.local/share/pnpm
+ENV PATH=$PNPM_HOME:$PATH
+
 RUN curl -fsSL https://get.pnpm.io/install.sh | bash - && \
-    source ~/.bashrc && \
     pnpm env use --global lts
