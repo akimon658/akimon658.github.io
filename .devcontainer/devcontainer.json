@@ -1,4 +1,5 @@
 {
+  "$schema": "https://github.com/devcontainers/spec/raw/main/schemas/devContainer.schema.json",
   "name": "Hugo",
   "dockerComposeFile": [
     "../docker-compose.yml",
@@ -8,5 +9,6 @@
   "workspaceFolder": "/akimon658.github.io",
   "remoteUser": "vscode",
   "updateContentCommand": "git submodule init",
-  "postAttachCommand": "git pull origin main && git submodule update && pnpm install"
+  "postAttachCommand": "git pull origin main && git submodule update && pnpm install",
+  "postCreateCommand": "pnpm env use lts"
 }
