@@ -10,5 +10,10 @@
   "remoteUser": "vscode",
   "updateContentCommand": "git submodule init",
   "postAttachCommand": "git pull origin main && git submodule update && pnpm install",
-  "postCreateCommand": "pnpm env use lts"
+  "postCreateCommand": "pnpm env use lts",
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  }
 }
