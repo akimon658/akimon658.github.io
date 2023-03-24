@@ -9,7 +9,7 @@
   },
   "regexManagers": [
     {
-      "fileMatch": ["^\\.devcontainer/Dockerfile$"],
+      "fileMatch": ["^builder/Dockerfile$"],
       "matchStrings": ["_REPO=(?<depName>.*?)\\nARG .*?_VERSION=(?<currentValue>.*?)\\n"],
       "datasourceTemplate": "github-releases"
     }

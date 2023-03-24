@@ -1,13 +1,12 @@
 {
   "name": "Hugo",
-  "dockerComposeFile": "../docker-compose.yml",
-  "service": "hugo",
-  "workspaceFolder": "/workspaces/akimon658.github.io",
-  "extensions": [
-    "budparr.language-hugo-vscode",
-    "znck.grammarly"
+  "dockerComposeFile": [
+    "../docker-compose.yml",
+    "docker-compose.override.yml"
   ],
-  "remoteUser": "node",
+  "service": "hugo",
+  "workspaceFolder": "/akimon658.github.io",
+  "remoteUser": "vscode",
   "updateContentCommand": "git submodule init",
   "postAttachCommand": "git pull origin main && git submodule update && pnpm install"
 }

@@ -31,12 +31,11 @@ jobs:
 
       - name: Start containers
         run: |
-          docker-compose build hugo
           docker-compose up -d
 
       - name: Build
         run: |
-          docker-compose exec -T --workdir /workspaces/akimon658.github.io hugo \
+          docker-compose exec -T --workdir /akimon658.github.io hugo \
           sh -c 'pnpm install && \
           hugo --minify && \
           touch public/.nojekyll'

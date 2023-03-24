@@ -2,9 +2,9 @@ version: '3'
 
 services:
   hugo:
-    build: .devcontainer/
+    image: ghcr.io/akimon658/akimon658.github.io:latest
     volumes:
-      - .:/workspaces/akimon658.github.io
+      - .:/akimon658.github.io
     ports:
       - '1313:1313'
     environment:
@@ -13,4 +13,4 @@ services:
 
   ogjson:
     image: ghcr.io/akimon658/ogjson:latest
-    command: /ogjson -user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
+    command: /ogjson -user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/111.0"
