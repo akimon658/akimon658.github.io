@@ -7,6 +7,6 @@ SHELL [ "/bin/bash", "-c" ]
 
 USER vscode
 
-RUN curl -fsSL https://get.pnpm.io/install.sh | sh - && \
+RUN curl -fsSL https://get.pnpm.io/install.sh | bash - && \
     source ~/.bashrc && \
     pnpm env use --global lts
