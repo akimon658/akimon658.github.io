@@ -18,4 +18,4 @@ FROM node:18.15.0-bullseye
 RUN npm install -g pnpm
 
 COPY --from=installer /usr/local/bin/hugo /usr/local/bin/hugo
-COPY --from=installer /sass_embedded/dart-sass-embedded /usr/local/bin/dart-sass-embedded
+COPY --from=installer /sass_embedded/* /usr/local/bin/
