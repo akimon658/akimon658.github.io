@@ -15,5 +15,8 @@
     "ghcr.io/devcontainers/features/sshd:1": {
       "version": "latest"
     }
-  }
+  },
+  "forwardPorts": [
+    1313
+  ]
 }
