@@ -9,7 +9,7 @@ RUN curl -fsSL -o ./hugo.deb https://github.com/${HUGO_REPO}/releases/download/v
 RUN apt-get install ./hugo.deb
 
 ARG SASS_REPO=sass/dart-sass-embedded
-ARG SASS_VERSION=1.60.0
+ARG SASS_VERSION=1.62.1
 RUN curl -fsSL -o ./sass.tar.gz https://github.com/${SASS_REPO}/releases/download/${SASS_VERSION}/sass_embedded-${SASS_VERSION}-linux-x64.tar.gz
 RUN tar -xvf ./sass.tar.gz -C /
 
