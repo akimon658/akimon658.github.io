@@ -3,12 +3,12 @@ lockfileVersion: 5.4
 specifiers:
   art-template: 4.13.2
   fuse.js: 6.6.2
-  medium-zoom: 1.0.8
+  medium-zoom: 1.1.0
 
 dependencies:
   art-template: 4.13.2
   fuse.js: 6.6.2
-  medium-zoom: 1.0.8
+  medium-zoom: 1.1.0
 
 packages:
 
@@ -136,8 +136,8 @@ packages:
     resolution: {integrity: sha512-2Fgx1Ycm599x+WGpIYwJOvsjmXFzTSc34IwDWALRA/8AopUKAVPwfJ+h5+f85BCp0PWmmJcWzEpxOpoXycMpdA==}
     dev: false
 
-  /medium-zoom/1.0.8:
-    resolution: {integrity: sha512-CjFVuFq/IfrdqesAXfg+hzlDKu6A2n80ZIq0Kl9kWjoHh9j1N9Uvk5X0/MmN0hOfm5F9YBswlClhcwnmtwz7gA==}
+  /medium-zoom/1.1.0:
+    resolution: {integrity: sha512-ewyDsp7k4InCUp3jRmwHBRFGyjBimKps/AJLjRSox+2q/2H4p/PNpQf+pwONWlJiOudkBXtbdmVbFjqyybfTmQ==}
     dev: false
 
   /merge-source-map/1.1.0:
