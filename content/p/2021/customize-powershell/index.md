@@ -1,7 +1,7 @@
 ---
 title: "PowerShell でホームディレクトリを省略する"
 canonicalURL: "https://zenn.dev/akimon658/articles/customize-powershell"
-date: 2021-12-12 13:00:00 +0900
+date: 2021-12-12T13:00:00+09:00
 description: "PowerShell のパス表示をカスタマイズする方法について簡単に書きました。"
 draft: false
 ---
