@@ -1,9 +1,0 @@
-{{ if .IsTranslated }}
-  <select onchange="location.href=value;" title="Select the language">
-    <option hidden>Language</option>
-
-    {{ range .Translations }}
-      <option title="{{ .RelPermalink | absURL }}" value="{{ .RelPermalink }}">{{ .Language.LanguageName }}</option>
-    {{ end }}
-  </select>
-{{ end }}

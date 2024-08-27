@@ -1,6 +1,0 @@
-{{ define "main" }}
-  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-  {{ partial "list-item.html" $paginator.Pages }}
-
-  {{ partial "pagination.html" (dict "context" . "pagi" $paginator) }}
-{{ end }}
