@@ -11,7 +11,7 @@ url: "/blog/awesome-header/"
 Headers can be animated easily by CSS and a few JavaScript, but the speed will be constant.
 I hate that, so I'll create a header that works naturally like this.
 
-![Search result screen of Google images](./google.webp)
+![Search result screen of Google images](/img/google.webp)
 
 ## Sample code & Demo
 

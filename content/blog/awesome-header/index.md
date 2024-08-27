@@ -11,7 +11,7 @@ tags: ["JavaScript"]
 
 言葉で説明するのは難しいのですが、要するにこういう挙動ですね。
 
-![Google 画像検索結果画面](./google.webp)
+![Google 画像検索結果画面](/img/google.webp)
 
 ## サンプル
 

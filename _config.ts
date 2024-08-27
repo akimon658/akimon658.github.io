@@ -8,6 +8,8 @@ const site = lume({
   src: "./content",
 })
 
+site.copy("img")
+
 site.use(jsx())
 site.use(redirects())
 site.use(multilanguage({
