@@ -4,6 +4,9 @@ date: 2022-03-18T21:45:00+09:00
 description: "Use juju/persistent-cookiejar to make cookies permanent"
 categories: ["dev.to"]
 tags: ["Golang"]
+lang: "en"
+oldUrl: "/en/p/2022/go-local-cookie/"
+url: "/blog/go-local-cookie/"
 ---
 
 Go's cookiejar doesn't have any function to persistence cookies, so you need to do [something](https://stackoverflow.com/questions/44031601/how-can-make-a-curl-store-cookie-in-golang) to save cookies to a local file.

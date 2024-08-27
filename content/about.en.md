@@ -4,6 +4,8 @@ date: 2021-12-12T17:52:52+09:00
 description: "About this site and me."
 draft: false
 showComments: false
+lang: "en"
+url: "/about/"
 ---
 
 This site is Akimo([@akimon658](https://twitter.com/Akimon658))'s blog.

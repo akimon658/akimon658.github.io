@@ -5,6 +5,7 @@ description: ""
 categories: ["dev.to"]
 tags: ["JavaScript"]
 lang: "en"
+oldUrl: "/en/p/2022/awesome-header/"
 url: "/blog/awesome-header/"
 ---
 

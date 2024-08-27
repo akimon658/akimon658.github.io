@@ -4,6 +4,7 @@ date: 2022-01-24T08:55:00+09:00
 description: "Hugo そのものの不具合ではありませんが、まぁまぁ困ったので解決策を調べました。"
 draft: false
 tags: ["Hugo"]
+oldUrl: "/p/2022/hugo-whitespace/"
 ---
 
 このブログは [Hugo](https://gohugo.io) を使って運用しています。
@@ -16,7 +17,7 @@ This is [test](https://example.com), just a [sample](https://sample.test).
 
 これが
 
-![余分なスペースの例](./unnecessary-whitespace.webp)
+![余分なスペースの例](/img/unnecessary-whitespace.webp)
 
 こうなる。（カンマ、ピリオドの前に余計なスペースが入っている）
 

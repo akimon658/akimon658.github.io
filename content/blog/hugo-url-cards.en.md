@@ -4,6 +4,9 @@ date: 2022-03-01T18:15:00+09:00
 description: "How to generate URL cards for your Hugo site"
 categories: ["dev.to"]
 tags: ["Docker", "Golang", "Hugo"]
+lang: "en"
+oldUrl: "/en/p/2022/hugo-url-cards/"
+url: "/blog/hugo-url-cards/"
 ---
 
 [Hugo](https://gohugo.io) is known as a super-fast static site generator.
@@ -128,7 +131,7 @@ I'm using `Title`, `URL.Host`, `Description`, and `Image`, but the JSON gives yo
 {{</* card "https://dev.to" */>}}
 ```
 
-![Generated card](./dev-card.webp)
+![Generated card](/img/dev-card.webp)
 
 Here you can see, Hugo successfully generated a URL card!
 

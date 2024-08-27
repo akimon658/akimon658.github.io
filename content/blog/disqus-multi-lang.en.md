@@ -4,6 +4,7 @@ date: 2022-01-26T21:20:00+09:00
 description: "How to use Disqus on multilingual Hugo site with minify option"
 tags: ["JavaScript", "Hugo"]
 lang: "en"
+oldUrl: "/en/p/2022/disqus-multi-lang/"
 url: "/blog/disqus-multi-lang/"
 ---
 

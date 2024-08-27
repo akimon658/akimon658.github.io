@@ -3,6 +3,9 @@ title: "Hugo adds unnecessary whitespace after a link"
 date: 2022-01-25T18:40:00+09:00
 description: "I don't like to end with no newlines, but there are no other solutions"
 tags: ["Hugo"]
+lang: "en"
+oldUrl: "/en/p/2022/hugo-whitespace/"
+url: "/blog/hugo-whitespace/"
 ---
 
 I'm running this blog with [Hugo](https://gohugo.io).
@@ -15,7 +18,7 @@ This is [test](https://example.com), just a [sample](https://sample.test)
 
 This would output...
 
-![unnecessary whitespace](./unnecessary-whitespace.webp)
+![unnecessary whitespace](/img/unnecessary-whitespace.webp)
 
 like this.
 It rendered unnecessary space before comma or period.

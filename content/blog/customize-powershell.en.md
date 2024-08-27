@@ -5,6 +5,7 @@ description: "About how to customize your PowerShell."
 draft: false
 categories: ["dev.to"]
 lang: "en"
+oldUrl: "/en/p/2021/customize-powershell/"
 url: "/blog/customize-powershell/"
 ---
 
