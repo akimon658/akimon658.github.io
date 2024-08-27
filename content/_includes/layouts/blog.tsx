@@ -1,4 +1,4 @@
-export const layout = "layouts/page.tsx"
+export const layout = "layouts/root.tsx"
 
 export default ({ title, children }: Lume.Data, _helpers: Lume.Helpers) => (
   <>

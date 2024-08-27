@@ -1,5 +1,5 @@
 export const title = "akimon658.github.io"
-export const layout = "layouts/page.tsx"
+export const layout = "layouts/root.tsx"
 
 export default (data: Lume.Data, _helpers: Lume.Helpers) => (
   <>
