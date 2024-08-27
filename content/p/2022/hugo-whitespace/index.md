@@ -1,6 +1,5 @@
 ---
 title: "Hugo でリンクの後に余分な空白が挿入されてしまう現象"
-canonicalURL: ""
 date: 2022-01-24T08:55:00+09:00
 description: "Hugo そのものの不具合ではありませんが、まぁまぁ困ったので解決策を調べました。"
 draft: false

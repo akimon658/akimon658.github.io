@@ -1,6 +1,5 @@
 ---
 title: "Hugo で Disqus を多言語対応させる"
-canonicalURL: ""
 date: 2022-01-24T17:20:00+09:00
 description: "Hugo のコメント欄をそのページの言語に合わせて変える方法"
 tags: ["Hugo", "JavaScript"]
