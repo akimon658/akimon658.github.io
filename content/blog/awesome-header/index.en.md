@@ -4,6 +4,8 @@ date: 2022-04-26T14:00:00+09:00
 description: ""
 categories: ["dev.to"]
 tags: ["JavaScript"]
+lang: "en"
+url: "/blog/awesome-header/"
 ---
 
 Headers can be animated easily by CSS and a few JavaScript, but the speed will be constant.
