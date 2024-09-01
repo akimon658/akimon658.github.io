@@ -6,12 +6,14 @@
   },
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "npm:preact",
+    "jsxImportSource": "npm:react",
+    "jsxImportSourceTypes": "npm:@types/react",
     "types": [
       "lume/types.ts"
     ]
   },
   "imports": {
+    "@emotion/styled": "npm:@emotion/styled@11.13.0",
     "lume/": "https://deno.land/x/lume@v2.2.0/"
   },
   "fmt": {
