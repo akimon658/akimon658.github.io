@@ -4,7 +4,7 @@ export default ({ title, children }: Lume.Data, _helpers: Lume.Helpers) => (
       <title>{title}</title>
     </head>
     <body>
-      {children}
+      <main>{children}</main>
     </body>
   </html>
 )
