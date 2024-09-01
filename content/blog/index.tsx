@@ -2,7 +2,7 @@ export const title = "記事一覧"
 export const layout = "layouts/root.tsx"
 
 export default ({ search }: Lume.Data) => {
-  const posts = search.pages("layout=layouts/blog.tsx lang=ja")
+  const posts = search.pages("layout=layouts/blog.tsx lang=ja", "date=desc")
 
   return (
     <>
