@@ -2,21 +2,21 @@
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
     "build": "deno task lume",
-    "serve": "deno task lume -s"
+    "serve": "deno task lume -s",
   },
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "npm:react",
     "jsxImportSourceTypes": "npm:@types/react",
     "types": [
-      "lume/types.ts"
+      "lume/types.ts",
     ]
   },
   "imports": {
     "@emotion/styled": "npm:@emotion/styled@11.13.0",
-    "lume/": "https://deno.land/x/lume@v2.2.0/"
+    "lume/": "https://deno.land/x/lume@v2.2.0/",
   },
   "fmt": {
-    "semiColons": false
+    "semiColons": false,
   }
 }
