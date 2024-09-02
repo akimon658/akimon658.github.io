@@ -8,6 +8,7 @@ const site = lume({
   src: "./content",
 })
 
+site.copy("icon")
 site.copy("img")
 
 site.use(jsx())
