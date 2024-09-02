@@ -1,18 +1,6 @@
 export const title = "記事一覧"
 export const layout = "layouts/root.tsx"
 
-export default ({ search }: Lume.Data) => {
-  const posts = search.pages("layout=layouts/blog.tsx lang=ja", "date=desc")
-
-  return (
-    <>
-      <ul>
-        {posts.map((post) => (
-          <li>
-            <a href={post.url}>{post.title}</a>
-          </li>
-        ))}
-      </ul>
-    </>
-  )
-}
+export default ({ comp }: Lume.Data) => (
+  <comp.List query="layout=layouts/blog.tsx lang=ja" sort="date=desc" />
+)
