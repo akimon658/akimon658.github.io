@@ -35,16 +35,14 @@
       "npm:@emotion/styled@11.13.0": "npm:@emotion/styled@11.13.0_@emotion+react@11.13.3__react@18.3.1_react@18.3.1",
       "npm:@js-temporal/polyfill@0.4.4": "npm:@js-temporal/polyfill@0.4.4",
       "npm:@types/estree@1.0.5": "npm:@types/estree@1.0.5",
-      "npm:@types/react": "npm:@types/react@18.3.5",
       "npm:@types/react-dom@18.3.0": "npm:@types/react-dom@18.3.0",
       "npm:@types/react@18.3.2": "npm:@types/react@18.3.2",
+      "npm:@types/react@18.3.5": "npm:@types/react@18.3.5",
       "npm:estree-walker@3.0.3": "npm:estree-walker@3.0.3",
       "npm:markdown-it-attrs@4.1.6": "npm:markdown-it-attrs@4.1.6_markdown-it@14.1.0",
       "npm:markdown-it-deflist@3.0.0": "npm:markdown-it-deflist@3.0.0",
       "npm:markdown-it@14.1.0": "npm:markdown-it@14.1.0",
       "npm:meriyah@4.4.0": "npm:meriyah@4.4.0",
-      "npm:preact": "npm:preact@10.22.0",
-      "npm:react": "npm:react@18.3.1",
       "npm:react-dom@18.3.1": "npm:react-dom@18.3.1_react@18.3.1",
       "npm:react@18.3.1": "npm:react@18.3.1"
     },
@@ -630,10 +628,6 @@
       },
       "picocolors@1.0.0": {
         "integrity": "sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==",
-        "dependencies": {}
-      },
-      "preact@10.22.0": {
-        "integrity": "sha512-RRurnSjJPj4rp5K6XoP45Ui33ncb7e4H7WiOHVpjbkvqvA3U+N8Z6Qbo0AE6leGYBV66n8EhEaFixvIu3SkxFw==",
         "dependencies": {}
       },
       "punycode.js@2.3.1": {
