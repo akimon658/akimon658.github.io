@@ -5,7 +5,7 @@ import redirects from "lume/plugins/redirects.ts"
 
 const site = lume({
   dest: "./public",
-  src: "./content",
+  src: "./src",
 })
 
 site.copy("icon")
