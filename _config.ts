@@ -21,6 +21,10 @@ site.use(tailwindcss({
   options: {
     plugins: [typography],
     theme: {
+      fontFamily: {
+        sans: ["Atkinson Hyperlegible", "sans-serif"],
+        mono: ["monospace"],
+      },
       extend: {
         content: {
           "open-in-new": "url('/icon/open_in_new_16dp_434343.svg')",
