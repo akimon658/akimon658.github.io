@@ -2,6 +2,7 @@ export default ({ title, children }: Lume.Data, _helpers: Lume.Helpers) => (
   <html>
     <head>
       <title>{title}</title>
+      <link rel="stylesheet" href="/style.css" />
     </head>
     <body>
       <main>{children}</main>
