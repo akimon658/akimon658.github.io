@@ -29,6 +29,18 @@ site.use(tailwindcss({
         content: {
           "open-in-new": "url('/icon/open_in_new_16dp_434343.svg')",
         },
+        typography: (theme: (s: string) => string) => ({
+          DEFAULT: {
+            css: {
+              "code:not(pre > code)": {
+                backgroundColor: theme("colors.gray.100"),
+                borderRadius: "0.25rem",
+                margin: "0.125rem",
+                padding: "0.125rem 0.25rem",
+              },
+            },
+          },
+        }),
       },
     },
   },
