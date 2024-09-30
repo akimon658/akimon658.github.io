@@ -27,7 +27,7 @@ site.use(tailwindcss({
       },
       extend: {
         content: {
-          "open-in-new": "url('/icon/open_in_new_16dp_434343.svg')",
+          "open-in-new": "url('/icon/open_in_new_16dp_2563EB.svg')",
         },
         typography: (theme: (s: string) => string) => ({
           DEFAULT: {
