@@ -37,15 +37,16 @@ site.use(multilanguage({
 }))
 
 interface Token {
-  content: string
-  href: string
+  attrGet: (name: string) => string
 }
 
 site.hooks.addMarkdownItRule("link_open", (tokens: Token[], idx: number) => {
-  return `<a href={${tokens[idx].href}}>`
-})
-site.hooks.addMarkdownItRule("link_close", (_: Token[], __: number) => {
-  return "</a>"
+  const href = tokens[idx].attrGet("href")
+  const isExternal = href.startsWith("http")
+  const additionalAttributes = isExternal
+    ? `target="_blank" rel="noopener noreferrer" class="after:content-open-in-new"`
+    : ""
+  return `<a href=${href} ${additionalAttributes}>`
 })
 
 export default site
