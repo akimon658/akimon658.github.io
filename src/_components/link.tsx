@@ -1,12 +1,16 @@
 interface LinkData extends Lume.Data {
+  className?: string
   href: string
+  title?: string
 }
 
-export default ({ children, href }: LinkData) => {
+export default ({ children, className, href, title }: LinkData) => {
   const isExternal = href.startsWith("http")
-  let classes = "hover:underline text-blue-600 visited:text-purple-700"
-  if (isExternal) {
-    classes += " after:content-open-in-new"
+  if (className == undefined) {
+    className = "hover:underline text-blue-600 visited:text-purple-700"
+    if (isExternal) {
+      className += " after:content-open-in-new"
+    }
   }
 
   return (
@@ -14,7 +18,8 @@ export default ({ children, href }: LinkData) => {
       href={href}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
-      className={classes}
+      className={className}
+      title={title}
     >
       {children}
     </a>
