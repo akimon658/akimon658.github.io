@@ -7,14 +7,18 @@ export default ({ comp, search, query, sort }: ListData) => {
   const posts = search.pages(query, sort)
 
   return (
-    <ul>
+    <div className="
+      gap-12
+      grid
+      grid-cols-[repeat(3,max-content)]
+      justify-center
+    ">
       {posts.map((post) => (
-        <li>
-          <comp.Link href={post.externalUrl ? post.externalUrl : post.url}>
-            {post.title}
-          </comp.Link>
-        </li>
+        <comp.Card
+          href={post.externalUrl ? post.externalUrl : post.url}
+          title={post.title}
+        />
       ))}
-    </ul>
+    </div>
   )
 }
