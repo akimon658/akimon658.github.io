@@ -4,7 +4,7 @@ export const layout = "layouts/root.tsx"
 export default ({ comp }: Lume.Data) => (
   <>
     <h1 className="
-      my-8
+      mt-8
       text-2xl
       text-center
     ">

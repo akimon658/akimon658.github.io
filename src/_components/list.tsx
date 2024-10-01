@@ -8,10 +8,11 @@ export default ({ comp, search, query, sort }: ListData) => {
 
   return (
     <div className="
-      gap-12
+      gap-6
       grid
       grid-cols-[repeat(3,max-content)]
       justify-center
+      my-8
     ">
       {posts.map((post) => (
         <comp.Card
