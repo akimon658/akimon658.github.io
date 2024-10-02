@@ -19,6 +19,7 @@ export default ({ comp, href, title }: CardData) => {
         h-36
         hover:bg-gray-100
         justify-between
+        not-prose
         p-4
         rounded-lg
         w-80
