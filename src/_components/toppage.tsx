@@ -9,13 +9,16 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
     <>
       <div className="
         flex
+        flex-col
         items-center
         justify-center
+        md:flex-row
         mt-8
       ">
-        <img src="/img/icon.png" />
+        <img src="/img/icon.png" className="md:mr-14" />
         <div className="
-          ml-14
+          md:mt-0
+          mt-8
           text-xl
         ">
           <h1 className="
