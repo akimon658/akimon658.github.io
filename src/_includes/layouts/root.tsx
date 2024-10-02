@@ -16,7 +16,7 @@ export default (
       <main>{children}</main>
       <footer className="
         flex
-        h-14
+        h-20
         sticky
         text-gray-500
         top-full
@@ -25,12 +25,17 @@ export default (
           mx-auto
           my-auto
         ">
-          © 2024 Takumi Akimoto |{" "}
-          <comp.Link href="/privacy-policy/">プライバシーポリシー</comp.Link> |
-          {" "}
-          <comp.Link href="https://github.com/akimon658/akimon658.github.io">
-            ソースコード
-          </comp.Link>
+          <div className="text-center">
+            © 2024 Takumi Akimoto
+          </div>
+          <div>
+            <comp.Link href="/privacy-policy/">プライバシーポリシー</comp.Link>
+            {" "}
+            |{" "}
+            <comp.Link href="https://github.com/akimon658/akimon658.github.io">
+              ソースコード
+            </comp.Link>
+          </div>
         </div>
       </footer>
     </body>
