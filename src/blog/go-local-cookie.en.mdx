@@ -12,9 +12,7 @@ url: "/blog/go-local-cookie/"
 Go's cookiejar doesn't have any function to persistence cookies, so you need to do [something](https://stackoverflow.com/questions/44031601/how-can-make-a-curl-store-cookie-in-golang) to save cookies to a local file.
 To make it easy, you can use [juju/persistent-cookiejar](https://github.com/juju/persistent-cookiejar) instead.
 
-<!--more-->
-
-{{< card "https://github.com/juju/persistent-cookiejar" >}}
+<comp.Card href="https://github.com/juju/persistent-cookiejar" title="juju/persistent-cookiejar: cookiejar is a fork of net/http/cookiejar that allows serialisation of the stored cookies" />
 
 ## Usage
 
@@ -41,7 +39,6 @@ jar, _ := cookiejar.New(&cookiejar.Options{Filename: "path/to/cookie"})
 This is a sample program to log in to [AtCoder](https://atcoder.jp).
 It outputs `Already logged in!` if you've already logged in, or asks your username and password if not yet.
 
-{{< details code >}}
 Some error handlings were omitted.
 
 ```go
@@ -123,7 +120,6 @@ func getDocument(url string) (*goquery.Document, error) {
 	return goquery.NewDocumentFromReader(resp.Body)
 }
 ```
-{{< /details >}}
 
 Now you can find the cookie as a file.
 

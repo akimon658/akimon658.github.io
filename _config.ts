@@ -1,5 +1,6 @@
 import lume from "lume/mod.ts"
 import jsx from "lume/plugins/jsx.ts"
+import mdx from "lume/plugins/mdx.ts"
 import multilanguage from "lume/plugins/multilanguage.ts"
 import postcss from "lume/plugins/postcss.ts"
 import redirects from "lume/plugins/redirects.ts"
@@ -15,6 +16,7 @@ site.copy("icon")
 site.copy("img")
 
 site.use(jsx())
+site.use(mdx())
 site.use(redirects())
 
 site.use(tailwindcss({
