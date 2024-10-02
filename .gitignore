@@ -1,7 +1,2 @@
-.pnpm-store/
-
 node_modules/
 public/
-resources/_gen/assets/
-
-.hugo_build.lock
