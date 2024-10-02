@@ -10,7 +10,7 @@ export default (
     </head>
     <body className="h-dvh">
       <header className="flex h-14 items-center mx-auto max-w-5xl">
-        <a href="/" className="ml-4 my-auto text-xl">akimon658.github.io</a>
+        <a href="/" className="ml-4 my-auto text-xl">akimo.dev</a>
       </header>
       <main>{children}</main>
       <footer className="

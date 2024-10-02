@@ -5,7 +5,7 @@ interface CardData extends Lume.Data {
 
 export default ({ comp, href, title }: CardData) => {
   const isExternal = href.startsWith("http")
-  const url = new URL(href, "https://akimon658.github.io")
+  const url = new URL(href, "https://akimo.dev")
 
   return (
     <comp.Link

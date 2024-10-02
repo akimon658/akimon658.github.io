@@ -1,4 +1,4 @@
-export const title = "akimon658.github.io"
+export const title = "akimo.dev"
 export const lang = "en"
 export const layout = "layouts/root.tsx"
 export const url = "/en/"

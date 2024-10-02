@@ -1,4 +1,4 @@
-# akimon658.github.io
+# akimo.dev
 
 My personal website.
 Powered by [Lume](https://lume.land/).
