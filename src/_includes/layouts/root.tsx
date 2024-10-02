@@ -1,3 +1,5 @@
+const now = Date.now()
+
 export default (
   { comp, title, children }: Lume.Data,
   _helpers: Lume.Helpers,
@@ -7,7 +9,10 @@ export default (
       <title>{title}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/icon/favicon.ico" />
-      <link rel="stylesheet" href="/style.css" />
+      <link
+        rel="stylesheet"
+        href={`/style.css?var=${now}`}
+      />
     </head>
     <body className="h-dvh">
       <header className="flex h-14 items-center mx-auto max-w-5xl">
