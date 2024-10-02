@@ -20,19 +20,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      DENO_DIR: ~/.deno
+
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: ${{ hashFiles('deno.lock') }}
-
       - uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
+
+      - uses: actions/cache@v4
+        with:
+          path: ${{ env.DENO_DIR }}
+          key: ${{ hashFiles('deno.lock') }}
 
       - name: Build
         run: |
