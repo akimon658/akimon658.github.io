@@ -1,9 +1,6 @@
 # akimon658.github.io
 
-The source for [akimon658.github.io](https://akimon658.github.io/)
+My personal website.
+Powered by [Lume](https://lume.land/).
 
-Powered by [Hugo](https://github.com/gohugoio/hugo) and [Fuji](https://github.com/dsrkafuu/hugo-theme-fuji) (customized).
-
-## License
-
-[CC BY 4.0](./LICENSE)
+This website uses [Material Icons](https://fonts.google.com/icons) under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt).

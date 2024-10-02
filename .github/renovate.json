@@ -3,21 +3,5 @@
   "extends": [
     "config:base",
     ":disableDependencyDashboard"
-  ],
-  "git-submodules": {
-    "enabled": true
-  },
-  "regexManagers": [
-    {
-      "fileMatch": ["^builder/Dockerfile$"],
-      "matchStrings": ["_REPO=(?<depName>.*?)\\nARG .*?_VERSION=(?<currentValue>.*?)\\n"],
-      "datasourceTemplate": "github-releases"
-    }
-  ],
-  "packageRules": [
-    {
-      "matchPackageNames": ["gohugoio/hugo"],
-      "extractVersion": "^v(?<version>.*)$"
-    }
   ]
 }

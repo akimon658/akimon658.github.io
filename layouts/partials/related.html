@@ -1,9 +1,0 @@
-{{ $related := .Site.RegularPages.Related . | first 5 }}
-
-{{ with $related }}
-  <div id="see-also">
-    <h2>{{ i18n "seeAlso" }}</h2>
-
-    {{ partial "list-item.html" . }}
-  </div>
-{{ end }}
