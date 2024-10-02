@@ -10,8 +10,10 @@ export default ({ comp, search, query, sort }: ListData) => {
     <div className="
       gap-6
       grid
-      grid-cols-[repeat(3,max-content)]
+      grid-cols-[repeat(1,max-content)]
       justify-center
+      lg:grid-cols-[repeat(3,max-content)]
+      md:grid-cols-[repeat(2,max-content)]
       my-8
     ">
       {posts.map((post) => (
