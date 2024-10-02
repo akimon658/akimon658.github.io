@@ -13,6 +13,7 @@ export default (
         rel="stylesheet"
         href={`/style.css?var=${now}`}
       />
+      <link rel="stylesheet" href="/code_highlight.css" />
     </head>
     <body className="h-dvh">
       <header className="flex h-14 items-center mx-auto max-w-5xl">

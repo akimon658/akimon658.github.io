@@ -1,4 +1,5 @@
 import lume from "lume/mod.ts"
+import highlight from "lume/plugins/code_highlight.ts"
 import jsx from "lume/plugins/jsx.ts"
 import mdx from "lume/plugins/mdx.ts"
 import multilanguage from "lume/plugins/multilanguage.ts"
@@ -15,6 +16,13 @@ const site = lume({
 site.copy("icon")
 site.copy("img")
 
+site.use(highlight({
+  theme: {
+    name: "atom-one-dark",
+    path: "/code_highlight.css",
+  },
+}))
+site.copy("/code_highlight.css")
 site.use(jsx())
 site.use(mdx())
 site.use(redirects())
