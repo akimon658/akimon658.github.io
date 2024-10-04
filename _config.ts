@@ -13,6 +13,7 @@ import typography from "@tailwindcss/typography"
 const site = lume({
   dest: "./public",
   src: "./src",
+  location: new URL("https://akimo.dev"),
 })
 
 site.copy("icon")
