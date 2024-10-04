@@ -5,6 +5,7 @@ import mdx from "lume/plugins/mdx.ts"
 import multilanguage from "lume/plugins/multilanguage.ts"
 import postcss from "lume/plugins/postcss.ts"
 import redirects from "lume/plugins/redirects.ts"
+import sitemap from "lume/plugins/sitemap.ts"
 import tailwindcss from "lume/plugins/tailwindcss.ts"
 import typography from "@tailwindcss/typography"
 
@@ -61,6 +62,9 @@ site.use(postcss())
 site.use(multilanguage({
   defaultLanguage: "ja",
   languages: ["ja", "en"],
+}))
+site.use(sitemap({
+  query: "externalUrl=undefined",
 }))
 
 interface Token {
