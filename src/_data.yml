@@ -5,6 +5,13 @@ author_affiliation: 東京科学大学 情報理工学院 学士1年
 privacy_policy: プライバシーポリシー
 source_code: ソースコード
 
+metas:
+  site: akimo.dev
+  title: =title
+  lang: =lang
+  twitter: "@akimon658"
+  generator: true
+
 en:
   article_list: Article List
   articles: Articles

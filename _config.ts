@@ -2,6 +2,7 @@ import lume from "lume/mod.ts"
 import highlight from "lume/plugins/code_highlight.ts"
 import jsx from "lume/plugins/jsx.ts"
 import mdx from "lume/plugins/mdx.ts"
+import metas from "lume/plugins/metas.ts"
 import multilanguage from "lume/plugins/multilanguage.ts"
 import postcss from "lume/plugins/postcss.ts"
 import redirects from "lume/plugins/redirects.ts"
@@ -28,6 +29,7 @@ site.use(highlight({
 site.copy("/code_highlight.css")
 site.use(jsx())
 site.use(mdx())
+site.use(metas())
 site.use(redirects())
 
 site.use(tailwindcss({
