@@ -66,7 +66,7 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
         text-2xl
         text-center
       ">
-        {data.article}
+        {data.articles}
       </h2>
       <comp.List
         query="

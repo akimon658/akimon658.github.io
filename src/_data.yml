@@ -1,8 +1,12 @@
-article: 記事
+articles: 記事
 author_name: あきも
 author_affiliation: 東京科学大学 情報理工学院 学士1年
+privacy_policy: プライバシーポリシー
+source_code: ソースコード
 
 en:
-  article: Articles
+  articles: Articles
   author_name: Akimo
   author_affiliation: Institute of Science Tokyo, School of Computing
+  privacy_policy: Privacy Policy
+  source_code: Source Code
