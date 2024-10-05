@@ -15,8 +15,10 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
       ">
         <img src="/img/icon.png" className="md:mr-14" />
         <div className="
+          max-w-80
           md:mt-0
           mt-8
+          sm:max-w-none
           text-xl
         ">
           <h1 className="
