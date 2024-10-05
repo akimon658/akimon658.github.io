@@ -1,9 +1,7 @@
+export const layout = "layouts/root.tsx"
+
 export default (data: Lume.Data, _helpers: Lume.Helpers) => {
   const comp = data.comp
-
-  if (data.lang === "en") {
-    data = data.en
-  }
 
   return (
     <>
