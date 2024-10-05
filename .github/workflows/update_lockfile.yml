@@ -19,7 +19,10 @@ jobs:
       - name: Update lockfile
         run: |
           rm deno.lock
-          deno task lume
+          deno task lume &
+          until [ -f deno.lock ]; do
+            sleep 1
+          done
 
       - name: Commit changes
         run: |
