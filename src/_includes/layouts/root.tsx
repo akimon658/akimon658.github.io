@@ -32,7 +32,7 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
             my-auto
           ">
             <div className="text-center">
-              © 2024 Takumi Akimoto
+              © {new Date().getFullYear()} Takumi Akimoto
             </div>
             <div>
               <comp.Link href="/privacy-policy/">
