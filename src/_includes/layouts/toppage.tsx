@@ -69,11 +69,11 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
         {data.articles}
       </h2>
       <comp.List
-        query="
+        query={`
           category=blog
-          lang=ja
+          lang=${data.lang}
           layout=layouts/blog.tsx
-        "
+        `}
         sort="date=desc"
       />
     </>
