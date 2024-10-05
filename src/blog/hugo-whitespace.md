@@ -5,6 +5,7 @@ description: "Hugo そのものの不具合ではありませんが、まぁま�
 draft: false
 tags: ["Hugo"]
 oldUrl: "/p/2022/hugo-whitespace/"
+id: hugo-whitespace
 ---
 
 このブログは [Hugo](https://gohugo.io) を使って運用しています。

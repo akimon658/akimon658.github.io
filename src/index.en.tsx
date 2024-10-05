@@ -1,6 +1,7 @@
 export const title = "akimo.dev"
-export const lang = "en"
+export const id = "akimo.dev"
 export const layout = "layouts/root.tsx"
-export const url = "/en/"
+export const lang = "en"
+export const url = "/"
 
 export default ({ comp }: Lume.Data, _helpers: Lume.Helpers) => <comp.TopPage />

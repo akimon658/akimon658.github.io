@@ -3,6 +3,7 @@ title: "Windows のブラウザを WSL のデフォルトとして使用する"
 date: 2021-12-31T11:10:00+09:00
 description: "あんまり使う機会ないけどね"
 oldUrl: /p/2021/wsl-default-browser/
+id: wsl-default-browser
 ---
 
 WSLg があるのでまぁそれでも良いんですが、Windows 側に統一できた方が楽なので。

@@ -2,10 +2,10 @@
 title: "How to use the browser in Windows as WSL's default"
 date: 2021-12-31T12:04:20+09:00
 description: "The way to use the browser of Windows as WSL's default browser."
-draft: false
 lang: "en"
 oldUrl: "/en/p/2021/wsl-default-browser/"
 url: "/blog/wsl-default-browser/"
+id: wsl-default-browser
 ---
 
 How do you usually do when you need to authorize using the browser in WSL?

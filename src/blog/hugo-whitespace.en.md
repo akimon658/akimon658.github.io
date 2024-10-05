@@ -6,6 +6,7 @@ tags: ["Hugo"]
 lang: "en"
 oldUrl: "/en/p/2022/hugo-whitespace/"
 url: "/blog/hugo-whitespace/"
+id: hugo-whitespace
 ---
 
 I'm running this blog with [Hugo](https://gohugo.io).
