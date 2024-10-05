@@ -1,0 +1,4 @@
+title: Article List
+layout: layouts/list.tsx
+lang: en
+url: /blog/

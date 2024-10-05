@@ -1,21 +1,20 @@
-export const title = "記事一覧"
 export const layout = "layouts/root.tsx"
 
-export default ({ comp }: Lume.Data) => (
+export default (data: Lume.Data) => (
   <>
     <h1 className="
       mt-8
       text-2xl
       text-center
     ">
-      {title}
+      {data.article_list}
     </h1>
-    <comp.List
-      query="
+    <data.comp.List
+      query={`
         category=blog
-        lang=ja
+        lang=${data.lang}
         layout=layouts/blog.tsx
-      " // Specify the layout to exclude this page from the list
+      `} // Specify the layout to exclude this page from the list
       sort="date=desc"
     />
   </>
