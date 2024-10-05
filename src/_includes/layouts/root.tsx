@@ -2,6 +2,8 @@ const now = Date.now()
 
 export default (data: Lume.Data, _helpers: Lume.Helpers) => {
   const comp = data.comp
+  const lang = data.lang
+  const basePath = lang === "ja" ? "/" : `/${lang}/`
 
   return (
     <html>
@@ -16,8 +18,23 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
         <link rel="stylesheet" href="/code_highlight.css" />
       </head>
       <body className="h-dvh">
-        <header className="flex h-14 items-center mx-auto max-w-5xl">
-          <a href="/" className="ml-4 my-auto text-xl">akimo.dev</a>
+        <header className="
+          flex
+          h-14
+          items-center
+          mx-auto
+          max-w-5xl
+        ">
+          <a
+            href={basePath}
+            className="
+              ml-4
+              my-auto
+              text-xl
+            "
+          >
+            akimo.dev
+          </a>
         </header>
         <main>{data.children}</main>
         <footer className="
@@ -35,7 +52,7 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
               © {new Date().getFullYear()} Takumi Akimoto
             </div>
             <div>
-              <comp.Link href="/privacy-policy/">
+              <comp.Link href={basePath + "privacy-policy/"}>
                 {data.privacy_policy}
               </comp.Link>{" "}
               |{" "}
