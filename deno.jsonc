@@ -14,7 +14,7 @@
   },
   "imports": {
     "@tailwindcss/typography": "npm:@tailwindcss/typography@0.5.15",
-    "lume/": "https://deno.land/x/lume@v2.2.0/",
+    "lume/": "https://deno.land/x/lume@v2.3.2/",
   },
   "fmt": {
     "semiColons": false,
