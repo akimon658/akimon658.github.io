@@ -25,7 +25,7 @@ export default ({ comp, href, title }: CardData) => {
         w-80
       "
     >
-      <div>
+      <div className="line-clamp-3">
         {title}
       </div>
       {isExternal && (
