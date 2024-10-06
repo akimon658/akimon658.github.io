@@ -29,15 +29,20 @@ jobs:
         with:
           deno-version: v1.x
 
-      - uses: actions/cache@v4
+      - uses: actions/cache/restore@v4
         with:
           path: ~/.cache/deno
-          key: ${{ hashFiles('deno.lock') }}
+          key: Default Cache
 
       - name: Build
         run: |
           deno task lume
           touch public/.nojekyll
+
+      - uses: actions/cache/save@v4
+        with:
+          path: ~/.cache/deno
+          key: Default Cache
 
       - name: Upload
         uses: actions/upload-pages-artifact@v3

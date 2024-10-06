@@ -16,6 +16,11 @@ jobs:
         with:
           deno-version: 1.x
 
+      - uses: actions/cache/restore@v4
+        with:
+          path: ~/.cache/deno
+          key: Default Cache
+
       - name: Update lockfile
         run: |
           rm deno.lock
@@ -23,6 +28,11 @@ jobs:
           until (curl -s http://localhost:3000 > /dev/null); do
             sleep 1
           done
+
+      - uses: actions/cache/save@v4
+        with:
+          path: ~/.cache/deno
+          key: Default Cache
 
       - name: Commit changes
         run: |
