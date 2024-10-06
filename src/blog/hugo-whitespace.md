@@ -18,7 +18,7 @@ This is [test](https://example.com), just a [sample](https://sample.test).
 
 これが
 
-![余分なスペースの例](/img/unnecessary-whitespace.webp)
+![余分なスペースの例](/img/unnecessary-whitespace.avif)
 
 こうなる。（カンマ、ピリオドの前に余計なスペースが入っている）
 

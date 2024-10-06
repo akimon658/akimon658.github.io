@@ -19,7 +19,7 @@ This is [test](https://example.com), just a [sample](https://sample.test)
 
 This would output...
 
-![unnecessary whitespace](/img/unnecessary-whitespace.webp)
+![unnecessary whitespace](/img/unnecessary-whitespace.avif)
 
 like this.
 It rendered unnecessary space before comma or period.

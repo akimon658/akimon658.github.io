@@ -13,7 +13,7 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
         md:flex-row
         mt-8
       ">
-        <img src="/img/icon.png" className="md:mr-14" />
+        <img src="/img/icon.avif" className="md:mr-14" />
         <div className="
           max-w-80
           md:mt-0

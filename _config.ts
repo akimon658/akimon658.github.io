@@ -9,6 +9,7 @@ import redirects from "lume/plugins/redirects.ts"
 import robots from "lume/plugins/robots.ts"
 import sitemap from "lume/plugins/sitemap.ts"
 import tailwindcss from "lume/plugins/tailwindcss.ts"
+import transformImages from "lume/plugins/transform_images.ts"
 import typography from "@tailwindcss/typography"
 
 const site = lume({
@@ -18,7 +19,8 @@ const site = lume({
 })
 
 site.copy("icon")
-site.copy("img")
+// Currently, animated image conversion does not work
+site.copy("img/google.webp")
 
 site.use(highlight({
   theme: {
@@ -70,6 +72,7 @@ site.use(robots({
     },
   ],
 }))
+site.use(transformImages())
 
 site.use(multilanguage({
   defaultLanguage: "ja",

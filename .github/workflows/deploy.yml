@@ -31,7 +31,9 @@ jobs:
 
       - uses: actions/cache/restore@v4
         with:
-          path: ~/.cache/deno
+          path: |
+            ~/.cache/deno
+            _cache
           key: Default Cache
 
       - name: Build
@@ -41,7 +43,9 @@ jobs:
 
       - uses: actions/cache/save@v4
         with:
-          path: ~/.cache/deno
+          path: |
+            ~/.cache/deno
+            _cache
           key: Default Cache
 
       - name: Upload
