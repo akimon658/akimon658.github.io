@@ -30,6 +30,7 @@ jobs:
           deno-version: v1.x
 
       - uses: actions/cache/restore@v4
+        id: cache
         with:
           path: |
             ~/.cache/deno
@@ -40,6 +41,13 @@ jobs:
         run: |
           deno task lume
           touch public/.nojekyll
+
+      - name: Delete previous cache
+        if: ${{ steps.cache.outputs.cache-hit }}
+        continue-on-error: true
+        run: |
+          gh extension install actions/gh-actions-cache
+          gh actions-cache delete "Default Cache" --confirm
 
       - uses: actions/cache/save@v4
         with:
