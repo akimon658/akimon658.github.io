@@ -19,8 +19,6 @@ const site = lume({
 })
 
 site.copy("icon")
-// Currently, animated image conversion does not work
-site.copy("img/google.webp")
 
 site.use(highlight({
   theme: {
@@ -72,7 +70,9 @@ site.use(robots({
     },
   ],
 }))
-site.use(transformImages())
+site.use(transformImages({
+  extensions: [".jpg", ".jpeg", ".png", ".webp", ".gif"],
+}))
 
 site.use(multilanguage({
   defaultLanguage: "ja",
