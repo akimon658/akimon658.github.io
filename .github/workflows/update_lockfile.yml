@@ -27,7 +27,7 @@ jobs:
       - name: Update lockfile
         run: |
           rm deno.lock
-          deno task lume &
+          deno task serve &
           until (curl -s http://localhost:3000 > /dev/null); do
             sleep 1
           done
