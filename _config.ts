@@ -11,6 +11,7 @@ import sitemap from "lume/plugins/sitemap.ts"
 import tailwindcss from "lume/plugins/tailwindcss.ts"
 import transformImages from "lume/plugins/transform_images.ts"
 import mila from "markdown-it-link-attributes"
+import rehypeExternalLinks from "rehype-external-links"
 import typography from "@tailwindcss/typography"
 
 const site = lume({
@@ -45,7 +46,20 @@ site.use(highlight({
 }))
 site.copy("/code_highlight.css")
 site.use(jsx())
-site.use(mdx())
+site.use(mdx({
+  rehypePlugins: [
+    [
+      rehypeExternalLinks,
+      {
+        properties: {
+          class: "after:content-open-in-new",
+        },
+        rel: ["noopener", "noreferrer"],
+        target: "_blank",
+      },
+    ],
+  ],
+}))
 site.use(metas())
 site.use(redirects())
 

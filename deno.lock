@@ -50,6 +50,7 @@
     "npm:postcss@8.4.47": "8.4.47",
     "npm:react-dom@18.3.1": "18.3.1_react@18.3.1",
     "npm:react@18.3.1": "18.3.1",
+    "npm:rehype-external-links@3.0.0": "3.0.0",
     "npm:remark-gfm@4.0.0": "4.0.0",
     "npm:sharp@0.33.5": "0.33.5",
     "npm:svg2png-wasm@1.4.1": "1.4.1",
@@ -746,6 +747,12 @@
         "function-bind"
       ]
     },
+    "hast-util-is-element@3.0.0": {
+      "integrity": "sha512-Val9mnv2IWpLbNPqc/pUem+a7Ipj2aHacCwgNfTiK0vJKl0LF+4Ba4+v1oPHFpf3bLYmreq0/l3Gud9S5OH42g==",
+      "dependencies": [
+        "@types/hast"
+      ]
+    },
     "hast-util-to-estree@3.1.0": {
       "integrity": "sha512-lfX5g6hqVh9kjS/B9E2gSkvHH4SZNiQFiqWS0x9fENzEl+8W12RqdRxX6d/Cwxi30tPQs3bIO+aolQJNp1bIyw==",
       "dependencies": [
@@ -804,6 +811,9 @@
     },
     "inline-style-parser@0.2.4": {
       "integrity": "sha512-0aO8FkhNZlj/ZIbNi7Lxxr12obT7cL1moPfE4tg1LkX7LlLfC6DeX4l2ZEud1ukP9jNQyNnfzQVqwbwmAATY4Q=="
+    },
+    "is-absolute-url@4.0.1": {
+      "integrity": "sha512-/51/TKE88Lmm7Gc4/8btclNXWS+g50wXhYJq8HWIBAGUBnoAdRu1aXeh364t/O7wXDAcTJDP8PNuNKWUDWie+A=="
     },
     "is-alphabetical@2.0.1": {
       "integrity": "sha512-FWyyY60MeTNyeSRpkM2Iry0G9hpr7/9kD40mD/cGQEuilcZYS4okz8SN2Q6rLCJ8gbCt6fN+rC+6tMGS99LaxQ=="
@@ -1651,6 +1661,17 @@
         "picomatch"
       ]
     },
+    "rehype-external-links@3.0.0": {
+      "integrity": "sha512-yp+e5N9V3C6bwBeAC4n796kc86M4gJCdlVhiMTxIrJG5UHDMh+PJANf9heqORJbt1nrCbDwIlAZKjANIaVBbvw==",
+      "dependencies": [
+        "@types/hast",
+        "@ungap/structured-clone",
+        "hast-util-is-element",
+        "is-absolute-url",
+        "space-separated-tokens",
+        "unist-util-visit"
+      ]
+    },
     "remark-gfm@4.0.0": {
       "integrity": "sha512-U92vJgBPkbw4Zfu/IiW2oTZLSL3Zpv+uI7My2eq8JxKgqraFdU8YUGicEJCEgSbeaG+QDFqIcwwfMTOEelPxuA==",
       "dependencies": [
@@ -2289,7 +2310,8 @@
   "workspace": {
     "dependencies": [
       "npm:@tailwindcss/typography@0.5.15",
-      "npm:markdown-it-link-attributes@4.0.1"
+      "npm:markdown-it-link-attributes@4.0.1",
+      "npm:rehype-external-links@3.0.0"
     ]
   }
 }
