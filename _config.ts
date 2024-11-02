@@ -10,12 +10,29 @@ import robots from "lume/plugins/robots.ts"
 import sitemap from "lume/plugins/sitemap.ts"
 import tailwindcss from "lume/plugins/tailwindcss.ts"
 import transformImages from "lume/plugins/transform_images.ts"
+import mila from "markdown-it-link-attributes"
 import typography from "@tailwindcss/typography"
 
 const site = lume({
   dest: "./public",
   src: "./src",
   location: new URL("https://akimo.dev"),
+}, {
+  markdown: {
+    plugins: [
+      [
+        mila,
+        {
+          matcher: (href: string) => href.startsWith("http"),
+          attrs: {
+            class: "after:content-open-in-new",
+            rel: "noopener noreferrer",
+            target: "_blank",
+          },
+        },
+      ],
+    ],
+  },
 })
 
 site.copy("icon")
@@ -81,18 +98,5 @@ site.use(multilanguage({
 site.use(sitemap({
   query: "externalUrl=undefined",
 }))
-
-interface Token {
-  attrGet: (name: string) => string
-}
-
-site.hooks.addMarkdownItRule("link_open", (tokens: Token[], idx: number) => {
-  const href = tokens[idx].attrGet("href")
-  const isExternal = href.startsWith("http")
-  const additionalAttributes = isExternal
-    ? `target="_blank" rel="noopener noreferrer" class="after:content-open-in-new"`
-    : ""
-  return `<a href=${href} ${additionalAttributes}>`
-})
 
 export default site

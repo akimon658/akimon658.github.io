@@ -15,6 +15,7 @@
   "imports": {
     "@tailwindcss/typography": "npm:@tailwindcss/typography@0.5.15",
     "lume/": "https://deno.land/x/lume@v2.3.3/",
+    "markdown-it-link-attributes": "npm:markdown-it-link-attributes@4.0.1",
   },
   "fmt": {
     "semiColons": false,
