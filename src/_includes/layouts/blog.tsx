@@ -15,6 +15,8 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
       prose-code:after:content-none
       prose-code:before:content-none
       prose-code:font-normal
+      prose-pre:bg-vsc-back
+      prose-pre:text-vsc-front
       prose-headings:font-normal
       px-4
       visited:prose-a:text-purple-700

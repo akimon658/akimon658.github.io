@@ -1,5 +1,4 @@
 import lume from "lume/mod.ts"
-import highlight from "lume/plugins/code_highlight.ts"
 import jsx from "lume/plugins/jsx.ts"
 import mdx from "lume/plugins/mdx.ts"
 import metas from "lume/plugins/metas.ts"
@@ -10,9 +9,20 @@ import robots from "lume/plugins/robots.ts"
 import sitemap from "lume/plugins/sitemap.ts"
 import tailwindcss from "lume/plugins/tailwindcss.ts"
 import transformImages from "lume/plugins/transform_images.ts"
+import escapeHtml from "escape-html"
+import type { Token } from "markdown-it"
 import mila from "markdown-it-link-attributes"
 import rehypeExternalLinks from "rehype-external-links"
+import rehypeRaw from "rehype-raw"
 import typography from "@tailwindcss/typography"
+import Parser from "tree-sitter"
+import Bash from "tree-sitter-bash"
+import Go from "tree-sitter-go"
+import Lua from "@tree-sitter-grammars/tree-sitter-lua"
+import Markdown from "@tree-sitter-grammars/tree-sitter-markdown"
+import YAML from "@tree-sitter-grammars/tree-sitter-yaml"
+import HTML from "tree-sitter-html"
+import JavaScript from "tree-sitter-javascript"
 
 const site = lume({
   dest: "./public",
@@ -36,17 +46,93 @@ const site = lume({
   },
 })
 
+const parseCode = (content: string, lang: string) => {
+  const languages: Record<string, unknown> = {
+    go: Go,
+    html: HTML,
+    javascript: JavaScript,
+    lua: Lua,
+    markdown: Markdown,
+    shell: Bash,
+    yaml: YAML,
+  }
+
+  if (!(lang in languages)) {
+    return `<pre><code>${escapeHtml(content)}</code></pre>`
+  }
+
+  const parser = new Parser()
+  parser.setLanguage(languages[lang])
+
+  const tree = parser.parse(content)
+
+  const wrapTag = (node: Parser.SyntaxNode, content?: string): string => {
+    let openTag = `<span class="ts-${escapeHtml(node.type)}">`,
+      closeTag = "</span>"
+
+    if (node.parent === null) {
+      openTag = `<pre><code class="lang-${lang}">`
+      closeTag = "</code></pre>"
+    }
+
+    return openTag + (content || escapeHtml(node.text)) + closeTag
+  }
+
+  const nodeToHtml = (node: Parser.SyntaxNode): string => {
+    if (node.childCount === 0) {
+      return wrapTag(node)
+    }
+
+    let content = ""
+    let lastIndex = node.startIndex
+
+    for (const child of node.children) {
+      content += escapeHtml(
+        node.text.slice(
+          lastIndex - node.startIndex,
+          child.startIndex - node.startIndex,
+        ),
+      )
+      content += nodeToHtml(child)
+      lastIndex = child.endIndex
+    }
+
+    content += escapeHtml(node.text.slice(lastIndex))
+
+    return wrapTag(node, content)
+  }
+
+  return nodeToHtml(tree.rootNode)
+}
+
+site.hooks.addMarkdownItRule("fence", (tokens: Token[], idx: number) => {
+  const token = tokens[idx]
+  const lang = token.info ? token.info.split(" ")[0] : ""
+
+  return parseCode(token.content, lang)
+})
+
 site.copy("icon")
 
-site.use(highlight({
-  theme: {
-    name: "atom-one-dark",
-    path: "/code_highlight.css",
-  },
-}))
-site.copy("/code_highlight.css")
 site.use(jsx())
+
+interface MdastNode {
+  lang?: string
+  value: string
+}
+
 site.use(mdx({
+  rehypeOptions: {
+    allowDangerousHtml: true,
+    handlers: {
+      code: (_: unknown, node: MdastNode) => {
+        return {
+          type: "raw",
+          value: parseCode(node.value, node.lang ?? ""),
+        }
+      },
+    },
+  },
   rehypePlugins: [
     [
       rehypeExternalLinks,
@@ -56,6 +142,12 @@ site.use(mdx({
         },
         rel: ["noopener", "noreferrer"],
         target: "_blank",
+      },
+    ],
+    [
+      rehypeRaw,
+      {
+        passThrough: ["mdxJsxFlowElement"],
       },
     ],
   ],
@@ -72,6 +164,10 @@ site.use(tailwindcss({
         mono: ["monospace"],
       },
       extend: {
+        colors: {
+          "vsc-back": "#1f1f1f",
+          "vsc-front": "#d4d4d4",
+        },
         content: {
           "open-in-new": "url('/icon/open_in_new_16dp_2563EB.svg')",
           "open-in-new-gray": "url('/icon/open_in_new_16dp_6B7280.svg')",
