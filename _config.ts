@@ -23,6 +23,7 @@ import Markdown from "@tree-sitter-grammars/tree-sitter-markdown"
 import YAML from "@tree-sitter-grammars/tree-sitter-yaml"
 import HTML from "tree-sitter-html"
 import JavaScript from "tree-sitter-javascript"
+import TypeScript from "tree-sitter-typescript"
 
 const site = lume({
   dest: "./public",
@@ -54,6 +55,7 @@ const parseCode = (content: string, lang: string) => {
     lua: Lua,
     markdown: Markdown,
     shell: Bash,
+    ts: TypeScript.typescript,
     yaml: YAML,
   }
 

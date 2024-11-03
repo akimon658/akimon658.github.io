@@ -64,6 +64,7 @@
     "npm:tree-sitter-go@0.23.1": "0.23.1_tree-sitter@0.21.1",
     "npm:tree-sitter-html@0.23.0": "0.23.0",
     "npm:tree-sitter-javascript@0.23.0": "0.23.0",
+    "npm:tree-sitter-typescript@0.23.0": "0.23.0_tree-sitter@0.21.1",
     "npm:tree-sitter@0.22.0": "0.22.0"
   },
   "jsr": {
@@ -2078,6 +2079,14 @@
         "node-gyp-build"
       ]
     },
+    "tree-sitter-typescript@0.23.0_tree-sitter@0.21.1": {
+      "integrity": "sha512-hRy5O9d+9ON4HxIWWxkI4zonrw2v/WNN1JoiGW5HkXfC9K2R3p53ugMvs6Vs4T7ASCwggsoQ75LNdgpExC/zgQ==",
+      "dependencies": [
+        "node-addon-api",
+        "node-gyp-build",
+        "tree-sitter@0.21.1"
+      ]
+    },
     "tree-sitter@0.21.1": {
       "integrity": "sha512-7dxoA6kYvtgWw80265MyqJlkRl4yawIjO7S5MigytjELkX43fV2WsAXzsNfO7sBpPPCF5Gp0+XzHk0DwLCq3xQ==",
       "dependencies": [
@@ -2493,6 +2502,7 @@
       "npm:tree-sitter-go@0.23.1",
       "npm:tree-sitter-html@0.23.0",
       "npm:tree-sitter-javascript@0.23.0",
+      "npm:tree-sitter-typescript@0.23.0",
       "npm:tree-sitter@0.22.0"
     ]
   }
