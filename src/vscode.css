@@ -1,8 +1,6 @@
 /* Settings came from https://github.com/Mofiqul/vscode.nvim */
 
 :root {
-  --vsc-front: #d4d4d4;
-  --vsc-back: #1f1f1f;
   --vsc-gray: #808080;
   --vsc-blue: #569cd6;
   --vsc-accent-blue: #4fc1ff;
@@ -20,11 +18,6 @@
   --vsc-yellow: #dcdcaa;
   --vsc-dark-yellow: #ffd602;
   --vsc-pink: #c586c0;
-}
-
-pre {
-  color: var(--vsc-front);
-  background-color: var(--vsc-back);
 }
 
 .lang-html .ts-\< {
