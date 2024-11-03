@@ -1,0 +1,212 @@
+/* Settings came from https://github.com/Mofiqul/vscode.nvim */
+
+:root {
+  --vsc-front: #d4d4d4;
+  --vsc-back: #1f1f1f;
+  --vsc-gray: #808080;
+  --vsc-blue: #569cd6;
+  --vsc-accent-blue: #4fc1ff;
+  --vsc-dark-blue: #223e55;
+  --vsc-medium-blue: #18a2fe;
+  --vsc-disabled-blue: #729db3;
+  --vsc-light-blue: #9cdcfe;
+  --vsc-green: #6a9955;
+  --vsc-blue-green: #4ec9b0;
+  --vsc-light-green: #b5cea8;
+  --vsc-red: #f44747;
+  --vsc-orange: #ce9178;
+  --vsc-light-red: #d16969;
+  --vsc-yellow-orange: #d7ba7d;
+  --vsc-yellow: #dcdcaa;
+  --vsc-dark-yellow: #ffd602;
+  --vsc-pink: #c586c0;
+}
+
+pre {
+  color: var(--vsc-front);
+  background-color: var(--vsc-back);
+}
+
+.lang-html .ts-\< {
+  color: var(--vsc-gray);
+}
+
+.lang-html .ts-\<\/ {
+  color: var(--vsc-gray);
+}
+
+.lang-html .ts-\> {
+  color: var(--vsc-gray);
+}
+
+.ts-attribute_name {
+  color: var(--vsc-light-blue);
+}
+
+.ts-block_mapping_pair>.ts-flow_node:first-child .ts-string_scalar {
+  color: var(--vsc-light-blue);
+}
+
+.ts-call_expression>.ts-identifier {
+  color: var(--vsc-yellow);
+}
+
+.ts-call_expression>.ts-member_expression>.ts-property_identifier:last-child {
+  color: var(--vsc-yellow);
+}
+
+.ts-call_expression>.ts-selector_expression>.ts-field_identifier {
+  color: var(--vsc-yellow);
+}
+
+.ts-command_name .ts-word {
+  color: var(--vsc-yellow);
+}
+
+.ts-comment {
+  color: var(--vsc-green);
+}
+
+.ts-const {
+  color: var(--vsc-blue);
+}
+
+.ts-defer {
+  color: var(--vsc-blue);
+}
+
+.ts-else {
+  color: var(--vsc-pink);
+}
+
+.ts-end {
+  color: var(--vsc-blue);
+}
+
+.ts-field_identifier {
+  color: var(--vsc-light-blue);
+}
+
+.ts-func {
+  color: var(--vsc-blue);
+}
+
+.ts-function {
+  color: var(--vsc-blue);
+}
+
+.ts-function_call>.ts-dot_index_expression>.ts-identifier:last-child {
+  color: var(--vsc-yellow);
+}
+
+.ts-function_call>.ts-identifier {
+  color: var(--vsc-yellow);
+}
+
+.ts-function_call>.ts-method_index_expression>.ts-identifier:last-child {
+  color: var(--vsc-yellow);
+}
+
+.ts-function_declaration>.ts-identifier {
+  color: var(--vsc-yellow);
+}
+
+.ts-identifier {
+  color: var(--vsc-light-blue);
+}
+
+.ts-if {
+  color: var(--vsc-pink);
+}
+
+.ts-import {
+  color: var(--vsc-pink);
+}
+
+.ts-interpreted_string_literal {
+  color: var(--vsc-orange);
+}
+
+.ts-int_literal {
+  color: var(--vsc-light-green);
+}
+
+.ts-let {
+  color: var(--vsc-blue);
+}
+
+.ts-local {
+  color: var(--vsc-blue);
+}
+
+.ts-nil {
+  color: var(--vsc-blue);
+}
+
+.ts-not {
+  color: var(--vsc-blue);
+}
+
+.ts-number {
+  color: var(--vsc-light-green);
+}
+
+.ts-package {
+  color: var(--vsc-pink);
+}
+
+.ts-package_identifier {
+  color: var(--vsc-blue-green);
+}
+
+.ts-property_identifier {
+  color: var(--vsc-light-blue);
+}
+
+.ts-quoted_attribute_value {
+  color: var(--vsc-orange);
+}
+
+.ts-raw_string_literal {
+  color: var(--vsc-orange);
+}
+
+.ts-return {
+  color: var(--vsc-pink);
+}
+
+.ts-string {
+  color: var(--vsc-orange);
+}
+
+.ts-string_scalar {
+  color: var(--vsc-orange);
+}
+
+.ts-tag_name {
+  color: var(--vsc-blue);
+}
+
+.ts-template_string>:not(.ts-template_substitution) {
+  color: var(--vsc-orange);
+}
+
+.ts-then {
+  color: var(--vsc-pink);
+}
+
+.ts-this {
+  color: var(--vsc-blue);
+}
+
+.ts-type_identifier {
+  color: var(--vsc-blue-green);
+}
+
+.ts-var {
+  color: var(--vsc-blue);
+}
+
+.ts-word {
+  color: var(--vsc-light-blue);
+}

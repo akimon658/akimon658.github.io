@@ -15,7 +15,6 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
           rel="stylesheet"
           href={`/style.css?var=${now}`}
         />
-        <link rel="stylesheet" href="/code_highlight.css" />
       </head>
       <body className="h-dvh">
         <header className="
