@@ -47,7 +47,7 @@ const site = lume({
   },
 })
 
-const parseCode = (content: string, lang: string) => {
+const parseCode = (code: string, lang: string) => {
   const languages: Record<string, unknown> = {
     go: Go,
     html: HTML,
@@ -60,13 +60,13 @@ const parseCode = (content: string, lang: string) => {
   }
 
   if (!(lang in languages)) {
-    return `<pre><code>${escapeHtml(content)}</code></pre>`
+    return `<pre><code>${escapeHtml(code)}</code></pre>`
   }
 
   const parser = new Parser()
   parser.setLanguage(languages[lang])
 
-  const tree = parser.parse(content)
+  const tree = parser.parse(code)
 
   const wrapTag = (node: Parser.SyntaxNode, content?: string): string => {
     let openTag = `<span class="ts-${escapeHtml(node.type)}">`,
