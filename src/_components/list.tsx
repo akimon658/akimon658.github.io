@@ -20,6 +20,8 @@ export default ({ comp, search, query, sort }: ListData) => {
         <comp.Card
           href={post.externalUrl ? post.externalUrl : post.url}
           title={post.title}
+          lang={post.lang}
+          date={post.date}
         />
       ))}
     </div>

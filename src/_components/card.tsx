@@ -3,9 +3,10 @@ interface CardData extends Lume.Data {
   title: string
 }
 
-export default ({ comp, href, title }: CardData) => {
+export default ({ comp, href, title, lang, date }: CardData) => {
   const isExternal = href.startsWith("http")
   const url = new URL(href, "https://akimo.dev")
+  const locale = lang === "ja" ? "ja-JP" : "en-US"
 
   return (
     <comp.Link
@@ -28,16 +29,29 @@ export default ({ comp, href, title }: CardData) => {
       <div className="line-clamp-3">
         {title}
       </div>
-      {isExternal && (
-        <div className="
-          after:content-open-in-new-gray
-          justify-self-end
-          text-gray-500
-          text-right
-        ">
-          {url.hostname}
-        </div>
-      )}
+      <div className="
+        flex
+        justify-between
+        text-gray-500
+      ">
+        {date && (
+          <div>
+            {date.toLocaleDateString(locale, {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </div>
+        )}
+        {isExternal && (
+          <div className="
+            after:content-open-in-new-gray
+            ml-auto
+          ">
+            {url.hostname}
+          </div>
+        )}
+      </div>
     </comp.Link>
   )
 }
