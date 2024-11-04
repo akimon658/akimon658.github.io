@@ -13,7 +13,12 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
         md:flex-row
         mt-8
       ">
-        <img src="/img/icon.avif" className="md:mr-14" />
+        <img
+          src="/img/icon.avif"
+          height="200"
+          width="200"
+          className="md:mr-14"
+        />
         <div className="
           max-w-80
           md:mt-0
@@ -42,21 +47,36 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
               title="X"
               className="mr-4"
             >
-              <img src="/icon/x_black.png" className="h-6" />
+              <img
+                src="/icon/x_black.png"
+                height="24"
+                width="23"
+                className="h-6"
+              />
             </comp.Link>
             <comp.Link
               href="https://github.com/akimon658"
               title="GitHub"
               className="mr-4"
             >
-              <img src="/icon/github_black.svg" className="h-6" />
+              <img
+                src="/icon/github_black.svg"
+                height="24"
+                width="24.5"
+                className="h-6"
+              />
             </comp.Link>
             <comp.Link
               href="https://atcoder.jp/users/akimon658"
               title="AtCoder"
               className="" // To avoid open_in_new icon to be displayed
             >
-              <img src="/icon/atcoder_black.png" className="h-6" />
+              <img
+                src="/icon/atcoder_black.png"
+                height="24"
+                width="24.32"
+                className="h-6"
+              />
             </comp.Link>
           </div>
         </div>
