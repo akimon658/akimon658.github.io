@@ -36,21 +36,18 @@ export default ({ comp, href, title, lang, date, compact }: CardData) => {
         justify-between
         text-gray-500
       ">
+        {isExternal && (
+          <div className="after:content-open-in-new-gray">
+            {url.hostname}
+          </div>
+        )}
         {date && (
-          <div>
+          <div className="ml-auto">
             {date.toLocaleDateString(locale, {
               year: "numeric",
               month: "long",
               day: "numeric",
             })}
-          </div>
-        )}
-        {isExternal && (
-          <div className="
-            after:content-open-in-new-gray
-            ml-auto
-          ">
-            {url.hostname}
           </div>
         )}
       </div>
