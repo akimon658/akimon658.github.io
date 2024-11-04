@@ -22,6 +22,7 @@ export default ({ comp, search, query, sort }: ListData) => {
           title={post.title}
           lang={post.lang}
           date={post.date}
+          compact
         />
       ))}
     </div>

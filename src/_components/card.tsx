@@ -1,17 +1,19 @@
 interface CardData extends Lume.Data {
   href: string
   title: string
+  compact?: boolean
 }
 
-export default ({ comp, href, title, lang, date }: CardData) => {
+export default ({ comp, href, title, lang, date, compact }: CardData) => {
   const isExternal = href.startsWith("http")
   const url = new URL(href, "https://akimo.dev")
   const locale = lang === "ja" ? "ja-JP" : "en-US"
+  const width = compact ? "80" : "full"
 
   return (
     <comp.Link
       href={href}
-      className="
+      className={`
         bg-gray-50
         border-2
         border-gray-100
@@ -23,8 +25,8 @@ export default ({ comp, href, title, lang, date }: CardData) => {
         not-prose
         p-4
         rounded-lg
-        w-80
-      "
+        w-${width}
+      `}
     >
       <div className="line-clamp-3">
         {title}
