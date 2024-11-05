@@ -37,7 +37,8 @@ const site = lume({
         {
           matcher: (href: string) => href.startsWith("http"),
           attrs: {
-            class: "after:content-open-in-new",
+            class:
+              "after:content-open-in-new after:dark:content-open-in-new-dark",
             rel: "noopener noreferrer",
             target: "_blank",
           },
@@ -140,7 +141,8 @@ site.use(mdx({
       rehypeExternalLinks,
       {
         properties: {
-          class: "after:content-open-in-new",
+          class:
+            "after:content-open-in-new after:dark:content-open-in-new-dark",
         },
         rel: ["noopener", "noreferrer"],
         target: "_blank",
@@ -172,6 +174,7 @@ site.use(tailwindcss({
         },
         content: {
           "open-in-new": "url('/icon/open_in_new_16dp_2563EB.svg')",
+          "open-in-new-dark": "url('/icon/open_in_new_16dp_60A5FA.svg')",
           "open-in-new-gray": "url('/icon/open_in_new_16dp_6B7280.svg')",
         },
         typography: (theme: (s: string) => string) => ({

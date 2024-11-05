@@ -8,6 +8,13 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
     <article className="
       hover:prose-a:underline
       mx-auto
+      dark:prose-a:text-blue-400
+      dark:prose-blockquote:border-s-gray-700
+      dark:prose-code:bg-vsc-back
+      dark:prose-code:text-gray-300
+      dark:prose-headings:text-gray-300
+      dark:prose-p:text-gray-300
+      dark:prose-strong:text-gray-300
       prose
       prose-a:font-normal
       prose-a:no-underline
@@ -19,6 +26,7 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
       prose-pre:text-vsc-front
       prose-headings:font-normal
       px-4
+      visited:dark:prose-a:text-purple-400
       visited:prose-a:text-purple-700
     ">
       <h1>{data.title}</h1>

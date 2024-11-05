@@ -16,7 +16,11 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
           href={`/style.css?var=${now}`}
         />
       </head>
-      <body className="h-dvh">
+      <body className="
+        dark:bg-gray-950
+        dark:text-gray-300
+        h-dvh
+      ">
         <header className="
           flex
           h-14

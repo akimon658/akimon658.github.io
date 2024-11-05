@@ -47,36 +47,39 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
               title="X"
               className="mr-4"
             >
-              <img
-                src="/icon/x_black.png"
-                height="24"
-                width="23"
-                className="h-6"
-              />
+              <picture className="h-6">
+                <source
+                  srcSet="/icon/x_white.png"
+                  media="(prefers-color-scheme: dark)"
+                />
+                <img src="/icon/x_black.png" height="24" width="23" />
+              </picture>
             </comp.Link>
             <comp.Link
               href="https://github.com/akimon658"
               title="GitHub"
               className="mr-4"
             >
-              <img
-                src="/icon/github_black.svg"
-                height="24"
-                width="24.5"
-                className="h-6"
-              />
+              <picture className="h-6">
+                <source
+                  srcSet="/icon/github_white.svg"
+                  media="(prefers-color-scheme: dark)"
+                />
+                <img src="/icon/github_black.svg" height="24" width="24.5" />
+              </picture>
             </comp.Link>
             <comp.Link
               href="https://atcoder.jp/users/akimon658"
               title="AtCoder"
               className="" // To avoid open_in_new icon to be displayed
             >
-              <img
-                src="/icon/atcoder_black.png"
-                height="24"
-                width="24.32"
-                className="h-6"
-              />
+              <picture className="h-6">
+                <source
+                  srcSet="/icon/atcoder_white.png"
+                  media="(prefers-color-scheme: dark)"
+                />
+                <img src="/icon/atcoder_black.png" height="24" width="24.32" />
+              </picture>
             </comp.Link>
           </div>
         </div>
