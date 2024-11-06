@@ -17,7 +17,7 @@ export default ({ comp, href, title, lang, date, compact }: CardData) => {
         bg-gray-50
         border-2
         border-gray-100
-        dark:bg-gray-950
+        dark:bg-gray-900
         dark:border-gray-800
         dark:hover:bg-gray-800
         dark:text-gray-300
