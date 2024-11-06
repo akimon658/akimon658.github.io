@@ -1,7 +1,42 @@
 export const layout = "layouts/root.tsx"
 
+type Icon = {
+  height: string
+  href: string
+  srcDark: string
+  srcLight: string
+  title: string
+  width: string
+}
+
 export default (data: Lume.Data, _helpers: Lume.Helpers) => {
   const comp = data.comp
+  const icons: Icon[] = [
+    {
+      height: "24",
+      href: "https://x.com/akimon658",
+      srcDark: "/icon/x_white.png",
+      srcLight: "/icon/x_black.png",
+      title: "X",
+      width: "23",
+    },
+    {
+      height: "24",
+      href: "https://github.com/akimon658",
+      srcDark: "/icon/github_white.svg",
+      srcLight: "/icon/github_black.svg",
+      title: "GitHub",
+      width: "24.5",
+    },
+    {
+      height: "24",
+      href: "https://atcoder.jp/users/akimon658",
+      srcDark: "/icon/atcoder_white.png",
+      srcLight: "/icon/atcoder_black.png",
+      title: "AtCoder",
+      width: "24.32",
+    },
+  ]
 
   return (
     <>
@@ -42,45 +77,26 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
             flex
             mt-4
           ">
-            <comp.Link
-              href="https://x.com/akimon658"
-              title="X"
-              className="mr-4"
-            >
-              <picture className="h-6">
-                <source
-                  srcSet="/icon/x_white.png"
-                  media="(prefers-color-scheme: dark)"
-                />
-                <img src="/icon/x_black.png" height="24" width="23" />
-              </picture>
-            </comp.Link>
-            <comp.Link
-              href="https://github.com/akimon658"
-              title="GitHub"
-              className="mr-4"
-            >
-              <picture className="h-6">
-                <source
-                  srcSet="/icon/github_white.svg"
-                  media="(prefers-color-scheme: dark)"
-                />
-                <img src="/icon/github_black.svg" height="24" width="24.5" />
-              </picture>
-            </comp.Link>
-            <comp.Link
-              href="https://atcoder.jp/users/akimon658"
-              title="AtCoder"
-              className="" // To avoid open_in_new icon to be displayed
-            >
-              <picture className="h-6">
-                <source
-                  srcSet="/icon/atcoder_white.png"
-                  media="(prefers-color-scheme: dark)"
-                />
-                <img src="/icon/atcoder_black.png" height="24" width="24.32" />
-              </picture>
-            </comp.Link>
+            {icons.map((icon) => (
+              <comp.Link
+                key={icon.href}
+                href={icon.href}
+                title={icon.title}
+                className="mr-4"
+              >
+                <picture className="h-6">
+                  <source
+                    srcSet={icon.srcDark}
+                    media="(prefers-color-scheme: dark)"
+                  />
+                  <img
+                    src={icon.srcLight}
+                    height={icon.height}
+                    width={icon.width}
+                  />
+                </picture>
+              </comp.Link>
+            ))}
           </div>
         </div>
       </div>
