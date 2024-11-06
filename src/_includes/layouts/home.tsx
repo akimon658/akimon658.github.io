@@ -114,6 +114,7 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
           layout=layouts/blog.tsx
         `}
         sort="date=desc"
+        limit={8}
       />
     </>
   )

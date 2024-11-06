@@ -3,6 +3,7 @@ articles: 記事
 author_name: あきも
 author_affiliation: 東京科学大学 情報理工学院 学士1年
 privacy_policy: プライバシーポリシー
+see_more: もっと見る
 source_code: ソースコード
 
 metas:
@@ -18,4 +19,5 @@ en:
   author_name: Akimo
   author_affiliation: Institute of Science Tokyo, School of Computing
   privacy_policy: Privacy Policy
+  see_more: See More
   source_code: Source Code

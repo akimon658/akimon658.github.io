@@ -8,29 +8,16 @@ export default ({ comp, href, title, lang, date, compact }: CardData) => {
   const isExternal = href.startsWith("http")
   const url = new URL(href, "https://akimo.dev")
   const locale = lang === "ja" ? "ja-JP" : "en-US"
-  const width = compact ? "80" : "full"
 
   return (
-    <comp.Link
+    <comp.CardContainer
       href={href}
       className={`
-        bg-gray-50
-        border-2
-        border-gray-100
-        dark:bg-gray-900
-        dark:border-gray-800
-        dark:hover:bg-gray-800
-        dark:text-gray-300
         flex
         flex-col
-        h-36
-        hover:bg-gray-100
         justify-between
-        not-prose
-        p-4
-        rounded-lg
-        w-${width}
       `}
+      compact={compact}
     >
       <div className="line-clamp-3">
         {title}
@@ -55,6 +42,6 @@ export default ({ comp, href, title, lang, date, compact }: CardData) => {
           </div>
         )}
       </div>
-    </comp.Link>
+    </comp.CardContainer>
   )
 }
