@@ -10,9 +10,12 @@ import robots from "lume/plugins/robots.ts"
 import sitemap from "lume/plugins/sitemap.ts"
 import tailwindcss from "lume/plugins/tailwindcss.ts"
 import transformImages from "lume/plugins/transform_images.ts"
+import cssnano from "cssnano"
+import advancedPreset from "cssnano-preset-advanced"
 import escapeHtml from "escape-html"
 import type { Token } from "markdown-it"
 import mila from "markdown-it-link-attributes"
+import variableCompress from "postcss-variable-compress"
 import rehypeExternalLinks from "rehype-external-links"
 import rehypeRaw from "rehype-raw"
 import typography from "@tailwindcss/typography"
@@ -196,7 +199,18 @@ site.use(tailwindcss({
     },
   },
 }))
-site.use(postcss())
+site.use(postcss({
+  plugins: [
+    cssnano({
+      preset: advancedPreset({
+        discardComments: {
+          removeAll: true,
+        },
+      }),
+    }),
+    variableCompress,
+  ],
+}))
 site.use(robots({
   rules: [
     {
