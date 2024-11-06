@@ -18,6 +18,7 @@ export default ({ comp, search, query, sort }: ListData) => {
     ">
       {posts.map((post) => (
         <comp.Card
+          key={post.url}
           href={post.externalUrl ? post.externalUrl : post.url}
           title={post.title}
           lang={post.lang}
