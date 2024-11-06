@@ -31,8 +31,13 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
           <a
             href={basePath}
             className="
+              dark:hover:bg-gray-900
+              hover:bg-gray-50
               ml-4
               my-auto
+              px-2
+              py-1
+              rounded-lg
               text-xl
             "
           >
