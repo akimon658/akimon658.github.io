@@ -2,6 +2,7 @@ import lume from "lume/mod.ts"
 import jsx from "lume/plugins/jsx.ts"
 import mdx from "lume/plugins/mdx.ts"
 import metas from "lume/plugins/metas.ts"
+import minifyHTML from "lume/plugins/minify_html.ts"
 import multilanguage from "lume/plugins/multilanguage.ts"
 import postcss from "lume/plugins/postcss.ts"
 import redirects from "lume/plugins/redirects.ts"
@@ -157,6 +158,7 @@ site.use(mdx({
   ],
 }))
 site.use(metas())
+site.use(minifyHTML())
 site.use(redirects())
 
 site.use(tailwindcss({

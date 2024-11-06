@@ -36,10 +36,7 @@
     "npm:@tree-sitter-grammars/tree-sitter-markdown@0.3.2": "0.3.2_tree-sitter@0.21.1",
     "npm:@tree-sitter-grammars/tree-sitter-yaml@0.6.1": "0.6.1_tree-sitter@0.21.1",
     "npm:@types/estree@1.0.5": "1.0.5",
-    "npm:@types/hast@3.0.4": "3.0.4",
     "npm:@types/node@*": "22.5.4",
-    "npm:@types/react-dom@18.3.0": "18.3.0",
-    "npm:@types/react@18.3.11": "18.3.11",
     "npm:@types/react@18.3.12": "18.3.12",
     "npm:autoprefixer@10.4.20": "10.4.20_postcss@8.4.47",
     "npm:escape-html@1.0.3": "1.0.3",
@@ -424,19 +421,6 @@
     },
     "@types/prop-types@15.7.13": {
       "integrity": "sha512-hCZTSvwbzWGvhqxp/RqVqwU999pBf2vp7hzIjiYOsl8wqOmUxkQ6ddw1cV3l8811+kdUFus/q4d1Y3E3SyEifA=="
-    },
-    "@types/react-dom@18.3.0": {
-      "integrity": "sha512-EhwApuTmMBmXuFOikhQLIBUn6uFg81SwLMOAUgodJF14SOBOCMdU04gDoYi0WOJJHD144TL32z4yDqCW3dnkQg==",
-      "dependencies": [
-        "@types/react@18.3.12"
-      ]
-    },
-    "@types/react@18.3.11": {
-      "integrity": "sha512-r6QZ069rFTjrEYgFdOck1gK7FLVsgJE7tTz0pQBczlBNUhBNk0MQH4UbnFSwjpQLMkLzgqvBBa+qGpLje16eTQ==",
-      "dependencies": [
-        "@types/prop-types",
-        "csstype"
-      ]
     },
     "@types/react@18.3.12": {
       "integrity": "sha512-D2wOSq/d6Agt28q7rSI3jhU7G6aiuzljDGZ2hTZHIkrTLUI+AF3WMeKkEZ9nN2fkBAlcktT6vcZjDFiIhMYEQw==",
@@ -2418,6 +2402,7 @@
     "https://deno.land/x/lume@v2.3.3/deps/log.ts": "d9d20a11d0acc6314c024bd8123b2010007aeb62fdd1969ba033a67562d52566",
     "https://deno.land/x/lume@v2.3.3/deps/markdown_it.ts": "f68bb28890f77347ac7bc980026ea52e3cf0940278a3930428f5900be9e6491f",
     "https://deno.land/x/lume@v2.3.3/deps/mdx.ts": "a241f7e859035caeb28216414e06545fb74fafed533b1dc2f19d18b0a1d3b8de",
+    "https://deno.land/x/lume@v2.3.3/deps/minify_html.ts": "a42184735d1e2ecf429bde8581eeba29cb7d9803cab940509463af6925ff64c0",
     "https://deno.land/x/lume@v2.3.3/deps/path.ts": "602a7f3485255cbb5a8d19b53b315718a74290076791f6f9156fa0f437f22b1f",
     "https://deno.land/x/lume@v2.3.3/deps/postcss.ts": "4bd702f1315a05d7793f140bba403c433203197e0dc65b381724aa9f6822c448",
     "https://deno.land/x/lume@v2.3.3/deps/react.ts": "dc3af1b253cbd3e8ac65cbd651cad6aff7da311826dec1f33e96984a2ad240a9",
@@ -2441,6 +2426,7 @@
     "https://deno.land/x/lume@v2.3.3/plugins/markdown.ts": "c7027605edee274762edb20f7040ccba6415c5fe656cc6e25ce91c448f467fd8",
     "https://deno.land/x/lume@v2.3.3/plugins/mdx.ts": "e71ffa900ba109888db580d00fff3369642340df80f31a6a404e066e79358351",
     "https://deno.land/x/lume@v2.3.3/plugins/metas.ts": "76db58c6ec7740e905240bba98685b7abb9a524f8204a1c683dfce3baa199ab2",
+    "https://deno.land/x/lume@v2.3.3/plugins/minify_html.ts": "521bdd0e00c2bb9bb486818f8909616945aaf11f127a67a3d11687d9893294d0",
     "https://deno.land/x/lume@v2.3.3/plugins/modules.ts": "e64197315d930e462aca24e444d0cfcefb37bfea168b2306122b892a1e1c5b8e",
     "https://deno.land/x/lume@v2.3.3/plugins/multilanguage.ts": "f6a000d1df368c9bbba976fbd3ef91a3dd170399603086390d7f35fcb8cf59fa",
     "https://deno.land/x/lume@v2.3.3/plugins/paginate.ts": "7dfee977a205dfe0af33a3e406f73017badd2d4593cf27e5bd897da7ab12ba8a",
@@ -2481,11 +2467,7 @@
     "https://deno.land/x/xml@5.4.16/parse.ts": "af704c72d42607d5b3f364972c413e05b6d2921d164806ec47aee348cf6ce49c",
     "https://deno.land/x/xml@5.4.16/stringify.ts": "a00881a1e563902538cfea8ce31464c81e98e61dddcf718039d7118b46464687",
     "https://deno.land/x/xml@5.4.16/wasm_xml_parser/wasm_xml_parser.js": "7ec301b1db7d11671f4f8785505c6f617ea05fcb3d558686c67efad263ea0c8e",
-    "https://esm.sh/gh/airbus-cert/tree-sitter-powershell@v1.2.0": "2e0358e0c99048853e16a8607924fb6652f2ffe75faed7656e98dcb6b2cf24fa",
-    "https://esm.sh/gh/camdencheek/tree-sitter-dockerfile@v0.2.0": "6b7cfef586727c7aed1f1df0c121f6c285daf3c6d6796b877062143af85aae99",
-    "https://esm.sh/v135/gh/airbus-cert/tree-sitter-powershell@v1.2.0/denonext/tree-sitter-powershell.mjs": "bf69ac54a6b1dd18837e24b2f30da10cdd533804373401ff10248accd4bb385a",
-    "https://esm.sh/v135/gh/camdencheek/tree-sitter-dockerfile@v0.2.0/denonext/tree-sitter-dockerfile.mjs": "927377b4c4e8c54470733b9f67c784713d99516382019a583892479daea60f4e",
-    "https://esm.sh/v135/node-gyp-build@4.8.2/denonext/node-gyp-build.mjs": "62b212d3f98c82eed5cd0a27c0774041720c6ed8863efa915dd44bcaac06dff0"
+    "https://wilsonl.in/minify-html/deno/0.15.0/index.js": "8e7ee5067ca84fb5d5a1f33118cac4998de0b7d80b3f56cc5c6728b84e6bfb70"
   },
   "workspace": {
     "dependencies": [
