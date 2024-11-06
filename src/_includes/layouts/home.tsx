@@ -67,7 +67,10 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
           ">
             {data.author_name}
           </h1>
-          <div className="text-gray-500">
+          <div className="
+            dark:text-gray-400
+            text-gray-500
+          ">
             @akimon658
           </div>
           <div className="mt-2">

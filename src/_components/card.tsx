@@ -23,12 +23,16 @@ export default ({ comp, href, title, lang, date, compact }: CardData) => {
         {title}
       </div>
       <div className="
+        dark:text-gray-400
         flex
         justify-between
         text-gray-500
       ">
         {isExternal && (
-          <div className="after:content-open-in-new-gray">
+          <div className="
+            after:content-open-in-new-gray
+            dark:after:content-open-in-new-gray-dark
+          ">
             {url.hostname}
           </div>
         )}

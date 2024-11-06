@@ -176,6 +176,7 @@ site.use(tailwindcss({
           "open-in-new": "url('/icon/open_in_new_16dp_2563EB.svg')",
           "open-in-new-dark": "url('/icon/open_in_new_16dp_60A5FA.svg')",
           "open-in-new-gray": "url('/icon/open_in_new_16dp_6B7280.svg')",
+          "open-in-new-gray-dark": "url('/icon/open_in_new_16dp_9CA3AF.svg')",
         },
         typography: (theme: (s: string) => string) => ({
           DEFAULT: {

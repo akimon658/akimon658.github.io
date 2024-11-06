@@ -46,6 +46,7 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
         </header>
         <main>{data.children}</main>
         <footer className="
+          dark:text-gray-400
           flex
           h-20
           sticky

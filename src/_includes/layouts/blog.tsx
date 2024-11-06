@@ -34,7 +34,10 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
         dateTime={`${date.getFullYear()}-${
           date.getMonth() + 1
         }-${date.getDate()}`}
-        className="text-gray-500"
+        className="
+          dark:text-gray-400
+          text-gray-500
+        "
       >
         {date.toLocaleDateString(locale, {
           year: "numeric",
