@@ -27,10 +27,7 @@ jobs:
       - name: Update lockfile
         run: |
           rm deno.lock
-          deno task serve &
-          until (curl -s http://localhost:4000 > /dev/null); do
-            sleep 1
-          done
+          deno task lume
 
       - name: Delete previous cache
         if: ${{ steps.cache.outputs.cache-hit }}
