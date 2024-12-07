@@ -5,6 +5,8 @@ on:
     branches:
       - "renovate/**"
 
+  workflow_dispatch:
+
 jobs:
   update:
     runs-on: ubuntu-latest
