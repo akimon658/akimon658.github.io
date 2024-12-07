@@ -57,7 +57,7 @@
     "npm:svg2png-wasm@1.4.1": "1.4.1",
     "npm:tailwindcss@3.4.14": "3.4.14_postcss@8.4.49",
     "npm:tree-sitter-bash@0.23.3": "0.23.3",
-    "npm:tree-sitter-go@0.23.3": "0.23.3",
+    "npm:tree-sitter-go@0.23.4": "0.23.4",
     "npm:tree-sitter-html@0.23.2": "0.23.2",
     "npm:tree-sitter-javascript@0.23.1": "0.23.1",
     "npm:tree-sitter-typescript@0.23.2": "0.23.2",
@@ -2510,8 +2510,8 @@
         "node-gyp-build"
       ]
     },
-    "tree-sitter-go@0.23.3": {
-      "integrity": "sha512-tU6iu3+EUm9GjPmsKfW70aWK15ZltMUY0GykFTkj3Vu31tTm0O4Rd5BbWH7wWxTtLI1vcNmUGYy1h0pgRPrBLA==",
+    "tree-sitter-go@0.23.4": {
+      "integrity": "sha512-iQaHEs4yMa/hMo/ZCGqLfG61F0miinULU1fFh+GZreCRtKylFLtvn798ocCZjO2r/ungNZgAY1s1hPFyAwkc7w==",
       "dependencies": [
         "node-addon-api",
         "node-gyp-build"
@@ -2942,7 +2942,7 @@
       "npm:rehype-external-links@3.0.0",
       "npm:rehype-raw@7.0.0",
       "npm:tree-sitter-bash@0.23.3",
-      "npm:tree-sitter-go@0.23.3",
+      "npm:tree-sitter-go@0.23.4",
       "npm:tree-sitter-html@0.23.2",
       "npm:tree-sitter-javascript@0.23.1",
       "npm:tree-sitter-typescript@0.23.2",
