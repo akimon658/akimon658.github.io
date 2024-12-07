@@ -27,7 +27,17 @@ jobs:
       - name: Update lockfile
         run: |
           rm deno.lock
-          deno task lume
+          deno task serve &
+          timeout=60
+          until curl -s http://localhost:8000/ > /dev/null; do
+            sleep 1;
+            ((timeout--))
+
+            if [ $timeout -le 0 ]; then
+              echo "Timeout waiting for server to start"
+              exit 1
+            fi
+          done
 
       - name: Delete previous cache
         if: ${{ steps.cache.outputs.cache-hit }}
