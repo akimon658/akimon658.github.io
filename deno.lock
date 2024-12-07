@@ -2939,7 +2939,7 @@
       "npm:@tree-sitter-grammars/tree-sitter-lua@0.2.0",
       "npm:@tree-sitter-grammars/tree-sitter-markdown@0.3.2",
       "npm:@tree-sitter-grammars/tree-sitter-yaml@0.7.0",
-      "npm:@types/react@18.3.13",
+      "npm:@types/react@18.3.14",
       "npm:cssnano-preset-advanced@7.0.6",
       "npm:cssnano@7.0.6",
       "npm:escape-html@1.0.3",
