@@ -1,4 +1,4 @@
-@import "./vscode.css";
+@import "./_vscode.css";
 
 @tailwind base;
 @tailwind components;
