@@ -1,4 +1,5 @@
 import lume from "lume/mod.ts"
+import googleFonts from "lume/plugins/google_fonts.ts"
 import jsx from "lume/plugins/jsx.ts"
 import mdx from "lume/plugins/mdx.ts"
 import metas from "lume/plugins/metas.ts"
@@ -121,6 +122,11 @@ site.hooks.addMarkdownItRule("fence", (tokens: Token[], idx: number) => {
 
 site.copy("icon")
 
+site.use(googleFonts({
+  cssFile: "style.css",
+  fonts:
+    "https://fonts.google.com/share?selection.family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700",
+}))
 site.use(jsx())
 
 interface MdastNode {
