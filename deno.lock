@@ -51,7 +51,6 @@
     "npm:postcss@8.4.49": "8.4.49",
     "npm:react-dom@18.3.1": "18.3.1_react@18.3.1",
     "npm:react@18.3.1": "18.3.1",
-    "npm:react@19.0.0": "19.0.0",
     "npm:rehype-external-links@3.0.0": "3.0.0",
     "npm:rehype-raw@7.0.0": "7.0.0",
     "npm:remark-gfm@4.0.0": "4.0.0",
@@ -2118,7 +2117,7 @@
       "integrity": "sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==",
       "dependencies": [
         "loose-envify",
-        "react@18.3.1",
+        "react",
         "scheduler"
       ]
     },
@@ -2127,9 +2126,6 @@
       "dependencies": [
         "loose-envify"
       ]
-    },
-    "react@19.0.0": {
-      "integrity": "sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ=="
     },
     "read-cache@1.0.0": {
       "integrity": "sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==",
@@ -2929,7 +2925,7 @@
       "npm:markdown-it-link-attributes@4.0.1",
       "npm:markdown-it@14.1.0",
       "npm:postcss-variable-compress@3.0.0",
-      "npm:react@19.0.0",
+      "npm:react@18.3.1",
       "npm:rehype-external-links@3.0.0",
       "npm:rehype-raw@7.0.0",
       "npm:tree-sitter-bash@0.23.3",
