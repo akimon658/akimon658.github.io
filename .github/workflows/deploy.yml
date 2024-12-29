@@ -2,8 +2,6 @@ name: Deploy
 
 on:
   push:
-    branches: [ main ]
-
     paths:
       - 'src/**'
       - '_config.ts'
@@ -51,14 +49,24 @@ jobs:
           deno task lume
           touch public/.nojekyll
 
-      - name: Upload
+      - name: Upload to GitHub Pages
+        if: github.ref_name == 'main'
         uses: actions/upload-pages-artifact@v3
         with:
           path: public/
 
       - name: Deploy to GitHub Pages
+        if: github.ref_name == 'main' 
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public/ --project-name=akimon658
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Delete previous cache
         if: ${{ steps.cache.outputs.cache-hit }}
