@@ -13,7 +13,7 @@ resource "cloudflare_pages_project" "deployment_config" {
     type = "github"
     config {
       owner = "akimon658"
-      repo_name = "akimon658.github.io"
+      repo_name = "akimo.dev"
       production_branch = "main"
       pr_comments_enabled = true
       deployments_enabled = false
