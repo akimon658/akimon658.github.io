@@ -65,7 +65,7 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
                 {data.privacy_policy}
               </comp.Link>{" "}
               |{" "}
-              <comp.Link href="https://github.com/akimon658/akimon658.github.io">
+              <comp.Link href="https://github.com/akimon658/akimo.dev">
                 {data.source_code}
               </comp.Link>
             </div>
