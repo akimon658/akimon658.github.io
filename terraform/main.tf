@@ -20,6 +20,11 @@ terraform {
   }
 }
 
+variable "cloudflare_account_id" {
+  type = string
+  default = "831106c4d239c1e8968fbfb28a1c9c05"
+}
+
 variable "cloudflare_api_token" {
   type = string
 }
