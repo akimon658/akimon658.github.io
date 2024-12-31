@@ -36,18 +36,31 @@ jobs:
         with:
           deno-version: v2.x
 
-      - uses: actions/cache/restore@v4
-        id: cache
+      - name: Configure Deno cache
+        uses: actions/cache@v4
         with:
-          path: |
-            ~/.cache/deno
-            _cache
-          key: Default Cache
+          path: ~/.cache/deno
+          key: deno-${{ hashFiles('deno.lock') }}
+          restore-keys: deno-
+
+      - name: Configure build cache
+        uses: actions/cache@v4
+        with:
+          path: _cache
+          key: lume-${{ hashFiles('src/**', '_config.ts') }}
+          restore-keys: lume-
 
       - name: Build
         run: |
           deno task lume
           touch public/.nojekyll
+
+      - name: Configure npm cache # Where wrangler is installed
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: npm-${{ github.run_id }}
+          restore-keys: npm-
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
@@ -56,18 +69,3 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy public/ --project-name=akimon658
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Delete previous cache
-        if: ${{ steps.cache.outputs.cache-hit }}
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh extension install actions/gh-actions-cache
-          gh actions-cache delete "Default Cache" --confirm
-
-      - uses: actions/cache/save@v4
-        with:
-          path: |
-            ~/.cache/deno
-            _cache
-          key: Default Cache
