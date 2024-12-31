@@ -36,17 +36,15 @@ jobs:
         with:
           deno-version: v2.x
 
-      - name: Restore Deno cache
-        uses: actions/cache/restore@v4
-        id: deno-cache
+      - name: Configure Deno cache
+        uses: actions/cache@v4
         with:
           path: ~/.cache/deno
           key: deno-${{ hashFiles('deno.lock') }}
           restore-keys: deno-
 
-      - name: Restore build cache
-        uses: actions/cache/restore@v4
-        id: build-cache
+      - name: Configure build cache
+        uses: actions/cache@v4
         with:
           path: _cache
           key: lume-${{ hashFiles('src/**', '_config.ts') }}
@@ -64,15 +62,3 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy public/ --project-name=akimon658
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Save Deno cache
-        uses: actions/cache/save@v4
-        with:
-          path: ~/.cache/deno
-          key: deno-${{ hashFiles('deno.lock') }}
-
-      - name: Save build cache
-        uses: actions/cache/save@v4
-        with:
-          path: _cache
-          key: lume-${{ hashFiles('src/**', '_config.ts') }}
