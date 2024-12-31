@@ -18,13 +18,22 @@ jobs:
         with:
           deno-version: v2.x
 
-      - uses: actions/cache/restore@v4
-        id: cache
+
+      - name: Restore Deno cache
+        uses: actions/cache/restore@v4
+        id: deno-cache
         with:
-          path: |
-            ~/.cache/deno
-            _cache
-          key: Default Cache
+          path: ~/.cache/deno
+          key: deno-${{ hashFiles('deno.lock') }}
+          restore-keys: deno-
+
+      - name: Restore build cache
+        uses: actions/cache/restore@v4
+        id: build-cache
+        with:
+          path: _cache
+          key: lume-${{ hashFiles('src/**', '_config.ts') }}
+          restore-keys: lume-
 
       - name: Update lockfile
         run: |
@@ -41,22 +50,6 @@ jobs:
             fi
           done
 
-      - name: Delete previous cache
-        if: ${{ steps.cache.outputs.cache-hit }}
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh extension install actions/gh-actions-cache
-          gh actions-cache delete "Default Cache" --confirm
-
-      - uses: actions/cache/save@v4
-        with:
-          path: |
-            ~/.cache/deno
-            _cache
-          key: Default Cache
-
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
@@ -64,3 +57,15 @@ jobs:
           git add .
           git commit -m "Update deno.lock"
           git push
+
+      - name: Save Deno cache
+        uses: actions/cache/save@v4
+        with:
+          path: ~/.cache/deno
+          key: deno-${{ hashFiles('deno.lock') }}
+
+      - name: Save build cache
+        uses: actions/cache/save@v4
+        with:
+          path: _cache
+          key: lume-${{ hashFiles('src/**', '_config.ts') }}
