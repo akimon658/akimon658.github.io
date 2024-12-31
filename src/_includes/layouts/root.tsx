@@ -15,6 +15,7 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
           rel="stylesheet"
           href={`/style.css?var=${now}`}
         />
+        <link rel="canonical" href={"https://akimo.dev" + data.url} />
       </head>
       <body className="
         dark:bg-gray-950
