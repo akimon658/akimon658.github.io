@@ -55,6 +55,13 @@ jobs:
           deno task lume
           touch public/.nojekyll
 
+      - name: Configure npm cache # Where wrangler is installed
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: npm-${{ github.run_id }}
+          restore-keys: npm-
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
