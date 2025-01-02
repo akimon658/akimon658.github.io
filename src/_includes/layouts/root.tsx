@@ -57,7 +57,21 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
           <div className="
             mx-auto
             my-auto
+            text-center
           ">
+            {data.alternates && data.alternates.length > 0 &&
+              data.alternates.map((alternate) => {
+                if (alternate.lang !== lang) {
+                  return (
+                    <comp.Link
+                      key={alternate.lang}
+                      href={alternate.url}
+                    >
+                      {alternate.switch_to}
+                    </comp.Link>
+                  )
+                }
+              })}
             <div>
               © {now.getFullYear()} Takumi Akimoto |{" "}
               <comp.Link href="https://github.com/akimon658/akimo.dev">
