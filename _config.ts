@@ -105,7 +105,7 @@ const parseCode = (code: string, lang: string) => {
       lastIndex = child.endIndex
     }
 
-    content += escapeHtml(node.text.slice(lastIndex))
+    content += escapeHtml(node.text.slice(lastIndex - node.startIndex))
 
     return wrapTag(node, content)
   }
