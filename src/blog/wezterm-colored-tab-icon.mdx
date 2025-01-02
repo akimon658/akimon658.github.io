@@ -57,7 +57,7 @@ end)
 
 プロセス名は`tab.active_pane.foreground_process_name`で取得できる[^tabinformation][^paneinformation]が、フルパスなのでファイル名だけを取り出す必要がある。僕はタブにカレントディレクトリを表示するためにも使いたいので、関数として切り出しておく。
 
-```
+```lua
 ---@param path string
 local function trim_path(path)
   return string.gsub(path, "(.*[/\\])(.*)", "%2") -- 拡張子を考慮していないのでWindowsでは動かないかも
@@ -136,7 +136,7 @@ return {
 
 最終的には次のような設定になる。
 
-```
+```lua
 ---@param path string
 local function trim_path(path)
   return string.gsub(path, "(.*[/\\])(.*)", "%2")

@@ -20,7 +20,7 @@ import variableCompress from "postcss-variable-compress"
 import rehypeExternalLinks from "rehype-external-links"
 import rehypeRaw from "rehype-raw"
 import typography from "@tailwindcss/typography"
-import Parser from "tree-sitter"
+import Parser, { Language } from "tree-sitter"
 import Bash from "tree-sitter-bash"
 import Go from "tree-sitter-go"
 import Lua from "@tree-sitter-grammars/tree-sitter-lua"
@@ -54,7 +54,7 @@ const site = lume({
 })
 
 const parseCode = (code: string, lang: string) => {
-  const languages: Record<string, unknown> = {
+  const languages = {
     go: Go,
     html: HTML,
     javascript: JavaScript,
@@ -63,7 +63,7 @@ const parseCode = (code: string, lang: string) => {
     shell: Bash,
     ts: TypeScript.typescript,
     yaml: YAML,
-  }
+  } as Record<string, Language>
 
   if (!(lang in languages)) {
     return `<pre><code>${escapeHtml(code)}</code></pre>`
@@ -105,7 +105,7 @@ const parseCode = (code: string, lang: string) => {
       lastIndex = child.endIndex
     }
 
-    content += escapeHtml(node.text.slice(lastIndex))
+    content += escapeHtml(node.text.slice(lastIndex - node.startIndex))
 
     return wrapTag(node, content)
   }
