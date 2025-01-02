@@ -11,6 +11,7 @@ metas:
   title: =title
   lang: =lang
   twitter: "@akimon658"
+  image: /img/og/default.png
   generator: true
 
 en:
