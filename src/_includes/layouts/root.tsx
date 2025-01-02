@@ -1,4 +1,4 @@
-const now = Date.now()
+const now = new Date()
 
 export default (data: Lume.Data, _helpers: Lume.Helpers) => {
   const comp = data.comp
@@ -13,7 +13,7 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
         <link rel="icon" href="/icon/favicon.ico" />
         <link
           rel="stylesheet"
-          href={`/style.css?var=${now}`}
+          href={`/style.css?var=${now.getTime()}`}
         />
         <link rel="canonical" href={"https://akimo.dev" + data.url} />
       </head>
@@ -58,14 +58,8 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
             mx-auto
             my-auto
           ">
-            <div className="text-center">
-              © {new Date().getFullYear()} Takumi Akimoto
-            </div>
             <div>
-              <comp.Link href={basePath + "privacy-policy/"}>
-                {data.privacy_policy}
-              </comp.Link>{" "}
-              |{" "}
+              © {now.getFullYear()} Takumi Akimoto |{" "}
               <comp.Link href="https://github.com/akimon658/akimo.dev">
                 {data.source_code}
               </comp.Link>
