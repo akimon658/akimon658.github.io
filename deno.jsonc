@@ -10,7 +10,8 @@
     "jsxImportSourceTypes": "npm:@types/react@18.3.18",
     "types": [
       "lume/types.ts",
-    ]
+    ],
+    "verbatimModuleSyntax": true
   },
   "imports": {
     "@tailwindcss/typography": "npm:@tailwindcss/typography@0.5.15",
