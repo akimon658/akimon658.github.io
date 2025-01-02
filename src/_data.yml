@@ -4,6 +4,7 @@ author_name: あきも
 author_affiliation: 東京科学大学 情報理工学院 学士1年
 see_more: もっと見る
 source_code: ソースコード
+switch_to: 日本語に切り替える
 
 metas:
   site: akimo.dev
@@ -20,3 +21,4 @@ en:
   author_affiliation: Institute of Science Tokyo, School of Computing
   see_more: See More
   source_code: Source Code
+  switch_to: Switch to English
