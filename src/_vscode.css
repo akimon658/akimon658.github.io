@@ -32,6 +32,18 @@
   color: var(--vsc-gray);
 }
 
+.lang-lua {
+
+  .ts-\{,
+  .ts-\} {
+    color: var(--vsc-blue);
+  }
+}
+
+.ts-and {
+  color: var(--vsc-blue);
+}
+
 .ts-attribute_name {
   color: var(--vsc-light-blue);
 }
@@ -178,6 +190,10 @@
 
 .ts-of {
   color: var(--vsc-pink);
+}
+
+.ts-or {
+  color: var(--vsc-blue);
 }
 
 .ts-package {
